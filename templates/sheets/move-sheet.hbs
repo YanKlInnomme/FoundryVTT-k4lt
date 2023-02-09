@@ -1,0 +1,60 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64" />
+    <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
+  </header>
+  <div class="forms kult-item-sheet">
+    <div>
+      <label>{{localize "k4lt.Attribute"}}:</label>
+      <select name="data.attributemod" value="{{data.attributemod}}">
+        {{#select data.attributemod}}
+        <option value ="none">{{localize "k4lt.None"}}</option>
+        <option value="willpower">{{localize "k4lt.Willpower"}}</option>
+        <option value="fortitude">{{localize "k4lt.Fortitude"}}</option>
+        <option value="reflexes">{{localize "k4lt.Reflexes"}}</option>
+        <option value="reason">{{localize "k4lt.Reason"}}</option>
+        <option value="intuition">{{localize "k4lt.Intuition"}}</option>
+        <option value="perception">{{localize "k4lt.Perception"}}</option>
+        <option value="coolness">{{localize "k4lt.Coolness"}}</option>
+        <option value="violence">{{localize "k4lt.Violence"}}</option>
+        <option value="charisma">{{localize "k4lt.Charisma"}}</option>
+        <option value="soul">{{localize "k4lt.Soul"}}</option>
+        <option value="ask">{{localize "k4lt.Ask"}}</option>
+        {{/select}}
+      </select>
+    </div>
+    <div class="editor-row">
+      <label>{{localize "k4lt.Trigger"}}:</label>
+      <div>{{editor content=data.trigger target="data.trigger" button=true owner=owner editable=editable}}</div>
+    </div>
+    <div>
+      <label>{{localize "k4lt.Results"}}:</label>
+      <div class="results-input">
+        <div class="editor-row">
+          <label>15+:</label>
+          <div>{{editor content=data.completesuccess target="data.completesuccess" button=true owner=owner editable=editable}}</div>
+        </div>
+        <div class="editor-row">
+          <label>10-14:</label>
+          <div>{{editor content=data.partialsuccess target="data.partialsuccess" button=true owner=owner
+            editable=editable}}</div>
+        </div>
+        <div class="editor-row">
+          <label>0-9</label>
+          <div>{{editor content=data.failure target="data.failure" button=true owner=owner editable=editable}}</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <label>{{localize "k4lt.SpecialMove"}}:</label>
+      <select name="data.specialflag" value="{{data.specialflag}}">
+      {{#select data.specialflag}}
+        <option value='0'>{{localize "k4lt.None"}}</option>
+        <option value='1'>{{localize "k4lt.KeepItTogether"}}</option>
+        <option value='2'>{{localize "k4lt.SeeThroughTheIllusion"}}</option>
+        <option value='3'>{{localize "k4lt.EndureInjury"}}</option>
+      {{/select}}
+      </select>
+    </div>
+  </div>
+</form>

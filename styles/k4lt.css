@@ -1,0 +1,677 @@
+.advantage-box {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 15px;
+    align-items: top;
+}
+
+.advantage-box div {
+    width: 100%;
+}
+
+.attribute-box input {
+    width: 40px;
+}
+
+.navigation-section {
+    border-top: 1px solid #968c6a;
+    border-bottom: 1px solid #968c6a;
+    vertical-align: middle;
+    padding-top: 5px;
+}
+
+.tabButton:hover {
+    background-color: #9b201f;
+    color: #968c6a
+}
+
+.tabButton {
+    background-color: #968c6a;
+    color: #9b201f;
+    font-size: 1.2rem;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-right: 5px;
+    margin-left: 5px;
+    vertical-align: middle;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.move-info input {
+    width: 30px;
+}
+
+.move-info a {
+    vertical-align: middle
+}
+
+table {
+    border-top: none;
+}
+
+.spec {
+    padding: 5px;
+    width: 120px;
+}
+
+.section-label {
+    font-size: large;
+}
+
+.item-list {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.move-card {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid #968c6a;
+    background-color: black;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    width: 97%;
+    break-inside: avoid;
+    color: white;
+}
+
+.actor-picture {
+    float: left;
+    border: 1px;
+    border-style: solid;
+    border-color: #948c68;
+    height: 100%;
+}
+
+.bottom-section .move-list {
+    columns: 250px;
+}
+
+.bottom-section {
+    border-bottom: 1px solid #968c6a;
+}
+
+.item-control {
+    float: right;
+    margin-left: 5px;
+}
+
+.item-show {
+    margin-top: 2px;
+}
+
+.fas {
+    margin-left: 0px;
+    margin-right: 0px;
+    vertical-align: middle;
+}
+
+.middle-section {
+    display: flex;
+    align-items: top;
+    border-top: none;
+}
+
+input {
+    background-color: black;
+}
+
+.weapon-column {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+div.stability-section {
+    text-align: center;
+    font-size: large;
+    padding-top: 10px;
+}
+
+div.right-middle-column {
+    overflow: hidden;
+    padding: 15px;
+    max-width: 280px;
+}
+
+.flex-container {
+    display: flex
+}
+
+.flex-column {
+    flex: 1
+}
+
+.top-section {
+    margin: -1px 0px 5px;
+    align-items: center;
+}
+
+.section-label {
+    text-align: center;
+    font-size: large;
+}
+
+.move-name {
+    background-color: black;
+    color: #9b201f;
+    text-align: center;
+    margin-top: 3px;
+    font-size: large
+}
+
+.result-roll {
+    background-color: #9b8d68;
+    color: black;
+    text-align: center;
+    margin-top: 3px;
+    font-size: large
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* Tooltip text */
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+
+/* Show the tooltip text when you mouse over the tooltip container */
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.stabilized {
+    float: right;
+    margin-left: 10px;
+}
+
+td textarea {
+    width: 300px;
+    height: 150px;
+    color: #9b8d68 !important;
+}
+
+.hidden {
+    display: none;
+}
+
+.tox-tinymce {
+    height: 100px;
+    min-height: 100px;
+}
+
+.background-box {
+    height: 100%;
+}
+
+.move-card-text {
+    padding-left: 3px;
+    vertical-align: middle;
+}
+
+.move-card img {
+    vertical-align: middle;
+    padding-bottom: 3px;
+    height: 20px;
+    width: 20px;
+}
+
+.kult-sheet {
+    background: url(tausta.jpg) white;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    padding: 10px;
+    color: #9b201f;
+    border: 1px solid #968c6a;
+}
+
+.sheet-header img {
+    background-color: black;
+}
+
+.section-label {
+    color: #FFFFFF;
+    text-shadow: 0px 0px 5px red;
+    border: 1px;
+    border-style: solid;
+    border-color: #948c68;
+}
+
+.wound-section select {
+    background-color: #782e22;
+}
+
+.wound-section input {
+    background-color: white;
+    width: 100%;
+}
+
+.stability-section .fas {
+    color: #968c6a;
+}
+
+.stability-section select {
+    background-color: #782e22;
+    opacity: .8;
+    margin: 8px 5px;
+    width: calc(100% - 55px);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.editor {
+    height: 100%;
+    min-height: 100px;
+}
+
+.editor-content {
+    height: 100%;
+    min-height: 100px;
+    padding: 8px;
+}
+
+.tox.tox-tinymce .tox-edit-area__iframe {
+    background: #782e22;
+    border-top: 1px solid #968c6a;
+}
+
+.free-text {
+    padding: .4rem;
+    height: 100%;
+    border: 1px solid #948c68;
+    border-top-style: none;
+    text-align: left;
+    color: #968c6a;
+}
+
+.free-text .editor-content {
+    padding: 0;
+}
+
+.modifier-section {
+    color: #9b201f;
+    border: 1px;
+    border-style: solid;
+    border-color: #948c68;
+    padding: 5px;
+}
+
+.modifier-section div {
+    background-color: #000000;
+}
+
+.modifier-section select {
+    background-color: #000000;
+}
+
+.situational-modifier {
+    margin-left: 8px;
+}
+
+input {
+    background-color: white;
+}
+
+.attribute-box {
+    background-color: black;
+    color: white;
+    border: 1px;
+    border-style: solid;
+    border-color: #948c68;
+    text-align: center;
+    vertical-align: text-top;
+    font-style: oblique;
+    font-size: 10px;
+}
+
+.attribute-box option {
+    background-color: black;
+}
+
+.attribute-box tr {
+    background-color: black !important;
+}
+
+.modifier-section {
+    display: flex;
+    align-items: top;
+}
+
+.wound-entries div {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.wound-section {
+    display: flex;
+}
+
+.wound-section input {
+    color: gray;
+}
+
+.two-column {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+
+.two-column > div {
+    width: 50%;
+    margin-right: 5px;
+}
+
+.weapon-card {
+    width: 100%;
+}
+
+.weapon-card > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.two-column .section-label {
+    text-align: center;
+}
+
+.wound-name {
+    background-color: #782e2200;
+    opacity: .8;
+    width: calc(100% - 2px);
+    min-width: 20px;
+    height: 26px;
+    border-radius: 3px;
+    border: 0px solid #968c6a;
+}
+
+.attribute-column {
+    padding: 15px;
+    padding-top: 10px;
+}
+
+.attribute-box select {
+    color: white;
+    appearance: none;
+    outline: none;
+    border: none;
+    cursor: inherit;
+}
+
+.stabilized {
+    float: right;
+}
+
+.character-name input {
+    color: #9b201f;
+    border: 1px solid #968c6a;
+}
+
+.character-name > input {
+    width: 98% !important;
+}
+
+.character-detail {
+    padding: 5px;
+}
+
+.details {
+    vertical-align: top;
+    flex: 1;
+    display: flex;
+    padding-left: 20px;
+}
+
+.character-detail input {
+    color: #9b201f;
+    width: 100px;
+    border: 1px solid #968c6a;
+}
+
+.background-section {
+    display: none;
+    margin-top: 10px;
+}
+
+input.short-input {
+    width: 70px;
+}
+
+.advantage-column {
+    display: block;
+    margin-left: 5px;
+}
+
+.willpic {
+    background: url(will.png);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: .8;
+}
+
+.willpic:hover {
+    opacity: 1;
+    text-shadow: 0 0 5px #ffee10;
+}
+
+.fortpic {
+    background: url(fort.png);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: .8;
+}
+
+.fortpic:hover {
+    opacity: 1;
+    text-shadow: 0 0 5px #ffee10;
+}
+
+.refpic {
+    background: url(ref.png);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: .8;
+}
+
+.refpic:hover {
+    opacity: 1;
+    text-shadow: 0 0 5px #ffee10;
+}
+
+.foo:hover {
+    color: red;
+}
+
+.reasonpic {
+    background: url(reason.png);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: .8;
+}
+
+.reasonpic:hover {
+    opacity: 1;
+    text-shadow: 0 0 5px #ffee10;
+}
+
+.intupic {
+    background: url(intu.png);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: .8;
+}
+
+.intupic:hover {
+    opacity: 1;
+    text-shadow: 0 0 5px #ffee10;
+}
+
+.percpic {
+    background: url(perc.png);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: .8;
+}
+
+.percpic:hover {
+    opacity: 1;
+    text-shadow: 0 0 5px #ffee10;
+}
+
+.attmid {
+    background: url(middle.png);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: .8;
+}
+
+.coolpic {
+    background: url(cool.png);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: .8;
+}
+
+.coolpic:hover {
+    opacity: 1;
+    text-shadow: 0 0 5px #ffee10;
+}
+
+.violpic {
+    background: url(viol.png);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: .8;
+}
+
+.violpic:hover {
+    opacity: 1;
+    text-shadow: 0 0 5px #ffee10;
+}
+
+.chapic {
+    background: url(cha.png);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: .8;
+}
+
+.chapic:hover {
+    opacity: 1;
+    text-shadow: 0 0 5px #ffee10;
+}
+
+.soulpic {
+    background: url(soul.png);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: .8;
+}
+
+.soulpic:hover {
+    opacity: 1;
+    text-shadow: 0 0 5px #ffee10;
+}
+
+.kult-item-sheet {
+    padding: 10px;
+}
+
+.kult-item-sheet > div {
+    margin-bottom: 10px;
+}
+
+.kult-item-sheet label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.kult-item-sheet .editor-row {
+    background-color: transparent !important;
+}
+
+.kult-item-sheet .results-input {
+    /* margin-left: 10px; */
+}
+
+.kult-item-sheet .editor {
+    border: 1px solid #968c6a;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.kult-item-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.endure-harm-dialog {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.endure-harm-dialog #harm_value {
+    width: auto;
+    margin-left: 10px;
+}
+
+.kult-item-sheet .tokens-container {
+    display: flex;
+    align-items: center;
+}
+
+.kult-item-sheet .tokens-container > label,
+.kult-item-sheet .tokens-container > input {
+    margin-right: 10px;
+}
+
+.kult-item-sheet .tokens-counter {
+    width: 80px;
+}
+
+.npc-harm-taken {
+    margin-bottom: .4rem;
+    padding-bottom: .4rem;
+    text-align: left;
+    border-bottom: 1px dashed rgba(148, 140, 104, 50%);
+}

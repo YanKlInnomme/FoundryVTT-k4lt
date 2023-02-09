@@ -1,0 +1,16 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64" />
+    <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
+  </header>
+  <div class="kult-item-sheet kult-item-flex">
+   <div>
+      <label>{{localize "k4lt.Target"}}:</label>
+      <input name="data.target" type="text" value="{{data.target}}">
+   </div>
+   <div>
+      <label>{{localize "k4lt.Strength"}}:</label>
+      <input name="data.strength" type="text" value="{{data.strength}}" data-dtype="Number">
+   </div>
+  </div>
+</form>

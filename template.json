@@ -1,0 +1,117 @@
+{
+  "Actor": {
+    "types": ["pc", "npc"],
+    "pc": {
+      "biography": "",
+      "appearance": "",
+      "stability": {
+        "value": 0,
+        "min": 0,
+        "max": 9
+      },
+      "sitmod": 0,
+      "attributes": {
+        "willpower": 0,
+        "fortitude": 0,
+        "reflexes": 0,
+        "reason": 0,
+        "intuition": 0,
+        "perception": 0,
+        "coolness": 0,
+        "violence": 0,
+        "charisma": 0,
+        "soul": 0
+      },
+        "forward": 0,
+        "woundtext": {
+          "majorwound1": "",
+          "majorwound2": "",
+          "majorwound3": "",
+          "majorwound4": "",
+          "criticalwound": ""
+        },
+        "woundstabilized": {
+          "majorwound1": "true",
+          "majorwound2": "true",
+          "majorwound3": "true",
+          "majorwound4": "true",
+          "criticalwound": "true"
+        }
+    },
+    "npc": {
+      "home": "",
+      "creature_type": "",
+      "harm": {
+        "value": 0,
+        "min": 0,
+        "max": 5
+      },
+      "harmmoves": "",
+      "combatmoves": "",
+      "influencemoves": "",
+      "magicmoves": "",
+      "description": "",
+      "attacks": "",
+      "abilities": ""
+    }
+  },
+  "Item": {
+    "types": ["move", "weapon", "advantage", "disadvantage", "darksecret", "relationship", "gear"],
+    "move": {
+      "description": "",
+      "attributemod": "",
+      "completesuccess": "Complete Success",
+      "partialsuccess": "Partial Success",
+      "failure": "Failure!",
+      "trigger": "When you",
+      "specialflag": "0"
+    },
+    "weapon": {
+      "description": "",
+      "harm": 0,
+      "range": 0,
+      "ammo": {
+        "value": 0,
+        "min": 0,
+        "max": 0
+      },
+      "special": "Special"
+    },
+    "advantage": {
+      "description": "",
+      "type": "active",
+      "effect": "",
+      "options": "",
+      "completesuccess": "Complete Success",
+      "partialsuccess": "Partial Success",
+      "failure": "Failure!",
+      "attributemod": "",
+      "tokens": "",
+      "hasTokens": false
+    },
+    "disadvantage": {
+      "description": "",
+      "type": "active",
+      "effect": "",
+      "options": "",
+      "completesuccess": "Complete Success",
+      "partialsuccess": "Partial Success",
+      "failure": "Failure!",
+      "attributemod": "",
+      "tokens": "",
+      "hasTokens": false
+    },
+    "darksecret": {
+      "description": "",
+      "effect": ""
+    },
+    "relationship": {
+      "target": "",
+      "strength": 0
+    },
+    "gear": {
+      "uses": "",
+      "description": ""
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<div class="weapon-card move-card">
+  <div class="move-info item-name" data-item-id="{{_id}}">
+    <span class="weapon-column">{{name}}</span>
+    {{#if data.ammo.max}}
+      <span class="weapon-column">{{localize "k4lt.Uses"}} {{data.ammo.value}}/{{data.ammo.max}}</span>
+    {{/if}}
+    <div>
+      <a class="item-control item-show" title="{{localize "k4lt.ShowItem"}}"><i class="far fa-comment-alt"></i></a>
+      <a class="item-control item-delete" title="{{localize "k4lt.DeleteItem"}}"><i class="fas fa-trash"></i></a>
+      <a class="item-control item-edit" title="{{localize "k4lt.EditItem"}}"><i class="fas fa-edit"></i></a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,447 @@
+<form class="{{cssClass}} kult-sheet" autocomplete="off">
+    <header class="sheet-header">
+        <script src="systems/k4lt/scripts/delete.js"></script>
+        <script src="systems/k4lt/scripts/getAttribute.js"></script>
+        <img src="/systems/k4lt/assets/kultlogo.png" height="64" width="167">
+        <h1 class="character-name"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
+    </header>
+    <div class="flex-container">
+        <div class="flex-column modifier-section">
+            <img class="actor-picture" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="167" width="167" />
+            <div>
+                <div class="spec">
+                    <label>{{localize "k4lt.Age"}}</label>
+                    <p1 class="character-detail">
+                        <input name="data.attributes.age" type="text" value="{{data.attributes.age}}" placeholder="{{localize "k4lt.Age"}}">
+                    </p1>
+                </div>
+                <div class="spec">
+                    <label>{{localize "k4lt.Gender"}}</label>
+                    <p1 class="character-detail">
+                        <input name="data.attributes.gender" type="text" value="{{data.attributes.gender}}" placeholder="{{localize "k4lt.Gender"}}">
+                    </p1>
+                </div>
+                <div class="spec">
+                    <label>{{localize "k4lt.Ethnicity"}}</label>
+                    <p1 class="character-detail">
+                        <input name="data.attributes.ethnicity" type="text" value="{{data.attributes.ethnicity}}" placeholder="{{localize "k4lt.Ethnicity"}}">
+                    </p1>
+                </div>
+            </div>
+            <div>
+                <div class="spec">
+                    <label>{{localize "k4lt.Weight"}}</label>
+                    <p1 class="character-detail">
+                        <input name="data.attributes.weight" type="text" value="{{data.attributes.weight}}" placeholder="{{localize "k4lt.Weight"}}">
+                    </p1>
+                </div>
+                <div class="spec">
+                    <label>{{localize "k4lt.Height"}}</label>
+                    <p1 class="character-detail">
+                        <input name="data.attributes.cm" type="text" value="{{data.attributes.cm}}" placeholder="{{localize "k4lt.Height"}}">
+                    </p1>
+                </div>
+            </div>
+            <div>
+                <div class="spec">
+                    <label>{{localize "k4lt.Eyes"}}</label>
+                    <p1 class="character-detail">
+                        <input name="data.attributes.eye" type="text" value="{{data.attributes.eye}}" placeholder="{{localize "k4lt.Eyes"}}">
+                    </p1>
+                </div>
+                <div class="spec">
+                    <label>{{localize "k4lt.Hair"}}</label>
+                    <p1 class="character-detail">
+                        <input name="data.attributes.hair" type="text" value="{{data.attributes.hair}}" placeholder="{{localize "k4lt.Hair"}}">
+                    </p1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-container top-section">
+        <div class="flex-column modifier-section">
+            <div>
+                {{localize "k4lt.Forward"}}:
+                <select name="data.forward" value="{{data.forward}}">
+                    {{#select data.forward}}
+                        <option value="5">5</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                        <option value="0">0</option>
+                        <option value="-1">-1</option>
+                        <option value="-2">-2</option>
+                        <option value="-3">-3</option>
+                        <option value="-4">-4</option>
+                        <option value="-5">-5</option>
+                    {{/select}}
+                </select>
+            </div>
+            <div class="situational-modifier">
+                {{localize "k4lt.SitMod"}}:
+                <select name="data.sitmod" value="{{data.sitmod}}">
+                    {{#select data.sitmod}}
+                        <option value="5">5</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                        <option value="0">0</option>
+                        <option value="-1">-1</option>
+                        <option value="-2">-2</option>
+                        <option value="-3">-3</option>
+                        <option value="-4">-4</option>
+                        <option value="-5">-5</option>
+                    {{/select}}
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="navigation-section">
+        <a class="tabButton" data-tab="Stats">{{localize "k4lt.Stats"}}</a>
+        <a class="tabButton" data-tab="Background">{{localize "k4lt.Background"}}</a>
+    </div>
+    <div id="Stats" class="stats-section {{actor._id}}-tab">
+        <div class="middle-section">
+            <div class="attribute-column">
+                <table class="attribute-box" style="table-layout: fixed; width: 200px; height:500px;">
+                    <tr style="background-color: black;">
+                        <td></td>
+                        <td class="willpic">
+                            <select class="foo" name="data.attributes.willpower" value="{{data.attributes.willpower}}">
+                                {{#select data.attributes.willpower}}
+                                    <option value="5">&nbsp;5&nbsp;</option>
+                                    <option value="4">&nbsp;4&nbsp;</option>
+                                    <option value="3">&nbsp;3&nbsp;</option>
+                                    <option value="2">&nbsp;2&nbsp;</option>
+                                    <option value="1">&nbsp;1&nbsp;</option>
+                                    <option value="0">&nbsp;0&nbsp;</option>
+                                    <option value="-1">-1&nbsp;</option>
+                                    <option value="-2">-2&nbsp;</option>
+                                    <option value="-3">-3&nbsp;</option>
+                                    <option value="-4">-4&nbsp;</option>
+                                    <option value="-5">-5&nbsp;</option>
+                                {{/select}}
+                            </select>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr style="background-color: black;">
+                        <td class="fortpic">
+                            <select class="foo" name="data.attributes.fortitude" value="{{data.attributes.fortitude}}">
+                                {{#select data.attributes.fortitude}}
+                                    <option value="5">&nbsp;5&nbsp;</option>
+                                    <option value="4">&nbsp;4&nbsp;</option>
+                                    <option value="3">&nbsp;3&nbsp;</option>
+                                    <option value="2">&nbsp;2&nbsp;</option>
+                                    <option value="1">&nbsp;1&nbsp;</option>
+                                    <option value="0">&nbsp;0&nbsp;</option>
+                                    <option value="-1">-1&nbsp;</option>
+                                    <option value="-2">-2&nbsp;</option>
+                                    <option value="-3">-3&nbsp;</option>
+                                    <option value="-4">-4&nbsp;</option>
+                                    <option value="-5">-5&nbsp;</option>
+                                {{/select}}
+                            </select>
+                        </td>
+                        <td>{{localize "k4lt.Willpower"}}</td>
+                        <td class="refpic">
+                            <select class="foo" name="data.attributes.reflexes" value="{{data.attributes.reflexes}}">
+                                {{#select data.attributes.reflexes}}
+                                    <option value="5">&nbsp;5&nbsp;</option>
+                                    <option value="4">&nbsp;4&nbsp;</option>
+                                    <option value="3">&nbsp;3&nbsp;</option>
+                                    <option value="2">&nbsp;2&nbsp;</option>
+                                    <option value="1">&nbsp;1&nbsp;</option>
+                                    <option value="0">&nbsp;0&nbsp;</option>
+                                    <option value="-1">-1&nbsp;</option>
+                                    <option value="-2">-2&nbsp;</option>
+                                    <option value="-3">-3&nbsp;</option>
+                                    <option value="-4">-4&nbsp;</option>
+                                    <option value="-5">-5&nbsp;</option>
+                                {{/select}}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{{localize "k4lt.Fortitude"}}</td>
+                        <td></td>
+                        <td>{{localize "k4lt.Reflexes"}}</td>
+                    </tr>
+                    <tr>
+                        <td class="reasonpic">
+                            <select class="foo" name="data.attributes.reason" value="{{data.attributes.reason}}">
+                                {{#select data.attributes.reason}}
+                                    <option value="5">&nbsp;5&nbsp;</option>
+                                    <option value="4">&nbsp;4&nbsp;</option>
+                                    <option value="3">&nbsp;3&nbsp;</option>
+                                    <option value="2">&nbsp;2&nbsp;</option>
+                                    <option value="1">&nbsp;1&nbsp;</option>
+                                    <option value="0">&nbsp;0&nbsp;</option>
+                                    <option value="-1">-1&nbsp;</option>
+                                    <option value="-2">-2&nbsp;</option>
+                                    <option value="-3">-3&nbsp;</option>
+                                    <option value="-4">-4&nbsp;</option>
+                                    <option value="-5">-5&nbsp;</option>
+                                {{/select}}
+                            </select>
+                        </td>
+                        <td class="attmid"></td>
+                        <td class="intupic">
+                            <select class="foo" name="data.attributes.intuition" value="{{data.attributes.intuition}}">
+                                {{#select data.attributes.intuition}}
+                                    <option value="5">&nbsp;5&nbsp;</option>
+                                    <option value="4">&nbsp;4&nbsp;</option>
+                                    <option value="3">&nbsp;3&nbsp;</option>
+                                    <option value="2">&nbsp;2&nbsp;</option>
+                                    <option value="1">&nbsp;1&nbsp;</option>
+                                    <option value="0">&nbsp;0&nbsp;</option>
+                                    <option value="-1">-1&nbsp;</option>
+                                    <option value="-2">-2&nbsp;</option>
+                                    <option value="-3">-3&nbsp;</option>
+                                    <option value="-4">-4&nbsp;</option>
+                                    <option value="-5">-5&nbsp;</option>
+                                {{/select}}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{{localize "k4lt.Reason"}}</td>
+                        <td class="percpic">
+                            <select class="foo" name="data.attributes.perception" value="{{data.attributes.perception}}">
+                                {{#select data.attributes.perception}}
+                                    <option value="5">&nbsp;5&nbsp;</option>
+                                    <option value="4">&nbsp;4&nbsp;</option>
+                                    <option value="3">&nbsp;3&nbsp;</option>
+                                    <option value="2">&nbsp;2&nbsp;</option>
+                                    <option value="1">&nbsp;1&nbsp;</option>
+                                    <option value="0">&nbsp;0&nbsp;</option>
+                                    <option value="-1">-1&nbsp;</option>
+                                    <option value="-2">-2&nbsp;</option>
+                                    <option value="-3">-3&nbsp;</option>
+                                    <option value="-4">-4&nbsp;</option>
+                                    <option value="-5">-5&nbsp;</option>
+                                {{/select}}
+                            </select>
+                        </td>
+                        <td>{{localize "k4lt.Intuition"}}</td>
+                    </tr>
+                    <tr style="background-color: black;">
+                        <td class="coolpic">
+                            <select class="foo" name="data.attributes.coolness" value="{{data.attributes.coolness}}">
+                                {{#select data.attributes.coolness}}
+                                    <option value="5">&nbsp;5&nbsp;</option>
+                                    <option value="4">&nbsp;4&nbsp;</option>
+                                    <option value="3">&nbsp;3&nbsp;</option>
+                                    <option value="2">&nbsp;2&nbsp;</option>
+                                    <option value="1">&nbsp;1&nbsp;</option>
+                                    <option value="0">&nbsp;0&nbsp;</option>
+                                    <option value="-1">-1&nbsp;</option>
+                                    <option value="-2">-2&nbsp;</option>
+                                    <option value="-3">-3&nbsp;</option>
+                                    <option value="-4">-4&nbsp;</option>
+                                    <option value="-5">-5&nbsp;</option>
+                                {{/select}}
+                            </select>
+                        </td>
+                        <td>{{localize "k4lt.Perception"}}</td>
+                        <td class="violpic">
+                            <select class="foo" name="data.attributes.violence" value="{{data.attributes.violence}}">
+                                {{#select data.attributes.violence}}
+                                    <option value="5">&nbsp;5&nbsp;</option>
+                                    <option value="4">&nbsp;4&nbsp;</option>
+                                    <option value="3">&nbsp;3&nbsp;</option>
+                                    <option value="2">&nbsp;2&nbsp;</option>
+                                    <option value="1">&nbsp;1&nbsp;</option>
+                                    <option value="0">&nbsp;0&nbsp;</option>
+                                    <option value="-1">-1&nbsp;</option>
+                                    <option value="-2">-2&nbsp;</option>
+                                    <option value="-3">-3&nbsp;</option>
+                                    <option value="-4">-4&nbsp;</option>
+                                    <option value="-5">-5&nbsp;</option>
+                                {{/select}}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{{localize "k4lt.Coolness"}}</td>
+                        <td class="chapic">
+                            <select class="foo" name="data.attributes.charisma" value="{{data.attributes.charisma}}">
+                                {{#select data.attributes.charisma}}
+                                    <option value="5">&nbsp;5&nbsp;</option>
+                                    <option value="4">&nbsp;4&nbsp;</option>
+                                    <option value="3">&nbsp;3&nbsp;</option>
+                                    <option value="2">&nbsp;2&nbsp;</option>
+                                    <option value="1">&nbsp;1&nbsp;</option>
+                                    <option value="0">&nbsp;0&nbsp;</option>
+                                    <option value="-1">-1&nbsp;</option>
+                                    <option value="-2">-2&nbsp;</option>
+                                    <option value="-3">-3&nbsp;</option>
+                                    <option value="-4">-4&nbsp;</option>
+                                    <option value="-5">-5&nbsp;</option>
+                                {{/select}}
+                            </select>
+                        </td>
+                        <td>{{localize "k4lt.Violence"}}</td>
+                    </tr>
+                    <tr style="background-color: black;">
+                        <td></td>
+                        <td>{{localize "k4lt.Charisma"}}</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="soulpic">
+                            <select class="foo" name="data.attributes.soul" value="{{data.attributes.soul}}">
+                                {{#select data.attributes.soul}}
+                                    <option value="5">&nbsp;5&nbsp;</option>
+                                    <option value="4">&nbsp;4&nbsp;</option>
+                                    <option value="3">&nbsp;3&nbsp;</option>
+                                    <option value="2">&nbsp;2&nbsp;</option>
+                                    <option value="1">&nbsp;1&nbsp;</option>
+                                    <option value="0">&nbsp;0&nbsp;</option>
+                                    <option value="-1">-1&nbsp;</option>
+                                    <option value="-2">-2&nbsp;</option>
+                                    <option value="-3">-3&nbsp;</option>
+                                    <option value="-4">-4&nbsp;</option>
+                                    <option value="-5">-5&nbsp;</option>
+                                {{/select}}
+                            </select>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr style="background-color: black;">
+                        <td></td>
+                        <td style="background-color: black;">{{localize "k4lt.Soul"}}</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="advantage-box">
+                <div class="section-label">{{localize "k4lt.DarkSecrets"}}</div>
+                <div class=" item-list darksecret-list">
+                    {{#each darksecrets as |darksecret id|}}
+                        {{> "systems/k4lt/templates/partials/darksecret-card.hbs" darksecret}}
+                    {{/each}}
+                </div>
+                <div class="section-label">{{localize "k4lt.Advantages"}}</div>
+                <div class="item-list advantage-list">
+                    {{#each advantages as |advantage id|}}
+                        {{> "systems/k4lt/templates/partials/advantage-card.hbs" advantage}}
+                    {{/each}}
+                </div>
+                <div class="section-label">{{localize "k4lt.Disadvantages"}}</div>
+                <div class="item-list disadvantage-list">
+                    {{#each disadvantages as |disadvantage id|}}
+                        {{> "systems/k4lt/templates/partials/disadvantage-card.hbs" disadvantage}}
+                    {{/each}}
+                </div>
+                <div class="section-label">{{localize "k4lt.Relationships"}}</div>
+                <div class="item-list relationship-list">
+                    {{#each relationships as |relationship id|}}
+                        {{> "systems/k4lt/templates/partials/relationship-card.hbs" relationship}}
+                    {{/each}}
+                </div>
+            </div>
+            <div class="right-middle-column">
+                <div class="section-label">{{localize "k4lt.Wounds"}}</div>
+                <div class="wound-entries">
+                    {{#each wounds}}
+                        <div class="wound-section">
+                            <label>{{localize "k4lt.MajorWound"}}</label>
+                            <select class="stabilized" name="data.attributes.woundstabilized.{{this}}"
+                                    value="{{lookup ../data.attributes.woundstabilized this}}">
+                                {{#select (lookup ../data.attributes.woundstabilized this)}}
+                                    <option value="true">{{localize "k4lt.Stabilized"}}</option>
+                                    <option value="false">{{localize "k4lt.NotStabilized"}}</option>
+                                {{/select}}
+                            </select>
+                        </div>
+                        <div class="wound-name">
+                            <input type="text" name="data.attributes.woundtext.{{this}}" value="{{lookup ../data.attributes.woundtext this}}">
+                        </div>
+                    {{/each}}
+                    <div class="wound-section">
+                        <label>{{localize "k4lt.CriticalWound"}}</label>
+                        <select class="stabilized" name="data.attributes.criticalwoundstabilized"
+                                value="{{data.attributes.criticalwoundstabilized}}">
+                            {{#select data.attributes.criticalwoundstabilized}}
+                                <option value="true">{{localize "k4lt.Stabilized"}}</option>
+                                <option value="false">{{localize "k4lt.NotStabilized"}}</option>
+                            {{/select}}
+                        </select>
+                    </div>
+                    <div class="wound-name">
+                        <input type="text" name="data.attributes.criticalwound" value="{{data.attributes.criticalwound}}">
+                    </div>
+                </div>
+                <div class="flex-column stability-section">
+                    <div class="section-label">{{localize "k4lt.Stability"}}</div>
+                    <div>
+                        <select name="data.stability.value" value="{{data.stability.value}}">{{#select data.stability.value}}
+                            <option value="0">{{localize "k4lt.StabilityComposed"}}</option>
+                            <option value="1">{{localize "k4lt.StabilityUneasy"}}</option>
+                            <option value="2">{{localize "k4lt.StabilityUnfocused"}}</option>
+                            <option value="3">{{localize "k4lt.StabilityShaken"}}</option>
+                            <option value="4">{{localize "k4lt.StabilityDistressed"}}</option>
+                            <option value="5">{{localize "k4lt.StabilityNeurotic"}}</option>
+                            <option value="6">{{localize "k4lt.StabilityAnxious"}}</option>
+                            <option value="7">{{localize "k4lt.StabilityIrrational"}}</option>
+                            <option value="8">{{localize "k4lt.StabilityUnhinged"}}</option>
+                            <option value="9">{{localize "k4lt.StabilityBroken"}}</option>
+                        {{/select}}
+                        </select>
+                        <a class="stability-minus" title="{{localize "k4lt.MinusStability"}}"><i class="fas fa-minus-circle"></i></a>
+                        <a class="stability-plus" title="{{localize "k4lt.PlusStability"}}"><i class="fas fa-plus-circle"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-section">
+            <div class="move-section">
+                <div class="section-label">{{localize "k4lt.Moves"}}</div>
+                <div class="item-list move-list">
+                    {{#each moves as |move id|}}
+                        {{#if (eq move.type "move")}}
+                            {{> "systems/k4lt/templates/partials/move-card.hbs" move}}
+                        {{/if}}
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        <div class="two-column">
+            <div class="weapon-section">
+                <div class="section-label">{{localize "k4lt.Weapons"}}</div>
+                <div class=" item-list weapon-list">
+                    {{#each weapons as |weapon id|}}
+                        {{> "systems/k4lt/templates/partials/weapon-card.hbs" weapon}}
+                    {{/each}}
+                </div>
+            </div>
+            <div class="gear-section">
+                <div class="section-label">{{localize "k4lt.Gear"}}</div>
+                <div class=" item-list weapon-list">
+                    {{#each gear as |gear id|}}
+                        {{> "systems/k4lt/templates/partials/gear-card.hbs" gear}}
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Background" class="background-section {{actor._id}}-tab">
+        <div class="two-column">
+            <div "background-box">
+                <div class="section-label">{{localize "k4lt.Background"}}</div>
+                <div class="free-text">
+                    {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
+                </div>
+            </div>
+            <div>
+                <div class="section-label">{{localize "k4lt.Appearance"}}</div>
+                <div class="free-text">
+                    {{editor content=data.appearance target="data.appearance" button=true owner=owner editable=editable}}
+                </div>
+            </div>
+        </div>
+</form>

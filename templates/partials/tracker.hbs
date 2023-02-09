@@ -1,0 +1,14 @@
+<div class="flames tracker-container">
+  {{!-- <div id="tracker-clickable" class="tracker-clickable">
+    <i id="tracker-clickable-plus" class="fas fa-plus hide"></i>
+    <i id="tracker-clickable-minus" class="fas fa-minus"></i>
+  </div> --}}
+<h3>This is the Tracker!</h3>
+{{#each pcs}}
+    {{name}}<br/>
+        {{#each pc.disadvantagearray as |disadvantage id|}}
+            {{disadvantage.name}}
+        {{/each}}
+    {{!-- {{this.data.disadvantages[0].name}}<br/> --}}
+{{/each}}
+</div>

@@ -1,4 +1,4 @@
-export default class kultTracker extends Application {
+export default class k4ltTracker extends Application {
     static get defaultOptions() {
       const options = super.defaultOptions;
       options.template = 'systems/k4lt/templates/partials/tracker.hbs';

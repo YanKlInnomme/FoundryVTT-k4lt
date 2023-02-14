@@ -101,17 +101,7 @@
   "k4lt.HealedStability": "ha recuperado Estabilidad",
   "k4lt.PCIsComposed": "El personaje ya está Tranquilo",
   "k4lt.PassiveAbility": "Este rasgo es pasivo, no necesita tirada",
-  "k4lt.Settings.Paused": "Juego en pausa",
-  "k4lt.Settings.PauseIcon": "Icono de Pausa",
-  "k4lt.Settings.PauseIconHint": "Selecciona una imagen para reemplazar el icono de pausa.",
-  "k4lt.Settings.Opacity": "Transparencia",
-  "k4lt.Settings.OpacityHint": "Define la transparencia del icono de pausa.",
-  "k4lt.Settings.PauseText": "Texto de pausa",
-  "k4lt.Settings.PauseTextHint": "Define el texto para el icono de pausa.",
-  "k4lt.Settings.RotationSpeed": "Velocidad de rotación",
-  "k4lt.Settings.RotationSpeedHint": "Define la velocidad de rotación del icono de pausa.",
-  "k4lt.Settings.Debug": "Habilitar depuración",
-  "k4lt.Settings.DebugHint": "Habilita la depuración para ver algunos mensajes de información en la consola, con el prefijo 'K4lt'",
+  
   "k4lt.Abilities": "Habilidades",
   "k4lt.Attacks": "Ataques",
   "k4lt.NPC": {

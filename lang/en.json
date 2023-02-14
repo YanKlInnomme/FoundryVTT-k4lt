@@ -101,17 +101,7 @@
   "k4lt.HealedStability": "Healed Stability",
   "k4lt.PCIsComposed": "Character is Fully Stable",
   "k4lt.PassiveAbility": "This ability is Passive",
-  "k4lt.Settings.Paused": "Game Paused",
-  "k4lt.Settings.PauseIcon": "Pause Icon",
-  "k4lt.Settings.PauseIconHint": "Select an image to replace the pause icon.",
-  "k4lt.Settings.Opacity": "Opacity",
-  "k4lt.Settings.OpacityHint": "Set the opacity of the pause icon.",
-  "k4lt.Settings.PauseText": "Pause Text",
-  "k4lt.Settings.PauseTextHint": "Set the pause text.",
-  "k4lt.Settings.RotationSpeed": "Rotation Speed",
-  "k4lt.Settings.RotationSpeedHint": "Set the pause icon rotation speed.",
-  "k4lt.Settings.Debug": "Enable Debug",
-  "k4lt.Settings.DebugHint": "Enable debug to see some info logs with the prefix 'K4lt' in the console",
+  
   "k4lt.Abilities": "Abilities",
   "k4lt.Attacks": "Ataques",
   "k4lt.NPC": {

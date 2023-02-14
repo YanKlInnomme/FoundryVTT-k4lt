@@ -1,3 +1,223 @@
+/* Polices d'écritures */
+
+@font-face {
+    font-family: "Alverata";
+    src:url("../fonts/Alverata.ttf") format("truetype"),
+        url("../fonts/Alverata-Bold.ttf") format("truetype"),
+        url("../fonts/Alverata-BoldItalic.ttf") format("truetype"),
+        url("../fonts/Alverata-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Infidel-C";
+    src:url("../fonts/Infidel-C.woff2") format("woff2"),
+        url("../fonts/Infidel-C.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+#logo {
+  width: 120px;
+  height: auto;
+  padding-right: 10px;
+  content: url("../assets/logo_en.webp");
+}
+  
+#pause > img {
+    content: url("../assets/pause.webp");
+    height: 220px;
+    width: 220px;
+    top: -65px;
+    left: calc(50% - 110px);
+}
+  
+#pause {
+    top: 50%;
+    background: none;
+}
+  
+#pause > figcaption {
+    font-family: "Infidel-C";
+    color: rgb(25, 25, 25); 
+    text-shadow: 0px 0px 30px rgb(150, 140, 108);
+}
+  
+:root {
+    --color-text-light-highlight: rgb(153, 138, 97);
+    --color-text-light-heading: rgb(129, 116, 81);
+    --color-text-light-primary: rgb(100, 105, 75);
+    --color-text-hyperlink: rgb(150, 14, 22);
+    --color-shadow-primary: rgb(167, 14, 22);
+    --color-shadow-highlight: rgb(236, 20, 31);
+    --color-border-highlight: rgb(236, 20, 31);
+    --color-border-highlight-alt: rgb(167, 14, 22);
+    --font-primary: "Alverata", sans-serif;
+}
+
+h1,h2,h3 {
+    font-family: "Infidel-C";
+}
+
+.chat-message.whisper {
+    background: rgb(200, 190, 140);
+}
+
+.move-roll:hover {
+    color: rgb(168, 14, 18);
+  }
+
+
+/* Les caractéristiques */
+
+.foo:hover {
+    color: rgb(168, 14, 18);
+}
+
+.attmid {
+    background: url(../assets/attributes/middle.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
+  .willpic {
+    background: url(../assets/attributes/will.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.willpic:hover {
+    background: url(../assets/attributes/will-hover.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.fortpic {
+    background: url(../assets/attributes/fort.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.fortpic:hover {
+    background: url(../assets/attributes/fort-hover.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.refpic {
+    background: url(../assets/attributes/ref.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.refpic:hover {
+    background: url(../assets/attributes/ref-hover.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.reasonpic {
+    background: url(../assets/attributes/reason.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.reasonpic:hover {
+    background: url(../assets/attributes/reason-hover.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.reasonpic:hover + .attmid {
+    background-image: url(../assets/attributes/middle-left.webp);
+}
+
+.intupic {
+    background: url(../assets/attributes/intu.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.intupic:hover {
+    background: url(../assets/attributes/intu-hover.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.percpic {
+    background: url(../assets/attributes/perc.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.percpic:hover {
+    background: url(../assets/attributes/perc-hover.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.coolpic {
+    background: url(../assets/attributes/cool.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.coolpic:hover {
+    background: url(../assets/attributes/cool-hover.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.violpic {
+    background: url(../assets/attributes/viol.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.violpic:hover {
+    background: url(../assets/attributes/viol-hover.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.chapic {
+    background: url(../assets/attributes/cha.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.chapic:hover {
+    background: url(../assets/attributes/cha-hover.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.soulpic {
+    background: url(../assets/attributes/soul.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.soulpic:hover {
+    background: url(../assets/attributes/soul-hover.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
+.attribute-column table {
+    border: none;
+}
+
+.attribute-column table tr {
+    background-color: transparent;
+    border-spacing: 0;
+}
+
+
+
 .advantage-box {
     display: flex;
     flex-direction: column;
@@ -47,9 +267,7 @@
     vertical-align: middle
 }
 
-table {
-    border-top: none;
-}
+
 
 .spec {
     padding: 5px;
@@ -72,14 +290,14 @@ table {
     padding-top: 5px;
     padding-bottom: 5px;
     border-radius: 5px;
-    border: 1px solid #968c6a;
-    background-color: black;
+    border: 1px solid rgb(150, 140, 106);
+    background-color: rgb(27, 27, 27);
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 5px;
     width: 97%;
     break-inside: avoid;
-    color: white;
+    color: rgb(153, 138, 97);
 }
 
 .actor-picture {
@@ -237,10 +455,10 @@ td textarea {
     padding-bottom: 3px;
     height: 20px;
     width: 20px;
+    border: 0px;
 }
 
 .kult-sheet {
-    background: url(tausta.jpg) white;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
@@ -254,11 +472,9 @@ td textarea {
 }
 
 .section-label {
-    color: #FFFFFF;
-    text-shadow: 0px 0px 5px red;
-    border: 1px;
-    border-style: solid;
-    border-color: #948c68;
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 0px 5px #968c6a;
+    border-bottom: 1px solid #968c6a;
 }
 
 .wound-section select {
@@ -321,25 +537,24 @@ td textarea {
     padding: 5px;
 }
 
-.modifier-section div {
+/* .modifier-section div {
     background-color: #000000;
-}
+} */
 
-.modifier-section select {
+/* .modifier-section select {
     background-color: #000000;
-}
+} */
 
 .situational-modifier {
     margin-left: 8px;
 }
 
-input {
+/* input {
     background-color: white;
-}
+} */
 
 .attribute-box {
-    background-color: black;
-    color: white;
+    color: rgb(0, 0, 0);
     border: 1px;
     border-style: solid;
     border-color: #948c68;
@@ -349,13 +564,13 @@ input {
     font-size: 10px;
 }
 
-.attribute-box option {
+/* .attribute-box option {
     background-color: black;
 }
 
 .attribute-box tr {
     background-color: black !important;
-}
+} */
 
 .modifier-section {
     display: flex;
@@ -469,150 +684,11 @@ input.short-input {
     margin-left: 5px;
 }
 
-.willpic {
-    background: url(will.png);
-    background-color: black;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    opacity: .8;
-}
 
-.willpic:hover {
-    opacity: 1;
-    text-shadow: 0 0 5px #ffee10;
-}
 
-.fortpic {
-    background: url(fort.png);
-    background-color: black;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    opacity: .8;
-}
-
-.fortpic:hover {
-    opacity: 1;
-    text-shadow: 0 0 5px #ffee10;
-}
-
-.refpic {
-    background: url(ref.png);
-    background-color: black;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    opacity: .8;
-}
-
-.refpic:hover {
-    opacity: 1;
-    text-shadow: 0 0 5px #ffee10;
-}
-
-.foo:hover {
-    color: red;
-}
-
-.reasonpic {
-    background: url(reason.png);
-    background-color: black;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    opacity: .8;
-}
-
-.reasonpic:hover {
-    opacity: 1;
-    text-shadow: 0 0 5px #ffee10;
-}
-
-.intupic {
-    background: url(intu.png);
-    background-color: black;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    opacity: .8;
-}
-
-.intupic:hover {
-    opacity: 1;
-    text-shadow: 0 0 5px #ffee10;
-}
-
-.percpic {
-    background: url(perc.png);
-    background-color: black;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    opacity: .8;
-}
-
-.percpic:hover {
-    opacity: 1;
-    text-shadow: 0 0 5px #ffee10;
-}
-
-.attmid {
-    background: url(middle.png);
-    background-color: black;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    opacity: .8;
-}
-
-.coolpic {
-    background: url(cool.png);
-    background-color: black;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    opacity: .8;
-}
-
-.coolpic:hover {
-    opacity: 1;
-    text-shadow: 0 0 5px #ffee10;
-}
-
-.violpic {
-    background: url(viol.png);
-    background-color: black;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    opacity: .8;
-}
-
-.violpic:hover {
-    opacity: 1;
-    text-shadow: 0 0 5px #ffee10;
-}
-
-.chapic {
-    background: url(cha.png);
-    background-color: black;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    opacity: .8;
-}
-
-.chapic:hover {
-    opacity: 1;
-    text-shadow: 0 0 5px #ffee10;
-}
-
-.soulpic {
-    background: url(soul.png);
-    background-color: black;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    opacity: .8;
-}
-
-.soulpic:hover {
-    opacity: 1;
-    text-shadow: 0 0 5px #ffee10;
-}
 
 .kult-item-sheet {
-    padding: 10px;
+    padding: 5px;
 }
 
 .kult-item-sheet > div {

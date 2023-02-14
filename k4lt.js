@@ -2,7 +2,7 @@ import k4ltitemsheet from "./modules/sheets/k4ltitemsheet.js";
 import k4ltPCsheet from "./modules/sheets/k4ltPCsheet.js";
 import k4ltNPCsheet from "./modules/sheets/k4ltNPCsheet.js";
 import k4ltActor from "./modules/sheets/k4ltActor.js";
-import kultTracker from "./modules/tracker.js";
+import k4ltTracker from "./modules/tracker.js";
 import {registerSystemSettings} from "./modules/system/settings.js";
 import {registerLogger} from "./modules/system/logger.js";
 
@@ -19,25 +19,15 @@ async function preloadHandlebarTemplates() {
   return loadTemplates(templatepaths);
 };
 
-Hooks.on("renderPause", function () {
-  if ($("#pause").attr("class") !== "paused") return;
-  const path = game.settings.get("k4lt", "pausePath");
-  const opacity = parseInt(game.settings.get("k4lt", "pauseOpacity")) / 100;
-  const speed = game.settings.get("k4lt", "pauseSpeed") + "s linear 0s infinite normal none running rotation";
-  $("#pause.paused img").attr("src", path);
-  $("#pause.paused img").css({"opacity": opacity, "-webkit-animation": speed});
-  $("#pause.paused h3").text(game.i18n.localize(game.settings.get("k4lt", "pauseText")));
-});
-
 Hooks.once("init", function() {
   // Register System Settings
   registerSystemSettings();
   registerLogger();
 
-  kultLogger("Initializing Kult 4E");
+  kultLogger("Initializing K4lt");
   CONFIG.Actor.documentClass = k4ltActor;
   Items.unregisterSheet("core", ItemSheet);
-  //Actors.unregisterSheet("core", ActorSheet);
+  Actors.unregisterSheet("core", ActorSheet);
   Items.registerSheet("k4lt", k4ltitemsheet, {makeDefault: true});
   Actors.registerSheet("k4lt", k4ltPCsheet, {types: ["pc"], makeDefault: true});
   Actors.registerSheet("k4lt", k4ltNPCsheet, {types: ["npc"], makeDefault: true});

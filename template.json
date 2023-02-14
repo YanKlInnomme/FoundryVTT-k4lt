@@ -60,6 +60,7 @@
     "move": {
       "description": "",
       "attributemod": "",
+      "options": "",
       "completesuccess": "Complete Success",
       "partialsuccess": "Partial Success",
       "failure": "Failure!",

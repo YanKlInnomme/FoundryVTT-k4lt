@@ -2,7 +2,23 @@
     <header class="sheet-header">
         <script src="systems/k4lt/scripts/delete.js"></script>
         <script src="systems/k4lt/scripts/getAttribute.js"></script>
-        <img src="/systems/k4lt/assets/kultlogo.png" height="64" width="167">
+        <script>
+$('.reasonpic').hover(function() {
+  $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle-left.webp)');
+}, function() {
+  $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle.webp)');
+});
+$('.intupic').hover(function() {
+  $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle-right.webp)');
+}, function() {
+  $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle.webp)');
+});
+$('.percpic').hover(function() {
+  $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle-bottom.webp)');
+}, function() {
+  $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle.webp)');
+});
+        </script>
         <h1 class="character-name"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
     </header>
     <div class="flex-container">
@@ -106,7 +122,7 @@
         <div class="middle-section">
             <div class="attribute-column">
                 <table class="attribute-box" style="table-layout: fixed; width: 200px; height:500px;">
-                    <tr style="background-color: black;">
+                    <tr>
                         <td></td>
                         <td class="willpic">
                             <select class="foo" name="data.attributes.willpower" value="{{data.attributes.willpower}}">
@@ -127,7 +143,7 @@
                         </td>
                         <td></td>
                     </tr>
-                    <tr style="background-color: black;">
+                    <tr>
                         <td class="fortpic">
                             <select class="foo" name="data.attributes.fortitude" value="{{data.attributes.fortitude}}">
                                 {{#select data.attributes.fortitude}}
@@ -227,7 +243,7 @@
                         </td>
                         <td>{{localize "k4lt.Intuition"}}</td>
                     </tr>
-                    <tr style="background-color: black;">
+                    <tr>
                         <td class="coolpic">
                             <select class="foo" name="data.attributes.coolness" value="{{data.attributes.coolness}}">
                                 {{#select data.attributes.coolness}}
@@ -285,7 +301,7 @@
                         </td>
                         <td>{{localize "k4lt.Violence"}}</td>
                     </tr>
-                    <tr style="background-color: black;">
+                    <tr>
                         <td></td>
                         <td>{{localize "k4lt.Charisma"}}</td>
                         <td></td>
@@ -311,9 +327,9 @@
                         </td>
                         <td></td>
                     </tr>
-                    <tr style="background-color: black;">
+                    <tr>
                         <td></td>
-                        <td style="background-color: black;">{{localize "k4lt.Soul"}}</td>
+                        <td>{{localize "k4lt.Soul"}}</td>
                         <td></td>
                     </tr>
                 </table>

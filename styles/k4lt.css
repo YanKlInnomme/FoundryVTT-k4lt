@@ -66,8 +66,27 @@ h1,h2,h3 {
 
 .move-roll:hover {
     color: rgb(168, 14, 18);
-  }
+}
 
+
+.forward {
+    color: rgb(224, 219, 204);
+    text-shadow: 0px 0px 5px rgb(150, 140, 106);
+    margin-left: 6px;
+}
+
+.situational-modifier {
+    color: rgb(224, 219, 204);
+    text-shadow: 0px 0px 5px rgb(150, 140, 106);
+    margin-left: 8px;
+}
+
+.hidden-select {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: rgb(224, 219, 204);
+}
 
 /* Les caractéristiques */
 
@@ -216,6 +235,9 @@ h1,h2,h3 {
     border-spacing: 0;
 }
 
+.tox-toolbar__group {
+    zoom: 90%;
+}
 
 
 .advantage-box {
@@ -274,9 +296,6 @@ h1,h2,h3 {
     width: 120px;
 }
 
-.section-label {
-    font-size: large;
-}
 
 .item-list {
     padding-bottom: 10px;
@@ -301,12 +320,22 @@ h1,h2,h3 {
 }
 
 .actor-picture {
+    position: relative;
+    height: 324px;
+    width: 200px;
+    transform: rotate(-5deg);
+    transition: transform 0.5s;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
     float: left;
     border: 1px;
-    border-style: solid;
-    border-color: #948c68;
-    height: 100%;
+    object-fit: cover;
+    margin-right: 10px;
 }
+
+.actor-picture:hover {
+    transform: rotate(0deg);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  }
 
 .bottom-section .move-list {
     columns: 250px;
@@ -319,6 +348,7 @@ h1,h2,h3 {
 .item-control {
     float: right;
     margin-left: 5px;
+    zoom: 75%;
 }
 
 .item-show {
@@ -373,6 +403,9 @@ div.right-middle-column {
 }
 
 .section-label {
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 0px 5px #968c6a;
+    border-bottom: 1px solid #968c6a;
     text-align: center;
     font-size: large;
 }
@@ -459,23 +492,20 @@ td textarea {
 }
 
 .kult-sheet {
+    background: url(../assets/background-sheet.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
     padding: 10px;
     color: #9b201f;
-    border: 1px solid #968c6a;
+    border: none;
 }
 
 .sheet-header img {
     background-color: black;
 }
 
-.section-label {
-    color: rgb(0, 0, 0);
-    text-shadow: 0px 0px 5px #968c6a;
-    border-bottom: 1px solid #968c6a;
-}
+
 
 .wound-section select {
     background-color: #782e22;
@@ -491,7 +521,7 @@ td textarea {
 }
 
 .stability-section select {
-    background-color: #782e22;
+    background-color: rgb(209, 207, 195);
     opacity: .8;
     margin: 8px 5px;
     width: calc(100% - 55px);
@@ -519,21 +549,19 @@ td textarea {
 .free-text {
     padding: .4rem;
     height: 100%;
-    border: 1px solid #948c68;
-    border-top-style: none;
     text-align: left;
-    color: #968c6a;
+    color: rgb(0, 0, 0);
 }
 
 .free-text .editor-content {
+    text-shadow: 0px 0px 5px #968c6a;
     padding: 0;
 }
 
 .modifier-section {
-    color: #9b201f;
-    border: 1px;
-    border-style: solid;
-    border-color: #948c68;
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 0px 5px #968c6a;
+    border: none;
     padding: 5px;
 }
 
@@ -545,9 +573,7 @@ td textarea {
     background-color: #000000;
 } */
 
-.situational-modifier {
-    margin-left: 8px;
-}
+
 
 /* input {
     background-color: white;
@@ -633,7 +659,8 @@ td textarea {
 }
 
 .attribute-box select {
-    color: white;
+    color: rgb(30, 30, 30);
+    font-size: large;
     appearance: none;
     outline: none;
     border: none;
@@ -646,7 +673,10 @@ td textarea {
 
 .character-name input {
     color: #9b201f;
-    border: 1px solid #968c6a;
+    text-indent: 4px;
+    border: none;
+    background-color: transparent;
+    padding-left: 20px;
 }
 
 .character-name > input {

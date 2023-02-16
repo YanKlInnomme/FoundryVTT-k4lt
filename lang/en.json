@@ -42,7 +42,7 @@
   "k4lt.Hair": "Hair",
   "k4lt.Stats": "Stats",
   "k4lt.Background": "Background",
-  "k4lt.Appearance": "Appearance",
+  "k4lt.WhoAreYou": "Who are you?",
   "k4lt.Stabilized": "Stabilized",
   "k4lt.NotStabilized": "Not Stabilized",
   "k4lt.StabilityComposed": "Composed: No Modifiers",
@@ -107,5 +107,12 @@
   "k4lt.NPC": {
     "Home": "Home",
     "Type": "Creature Type"
-  }
+  },
+
+  "k4lt.WhatYouHoldDear": "What you hold dear",
+  "k4lt.ThingsInYourPossession": "Things in your possession",
+  "k4lt.RelationToTheOtherCharacters": "Relation to the other characters",
+  "k4lt.DramaticHooks": "Dramatic Hooks"
+
+  
 }

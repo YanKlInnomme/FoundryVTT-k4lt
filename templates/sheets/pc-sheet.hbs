@@ -19,12 +19,55 @@ $('.percpic').hover(function() {
   $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle.webp)');
 });
         </script>
-        <h1 class="character-name"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
+        <div class="flex-container top-section">
+            <div class="forward">
+                {{localize "k4lt.Forward"}}:
+                <select class="hidden-select" name="data.forward" value="{{data.forward}}">
+                    {{#select data.forward}}
+                        <option value="5">5</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                        <option value="0">0</option>
+                        <option value="-1">-1</option>
+                        <option value="-2">-2</option>
+                        <option value="-3">-3</option>
+                        <option value="-4">-4</option>
+                        <option value="-5">-5</option>
+                    {{/select}}
+                </select>
+            </div>
+            <div class="situational-modifier">
+                {{localize "k4lt.SitMod"}}:
+                <select class="hidden-select" name="data.sitmod" value="{{data.sitmod}}">
+                    {{#select data.sitmod}}
+                        <option value="5">5</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                        <option value="0">0</option>
+                        <option value="-1">-1</option>
+                        <option value="-2">-2</option>
+                        <option value="-3">-3</option>
+                        <option value="-4">-4</option>
+                        <option value="-5">-5</option>
+                    {{/select}}
+                </select>
+            </div>
+            <h1 class="character-name"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
+        </div>
     </header>
     <div class="flex-container">
-        <div class="flex-column modifier-section">
-            <img class="actor-picture" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="167" width="167" />
-            <div>
+            <img class="actor-picture" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="324" width="200" />
+             <div>
+                <div class="section-label">{{localize "k4lt.WhoAreYou"}}</div>
+                <div class="free-text">
+                    {{editor content=data.whoareyou target="data.whoareyou" button=true owner=owner editable=editable}}
+                </div>
+            </div>
+            {{!-- <div>
                 <div class="spec">
                     <label>{{localize "k4lt.Age"}}</label>
                     <p1 class="character-detail">
@@ -71,10 +114,9 @@ $('.percpic').hover(function() {
                         <input name="data.attributes.hair" type="text" value="{{data.attributes.hair}}" placeholder="{{localize "k4lt.Hair"}}">
                     </p1>
                 </div>
-            </div>
-        </div>
+            </div> --}}
     </div>
-    <div class="flex-container top-section">
+    {{!-- <div class="flex-container top-section">
         <div class="flex-column modifier-section">
             <div>
                 {{localize "k4lt.Forward"}}:
@@ -113,7 +155,7 @@ $('.percpic').hover(function() {
                 </select>
             </div>
         </div>
-    </div>
+    </div> --}}
     <div class="navigation-section">
         <a class="tabButton" data-tab="Stats">{{localize "k4lt.Stats"}}</a>
         <a class="tabButton" data-tab="Background">{{localize "k4lt.Background"}}</a>
@@ -336,7 +378,7 @@ $('.percpic').hover(function() {
             </div>
             <div class="advantage-box">
                 <div class="section-label">{{localize "k4lt.DarkSecrets"}}</div>
-                <div class=" item-list darksecret-list">
+                <div class="item-list darksecret-list">
                     {{#each darksecrets as |darksecret id|}}
                         {{> "systems/k4lt/templates/partials/darksecret-card.hbs" darksecret}}
                     {{/each}}
@@ -375,7 +417,7 @@ $('.percpic').hover(function() {
                             </select>
                         </div>
                         <div class="wound-name">
-                            <input type="text" name="data.attributes.woundtext.{{this}}" value="{{lookup ../data.attributes.woundtext this}}">
+                            <input type="text" name="data.attributes.woundtext.{{this}}" value="{{lookup ../data.attributes.woundtext this}}" placeholder="{{localize "k4lt.MajorWound"}}">
                         </div>
                     {{/each}}
                     <div class="wound-section">
@@ -389,7 +431,7 @@ $('.percpic').hover(function() {
                         </select>
                     </div>
                     <div class="wound-name">
-                        <input type="text" name="data.attributes.criticalwound" value="{{data.attributes.criticalwound}}">
+                        <input type="text" name="data.attributes.criticalwound" value="{{data.attributes.criticalwound}}" placeholder="{{localize "k4lt.CriticalWound"}}">
                     </div>
                 </div>
                 <div class="flex-column stability-section">
@@ -448,16 +490,31 @@ $('.percpic').hover(function() {
     <div id="Background" class="background-section {{actor._id}}-tab">
         <div class="two-column">
             <div "background-box">
-                <div class="section-label">{{localize "k4lt.Background"}}</div>
+                <div class="section-label">{{localize "k4lt.WhatYouHoldDear"}}</div>
                 <div class="free-text">
-                    {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
+                    {{editor content=data.whatyouholddear target="data.whatyouholddear" button=true owner=owner editable=editable}}
                 </div>
             </div>
             <div>
-                <div class="section-label">{{localize "k4lt.Appearance"}}</div>
+                <div class="section-label">{{localize "k4lt.ThingsInYourPossession"}}</div>
                 <div class="free-text">
-                    {{editor content=data.appearance target="data.appearance" button=true owner=owner editable=editable}}
+                    {{editor content=data.thingsinyourpossession target="data.thingsinyourpossession" button=true owner=owner editable=editable}}
                 </div>
             </div>
         </div>
+         <div class="two-column">
+            <div "background-box">
+                <div class="section-label">{{localize "k4lt.RelationToTheOtherCharacters"}}</div>
+                <div class="free-text">
+                    {{editor content=data.relationtotheothercharacters target="data.relationtotheothercharacters" button=true owner=owner editable=editable}}
+                </div>
+            </div>
+            <div>
+                <div class="section-label">{{localize "k4lt.DramaticHooks"}}</div>
+                <div class="free-text">
+                    {{editor content=data.dramatichooks target="data.dramatichooks" button=true owner=owner editable=editable}}
+                </div>
+            </div>
+        </div>
+    </div>   
 </form>

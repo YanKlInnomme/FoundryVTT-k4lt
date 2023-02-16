@@ -2,8 +2,11 @@
   "Actor": {
     "types": ["pc", "npc"],
     "pc": {
-      "biography": "",
-      "appearance": "",
+      "whoareyou": "",
+      "whatyouholddear": "",
+      "thingsinyourpossession": "",
+      "relationtotheothercharacters": "",
+      "dramatichooks": "",
       "stability": {
         "value": 0,
         "min": 0,

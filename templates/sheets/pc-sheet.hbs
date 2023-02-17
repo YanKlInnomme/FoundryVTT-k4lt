@@ -3,22 +3,53 @@
         <script src="systems/k4lt/scripts/delete.js"></script>
         <script src="systems/k4lt/scripts/getAttribute.js"></script>
         <script>
-$('.reasonpic').hover(function() {
-  $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle-left.webp)');
-}, function() {
-  $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle.webp)');
-});
-$('.intupic').hover(function() {
-  $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle-right.webp)');
-}, function() {
-  $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle.webp)');
-});
-$('.percpic').hover(function() {
-  $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle-bottom.webp)');
-}, function() {
-  $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle.webp)');
-});
+            $('.reasonpic').hover(function() {
+                $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle-left.webp)');
+                }, function() {
+                $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle.webp)');
+            });
+            $('.intupic').hover(function() {
+                $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle-right.webp)');
+                }, function() {
+                $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle.webp)');
+            });
+            $('.percpic').hover(function() {
+                $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle-bottom.webp)');
+                }, function() {
+                $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle.webp)');
+            });
         </script>
+        <script>
+// On récupère les éléments du DOM
+const wounds = document.querySelectorAll('.wound');
+
+// On ajoute un événement click sur chaque image
+wounds.forEach((wound) => {
+  wound.addEventListener('click', () => {
+    // On récupère l'état actuel de l'image
+    const state = wound.getAttribute('src');
+
+    // On définit les différents états de l'image
+    const neutral = 'systems/k4lt/assets/blank.webp';
+    const serious = 'systems/k4lt/assets/bleeding-wound.webp';
+    const stabilized = 'systems/k4lt/assets/sticking-plaster.webp';
+    const critical = 'systems/k4lt/assets/bleeding-wound.webp';
+
+    // On modifie l'état de l'image en fonction de l'état actuel
+    if (state === neutral) {
+      wound.setAttribute('src', serious);
+    } else if (state === serious) {
+      wound.setAttribute('src', stabilized);
+    } else if (state === stabilized) {
+      wound.setAttribute('src', neutral);
+    } else if (state === critical) {
+      wound.setAttribute('src', neutral);
+    } else {
+      wound.setAttribute('src', critical);
+    }
+  });
+});
+       </script>
         <div class="flex-container top-section">
             <div class="forward">
                 {{localize "k4lt.Forward"}}:
@@ -61,60 +92,12 @@ $('.percpic').hover(function() {
     </header>
     <div class="flex-container">
             <img class="actor-picture" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="324" width="200" />
-             <div>
+             <div style="width: 98% !important;">
                 <div class="section-label">{{localize "k4lt.WhoAreYou"}}</div>
                 <div class="free-text">
                     {{editor content=data.whoareyou target="data.whoareyou" button=true owner=owner editable=editable}}
                 </div>
             </div>
-            {{!-- <div>
-                <div class="spec">
-                    <label>{{localize "k4lt.Age"}}</label>
-                    <p1 class="character-detail">
-                        <input name="data.attributes.age" type="text" value="{{data.attributes.age}}" placeholder="{{localize "k4lt.Age"}}">
-                    </p1>
-                </div>
-                <div class="spec">
-                    <label>{{localize "k4lt.Gender"}}</label>
-                    <p1 class="character-detail">
-                        <input name="data.attributes.gender" type="text" value="{{data.attributes.gender}}" placeholder="{{localize "k4lt.Gender"}}">
-                    </p1>
-                </div>
-                <div class="spec">
-                    <label>{{localize "k4lt.Ethnicity"}}</label>
-                    <p1 class="character-detail">
-                        <input name="data.attributes.ethnicity" type="text" value="{{data.attributes.ethnicity}}" placeholder="{{localize "k4lt.Ethnicity"}}">
-                    </p1>
-                </div>
-            </div>
-            <div>
-                <div class="spec">
-                    <label>{{localize "k4lt.Weight"}}</label>
-                    <p1 class="character-detail">
-                        <input name="data.attributes.weight" type="text" value="{{data.attributes.weight}}" placeholder="{{localize "k4lt.Weight"}}">
-                    </p1>
-                </div>
-                <div class="spec">
-                    <label>{{localize "k4lt.Height"}}</label>
-                    <p1 class="character-detail">
-                        <input name="data.attributes.cm" type="text" value="{{data.attributes.cm}}" placeholder="{{localize "k4lt.Height"}}">
-                    </p1>
-                </div>
-            </div>
-            <div>
-                <div class="spec">
-                    <label>{{localize "k4lt.Eyes"}}</label>
-                    <p1 class="character-detail">
-                        <input name="data.attributes.eye" type="text" value="{{data.attributes.eye}}" placeholder="{{localize "k4lt.Eyes"}}">
-                    </p1>
-                </div>
-                <div class="spec">
-                    <label>{{localize "k4lt.Hair"}}</label>
-                    <p1 class="character-detail">
-                        <input name="data.attributes.hair" type="text" value="{{data.attributes.hair}}" placeholder="{{localize "k4lt.Hair"}}">
-                    </p1>
-                </div>
-            </div> --}}
     </div>
     {{!-- <div class="flex-container top-section">
         <div class="flex-column modifier-section">
@@ -159,6 +142,7 @@ $('.percpic').hover(function() {
     <div class="navigation-section">
         <a class="tabButton" data-tab="Stats">{{localize "k4lt.Stats"}}</a>
         <a class="tabButton" data-tab="Background">{{localize "k4lt.Background"}}</a>
+        <a class="tabButton" data-tab="Notes">{{localize "k4lt.Notes"}}</a>
     </div>
     <div id="Stats" class="stats-section {{actor._id}}-tab">
         <div class="middle-section">
@@ -403,37 +387,32 @@ $('.percpic').hover(function() {
                 </div>
             </div>
             <div class="right-middle-column">
-                <div class="section-label">{{localize "k4lt.Wounds"}}</div>
-                <div class="wound-entries">
-                    {{#each wounds}}
-                        <div class="wound-section">
-                            <label>{{localize "k4lt.MajorWound"}}</label>
-                            <select class="stabilized" name="data.attributes.woundstabilized.{{this}}"
-                                    value="{{lookup ../data.attributes.woundstabilized this}}">
-                                {{#select (lookup ../data.attributes.woundstabilized this)}}
-                                    <option value="true">{{localize "k4lt.Stabilized"}}</option>
-                                    <option value="false">{{localize "k4lt.NotStabilized"}}</option>
-                                {{/select}}
-                            </select>
-                        </div>
-                        <div class="wound-name">
-                            <input type="text" name="data.attributes.woundtext.{{this}}" value="{{lookup ../data.attributes.woundtext this}}" placeholder="{{localize "k4lt.MajorWound"}}">
-                        </div>
-                    {{/each}}
-                    <div class="wound-section">
-                        <label>{{localize "k4lt.CriticalWound"}}</label>
-                        <select class="stabilized" name="data.attributes.criticalwoundstabilized"
-                                value="{{data.attributes.criticalwoundstabilized}}">
-                            {{#select data.attributes.criticalwoundstabilized}}
-                                <option value="true">{{localize "k4lt.Stabilized"}}</option>
-                                <option value="false">{{localize "k4lt.NotStabilized"}}</option>
-                            {{/select}}
-                        </select>
-                    </div>
-                    <div class="wound-name">
-                        <input type="text" name="data.attributes.criticalwound" value="{{data.attributes.criticalwound}}" placeholder="{{localize "k4lt.CriticalWound"}}">
-                    </div>
-                </div>
+                <div class="section-label" style="margin-bottom: 12px;">{{localize "k4lt.Wounds"}}</div>
+                
+<div class="two-column-wound" id="serious-wounds">
+    <img id="wound1" class="wound" src="systems/k4lt/assets/blank.webp">
+        <input type="text" name="data.attributes.majorwound1" value="{{system.attributes.majorwound1}}" placeholder="{{localize "k4lt.MajorWound1"}}">
+</div>
+<div class="two-column-wound" id="serious-wounds">
+    <img id="wound2" class="wound" src="systems/k4lt/assets/blank.webp">
+        <input type="text" name="data.attributes.majorwound2" value="{{data.attributes.majorwound2}}" placeholder="{{localize "k4lt.MajorWound2"}}">
+</div>
+<div class="two-column-wound" id="serious-wounds">
+    <img id="wound3" class="wound" src="systems/k4lt/assets/blank.webp">
+        <input type="text" name="data.attributes.majorwound3" value="{{data.attributes.majorwound3}}" placeholder="{{localize "k4lt.MajorWound3"}}">
+</div>
+<div class="two-column-wound" id="serious-wounds">
+    <img id="wound4" class="wound" src="systems/k4lt/assets/blank.webp">
+        <input type="text" name="data.attributes.majorwound4" value="{{data.attributes.majorwound4}}" placeholder="{{localize "k4lt.MajorWound4"}}">
+</div>
+<div class="two-column-wound" id="critical-wound">
+    <img id="wound5" class="wound" src="systems/k4lt/assets/blank.webp">
+        <input type="text" name="data.attributes.criticalwound" value="{{data.attributes.criticalwound}}" placeholder="{{localize "k4lt.CriticalWound"}}">
+</div>
+
+
+
+
                 <div class="flex-column stability-section">
                     <div class="section-label">{{localize "k4lt.Stability"}}</div>
                     <div>
@@ -513,6 +492,15 @@ $('.percpic').hover(function() {
                 <div class="section-label">{{localize "k4lt.DramaticHooks"}}</div>
                 <div class="free-text">
                     {{editor content=data.dramatichooks target="data.dramatichooks" button=true owner=owner editable=editable}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Notes" class="background-section {{actor._id}}-tab">
+        <div class="one-column">
+            <div "notes-box">
+                <div class="free-text">
+                    {{editor content=data.notes target="data.notes" button=true owner=owner editable=editable}}
                 </div>
             </div>
         </div>

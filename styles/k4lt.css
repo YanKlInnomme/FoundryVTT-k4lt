@@ -88,6 +88,10 @@ h1,h2,h3 {
     color: rgb(224, 219, 204);
 }
 
+.hidden-select option {
+    color: rgb(155, 32, 31);
+}
+
 /* Les caractéristiques */
 
 .foo:hover {
@@ -237,6 +241,28 @@ h1,h2,h3 {
 
 .tox-toolbar__group {
     zoom: 90%;
+}
+
+.wound {
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    margin-right: 10px;
+    border: 1px dashed #968c6a;
+  }
+  
+.two-column-wound {
+    display: flex;
+    flex-direction: row;
+}
+
+#serious-wounds {
+    margin-bottom: 5px;
+}
+
+#critical-wound {
+    margin-top: 15px;
+    color: #9b201f;
 }
 
 

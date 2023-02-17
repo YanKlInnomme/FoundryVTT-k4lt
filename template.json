@@ -7,6 +7,12 @@
       "thingsinyourpossession": "",
       "relationtotheothercharacters": "",
       "dramatichooks": "",
+      "notes": "",
+      "majorwound1": "",
+      "majorwound2": "",
+      "majorwound3": "",
+      "majorwound4": "",
+      "criticalwound": "",
       "stability": {
         "value": 0,
         "min": 0,
@@ -25,21 +31,7 @@
         "charisma": 0,
         "soul": 0
       },
-        "forward": 0,
-        "woundtext": {
-          "majorwound1": "",
-          "majorwound2": "",
-          "majorwound3": "",
-          "majorwound4": "",
-          "criticalwound": ""
-        },
-        "woundstabilized": {
-          "majorwound1": "true",
-          "majorwound2": "true",
-          "majorwound3": "true",
-          "majorwound4": "true",
-          "criticalwound": "true"
-        }
+        "forward": 0
     },
     "npc": {
       "home": "",

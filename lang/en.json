@@ -42,11 +42,13 @@
   "k4lt.StabilityAnxious": "Anxious: -2 KIT/ -3 Disadvantage / +1 Illusion",
   "k4lt.StabilityIrrational": "Irrational: -2 KIT/ -3 Disadvantage / +1 Illusion",
   "k4lt.StabilityUnhinged": "Unhinged: -2 KIT/ -3 Disadvantage / +1 Illusion",
-
+  "k4lt.StabilityBroken": "Broken: GM Makes a Move",
+  
   "k4lt.Moves": "Moves",
   "k4lt.Move": "Move",
   "k4lt.Weapons": "Weapons",
   "k4lt.Weapon": "Weapon",
+  "k4lt.Gears": "Gears",
   "k4lt.Gear": "Gear",
 
   "k4lt.WhatYouHoldDear": "What you hold dear",
@@ -54,31 +56,34 @@
   "k4lt.RelationToTheOtherCharacters": "Relation to the other characters",
   "k4lt.DramaticHooks": "Dramatic Hooks",
 
-  "k4lt.Ask": "Always Ask",
   "k4lt.AskAttribute": "What Attribute Do You Want to Roll?",
+  "k4lt.Attribute": "Attribute",
+  "k4lt.None": "None",
+  "k4lt.Ask": "Always Ask",
+
   "k4lt.Success": "Success",
   "k4lt.Failure": "Failure",
   "k4lt.PartialSuccess": "Partial Success",
   
-  
-  "k4lt.StabilityBroken": "Broken: GM Makes a Move",
   "k4lt.MinusStability": "Click to Take Stability Damage",
   "k4lt.PlusStability": "Click to Heal Stability",
   "k4lt.RollMove": "Click to Roll Move",
   "k4lt.DeleteItem": "Delete Item",
   "k4lt.EditItem": "Edit Item",
   "k4lt.ShowItem": "Show Item",
+  
   "k4lt.Edge": "Edge",
   "k4lt.AddEdge": "Add Edge",
   "k4lt.SpendEdge": "Spend Edge",
+  
   "k4lt.Hold": "Hold",
   "k4lt.AddHold": "Add Hold",
   "k4lt.SpendHold": "Spend Hold",
+  
   "k4lt.Uses": "Uses",
   "k4lt.Ammo": "Ammo",
   "k4lt.Harm": "Harm",
-  "k4lt.Attribute": "Attribute",
-  "k4lt.None": "None",
+  
   "k4lt.Type": "Type",
   "k4lt.Active": "Active",
   "k4lt.Passive": "Passive",

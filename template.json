@@ -13,6 +13,7 @@
       "majorwound3": "",
       "majorwound4": "",
       "criticalwound": "",
+      "majorwoundstate1": false,
       "stability": {
         "value": 0,
         "min": 0,

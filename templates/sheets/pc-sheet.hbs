@@ -2,23 +2,7 @@
     <header class="sheet-header">
         <script src="systems/k4lt/scripts/delete.js"></script>
         <script src="systems/k4lt/scripts/getAttribute.js"></script>
-        <script>
-            $('.reasonpic').hover(function() {
-                $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle-left.webp)');
-                }, function() {
-                $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle.webp)');
-            });
-            $('.intupic').hover(function() {
-                $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle-right.webp)');
-                }, function() {
-                $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle.webp)');
-            });
-            $('.percpic').hover(function() {
-                $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle-bottom.webp)');
-                }, function() {
-                $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle.webp)');
-            });
-        </script>
+        <script src="systems/k4lt/scripts/picHover.js"></script>
         <script>
 // On récupère les éléments du DOM
 const wounds = document.querySelectorAll('.wound');
@@ -50,22 +34,15 @@ wounds.forEach((wound) => {
   });
 });
        </script>
+ 
+
+
         <div class="flex-container top-section">
             <div class="forward">
                 {{localize "k4lt.Forward"}}:
                 <select class="hidden-select" name="data.forward" value="{{data.forward}}">
                     {{#select data.forward}}
-                        <option value="5">5</option>
-                        <option value="4">4</option>
-                        <option value="3">3</option>
-                        <option value="2">2</option>
-                        <option value="1">1</option>
-                        <option value="0">0</option>
-                        <option value="-1">-1</option>
-                        <option value="-2">-2</option>
-                        <option value="-3">-3</option>
-                        <option value="-4">-4</option>
-                        <option value="-5">-5</option>
+                        {{>"systems/k4lt/templates/partials/modifier-values.hbs"}}
                     {{/select}}
                 </select>
             </div>
@@ -73,17 +50,7 @@ wounds.forEach((wound) => {
                 {{localize "k4lt.SitMod"}}:
                 <select class="hidden-select" name="data.sitmod" value="{{data.sitmod}}">
                     {{#select data.sitmod}}
-                        <option value="5">5</option>
-                        <option value="4">4</option>
-                        <option value="3">3</option>
-                        <option value="2">2</option>
-                        <option value="1">1</option>
-                        <option value="0">0</option>
-                        <option value="-1">-1</option>
-                        <option value="-2">-2</option>
-                        <option value="-3">-3</option>
-                        <option value="-4">-4</option>
-                        <option value="-5">-5</option>
+                        {{>"systems/k4lt/templates/partials/modifier-values.hbs"}}
                     {{/select}}
                 </select>
             </div>
@@ -99,46 +66,7 @@ wounds.forEach((wound) => {
                 </div>
             </div>
     </div>
-    {{!-- <div class="flex-container top-section">
-        <div class="flex-column modifier-section">
-            <div>
-                {{localize "k4lt.Forward"}}:
-                <select name="data.forward" value="{{data.forward}}">
-                    {{#select data.forward}}
-                        <option value="5">5</option>
-                        <option value="4">4</option>
-                        <option value="3">3</option>
-                        <option value="2">2</option>
-                        <option value="1">1</option>
-                        <option value="0">0</option>
-                        <option value="-1">-1</option>
-                        <option value="-2">-2</option>
-                        <option value="-3">-3</option>
-                        <option value="-4">-4</option>
-                        <option value="-5">-5</option>
-                    {{/select}}
-                </select>
-            </div>
-            <div class="situational-modifier">
-                {{localize "k4lt.SitMod"}}:
-                <select name="data.sitmod" value="{{data.sitmod}}">
-                    {{#select data.sitmod}}
-                        <option value="5">5</option>
-                        <option value="4">4</option>
-                        <option value="3">3</option>
-                        <option value="2">2</option>
-                        <option value="1">1</option>
-                        <option value="0">0</option>
-                        <option value="-1">-1</option>
-                        <option value="-2">-2</option>
-                        <option value="-3">-3</option>
-                        <option value="-4">-4</option>
-                        <option value="-5">-5</option>
-                    {{/select}}
-                </select>
-            </div>
-        </div>
-    </div> --}}
+    
     <div class="navigation-section">
         <a class="tabButton" data-tab="Stats">{{localize "k4lt.Stats"}}</a>
         <a class="tabButton" data-tab="Background">{{localize "k4lt.Background"}}</a>
@@ -153,17 +81,7 @@ wounds.forEach((wound) => {
                         <td class="willpic">
                             <select class="foo" name="data.attributes.willpower" value="{{data.attributes.willpower}}">
                                 {{#select data.attributes.willpower}}
-                                    <option value="5">&nbsp;5&nbsp;</option>
-                                    <option value="4">&nbsp;4&nbsp;</option>
-                                    <option value="3">&nbsp;3&nbsp;</option>
-                                    <option value="2">&nbsp;2&nbsp;</option>
-                                    <option value="1">&nbsp;1&nbsp;</option>
-                                    <option value="0">&nbsp;0&nbsp;</option>
-                                    <option value="-1">-1&nbsp;</option>
-                                    <option value="-2">-2&nbsp;</option>
-                                    <option value="-3">-3&nbsp;</option>
-                                    <option value="-4">-4&nbsp;</option>
-                                    <option value="-5">-5&nbsp;</option>
+                                    {{>"systems/k4lt/templates/partials/passive-attribute-values.hbs"}}
                                 {{/select}}
                             </select>
                         </td>
@@ -173,17 +91,7 @@ wounds.forEach((wound) => {
                         <td class="fortpic">
                             <select class="foo" name="data.attributes.fortitude" value="{{data.attributes.fortitude}}">
                                 {{#select data.attributes.fortitude}}
-                                    <option value="5">&nbsp;5&nbsp;</option>
-                                    <option value="4">&nbsp;4&nbsp;</option>
-                                    <option value="3">&nbsp;3&nbsp;</option>
-                                    <option value="2">&nbsp;2&nbsp;</option>
-                                    <option value="1">&nbsp;1&nbsp;</option>
-                                    <option value="0">&nbsp;0&nbsp;</option>
-                                    <option value="-1">-1&nbsp;</option>
-                                    <option value="-2">-2&nbsp;</option>
-                                    <option value="-3">-3&nbsp;</option>
-                                    <option value="-4">-4&nbsp;</option>
-                                    <option value="-5">-5&nbsp;</option>
+                                    {{>"systems/k4lt/templates/partials/passive-attribute-values.hbs"}}
                                 {{/select}}
                             </select>
                         </td>
@@ -191,17 +99,7 @@ wounds.forEach((wound) => {
                         <td class="refpic">
                             <select class="foo" name="data.attributes.reflexes" value="{{data.attributes.reflexes}}">
                                 {{#select data.attributes.reflexes}}
-                                    <option value="5">&nbsp;5&nbsp;</option>
-                                    <option value="4">&nbsp;4&nbsp;</option>
-                                    <option value="3">&nbsp;3&nbsp;</option>
-                                    <option value="2">&nbsp;2&nbsp;</option>
-                                    <option value="1">&nbsp;1&nbsp;</option>
-                                    <option value="0">&nbsp;0&nbsp;</option>
-                                    <option value="-1">-1&nbsp;</option>
-                                    <option value="-2">-2&nbsp;</option>
-                                    <option value="-3">-3&nbsp;</option>
-                                    <option value="-4">-4&nbsp;</option>
-                                    <option value="-5">-5&nbsp;</option>
+                                    {{>"systems/k4lt/templates/partials/passive-attribute-values.hbs"}}
                                 {{/select}}
                             </select>
                         </td>
@@ -215,17 +113,7 @@ wounds.forEach((wound) => {
                         <td class="reasonpic">
                             <select class="foo" name="data.attributes.reason" value="{{data.attributes.reason}}">
                                 {{#select data.attributes.reason}}
-                                    <option value="5">&nbsp;5&nbsp;</option>
-                                    <option value="4">&nbsp;4&nbsp;</option>
-                                    <option value="3">&nbsp;3&nbsp;</option>
-                                    <option value="2">&nbsp;2&nbsp;</option>
-                                    <option value="1">&nbsp;1&nbsp;</option>
-                                    <option value="0">&nbsp;0&nbsp;</option>
-                                    <option value="-1">-1&nbsp;</option>
-                                    <option value="-2">-2&nbsp;</option>
-                                    <option value="-3">-3&nbsp;</option>
-                                    <option value="-4">-4&nbsp;</option>
-                                    <option value="-5">-5&nbsp;</option>
+                                    {{>"systems/k4lt/templates/partials/active-attribute-values.hbs"}}
                                 {{/select}}
                             </select>
                         </td>
@@ -233,17 +121,7 @@ wounds.forEach((wound) => {
                         <td class="intupic">
                             <select class="foo" name="data.attributes.intuition" value="{{data.attributes.intuition}}">
                                 {{#select data.attributes.intuition}}
-                                    <option value="5">&nbsp;5&nbsp;</option>
-                                    <option value="4">&nbsp;4&nbsp;</option>
-                                    <option value="3">&nbsp;3&nbsp;</option>
-                                    <option value="2">&nbsp;2&nbsp;</option>
-                                    <option value="1">&nbsp;1&nbsp;</option>
-                                    <option value="0">&nbsp;0&nbsp;</option>
-                                    <option value="-1">-1&nbsp;</option>
-                                    <option value="-2">-2&nbsp;</option>
-                                    <option value="-3">-3&nbsp;</option>
-                                    <option value="-4">-4&nbsp;</option>
-                                    <option value="-5">-5&nbsp;</option>
+                                    {{>"systems/k4lt/templates/partials/active-attribute-values.hbs"}}
                                 {{/select}}
                             </select>
                         </td>
@@ -253,17 +131,7 @@ wounds.forEach((wound) => {
                         <td class="percpic">
                             <select class="foo" name="data.attributes.perception" value="{{data.attributes.perception}}">
                                 {{#select data.attributes.perception}}
-                                    <option value="5">&nbsp;5&nbsp;</option>
-                                    <option value="4">&nbsp;4&nbsp;</option>
-                                    <option value="3">&nbsp;3&nbsp;</option>
-                                    <option value="2">&nbsp;2&nbsp;</option>
-                                    <option value="1">&nbsp;1&nbsp;</option>
-                                    <option value="0">&nbsp;0&nbsp;</option>
-                                    <option value="-1">-1&nbsp;</option>
-                                    <option value="-2">-2&nbsp;</option>
-                                    <option value="-3">-3&nbsp;</option>
-                                    <option value="-4">-4&nbsp;</option>
-                                    <option value="-5">-5&nbsp;</option>
+                                    {{>"systems/k4lt/templates/partials/active-attribute-values.hbs"}}
                                 {{/select}}
                             </select>
                         </td>
@@ -273,17 +141,7 @@ wounds.forEach((wound) => {
                         <td class="coolpic">
                             <select class="foo" name="data.attributes.coolness" value="{{data.attributes.coolness}}">
                                 {{#select data.attributes.coolness}}
-                                    <option value="5">&nbsp;5&nbsp;</option>
-                                    <option value="4">&nbsp;4&nbsp;</option>
-                                    <option value="3">&nbsp;3&nbsp;</option>
-                                    <option value="2">&nbsp;2&nbsp;</option>
-                                    <option value="1">&nbsp;1&nbsp;</option>
-                                    <option value="0">&nbsp;0&nbsp;</option>
-                                    <option value="-1">-1&nbsp;</option>
-                                    <option value="-2">-2&nbsp;</option>
-                                    <option value="-3">-3&nbsp;</option>
-                                    <option value="-4">-4&nbsp;</option>
-                                    <option value="-5">-5&nbsp;</option>
+                                    {{>"systems/k4lt/templates/partials/active-attribute-values.hbs"}}
                                 {{/select}}
                             </select>
                         </td>
@@ -291,17 +149,7 @@ wounds.forEach((wound) => {
                         <td class="violpic">
                             <select class="foo" name="data.attributes.violence" value="{{data.attributes.violence}}">
                                 {{#select data.attributes.violence}}
-                                    <option value="5">&nbsp;5&nbsp;</option>
-                                    <option value="4">&nbsp;4&nbsp;</option>
-                                    <option value="3">&nbsp;3&nbsp;</option>
-                                    <option value="2">&nbsp;2&nbsp;</option>
-                                    <option value="1">&nbsp;1&nbsp;</option>
-                                    <option value="0">&nbsp;0&nbsp;</option>
-                                    <option value="-1">-1&nbsp;</option>
-                                    <option value="-2">-2&nbsp;</option>
-                                    <option value="-3">-3&nbsp;</option>
-                                    <option value="-4">-4&nbsp;</option>
-                                    <option value="-5">-5&nbsp;</option>
+                                    {{>"systems/k4lt/templates/partials/active-attribute-values.hbs"}}
                                 {{/select}}
                             </select>
                         </td>
@@ -311,17 +159,7 @@ wounds.forEach((wound) => {
                         <td class="chapic">
                             <select class="foo" name="data.attributes.charisma" value="{{data.attributes.charisma}}">
                                 {{#select data.attributes.charisma}}
-                                    <option value="5">&nbsp;5&nbsp;</option>
-                                    <option value="4">&nbsp;4&nbsp;</option>
-                                    <option value="3">&nbsp;3&nbsp;</option>
-                                    <option value="2">&nbsp;2&nbsp;</option>
-                                    <option value="1">&nbsp;1&nbsp;</option>
-                                    <option value="0">&nbsp;0&nbsp;</option>
-                                    <option value="-1">-1&nbsp;</option>
-                                    <option value="-2">-2&nbsp;</option>
-                                    <option value="-3">-3&nbsp;</option>
-                                    <option value="-4">-4&nbsp;</option>
-                                    <option value="-5">-5&nbsp;</option>
+                                    {{>"systems/k4lt/templates/partials/active-attribute-values.hbs"}}
                                 {{/select}}
                             </select>
                         </td>
@@ -337,17 +175,7 @@ wounds.forEach((wound) => {
                         <td class="soulpic">
                             <select class="foo" name="data.attributes.soul" value="{{data.attributes.soul}}">
                                 {{#select data.attributes.soul}}
-                                    <option value="5">&nbsp;5&nbsp;</option>
-                                    <option value="4">&nbsp;4&nbsp;</option>
-                                    <option value="3">&nbsp;3&nbsp;</option>
-                                    <option value="2">&nbsp;2&nbsp;</option>
-                                    <option value="1">&nbsp;1&nbsp;</option>
-                                    <option value="0">&nbsp;0&nbsp;</option>
-                                    <option value="-1">-1&nbsp;</option>
-                                    <option value="-2">-2&nbsp;</option>
-                                    <option value="-3">-3&nbsp;</option>
-                                    <option value="-4">-4&nbsp;</option>
-                                    <option value="-5">-5&nbsp;</option>
+                                    {{>"systems/k4lt/templates/partials/active-attribute-values.hbs"}}
                                 {{/select}}
                             </select>
                         </td>
@@ -390,24 +218,25 @@ wounds.forEach((wound) => {
                 <div class="section-label" style="margin-bottom: 12px;">{{localize "k4lt.Wounds"}}</div>
                 
 <div class="two-column-wound" id="serious-wounds">
+    <input type="checkbox" id="maCaseACocher" name="system.majorwoundstate1" {{checked system.majorwoundstate1}}>
     <img id="wound1" class="wound" src="systems/k4lt/assets/blank.webp">
-        <input type="text" name="data.attributes.majorwound1" value="{{system.attributes.majorwound1}}" placeholder="{{localize "k4lt.MajorWound1"}}">
+        <input type="text" name="data.majorwound1" value="{{data.majorwound1}}" placeholder="{{localize "k4lt.MajorWound1"}}">
 </div>
 <div class="two-column-wound" id="serious-wounds">
     <img id="wound2" class="wound" src="systems/k4lt/assets/blank.webp">
-        <input type="text" name="data.attributes.majorwound2" value="{{data.attributes.majorwound2}}" placeholder="{{localize "k4lt.MajorWound2"}}">
+        <input type="text" name="data.majorwound2" value="{{data.majorwound2}}" placeholder="{{localize "k4lt.MajorWound2"}}">
 </div>
 <div class="two-column-wound" id="serious-wounds">
     <img id="wound3" class="wound" src="systems/k4lt/assets/blank.webp">
-        <input type="text" name="data.attributes.majorwound3" value="{{data.attributes.majorwound3}}" placeholder="{{localize "k4lt.MajorWound3"}}">
+        <input type="text" name="data.majorwound3" value="{{data.majorwound3}}" placeholder="{{localize "k4lt.MajorWound3"}}">
 </div>
 <div class="two-column-wound" id="serious-wounds">
     <img id="wound4" class="wound" src="systems/k4lt/assets/blank.webp">
-        <input type="text" name="data.attributes.majorwound4" value="{{data.attributes.majorwound4}}" placeholder="{{localize "k4lt.MajorWound4"}}">
+        <input type="text" name="data.majorwound4" value="{{data.majorwound4}}" placeholder="{{localize "k4lt.MajorWound4"}}">
 </div>
 <div class="two-column-wound" id="critical-wound">
     <img id="wound5" class="wound" src="systems/k4lt/assets/blank.webp">
-        <input type="text" name="data.attributes.criticalwound" value="{{data.attributes.criticalwound}}" placeholder="{{localize "k4lt.CriticalWound"}}">
+        <input type="text" name="data.criticalwound" value="{{data.criticalwound}}" placeholder="{{localize "k4lt.CriticalWound"}}">
 </div>
 
 
@@ -504,5 +333,7 @@ wounds.forEach((wound) => {
                 </div>
             </div>
         </div>
-    </div>   
+    </div>
+
+
 </form>

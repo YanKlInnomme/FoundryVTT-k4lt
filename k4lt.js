@@ -14,7 +14,10 @@ async function preloadHandlebarTemplates() {
     "systems/k4lt/templates/partials/weapon-card.hbs",
     "systems/k4lt/templates/partials/gear-card.hbs",
     "systems/k4lt/templates/partials/advantage-card.hbs",
-    "systems/k4lt/templates/partials/disadvantage-card.hbs"
+    "systems/k4lt/templates/partials/disadvantage-card.hbs",
+    "systems/k4lt/templates/partials/modifier-values.hbs",
+    "systems/k4lt/templates/partials/passive-attribute-values.hbs",
+    "systems/k4lt/templates/partials/active-attribute-values.hbs"
   ];
   return loadTemplates(templatepaths);
 };

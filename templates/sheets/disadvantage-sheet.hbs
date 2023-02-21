@@ -8,17 +8,17 @@
       <label>{{localize "k4lt.Attribute"}}:</label>
       <select name="system.attributemod" value="{{system.attributemod}}">
         {{#select system.attributemod}}
-        <option value="">{{localize "k4lt.None"}}</option>
-        <option value="willpower">{{localize "k4lt.Willpower"}}</option>
-        <option value="fortitude">{{localize "k4lt.Fortitude"}}</option>
-        <option value="reflexes">{{localize "k4lt.Reflexes"}}</option>
-        <option value="reason">{{localize "k4lt.Reason"}}</option>
-        <option value="intuition">{{localize "k4lt.Intuition"}}</option>
-        <option value="perception">{{localize "k4lt.Perception"}}</option>
-        <option value="coolness">{{localize "k4lt.Coolness"}}</option>
-        <option value="violence">{{localize "k4lt.Violence"}}</option>
-        <option value="charisma">{{localize "k4lt.Charisma"}}</option>
-        <option value="soul">{{localize "k4lt.Soul"}}</option>
+          <option value="">{{localize "k4lt.None"}}</option>
+          <option value="willpower">{{localize "k4lt.Willpower"}}</option>
+          <option value="fortitude">{{localize "k4lt.Fortitude"}}</option>
+          <option value="reflexes">{{localize "k4lt.Reflexes"}}</option>
+          <option value="reason">{{localize "k4lt.Reason"}}</option>
+          <option value="intuition">{{localize "k4lt.Intuition"}}</option>
+          <option value="perception">{{localize "k4lt.Perception"}}</option>
+          <option value="coolness">{{localize "k4lt.Coolness"}}</option>
+          <option value="violence">{{localize "k4lt.Violence"}}</option>
+          <option value="charisma">{{localize "k4lt.Charisma"}}</option>
+          <option value="soul">{{localize "k4lt.Soul"}}</option>
         {{/select}}
       </select>
     </div>
@@ -26,8 +26,8 @@
       <label>{{localize "k4lt.Type"}}:</label>
       <select name="system.type" value="{{system.type}}">
         {{#select system.type}}
-        <option value="active">{{localize "k4lt.Active"}}</option>
-        <option value="passive">{{localize "k4lt.Passive"}}</option>]
+          <option value="active">{{localize "k4lt.Active"}}</option>
+          <option value="passive">{{localize "k4lt.Passive"}}</option>]
         {{/select}}
       </select>
     </div>
@@ -35,8 +35,8 @@
       <label>{{localize "k4lt.HasHold"}}?</label>
       <input type="checkbox" name="system.hasTokens" {{checked system.hasTokens}} />
       {{#if system.hasTokens}}
-      <label>{{localize "k4lt.Counter"}}:</label>
-      <input class="tokens-counter" name="system.tokens" value="{{system.tokens}}" class="short-input" type="number" />
+        <label>{{localize "k4lt.Counter"}}:</label>
+        <input class="tokens-counter" name="system.tokens" value="{{system.tokens}}" class="short-input" type="number" />
       {{/if}}
     </div>
     <div class="editor-row">
@@ -52,13 +52,11 @@
       <div class="results-input">
         <div class="editor-row">
           <label>15+:</label>
-          <div>{{editor system.completesuccess target="system.completesuccess" button=true owner=owner
-            editable=editable}}</div>
+          <div>{{editor system.completesuccess target="system.completesuccess" button=true owner=owner editable=editable}}</div>
         </div>
         <div class="editor-row">
           <label>10-14:</label>
-          <div>{{editor system.partialsuccess target="system.partialsuccess" button=true owner=owner
-            editable=editable}}</div>
+          <div>{{editor system.partialsuccess target="system.partialsuccess" button=true owner=owner editable=editable}}</div>
         </div>
         <div class="editor-row">
           <label>0-9</label>

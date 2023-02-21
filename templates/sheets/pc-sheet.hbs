@@ -31,12 +31,18 @@
             </div>
     </div>
     
-    <div class="navigation-section">
-        <a class="tabButton" data-tab="Stats">{{localize "k4lt.Stats"}}</a>
-        <a class="tabButton" data-tab="Background">{{localize "k4lt.Background"}}</a>
-        <a class="tabButton" data-tab="Notes">{{localize "k4lt.Notes"}}</a>
-    </div>
-    <div id="Stats" class="stats-section {{actor._id}}-tab">
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs align-center" data-group="primary">
+        <a class="choice" data-tab="Stats">{{localize "k4lt.Stats"}}</a>
+        <a class="choice" data-tab="Background">{{localize "k4lt.Background"}}</a>
+        <a class="choice" data-tab="Notes">{{localize "k4lt.Notes"}}</a>
+    </nav>   
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+        
+    {{!-- Stats Tab --}}
+    <div id="Stats" class="tab stats-section {{actor._id}}-tab" data-group="primary" data-tab="Stats">
         <div class="middle-section">
             <div class="attribute-column">
                 <table class="attribute-box" style="table-layout: fixed; width: 200px; height:500px;">
@@ -259,7 +265,9 @@
             </div>
         </div>
     </div>
-    <div id="Background" class="background-section {{actor._id}}-tab">
+
+    {{!-- Background Tab --}}
+    <div id="Background" class="tab background-section {{actor._id}}-tab" data-group="primary" data-tab="Background">
         <div class="two-column">
             <div "background-box">
                 <div class="section-label">{{localize "k4lt.WhatYouHoldDear"}}</div>
@@ -289,7 +297,9 @@
             </div>
         </div>
     </div>
-    <div id="Notes" class="background-section {{actor._id}}-tab">
+
+    {{!-- Notes Tab --}}
+    <div id="Notes" class="tab background-section {{actor._id}}-tab" data-group="primary" data-tab="Notes">
         <div class="one-column">
             <div "notes-box">
                 <div class="free-text">
@@ -299,5 +309,6 @@
         </div>
     </div>
 
-
+    </section>
+    
 </form>

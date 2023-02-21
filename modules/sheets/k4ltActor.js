@@ -1,5 +1,3 @@
-import { attributeAsk } from "../../scripts/attributeAsk.js";
-
 export default class k4ltActor extends Actor {
   /** @override */
   prepareBaseData() {
@@ -7,7 +5,9 @@ export default class k4ltActor extends Actor {
   }
 
   _preparePCData() {
-    this.system.disadvantages = this.items.filter(function (item) { return item.type == "disadvantage"; });
+    this.system.disadvantages = this.items.filter(function (item) {
+      return item.type == "disadvantage";
+    });
     this.system.disadvantagearray = Array.from(this.system.disadvantages);
   }
 
@@ -31,7 +31,6 @@ export default class k4ltActor extends Actor {
       this.createEmbeddedDocuments("Item", newItems);
     }
   }*/
-
 
   async woundEffect() {
     var i;
@@ -68,20 +67,19 @@ export default class k4ltActor extends Actor {
     let move = this.items.get(moveID);
     kultLogger("Move => ", move);
 
-    const moveData = move.data.data;
-    const moveType = moveData.type;
+    const moveType = move.type;
     const moveName = move.name;
     kultLogger("Move Type => ", moveType);
 
     if (moveType === "passive") {
       ui.notifications.warn(game.i18n.localize("k4lt.PassiveAbility"));
     } else {
-      const attr = moveData.attributemod == "ask" ? await attributeAsk() : moveData.attributemod;
-      const successtext = moveData.completesuccess;
-      const optionstext = moveData.options;
-      const failuretext = moveData.failure;
-      const partialsuccess = moveData.partialsuccess;
-      const specialflag = moveData.specialflag;
+      const attr = move.system.attributemod == "ask" ? await this._attributeAsk() : move.system.attributemod;
+      const successtext = move.system.completesuccess;
+      const optionstext = move.system.options;
+      const failuretext = move.system.failure;
+      const partialsuccess = move.system.partialsuccess;
+      const specialflag = move.system.specialflag;
       let mod = 0;
       let harm = 0;
       if (specialflag == 3) {
@@ -107,17 +105,17 @@ export default class k4ltActor extends Actor {
       }
 
       if (attr != "" && attr != "none") {
-        mod = actorsystem.attributes[attr];
+        mod = this.system.attributes[attr];
       }
 
-      let stab = system.stability.value;
-      let situation = parseInt(system.sitmod) + parseInt(system.forward);
-      kultLogger("Sitmod => ", system.sitmod);
+      let stab = this.system.stability.value;
+      let situation = parseInt(this.system.sitmod) + parseInt(this.system.forward);
+      kultLogger("Sitmod => ", this.system.sitmod);
 
       let woundmod = await this.woundEffect();
       situation -= woundmod;
 
-      if (system.attributes.criticalwound && system.attributes.criticalwoundstabilized != "true") {
+      if (this.system.attributes.criticalwound && this.system.attributes.criticalwoundstabilized != "true") {
         situation -= 1;
       }
       if (specialflag == 1 && stab > 2) {
@@ -153,7 +151,7 @@ export default class k4ltActor extends Actor {
       if (r.total) {
         kultLogger("Roll Successful");
         this.update({ "data.sitmod": 0 });
-        kultLogger(`Sitmod is ` + this.data.data.sitmod);
+        kultLogger(`Sitmod is ` + this.system.sitmod);
       }
 
       if (r.total >= 15) {
@@ -164,5 +162,44 @@ export default class k4ltActor extends Actor {
         this.displayRollResult({ roll: r, moveName, resultText: game.i18n.localize("k4lt.PartialSuccess"), moveResultText: partialsuccess, optionsText: optionstext });
       }
     }
+  }
+
+  async _attributeAsk() {
+    // Stocke les noms d'attributs dans un tableau plutôt que de les stocker individuellement
+    const attributes = ["None", "Willpower", "Fortitude", "Reflexes", "Reason", "Intuition", "Perception", "Coolness", "Violence", "Charisma", "Soul"];
+
+    // Utilise la méthode map() pour générer les options du sélecteur à partir du tableau d'attributs
+    const options = attributes
+      .map((attribute) => {
+        // Localise chaque nom d'attribut
+        const localizedAttribute = game.i18n.localize(`k4lt.${attribute}`);
+        // Retourne une chaîne HTML pour chaque option
+        return `<option value="${attribute.toLowerCase()}">${localizedAttribute}</option>`;
+        // Utilise la méthode join() pour joindre les options du sélecteur en une seule chaîne
+      })
+      .join("");
+
+    // Utilise une promesse pour attendre la sélection de l'utilisateur
+    const result = await new Promise((resolve) => {
+      new Dialog({
+        title: game.i18n.localize("k4lt.AskAttribute"),
+        content: `<div class="endure-harm-dialog">
+          <label>${game.i18n.localize("k4lt.Attribute")}</label>
+          <select id="attribute_value">${options}</select>
+        </div>`,
+        buttons: {
+          one: {
+            label: "Ok",
+            // Résout la promesse avec la valeur sélectionnée par l'utilisateur
+            callback: () => {
+              resolve({ attribute_value: document.getElementById("attribute_value").value });
+            },
+          },
+        },
+      }).render(true);
+    });
+
+    // Retourne directement la valeur de attribute_value extraite de la promesse résolue
+    return result.attribute_value;
   }
 }

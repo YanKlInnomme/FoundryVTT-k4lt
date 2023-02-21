@@ -32,15 +32,16 @@ export default class k4ltActor extends Actor {
     }
   }*/
 
-  async woundEffect() {
-    var i;
-    let modifier = 0;
-    for (i = 1; i < 5; i++) {
-      if (getProperty(this.system.attributes, `woundtext.majorwound${i}`) && getProperty(this.system.attributes, `woundstabilized.majorwound${i}`) == "false") {
-        modifier = 1;
-      }
-    }
-    return modifier;
+  get hasUnstabilizedMajorWounds() {
+    if (this.system.majorwound1.state == "unstabilized") return true;
+    if (this.system.majorwound2.state == "unstabilized") return true;
+    if (this.system.majorwound3.state == "unstabilized") return true;
+    if (this.system.majorwound4.state == "unstabilized") return true;
+    return false
+  }
+
+  get hasUnstabilizedCriticalWound() {
+    if (this.system.criticalwound.state == "unstabilized") return true;
   }
 
   displayRollResult({ roll, moveName, resultText, moveResultText, optionsText }) {
@@ -112,27 +113,30 @@ export default class k4ltActor extends Actor {
       let situation = parseInt(this.system.sitmod) + parseInt(this.system.forward);
       kultLogger("Sitmod => ", this.system.sitmod);
 
-      let woundmod = await this.woundEffect();
-      situation -= woundmod;
+      // Major wounds
+      if (this.hasUnstabilizedMajorWounds) situation -= 1;
 
-      if (this.system.attributes.criticalwound && this.system.attributes.criticalwoundstabilized != "true") {
-        situation -= 1;
-      }
-      if (specialflag == 1 && stab > 2) {
-        situation -= 1;
-      }
+      // Critical wound
+      if (this.hasUnstabilizedCriticalWound) situation -= 1;
+
+      if (specialflag == 1 && stab > 2) situation -= 1;
+      
+      // FIXME ? si stab == 3, ça donne 2 de malus ?
       if (moveType == "disadvantage" && stab > 0) {
         situation -= 1;
       }
       if (moveType == "disadvantage" && stab > 2) {
         situation -= 1;
       }
+
       if (specialflag == 1 && stab > 5) {
         situation -= 1;
       }
+
       if (moveType == "disadvantage" && stab > 5) {
         situation -= 1;
       }
+      
       if (specialflag == 2 && stab > 5) {
         situation += 1;
       }

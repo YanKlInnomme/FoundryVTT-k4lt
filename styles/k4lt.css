@@ -262,11 +262,11 @@ h3 {
     flex-direction: row;
 }
 
-#serious-wounds {
+.serious-wounds {
     margin-bottom: 5px;
 }
 
-#critical-wound {
+.critical-wound {
     margin-top: 15px;
     color: #9b201f;
 }

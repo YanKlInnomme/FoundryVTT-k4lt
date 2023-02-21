@@ -36,6 +36,17 @@ Hooks.once("init", function () {
   Actors.registerSheet("k4lt", k4ltNPCsheet, { types: ["npc"], makeDefault: true });
 
   preloadHandlebarTemplates();
+
+  Handlebars.registerHelper("getWoundsImage", function (state) {
+    switch (state) {
+      case "none":
+        return "systems/k4lt/assets/blank.webp";
+      case "unstabilized":
+        return "systems/k4lt/assets/bleeding-wound.webp";
+      case "stabilized":
+        return "systems/k4lt/assets/sticking-plaster.webp";
+    }
+  });
 });
 
 //TODO A quoi ça sert ?

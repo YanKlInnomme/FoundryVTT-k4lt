@@ -187,51 +187,51 @@
             <div class="right-middle-column">
                 <div class="section-label" style="margin-bottom: 12px;">{{localize "k4lt.Wounds"}}</div>
                 
-<div class="two-column-wound" id="serious-wounds">
-    <input type="checkbox" id="maCaseACocher" name="system.majorwoundstate1" {{checked system.majorwoundstate1}}>
-    <img id="wound1" class="wound" src="systems/k4lt/assets/blank.webp">
-        <input type="text" name="system.majorwound1" value="{{system.majorwound1}}" placeholder="{{localize "k4lt.MajorWound1"}}">
-</div>
-<div class="two-column-wound" id="serious-wounds">
-    <img id="wound2" class="wound" src="systems/k4lt/assets/blank.webp">
-        <input type="text" name="system.majorwound2" value="{{system.majorwound2}}" placeholder="{{localize "k4lt.MajorWound2"}}">
-</div>
-<div class="two-column-wound" id="serious-wounds">
-    <img id="wound3" class="wound" src="systems/k4lt/assets/blank.webp">
-        <input type="text" name="system.majorwound3" value="{{system.majorwound3}}" placeholder="{{localize "k4lt.MajorWound3"}}">
-</div>
-<div class="two-column-wound" id="serious-wounds">
-    <img id="wound4" class="wound" src="systems/k4lt/assets/blank.webp">
-        <input type="text" name="system.majorwound4" value="{{system.majorwound4}}" placeholder="{{localize "k4lt.MajorWound4"}}">
-</div>
-<div class="two-column-wound" id="critical-wound">
-    <img id="wound5" class="wound" src="systems/k4lt/assets/blank.webp">
-        <input type="text" name="system.criticalwound" value="{{system.criticalwound}}" placeholder="{{localize "k4lt.CriticalWound"}}">
-</div>
+            <div class="two-column-wound serious-wounds">
+                <img id="majorwound1" class="wound" src="{{getWoundsImage system.majorwound1.state}}">
+                    <input type="text" name="system.majorwound1.value" value="{{system.majorwound1.value}}" placeholder="{{localize "k4lt.MajorWound1"}}">
+            </div>
 
+            <div class="two-column-wound serious-wounds">
+                <img id="majorwound2" class="wound" src="{{getWoundsImage system.majorwound2.state}}">
+                    <input type="text" name="system.majorwound2.value" value="{{system.majorwound2.value}}" placeholder="{{localize "k4lt.MajorWound2"}}">
+            </div>
 
+            <div class="two-column-wound serious-wounds">
+                <img id="majorwound3" class="wound" src="{{getWoundsImage system.majorwound3.state}}">
+                    <input type="text" name="system.majorwound3.value" value="{{system.majorwound3.value}}" placeholder="{{localize "k4lt.MajorWound3"}}">
+            </div>
 
+            <div class="two-column-wound serious-wounds">
+                <img id="majorwound4" class="wound" src="{{getWoundsImage system.majorwound4.state}}">
+                    <input type="text" name="system.majorwound4.value" value="{{system.majorwound4.value}}" placeholder="{{localize "k4lt.MajorWound4"}}">
+            </div>
 
-                <div class="flex-column stability-section">
-                    <div class="section-label">{{localize "k4lt.Stability"}}</div>
-                    <div>
-                        <select name="system.stability.value" value="{{system.stability.value}}">{{#select system.stability.value}}
-                            <option value="0">{{localize "k4lt.StabilityComposed"}}</option>
-                            <option value="1">{{localize "k4lt.StabilityUneasy"}}</option>
-                            <option value="2">{{localize "k4lt.StabilityUnfocused"}}</option>
-                            <option value="3">{{localize "k4lt.StabilityShaken"}}</option>
-                            <option value="4">{{localize "k4lt.StabilityDistressed"}}</option>
-                            <option value="5">{{localize "k4lt.StabilityNeurotic"}}</option>
-                            <option value="6">{{localize "k4lt.StabilityAnxious"}}</option>
-                            <option value="7">{{localize "k4lt.StabilityIrrational"}}</option>
-                            <option value="8">{{localize "k4lt.StabilityUnhinged"}}</option>
-                            <option value="9">{{localize "k4lt.StabilityBroken"}}</option>
-                        {{/select}}
-                        </select>
-                        <a class="stability-minus" title="{{localize "k4lt.MinusStability"}}"><i class="fas fa-minus-circle"></i></a>
-                        <a class="stability-plus" title="{{localize "k4lt.PlusStability"}}"><i class="fas fa-plus-circle"></i></a>
-                    </div>
+            <div class="two-column-wound critical-wound">
+                <img id="criticalwound" class="wound" src="{{getWoundsImage system.criticalwound.state}}">
+                    <input type="text" name="system.criticalwound.value" value="{{system.criticalwound.value}}" placeholder="{{localize "k4lt.CriticalWound"}}">
+            </div>
+
+            <div class="flex-column stability-section">
+                <div class="section-label">{{localize "k4lt.Stability"}}</div>
+                <div>
+                    <select name="system.stability.value" value="{{system.stability.value}}">{{#select system.stability.value}}
+                        <option value="0">{{localize "k4lt.StabilityComposed"}}</option>
+                        <option value="1">{{localize "k4lt.StabilityUneasy"}}</option>
+                        <option value="2">{{localize "k4lt.StabilityUnfocused"}}</option>
+                        <option value="3">{{localize "k4lt.StabilityShaken"}}</option>
+                        <option value="4">{{localize "k4lt.StabilityDistressed"}}</option>
+                        <option value="5">{{localize "k4lt.StabilityNeurotic"}}</option>
+                        <option value="6">{{localize "k4lt.StabilityAnxious"}}</option>
+                        <option value="7">{{localize "k4lt.StabilityIrrational"}}</option>
+                        <option value="8">{{localize "k4lt.StabilityUnhinged"}}</option>
+                        <option value="9">{{localize "k4lt.StabilityBroken"}}</option>
+                    {{/select}}
+                    </select>
+                    <a class="stability-minus" title="{{localize "k4lt.MinusStability"}}"><i class="fas fa-minus-circle"></i></a>
+                    <a class="stability-plus" title="{{localize "k4lt.PlusStability"}}"><i class="fas fa-plus-circle"></i></a>
                 </div>
+            </div>
             </div>
         </div>
         <div class="bottom-section">

@@ -8,12 +8,26 @@
       "relationtotheothercharacters": "",
       "dramatichooks": "",
       "notes": "",
-      "majorwound1": "",
-      "majorwound2": "",
-      "majorwound3": "",
-      "majorwound4": "",
-      "criticalwound": "",
-      "majorwoundstate1": false,
+      "majorwound1": {
+        "value": "",
+        "state": "none"
+      },
+      "majorwound2": {
+        "value": "",
+        "state": "none"
+      },
+      "majorwound3": {
+        "value": "",
+        "state": "none"
+      },
+      "majorwound4": {
+        "value": "",
+        "state": "none"
+      },
+      "criticalwound": {
+        "value": "",
+        "state": "none"
+      },
       "stability": {
         "value": 0,
         "min": 0,

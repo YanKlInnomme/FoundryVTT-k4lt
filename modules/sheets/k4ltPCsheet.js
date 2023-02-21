@@ -91,14 +91,6 @@ export default class k4ltPCsheet extends ActorSheet {
       ChatMessage.create({ content: html, speaker: ChatMessage.getSpeaker({ alias: this.name }) });
     });
 
-    html.find(".token-add").click((ev) => {
-      const li = $(ev.currentTarget).parents(".item-name");
-      const item = this.actor.getOwnedItem(li.data("itemId"));
-      let newtokens = Number(item.system.tokens) + 1;
-      kultLogger("Add Tokens => ", { currentTokens: item.system.tokens, newTokens: newtokens });
-      item.update({ "system.tokens": newtokens });
-    });
-
     html.find(".move-roll").click((ev) => {
       const li = $(ev.currentTarget).parents(".item-name");
       this.actor.moveroll(li.data("itemId"));
@@ -126,8 +118,11 @@ export default class k4ltPCsheet extends ActorSheet {
       }
     });
 
-    html.find(".reveal-hidden").click((ev) => {
-      document.getElementsById("hidden_text").style.display = "block";
+    html.find(".token-add").click((ev) => {
+      const li = $(ev.currentTarget).parents(".item-name");
+      const item = this.actor.get(li.data("itemId"));
+      let newtokens = Number(item.system.tokens) + 1;
+      item.update({ "system.tokens": newtokens });
     });
 
     html.find(".token-spend").click((ev) => {
@@ -137,11 +132,36 @@ export default class k4ltPCsheet extends ActorSheet {
       item.update({ "system.tokens": newtokens });
     });
 
-    html.find(".token-add").click((ev) => {
-      const li = $(ev.currentTarget).parents(".item-name");
-      const item = this.actor.get(li.data("itemId"));
-      let newtokens = Number(item.system.tokens) + 1;
-      item.update({ "system.tokens": newtokens });
-    });
+    html.find('#majorwound1').click(this._onUpdateWound.bind(this));
+    html.find('#majorwound2').click(this._onUpdateWound.bind(this));
+    html.find('#majorwound3').click(this._onUpdateWound.bind(this));
+    html.find('#majorwound4').click(this._onUpdateWound.bind(this));
+    html.find('#criticalwound').click(this._onUpdateWound.bind(this));
+
+  }
+
+  /**
+   * @description l'id de l'image est utilisée pour récupérer l'information de l'acteur et le mettre à jour.
+   * @param {*} ev 
+   */
+  _onUpdateWound(ev) {
+    ev.preventDefault();
+    const id = $(ev.currentTarget)[0].id; 
+
+    const wound = eval(`this.actor.system.${id}`);
+    let newState;
+    switch (wound.state) {
+      case "none":
+        newState = "unstabilized";
+        break;
+      case "unstabilized":
+        newState = "stabilized";
+        break;
+      case "stabilized":
+        newState = "none";
+        break;
+    }
+    const key = `system.${id}`;
+    this.actor.update({[key]: {value : wound.value, state: newState}});
   }
 }

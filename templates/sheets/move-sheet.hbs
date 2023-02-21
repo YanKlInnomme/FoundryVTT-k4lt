@@ -6,8 +6,8 @@
   <div class="forms kult-item-sheet">
     <div>
       <label>{{localize "k4lt.Attribute"}}:</label>
-      <select name="data.attributemod" value="{{data.attributemod}}">
-        {{#select data.attributemod}}
+      <select name="system.attributemod" value="{{system.attributemod}}">
+        {{#select system.attributemod}}
         <option value ="none">{{localize "k4lt.None"}}</option>
         <option value="willpower">{{localize "k4lt.Willpower"}}</option>
         <option value="fortitude">{{localize "k4lt.Fortitude"}}</option>
@@ -25,34 +25,34 @@
     </div>
     <div class="editor-row">
       <label>{{localize "k4lt.Trigger"}}:</label>
-      <div>{{editor content=data.trigger target="data.trigger" button=true owner=owner editable=editable}}</div>
+      <div>{{editor system.trigger target="system.trigger" button=true owner=owner editable=editable}}</div>
     </div>
     <div class="editor-row">
       <label>{{localize "k4lt.Options"}}:</label>
-      <div>{{editor content=data.options target="data.options" button=true owner=owner editable=editable}}</div>
+      <div>{{editor system.options target="system.options" button=true owner=owner editable=editable}}</div>
     </div>
     <div>
       <label>{{localize "k4lt.Results"}}:</label>
       <div class="results-input">
         <div class="editor-row">
           <label>15+:</label>
-          <div>{{editor content=data.completesuccess target="data.completesuccess" button=true owner=owner editable=editable}}</div>
+          <div>{{editor system.completesuccess target="system.completesuccess" button=true owner=owner editable=editable}}</div>
         </div>
         <div class="editor-row">
           <label>10-14:</label>
-          <div>{{editor content=data.partialsuccess target="data.partialsuccess" button=true owner=owner
+          <div>{{editor system.partialsuccess target="system.partialsuccess" button=true owner=owner
             editable=editable}}</div>
         </div>
         <div class="editor-row">
           <label>0-9</label>
-          <div>{{editor content=data.failure target="data.failure" button=true owner=owner editable=editable}}</div>
+          <div>{{editor system.failure target="system.failure" button=true owner=owner editable=editable}}</div>
         </div>
       </div>
     </div>
     <div>
       <label>{{localize "k4lt.SpecialMove"}}:</label>
-      <select name="data.specialflag" value="{{data.specialflag}}">
-      {{#select data.specialflag}}
+      <select name="system.specialflag" value="{{system.specialflag}}">
+      {{#select system.specialflag}}
         <option value='0'>{{localize "k4lt.None"}}</option>
         <option value='1'>{{localize "k4lt.KeepItTogether"}}</option>
         <option value='2'>{{localize "k4lt.SeeThroughTheIllusion"}}</option>

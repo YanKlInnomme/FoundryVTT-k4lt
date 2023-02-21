@@ -1,3 +1,4 @@
+{{log 'npc-sheet' this}}
 <form class="{{cssClass}} kult-sheet" autocomplete="off">
     <header class="sheet-header">
         <script src="systems/k4lt/scripts/delete.js"></script>
@@ -20,14 +21,14 @@
         <div class="npc-description">
             <div class="section-label">{{localize "Description"}}</div>
             <div class="free-text">
-                {{editor content=data.data.description target="data.description" button=true owner=owner
+                {{editor data.data.description target="data.description" button=true owner=owner
                          editable=editable}}
             </div>
         </div>
         <div class="npc-abilities">
             <div class="section-label">{{localize "k4lt.Abilities"}}</div>
             <div class="free-text">
-                {{editor content=data.data.abilities target="data.abilities" button=true owner=owner editable=editable}}
+                {{editor data.data.abilities target="data.abilities" button=true owner=owner editable=editable}}
             </div>
         </div>
         <div class="npc-harm">
@@ -43,33 +44,33 @@
                            type="text" aria-label="Max Harm"
                            data-dtype="Number"/>
                 </div>
-                {{editor content=data.data.harmmoves target="data.harmmoves" button=true owner=owner editable=editable}}
+                {{editor data.data.harmmoves target="data.harmmoves" button=true owner=owner editable=editable}}
             </div>
         </div>
         <div class="npc-attacks">
             <div class="section-label">{{localize "k4lt.Attacks"}}</div>
             <div class="free-text">
-                {{editor content=data.data.attacks target="data.attacks" button=true owner=owner editable=editable}}
+                {{editor data.data.attacks target="data.attacks" button=true owner=owner editable=editable}}
             </div>
         </div>
         <div class="npc-combat">
             <div class="section-label">{{localize "k4lt.Combat"}}</div>
             <div class="free-text">
-                {{editor content=data.data.combatmoves target="data.combatmoves" button=true owner=owner
+                {{editor data.data.combatmoves target="data.combatmoves" button=true owner=owner
                          editable=editable}}
             </div>
         </div>
         <div class="npc-influence">
             <div class="section-label">{{localize "k4lt.Influence"}}</div>
             <div class="free-text">
-                {{editor content=data.data.influencemoves target="data.influencemoves" button=true owner=owner
+                {{editor data.data.influencemoves target="data.influencemoves" button=true owner=owner
                          editable=editable}}
             </div>
         </div>
         <div class="npc-magic">
             <div class="section-label">{{localize "k4lt.Magic"}}</div>
             <div class="free-text">
-                {{editor content=data.data.magicmoves target="data.magicmoves" button=true owner=owner
+                {{editor data.data.magicmoves target="data.magicmoves" button=true owner=owner
                          editable=editable}}
             </div>
         </div>

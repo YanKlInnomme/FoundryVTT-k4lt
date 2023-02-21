@@ -1,3 +1,4 @@
+{{log 'avantage sheet' this}}
 <form class="{{cssClass}}" autocomplete="off">
   <header class="sheet-header">
     <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64" />
@@ -6,8 +7,8 @@
   <div class="forms kult-item-sheet">
     <div>
       <label>{{localize "k4lt.Attribute"}}:</label>
-      <select name="data.attributemod" value="{{data.attributemod}}">
-        {{#select data.attributemod}}
+      <select name="system.attributemod" value="{{system.attributemod}}">
+        {{#select system.attributemod}}
         <option value="">{{localize "k4lt.None"}}</option>
         <option value="willpower">{{localize "k4lt.Willpower"}}</option>
         <option value="fortitude">{{localize "k4lt.Fortitude"}}</option>
@@ -24,8 +25,8 @@
     </div>
     <div>
       <label>{{localize "k4lt.Type"}}:</label>
-      <select name="data.type" value="{{data.type}}">
-      {{#select data.type}}
+      <select name="system.type" value="{{system.type}}">
+      {{#select system.type}}
         <option value="active">{{localize "k4lt.Active"}}</option>
         <option value="passive">{{localize "k4lt.Passive"}}</option>]
       {{/select}}
@@ -33,34 +34,34 @@
     </div>
     <div class="tokens-container">
       <label>{{localize "k4lt.HasEdge"}}?</label>
-      <input type="checkbox" name="data.hasTokens" {{checked data.hasTokens}} />
-      {{#if data.hasTokens}}
+      <input type="checkbox" name="system.hasTokens" {{checked system.hasTokens}} />
+      {{#if system.hasTokens}}
         <label>{{localize "k4lt.Counter"}}:</label>
-        <input class="tokens-counter" name="data.tokens" value="{{data.tokens}}" class="short-input" type="number" />
+        <input class="tokens-counter" name="system.tokens" value="{{system.tokens}}" class="short-input" type="number" />
       {{/if}}
     </div>
     <div class="editor-row">
       <label>{{localize "k4lt.Effect"}}:</label>
-      <div>{{editor content=data.effect target="data.effect" button=true owner=owner editable=editable}}</div>
+      <div>{{editor system.effect target="system.effect" button=true owner=owner editable=editable}}</div>
     </div>
     <div class="editor-row">
       <label>{{localize "k4lt.Options"}}:</label>
-      <div>{{editor content=data.options target="data.options" button=true owner=owner editable=editable}}</div>
+      <div>{{editor system.options target="system.options" button=true owner=owner editable=editable}}</div>
     </div>
     <div>
       <label>{{localize "k4lt.Results"}}:</label>
       <div class="results-input">
         <div class="editor-row">
           <label>15+:</label>
-          <div>{{editor content=data.completesuccess target="data.completesuccess" button=true owner=owner editable=editable}}</div>
+          <div>{{editor system.completesuccess target="system.completesuccess" button=true owner=owner editable=editable}}</div>
         </div>
         <div class="editor-row">
           <label>10-14:</label>
-          <div>{{editor content=data.partialsuccess target="data.partialsuccess" button=true owner=owner editable=editable}}</div>
+          <div>{{editor system.partialsuccess target="system.partialsuccess" button=true owner=owner editable=editable}}</div>
         </div>
         <div class="editor-row">
           <label>0-9</label>
-          <div>{{editor content=data.failure target="data.failure" button=true owner=owner editable=editable}}</div>
+          <div>{{editor system.failure target="system.failure" button=true owner=owner editable=editable}}</div>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 export default class k4ltActor extends Actor {
+
   /** @override */
   prepareBaseData() {
     if (this.type === "pc") this._preparePCData();
@@ -10,27 +11,6 @@ export default class k4ltActor extends Actor {
     });
     this.system.disadvantagearray = Array.from(this.system.disadvantages);
   }
-
-  //TODO V10
-  /*
-  async _onCreate(data, options, user) {
-    await super._preCreate(data, options, user);
-    if (this.type === "pc") {
-      const pack = await game.packs.get("k4lt.moves");
-      const index = await pack.getIndex();
-      const moveArray = await Array.from(index);
-      var i;
-      const newItems = [];
-      for (i = 0; i < moveArray.length; i++) {
-        const move = moveArray[i];
-        const finalItem = await pack.getDocument(move._id);
-        newItems.push(finalItem.data);
-      }
-      console.log(newItems);
-
-      this.createEmbeddedDocuments("Item", newItems);
-    }
-  }*/
 
   get hasUnstabilizedMajorWounds() {
     if (this.system.majorwound1.state == "unstabilized") return true;
@@ -136,7 +116,7 @@ export default class k4ltActor extends Actor {
       if (moveType == "disadvantage" && stab > 5) {
         situation -= 1;
       }
-      
+
       if (specialflag == 2 && stab > 5) {
         situation += 1;
       }

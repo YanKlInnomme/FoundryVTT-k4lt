@@ -49,28 +49,17 @@ Hooks.once("init", function () {
   });
 });
 
-//TODO A quoi ça sert ?
-Hooks.once("ready", () => {
-  // Listen for dice icon click
-  const diceIconSelector = "#chat-controls i.fas.fa-dice-d20";
-  $(document).on("click", diceIconSelector, () => {
-    kultLogger(`Dice Icon Works`);
-  });
-});
-
-//TODO V10
-Hooks.on("createActor", async (document, createData, options, userId) => {
-  if (createData.type === "pc") {
-    let pack = await game.packs.get("k4lt.moves");
-    let index = await pack.getIndex();
-    let moveArray = Array.from(index);
-    kultLogger(moveArray);
-    var i;
-    for (i = 0; i < moveArray.length; i++) {
-      let finalID = moveArray[0];
-      kultLogger(finalID);
-      await createData.createEmbeddedDocuments("Item", [finalItem]);
+Hooks.on("createActor", async (actor) => {
+  if (actor.type === "pc") {
+    let pack = game.packs.get("k4lt.moves");
+    let index = pack.indexed ? pack.index : await pack.getIndex();
+    let moves = [];
+    for (const move of index) {
+      let item = await pack.getDocument(move._id);
+      moves.push(item.toObject());
     }
+    console.log("moves", moves);
+    await actor.createEmbeddedDocuments("Item", moves);
   }
 });
 

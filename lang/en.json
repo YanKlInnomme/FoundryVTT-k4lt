@@ -7,7 +7,7 @@
   "ITEM": {
       "TypeMove": "Move",
       "TypeWeapon": "Weapon",
-      "TypeAdvantage": "Attaque",
+      "TypeAdvantage": "Advantage",
       "TypeDisadvantage": "Disadvantage",
       "TypeDarksecret": "Dark Secret",
       "TypeRelationship": "Relationship",

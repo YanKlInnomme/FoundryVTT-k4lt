@@ -42,7 +42,6 @@ export default class k4ltActor extends Actor {
   }
 
   async moveroll(moveID) {
-    //const actordata = this.data;
     kultLogger("Actor Data => ", this);
 
     let move = this.items.get(moveID);
@@ -89,7 +88,7 @@ export default class k4ltActor extends Actor {
         mod = this.system.attributes[attr];
       }
 
-      let stab = this.system.stability.value;
+      let stability = this.system.stability.value;
       let situation = parseInt(this.system.sitmod) + parseInt(this.system.forward);
       kultLogger("Sitmod => ", this.system.sitmod);
 
@@ -99,25 +98,23 @@ export default class k4ltActor extends Actor {
       // Critical wound
       if (this.hasUnstabilizedCriticalWound) situation -= 1;
 
-      if (specialflag == 1 && stab > 2) situation -= 1;
-      
-      // FIXME ? si stab == 3, ça donne 2 de malus ?
-      if (moveType == "disadvantage" && stab > 0) {
-        situation -= 1;
-      }
-      if (moveType == "disadvantage" && stab > 2) {
-        situation -= 1;
+      // Stability
+      if (moveType == "disadvantage" && stability > 0) {
+        if (stability <= 2 ) situation -= 1;
+        else if (3 <= stability && stability <= 5) situation -= 2;
+        else situation -= 3;
       }
 
-      if (specialflag == 1 && stab > 5) {
+      if (specialflag == 1 && stability > 0) {
+        if (3 <= stability && stability <= 5) situation -= 1;
+        else situation -= 2;
+      }
+        
+      if (specialflag == 1 && stability > 5) {
         situation -= 1;
       }
-
-      if (moveType == "disadvantage" && stab > 5) {
-        situation -= 1;
-      }
-
-      if (specialflag == 2 && stab > 5) {
+  
+      if (specialflag == 2 && stability > 5) {
         situation += 1;
       }
 

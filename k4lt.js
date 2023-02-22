@@ -2,7 +2,7 @@ import k4ltitemsheet from "./modules/sheets/k4ltitemsheet.js";
 import k4ltPCsheet from "./modules/sheets/k4ltPCsheet.js";
 import k4ltNPCsheet from "./modules/sheets/k4ltNPCsheet.js";
 import k4ltActor from "./modules/sheets/k4ltActor.js";
-import k4ltTracker from "./modules/tracker.js";
+import Macros from "./modules/system/macros.js";
 import { registerSystemSettings } from "./modules/system/settings.js";
 import { registerLogger } from "./modules/system/logger.js";
 
@@ -23,7 +23,6 @@ async function preloadHandlebarTemplates() {
 }
 
 Hooks.once("init", function () {
-  // Register System Settings
   registerSystemSettings();
   registerLogger();
 
@@ -47,8 +46,13 @@ Hooks.once("init", function () {
         return "systems/k4lt/assets/sticking-plaster.webp";
     }
   });
+
+  kultLogger("K4lt Initialized");
 });
 
+/**
+ * Add the basic moves from the compendium to a new actor of type pc
+ */
 Hooks.on("createActor", async (actor) => {
   if (actor.type === "pc") {
     let pack = game.packs.get("k4lt.moves");
@@ -58,33 +62,16 @@ Hooks.on("createActor", async (actor) => {
       let item = await pack.getDocument(move._id);
       moves.push(item.toObject());
     }
-    console.log("moves", moves);
     await actor.createEmbeddedDocuments("Item", moves);
   }
 });
 
-//TODO V10
-Hooks.on("hotbarDrop", async (hotbar, data, slot) => {
-  kultLogger(data.system);
-  if (data.system.type === "passive") {
-    ui.notifications.info(game.i18n.localize("k4lt.PassiveAbility"));
+/**
+ * Create a macro when dropping an item on the hotbar
+ */
+Hooks.on("hotbarDrop", (bar, data, slot) => {
+  if (["Item"].includes(data.type)) {
+    Macros.createK4ltMacro(data, slot);
     return false;
   }
-  let functionName = "";
-  const itemID = data.data._id;
-  const actorID = data.actorId;
-  const macroData = {
-    name: data.data.name,
-    command: `
-      let character = game.actors.get("${actorID}");
-      character.moveroll("${itemID}")`,
-    img: data.data.img,
-  };
-  let macro = await Macro.create({
-    name: macroData.name,
-    type: "script",
-    img: macroData.img,
-    command: macroData.command,
-  });
-  await game.user.assignHotbarMacro(macro, slot);
 });

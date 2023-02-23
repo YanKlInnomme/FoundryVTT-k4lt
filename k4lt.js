@@ -2,12 +2,12 @@ import k4ltitemsheet from "./modules/sheets/k4ltitemsheet.js";
 import k4ltPCsheet from "./modules/sheets/k4ltPCsheet.js";
 import k4ltNPCsheet from "./modules/sheets/k4ltNPCsheet.js";
 import k4ltActor from "./modules/sheets/k4ltActor.js";
-import k4ltTracker from "./modules/tracker.js";
-import {registerSystemSettings} from "./modules/system/settings.js";
-import {registerLogger} from "./modules/system/logger.js";
+import Macros from "./modules/system/macros.js";
+import { registerSystemSettings } from "./modules/system/settings.js";
+import { registerLogger } from "./modules/system/logger.js";
 
 async function preloadHandlebarTemplates() {
-  const templatepaths =[
+  const templatepaths = [
     "systems/k4lt/templates/partials/move-card.hbs",
     "systems/k4lt/templates/partials/darksecret-card.hbs",
     "systems/k4lt/templates/partials/relationship-card.hbs",
@@ -17,13 +17,12 @@ async function preloadHandlebarTemplates() {
     "systems/k4lt/templates/partials/disadvantage-card.hbs",
     "systems/k4lt/templates/partials/modifier-values.hbs",
     "systems/k4lt/templates/partials/passive-attribute-values.hbs",
-    "systems/k4lt/templates/partials/active-attribute-values.hbs"
+    "systems/k4lt/templates/partials/active-attribute-values.hbs",
   ];
   return loadTemplates(templatepaths);
-};
+}
 
-Hooks.once("init", function() {
-  // Register System Settings
+Hooks.once("init", function () {
   registerSystemSettings();
   registerLogger();
 
@@ -31,60 +30,48 @@ Hooks.once("init", function() {
   CONFIG.Actor.documentClass = k4ltActor;
   Items.unregisterSheet("core", ItemSheet);
   Actors.unregisterSheet("core", ActorSheet);
-  Items.registerSheet("k4lt", k4ltitemsheet, {makeDefault: true});
-  Actors.registerSheet("k4lt", k4ltPCsheet, {types: ["pc"], makeDefault: true});
-  Actors.registerSheet("k4lt", k4ltNPCsheet, {types: ["npc"], makeDefault: true});
+  Items.registerSheet("k4lt", k4ltitemsheet, { makeDefault: true });
+  Actors.registerSheet("k4lt", k4ltPCsheet, { types: ["pc"], makeDefault: true });
+  Actors.registerSheet("k4lt", k4ltNPCsheet, { types: ["npc"], makeDefault: true });
 
   preloadHandlebarTemplates();
-});
 
-Hooks.once("ready", () => {
-  // Listen for dice icon click
-  const diceIconSelector = '#chat-controls i.fas.fa-dice-d20';
-  $(document).on('click', diceIconSelector, () => {
-      console.log(`Dice Icon Works`);
-  });
-});
-
-Hooks.on('createActor', async (document, createData, options, userId) => {
-    if (createData.type === "pc"){
-        let pack = await game.packs.get("k4lt.moves");
-        let index = await pack.getIndex();
-        let moveArray = Array.from(index);
-        console.log(moveArray);
-        var i;
-        for (i=0; i<moveArray.length; i++){
-            let finalID = moveArray[0];
-            console.log(finalID);
-            await createData.createEmbeddedDocuments('Item', [finalItem]);
-        }
+  Handlebars.registerHelper("getWoundsImage", function (state) {
+    switch (state) {
+      case "none":
+        return "systems/k4lt/assets/blank.webp";
+      case "unstabilized":
+        return "systems/k4lt/assets/bleeding-wound.webp";
+      case "stabilized":
+        return "systems/k4lt/assets/sticking-plaster.webp";
     }
-
   });
 
-  Hooks.on('hotbarDrop', async (hotbar, data, slot) => {
+  kultLogger("K4lt Initialized");
+});
 
-    console.log(data.data.data);
-    if(data.data.data.type === "passive"){
-      ui.notifications.info(game.i18n.localize("k4lt.PassiveAbility"))
-      return false;
+/**
+ * Add the basic moves from the compendium to a new actor of type pc
+ */
+Hooks.on("createActor", async (actor) => {
+  if (actor.type === "pc") {
+    let pack = game.packs.get("k4lt.moves");
+    let index = pack.indexed ? pack.index : await pack.getIndex();
+    let moves = [];
+    for (const move of index) {
+      let item = await pack.getDocument(move._id);
+      moves.push(item.toObject());
     }
-    let functionName = "";
-    const itemID = data.data._id;
-    const actorID = data.actorId
-    const macroData = {
-      name: data.data.name,
-      command: `
-      let character = game.actors.get("${actorID}");
-      character.moveroll("${itemID}")`,
-      img: data.data.img
-    }
-    let macro = await Macro.create({
-      name: macroData.name,
-      type: 'script',
-      img: macroData.img,
-      command: macroData.command})
-      await game.user.assignHotbarMacro(macro, slot)
+    await actor.createEmbeddedDocuments("Item", moves);
+  }
+});
 
-
-    })
+/**
+ * Create a macro when dropping an item on the hotbar
+ */
+Hooks.on("hotbarDrop", (bar, data, slot) => {
+  if (["Item"].includes(data.type)) {
+    Macros.createK4ltMacro(data, slot);
+    return false;
+  }
+});

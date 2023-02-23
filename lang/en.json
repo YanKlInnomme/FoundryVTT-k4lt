@@ -1,4 +1,19 @@
 {
+  "ACTOR": {
+    "TypePc": "Player Character",
+    "TypeNpc": "Non Player Character"
+  },
+
+  "ITEM": {
+      "TypeMove": "Move",
+      "TypeWeapon": "Weapon",
+      "TypeAdvantage": "Advantage",
+      "TypeDisadvantage": "Disadvantage",
+      "TypeDarksecret": "Dark Secret",
+      "TypeRelationship": "Relationship",
+      "TypeGear": "Gear"
+  },
+
   "k4lt.Forward": "Forward",
   "k4lt.SitMod": "Situational Modifier",
   "k4lt.WhoAreYou": "Who are you?",

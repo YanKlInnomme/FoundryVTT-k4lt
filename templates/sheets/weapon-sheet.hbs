@@ -7,23 +7,29 @@
     <div class="kult-item-flex">
       <div>
         <label>{{localize "k4lt.Range"}}:</label>
-        <input name="data.range" type="text" style="width: 80px" value="{{data.range}}">
+        <input name="system.range" type="text" style="width: 80px" value="{{system.range}}" />
       </div>
       <div>
         <label>{{localize "k4lt.Harm"}}:</label>
-        <input name="data.harm" style="width: 80px" type="text" value="{{data.harm}}" data-dtype="Number">
+        <input name="system.harm" style="width: 80px" type="text" value="{{system.harm}}" data-dtype="Number" />
       </div>
     </div>
     <div>
       <label>{{localize "k4lt.Ammo"}}:</label>
       <span>
-        <input class="short-input" style="width: 80px" name="data.ammo.value" type="number" data-dtype="Number" value="{{data.ammo.value}}">/<input
-          class="short-input" style="width: 80px" name="data.ammo.max" type="number" data-dtype="Number" value="{{data.ammo.max}}">
+        <input class="short-input" style="width: 80px" name="system.ammo.value" type="number" data-dtype="Number" value="{{system.ammo.value}}" />/<input
+          class="short-input"
+          style="width: 80px"
+          name="system.ammo.max"
+          type="number"
+          data-dtype="Number"
+          value="{{system.ammo.max}}"
+        />
       </span>
     </div>
     <div class="editor-row">
       <label>{{localize "k4lt.Special"}}:</label>
-      <div>{{editor content=data.special target="data.special" button=true owner=owner editable=editable}}</div>
+      <div>{{editor system.special target="system.special" button=true owner=owner editable=editable}}</div>
     </div>
   </div>
 </form>

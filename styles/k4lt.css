@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: "Alverata";
-    src:url("../fonts/Alverata.ttf") format("truetype"),
+    src: url("../fonts/Alverata.ttf") format("truetype"),
         url("../fonts/Alverata-Bold.ttf") format("truetype"),
         url("../fonts/Alverata-BoldItalic.ttf") format("truetype"),
         url("../fonts/Alverata-Italic.ttf") format("truetype");
@@ -12,38 +12,38 @@
 
 @font-face {
     font-family: "Infidel-C";
-    src:url("../fonts/Infidel-C.woff2") format("woff2"),
+    src: url("../fonts/Infidel-C.woff2") format("woff2"),
         url("../fonts/Infidel-C.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
 }
 
 #logo {
-  width: 120px;
-  height: auto;
-  padding-right: 10px;
-  content: url("../assets/logo_en.webp");
+    width: 120px;
+    height: auto;
+    padding-right: 10px;
+    content: url("../assets/logo_en.webp");
 }
-  
-#pause > img {
+
+#pause>img {
     content: url("../assets/pause.webp");
     height: 220px;
     width: 220px;
     top: -65px;
     left: calc(50% - 110px);
 }
-  
+
 #pause {
     top: 50%;
     background: none;
 }
-  
-#pause > figcaption {
+
+#pause>figcaption {
     font-family: "Infidel-C";
-    color: rgb(25, 25, 25); 
+    color: rgb(25, 25, 25);
     text-shadow: 0px 0px 30px rgb(150, 140, 108);
 }
-  
+
 :root {
     --color-text-light-highlight: rgb(153, 138, 97);
     --color-text-light-heading: rgb(129, 116, 81);
@@ -56,7 +56,9 @@
     --font-primary: "Alverata", sans-serif;
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
     font-family: "Infidel-C";
 }
 
@@ -109,7 +111,7 @@ h1,h2,h3 {
 }
 
 
-  .willpic {
+.willpic {
     background: url(../assets/attributes/will.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -157,7 +159,7 @@ h1,h2,h3 {
     background-size: 100% 100%;
 }
 
-.reasonpic:hover + .attmid {
+.reasonpic:hover+.attmid {
     background-image: url(../assets/attributes/middle-left.webp);
 }
 
@@ -253,18 +255,18 @@ h1,h2,h3 {
     cursor: pointer;
     margin-right: 10px;
     border: 1px dashed #968c6a;
-  }
-  
+}
+
 .two-column-wound {
     display: flex;
     flex-direction: row;
 }
 
-#serious-wounds {
+.serious-wounds {
     margin-bottom: 5px;
 }
 
-#critical-wound {
+.critical-wound {
     margin-top: 15px;
     color: #9b201f;
 }
@@ -306,12 +308,12 @@ h1,h2,h3 {
     padding-top: 5px;
 }
 
-.tabButton:hover {
+.choice:hover {
     background-color: #9b201f;
     color: #968c6a
 }
 
-.tabButton {
+.choice {
     background-color: #968c6a;
     color: #9b201f;
     font-size: 1.2rem;
@@ -378,7 +380,7 @@ h1,h2,h3 {
 .actor-picture:hover {
     transform: rotate(0deg);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  }
+}
 
 .bottom-section .move-list {
     columns: 250px;
@@ -666,7 +668,7 @@ td textarea {
     margin-bottom: 50px;
 }
 
-.two-column > div {
+.two-column>div {
     width: 50%;
     margin-right: 5px;
 }
@@ -675,7 +677,7 @@ td textarea {
     width: 100%;
 }
 
-.weapon-card > div {
+.weapon-card>div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -722,7 +724,7 @@ td textarea {
     padding-left: 20px;
 }
 
-.character-name > input {
+.character-name>input {
     width: 98% !important;
 }
 
@@ -743,11 +745,6 @@ td textarea {
     border: 1px solid #968c6a;
 }
 
-.background-section {
-    display: none;
-    margin-top: 10px;
-}
-
 input.short-input {
     width: 70px;
 }
@@ -764,7 +761,7 @@ input.short-input {
     padding: 5px;
 }
 
-.kult-item-sheet > div {
+.kult-item-sheet>div {
     margin-bottom: 10px;
 }
 
@@ -809,8 +806,8 @@ input.short-input {
     align-items: center;
 }
 
-.kult-item-sheet .tokens-container > label,
-.kult-item-sheet .tokens-container > input {
+.kult-item-sheet .tokens-container>label,
+.kult-item-sheet .tokens-container>input {
     margin-right: 10px;
 }
 

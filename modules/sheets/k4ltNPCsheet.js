@@ -1,11 +1,17 @@
-export default class k4ltNPCsheet extends ActorSheet{
-    get template(){
-        return `systems/k4lt/templates/sheets/npc-sheet.hbs`;
-    }
+export default class k4ltNPCsheet extends ActorSheet {
+  /** @override */
+  get template() {
+    return `systems/k4lt/templates/sheets/npc-sheet.hbs`;
+  }
 
-    getData(){
-        const data = super.getData();
-        data.moves = data.items.filter(function(item) {return item.type == "move" || "advantage" || "disadvantage" || "darksecret" || "relationship"} );
-        console.log(data);
-        return data;
-    }}
+  /** @override */
+  getData() {
+    const context = super.getData();
+    context.system = context.actor.system;
+    context.moves = context.items.filter(function (item) {
+      return item.type == "move" || "advantage" || "disadvantage" || "darksecret" || "relationship";
+    });
+    kultLogger("NPCSheet getData => ", context);
+    return context;
+  }
+}

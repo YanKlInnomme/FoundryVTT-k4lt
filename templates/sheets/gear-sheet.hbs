@@ -7,13 +7,17 @@
     <div>
       <label>{{localize "k4lt.Uses"}}:</label>
       <span>
-        <input name="data.ammo.value" style="width: 80px" type="text" value="{{data.ammo.value}}">/<input name="data.ammo.max"
-          style="width: 80px" type="number" value="{{data.ammo.max}}">
+        <input name="system.ammo.value" style="width: 80px" type="text" value="{{system.ammo.value}}" />/<input
+          name="system.ammo.max"
+          style="width: 80px"
+          type="number"
+          value="{{system.ammo.max}}"
+        />
       </span>
     </div>
     <div class="editor-row">
       <label>{{localize "k4lt.Description"}}:</label>
-      <div>{{editor content=data.description target="data.description" button=true owner=owner editable=editable}}</div>
+      <div>{{editor system.description target="system.description" button=true owner=owner editable=editable}}</div>
     </div>
   </div>
 </form>

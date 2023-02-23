@@ -1,78 +1,68 @@
+{{!log "npc-sheet" this}}
 <form class="{{cssClass}} kult-sheet" autocomplete="off">
-    <header class="sheet-header">
-        <script src="systems/k4lt/scripts/delete.js"></script>
-        <script src="systems/k4lt/scripts/getAttribute.js"></script>
-        <img src="/systems/k4lt/assets/kultlogo.png" height="64" width="167">
-        <h1 class="character-name"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
-    </header>
-    <section class="flexcol" style="gap: .5rem; margin-top: 1rem;">
-        <div class="flexrow" style="gap: .5rem">
-            <div class="flexrow">
-                <label for="npc-home" class="section-label">{{localize "k4lt.NPC.Home"}}</label>
-                <input id="npc-home" type="text" class="border-rect" value="{{data.data.home}}" name="data.home">
-            </div>
-            <div class="flexrow">
-                <label for="npc-type" class="section-label">{{localize "k4lt.NPC.Type"}}</label>
-                <input id="npc-type" type="text" class="border-rect" value="{{data.data.creature_type}}"
-                       name="data.creature_type">
-            </div>
+  <header class="sheet-header">
+    <img src="/systems/k4lt/assets/kultlogo.png" height="64" width="167" />
+    <h1 class="character-name"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
+  </header>
+  <section class="flexcol" style="gap: .5rem; margin-top: 1rem;">
+    <div class="flexrow" style="gap: .5rem">
+      <div class="flexrow">
+        <label for="npc-home" class="section-label">{{localize "k4lt.NPC.Home"}}</label>
+        <input id="npc-home" type="text" class="border-rect" value="{{system.home}}" name="system.home" />
+      </div>
+      <div class="flexrow">
+        <label for="npc-type" class="section-label">{{localize "k4lt.NPC.Type"}}</label>
+        <input id="npc-type" type="text" class="border-rect" value="{{system.creaturetype}}" name="system.creaturetype" />
+      </div>
+    </div>
+    <div class="npc-description">
+      <div class="section-label">{{localize "Description"}}</div>
+      <div class="free-text">
+        {{editor system.description target="system.description" button=true owner=owner editable=editable}}
+      </div>
+    </div>
+    <div class="npc-abilities">
+      <div class="section-label">{{localize "k4lt.Abilities"}}</div>
+      <div class="free-text">
+        {{editor system.abilities target="system.abilities" button=true owner=owner editable=editable}}
+      </div>
+    </div>
+    <div class="npc-harm">
+      <div class="section-label">{{localize "k4lt.Harm"}}</div>
+      <div class="free-text">
+        <div class="npc-harm-taken">
+          <label for="npc-harm-taken">{{localize "k4lt.HarmTaken"}}:</label>
+          <input id="npc-harm-taken" class="short-input" style="width: 80px" name="system.harm.value" value="{{system.harm.value}}" type="text" />
+          <span>/</span>
+          <input class="short-input" style="width: 80px" name="system.harm.max" value="{{system.harm.max}}" type="text" aria-label="Max Harm" data-dtype="Number" />
         </div>
-        <div class="npc-description">
-            <div class="section-label">{{localize "Description"}}</div>
-            <div class="free-text">
-                {{editor content=data.data.description target="data.description" button=true owner=owner
-                         editable=editable}}
-            </div>
-        </div>
-        <div class="npc-abilities">
-            <div class="section-label">{{localize "k4lt.Abilities"}}</div>
-            <div class="free-text">
-                {{editor content=data.data.abilities target="data.abilities" button=true owner=owner editable=editable}}
-            </div>
-        </div>
-        <div class="npc-harm">
-            <div class="section-label">{{localize "k4lt.Harm"}}</div>
-            <div class="free-text">
-                <div class="npc-harm-taken">
-                    <label for="npc-harm-taken">{{localize "k4lt.HarmTaken"}}:</label>
-                    <input id="npc-harm-taken" class="short-input" style="width: 80px" name="data.harm.value"
-                           value="{{data.data.harm.value}}"
-                           type="text"/>
-                    <span>/</span>
-                    <input class="short-input" style="width: 80px" name="data.harm.max" value="{{data.data.harm.max}}"
-                           type="text" aria-label="Max Harm"
-                           data-dtype="Number"/>
-                </div>
-                {{editor content=data.data.harmmoves target="data.harmmoves" button=true owner=owner editable=editable}}
-            </div>
-        </div>
-        <div class="npc-attacks">
-            <div class="section-label">{{localize "k4lt.Attacks"}}</div>
-            <div class="free-text">
-                {{editor content=data.data.attacks target="data.attacks" button=true owner=owner editable=editable}}
-            </div>
-        </div>
-        <div class="npc-combat">
-            <div class="section-label">{{localize "k4lt.Combat"}}</div>
-            <div class="free-text">
-                {{editor content=data.data.combatmoves target="data.combatmoves" button=true owner=owner
-                         editable=editable}}
-            </div>
-        </div>
-        <div class="npc-influence">
-            <div class="section-label">{{localize "k4lt.Influence"}}</div>
-            <div class="free-text">
-                {{editor content=data.data.influencemoves target="data.influencemoves" button=true owner=owner
-                         editable=editable}}
-            </div>
-        </div>
-        <div class="npc-magic">
-            <div class="section-label">{{localize "k4lt.Magic"}}</div>
-            <div class="free-text">
-                {{editor content=data.data.magicmoves target="data.magicmoves" button=true owner=owner
-                         editable=editable}}
-            </div>
-        </div>
+        {{editor system.harmmoves target="system.harmmoves" button=true owner=owner editable=editable}}
+      </div>
+    </div>
+    <div class="npc-attacks">
+      <div class="section-label">{{localize "k4lt.Attacks"}}</div>
+      <div class="free-text">
+        {{editor system.attacks target="system.attacks" button=true owner=owner editable=editable}}
+      </div>
+    </div>
+    <div class="npc-combat">
+      <div class="section-label">{{localize "k4lt.Combat"}}</div>
+      <div class="free-text">
+        {{editor system.combatmoves target="system.combatmoves" button=true owner=owner editable=editable}}
+      </div>
+    </div>
+    <div class="npc-influence">
+      <div class="section-label">{{localize "k4lt.Influence"}}</div>
+      <div class="free-text">
+        {{editor system.influencemoves target="system.influencemoves" button=true owner=owner editable=editable}}
+      </div>
+    </div>
+    <div class="npc-magic">
+      <div class="section-label">{{localize "k4lt.Magic"}}</div>
+      <div class="free-text">
+        {{editor system.magicmoves target="system.magicmoves" button=true owner=owner editable=editable}}
+      </div>
+    </div>
 
-    </section>
+  </section>
 </form>

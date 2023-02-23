@@ -1,55 +1,19 @@
+{{!log 'pc-sheet' this}}
 <form class="{{cssClass}} kult-sheet" autocomplete="off">
     <header class="sheet-header">
-        <script src="systems/k4lt/scripts/delete.js"></script>
-        <script src="systems/k4lt/scripts/getAttribute.js"></script>
-        <script src="systems/k4lt/scripts/picHover.js"></script>
-        <script>
-// On récupère les éléments du DOM
-const wounds = document.querySelectorAll('.wound');
-
-// On ajoute un événement click sur chaque image
-wounds.forEach((wound) => {
-  wound.addEventListener('click', () => {
-    // On récupère l'état actuel de l'image
-    const state = wound.getAttribute('src');
-
-    // On définit les différents états de l'image
-    const neutral = 'systems/k4lt/assets/blank.webp';
-    const serious = 'systems/k4lt/assets/bleeding-wound.webp';
-    const stabilized = 'systems/k4lt/assets/sticking-plaster.webp';
-    const critical = 'systems/k4lt/assets/bleeding-wound.webp';
-
-    // On modifie l'état de l'image en fonction de l'état actuel
-    if (state === neutral) {
-      wound.setAttribute('src', serious);
-    } else if (state === serious) {
-      wound.setAttribute('src', stabilized);
-    } else if (state === stabilized) {
-      wound.setAttribute('src', neutral);
-    } else if (state === critical) {
-      wound.setAttribute('src', neutral);
-    } else {
-      wound.setAttribute('src', critical);
-    }
-  });
-});
-       </script>
- 
-
-
         <div class="flex-container top-section">
             <div class="forward">
                 {{localize "k4lt.Forward"}}:
-                <select class="hidden-select" name="data.forward" value="{{data.forward}}">
-                    {{#select data.forward}}
+                <select class="hidden-select" name="system.forward" value="{{system.forward}}">
+                    {{#select system.forward}}
                         {{>"systems/k4lt/templates/partials/modifier-values.hbs"}}
                     {{/select}}
                 </select>
             </div>
             <div class="situational-modifier">
                 {{localize "k4lt.SitMod"}}:
-                <select class="hidden-select" name="data.sitmod" value="{{data.sitmod}}">
-                    {{#select data.sitmod}}
+                <select class="hidden-select" name="system.sitmod" value="{{system.sitmod}}">
+                    {{#select system.sitmod}}
                         {{>"systems/k4lt/templates/partials/modifier-values.hbs"}}
                     {{/select}}
                 </select>
@@ -62,25 +26,31 @@ wounds.forEach((wound) => {
              <div style="width: 98% !important;">
                 <div class="section-label">{{localize "k4lt.WhoAreYou"}}</div>
                 <div class="free-text">
-                    {{editor content=data.whoareyou target="data.whoareyou" button=true owner=owner editable=editable}}
+                    {{editor system.whoareyou target="system.whoareyou" button=true owner=owner editable=editable}}
                 </div>
             </div>
     </div>
     
-    <div class="navigation-section">
-        <a class="tabButton" data-tab="Stats">{{localize "k4lt.Stats"}}</a>
-        <a class="tabButton" data-tab="Background">{{localize "k4lt.Background"}}</a>
-        <a class="tabButton" data-tab="Notes">{{localize "k4lt.Notes"}}</a>
-    </div>
-    <div id="Stats" class="stats-section {{actor._id}}-tab">
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs align-center" data-group="primary">
+        <a class="choice" data-tab="Stats">{{localize "k4lt.Stats"}}</a>
+        <a class="choice" data-tab="Background">{{localize "k4lt.Background"}}</a>
+        <a class="choice" data-tab="Notes">{{localize "k4lt.Notes"}}</a>
+    </nav>   
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+        
+    {{!-- Stats Tab --}}
+    <div id="Stats" class="tab stats-section {{actor._id}}-tab" data-group="primary" data-tab="Stats">
         <div class="middle-section">
             <div class="attribute-column">
                 <table class="attribute-box" style="table-layout: fixed; width: 200px; height:500px;">
                     <tr>
                         <td></td>
                         <td class="willpic">
-                            <select class="foo" name="data.attributes.willpower" value="{{data.attributes.willpower}}">
-                                {{#select data.attributes.willpower}}
+                            <select class="foo" name="system.attributes.willpower" value="{{system.attributes.willpower}}">
+                                {{#select system.attributes.willpower}}
                                     {{>"systems/k4lt/templates/partials/passive-attribute-values.hbs"}}
                                 {{/select}}
                             </select>
@@ -89,16 +59,16 @@ wounds.forEach((wound) => {
                     </tr>
                     <tr>
                         <td class="fortpic">
-                            <select class="foo" name="data.attributes.fortitude" value="{{data.attributes.fortitude}}">
-                                {{#select data.attributes.fortitude}}
+                            <select class="foo" name="system.attributes.fortitude" value="{{system.attributes.fortitude}}">
+                                {{#select system.attributes.fortitude}}
                                     {{>"systems/k4lt/templates/partials/passive-attribute-values.hbs"}}
                                 {{/select}}
                             </select>
                         </td>
                         <td>{{localize "k4lt.Willpower"}}</td>
                         <td class="refpic">
-                            <select class="foo" name="data.attributes.reflexes" value="{{data.attributes.reflexes}}">
-                                {{#select data.attributes.reflexes}}
+                            <select class="foo" name="system.attributes.reflexes" value="{{system.attributes.reflexes}}">
+                                {{#select system.attributes.reflexes}}
                                     {{>"systems/k4lt/templates/partials/passive-attribute-values.hbs"}}
                                 {{/select}}
                             </select>
@@ -111,16 +81,16 @@ wounds.forEach((wound) => {
                     </tr>
                     <tr>
                         <td class="reasonpic">
-                            <select class="foo" name="data.attributes.reason" value="{{data.attributes.reason}}">
-                                {{#select data.attributes.reason}}
+                            <select class="foo" name="system.attributes.reason" value="{{system.attributes.reason}}">
+                                {{#select system.attributes.reason}}
                                     {{>"systems/k4lt/templates/partials/active-attribute-values.hbs"}}
                                 {{/select}}
                             </select>
                         </td>
                         <td class="attmid"></td>
                         <td class="intupic">
-                            <select class="foo" name="data.attributes.intuition" value="{{data.attributes.intuition}}">
-                                {{#select data.attributes.intuition}}
+                            <select class="foo" name="system.attributes.intuition" value="{{system.attributes.intuition}}">
+                                {{#select system.attributes.intuition}}
                                     {{>"systems/k4lt/templates/partials/active-attribute-values.hbs"}}
                                 {{/select}}
                             </select>
@@ -129,8 +99,8 @@ wounds.forEach((wound) => {
                     <tr>
                         <td>{{localize "k4lt.Reason"}}</td>
                         <td class="percpic">
-                            <select class="foo" name="data.attributes.perception" value="{{data.attributes.perception}}">
-                                {{#select data.attributes.perception}}
+                            <select class="foo" name="system.attributes.perception" value="{{system.attributes.perception}}">
+                                {{#select system.attributes.perception}}
                                     {{>"systems/k4lt/templates/partials/active-attribute-values.hbs"}}
                                 {{/select}}
                             </select>
@@ -139,16 +109,16 @@ wounds.forEach((wound) => {
                     </tr>
                     <tr>
                         <td class="coolpic">
-                            <select class="foo" name="data.attributes.coolness" value="{{data.attributes.coolness}}">
-                                {{#select data.attributes.coolness}}
+                            <select class="foo" name="system.attributes.coolness" value="{{system.attributes.coolness}}">
+                                {{#select system.attributes.coolness}}
                                     {{>"systems/k4lt/templates/partials/active-attribute-values.hbs"}}
                                 {{/select}}
                             </select>
                         </td>
                         <td>{{localize "k4lt.Perception"}}</td>
                         <td class="violpic">
-                            <select class="foo" name="data.attributes.violence" value="{{data.attributes.violence}}">
-                                {{#select data.attributes.violence}}
+                            <select class="foo" name="system.attributes.violence" value="{{system.attributes.violence}}">
+                                {{#select system.attributes.violence}}
                                     {{>"systems/k4lt/templates/partials/active-attribute-values.hbs"}}
                                 {{/select}}
                             </select>
@@ -157,8 +127,8 @@ wounds.forEach((wound) => {
                     <tr>
                         <td>{{localize "k4lt.Coolness"}}</td>
                         <td class="chapic">
-                            <select class="foo" name="data.attributes.charisma" value="{{data.attributes.charisma}}">
-                                {{#select data.attributes.charisma}}
+                            <select class="foo" name="system.attributes.charisma" value="{{system.attributes.charisma}}">
+                                {{#select system.attributes.charisma}}
                                     {{>"systems/k4lt/templates/partials/active-attribute-values.hbs"}}
                                 {{/select}}
                             </select>
@@ -173,8 +143,8 @@ wounds.forEach((wound) => {
                     <tr>
                         <td></td>
                         <td class="soulpic">
-                            <select class="foo" name="data.attributes.soul" value="{{data.attributes.soul}}">
-                                {{#select data.attributes.soul}}
+                            <select class="foo" name="system.attributes.soul" value="{{system.attributes.soul}}">
+                                {{#select system.attributes.soul}}
                                     {{>"systems/k4lt/templates/partials/active-attribute-values.hbs"}}
                                 {{/select}}
                             </select>
@@ -217,51 +187,51 @@ wounds.forEach((wound) => {
             <div class="right-middle-column">
                 <div class="section-label" style="margin-bottom: 12px;">{{localize "k4lt.Wounds"}}</div>
                 
-<div class="two-column-wound" id="serious-wounds">
-    <input type="checkbox" id="maCaseACocher" name="system.majorwoundstate1" {{checked system.majorwoundstate1}}>
-    <img id="wound1" class="wound" src="systems/k4lt/assets/blank.webp">
-        <input type="text" name="data.majorwound1" value="{{data.majorwound1}}" placeholder="{{localize "k4lt.MajorWound1"}}">
-</div>
-<div class="two-column-wound" id="serious-wounds">
-    <img id="wound2" class="wound" src="systems/k4lt/assets/blank.webp">
-        <input type="text" name="data.majorwound2" value="{{data.majorwound2}}" placeholder="{{localize "k4lt.MajorWound2"}}">
-</div>
-<div class="two-column-wound" id="serious-wounds">
-    <img id="wound3" class="wound" src="systems/k4lt/assets/blank.webp">
-        <input type="text" name="data.majorwound3" value="{{data.majorwound3}}" placeholder="{{localize "k4lt.MajorWound3"}}">
-</div>
-<div class="two-column-wound" id="serious-wounds">
-    <img id="wound4" class="wound" src="systems/k4lt/assets/blank.webp">
-        <input type="text" name="data.majorwound4" value="{{data.majorwound4}}" placeholder="{{localize "k4lt.MajorWound4"}}">
-</div>
-<div class="two-column-wound" id="critical-wound">
-    <img id="wound5" class="wound" src="systems/k4lt/assets/blank.webp">
-        <input type="text" name="data.criticalwound" value="{{data.criticalwound}}" placeholder="{{localize "k4lt.CriticalWound"}}">
-</div>
+            <div class="two-column-wound serious-wounds">
+                <img id="majorwound1" class="wound" src="{{getWoundsImage system.majorwound1.state}}">
+                    <input type="text" name="system.majorwound1.value" value="{{system.majorwound1.value}}" placeholder="{{localize "k4lt.MajorWound1"}}">
+            </div>
 
+            <div class="two-column-wound serious-wounds">
+                <img id="majorwound2" class="wound" src="{{getWoundsImage system.majorwound2.state}}">
+                    <input type="text" name="system.majorwound2.value" value="{{system.majorwound2.value}}" placeholder="{{localize "k4lt.MajorWound2"}}">
+            </div>
 
+            <div class="two-column-wound serious-wounds">
+                <img id="majorwound3" class="wound" src="{{getWoundsImage system.majorwound3.state}}">
+                    <input type="text" name="system.majorwound3.value" value="{{system.majorwound3.value}}" placeholder="{{localize "k4lt.MajorWound3"}}">
+            </div>
 
+            <div class="two-column-wound serious-wounds">
+                <img id="majorwound4" class="wound" src="{{getWoundsImage system.majorwound4.state}}">
+                    <input type="text" name="system.majorwound4.value" value="{{system.majorwound4.value}}" placeholder="{{localize "k4lt.MajorWound4"}}">
+            </div>
 
-                <div class="flex-column stability-section">
-                    <div class="section-label">{{localize "k4lt.Stability"}}</div>
-                    <div>
-                        <select name="data.stability.value" value="{{data.stability.value}}">{{#select data.stability.value}}
-                            <option value="0">{{localize "k4lt.StabilityComposed"}}</option>
-                            <option value="1">{{localize "k4lt.StabilityUneasy"}}</option>
-                            <option value="2">{{localize "k4lt.StabilityUnfocused"}}</option>
-                            <option value="3">{{localize "k4lt.StabilityShaken"}}</option>
-                            <option value="4">{{localize "k4lt.StabilityDistressed"}}</option>
-                            <option value="5">{{localize "k4lt.StabilityNeurotic"}}</option>
-                            <option value="6">{{localize "k4lt.StabilityAnxious"}}</option>
-                            <option value="7">{{localize "k4lt.StabilityIrrational"}}</option>
-                            <option value="8">{{localize "k4lt.StabilityUnhinged"}}</option>
-                            <option value="9">{{localize "k4lt.StabilityBroken"}}</option>
-                        {{/select}}
-                        </select>
-                        <a class="stability-minus" title="{{localize "k4lt.MinusStability"}}"><i class="fas fa-minus-circle"></i></a>
-                        <a class="stability-plus" title="{{localize "k4lt.PlusStability"}}"><i class="fas fa-plus-circle"></i></a>
-                    </div>
+            <div class="two-column-wound critical-wound">
+                <img id="criticalwound" class="wound" src="{{getWoundsImage system.criticalwound.state}}">
+                    <input type="text" name="system.criticalwound.value" value="{{system.criticalwound.value}}" placeholder="{{localize "k4lt.CriticalWound"}}">
+            </div>
+
+            <div class="flex-column stability-section">
+                <div class="section-label">{{localize "k4lt.Stability"}}</div>
+                <div>
+                    <select name="system.stability.value" value="{{system.stability.value}}">{{#select system.stability.value}}
+                        <option value="0">{{localize "k4lt.StabilityComposed"}}</option>
+                        <option value="1">{{localize "k4lt.StabilityUneasy"}}</option>
+                        <option value="2">{{localize "k4lt.StabilityUnfocused"}}</option>
+                        <option value="3">{{localize "k4lt.StabilityShaken"}}</option>
+                        <option value="4">{{localize "k4lt.StabilityDistressed"}}</option>
+                        <option value="5">{{localize "k4lt.StabilityNeurotic"}}</option>
+                        <option value="6">{{localize "k4lt.StabilityAnxious"}}</option>
+                        <option value="7">{{localize "k4lt.StabilityIrrational"}}</option>
+                        <option value="8">{{localize "k4lt.StabilityUnhinged"}}</option>
+                        <option value="9">{{localize "k4lt.StabilityBroken"}}</option>
+                    {{/select}}
+                    </select>
+                    <a class="stability-minus" title="{{localize "k4lt.MinusStability"}}"><i class="fas fa-minus-circle"></i></a>
+                    <a class="stability-plus" title="{{localize "k4lt.PlusStability"}}"><i class="fas fa-plus-circle"></i></a>
                 </div>
+            </div>
             </div>
         </div>
         <div class="bottom-section">
@@ -295,18 +265,20 @@ wounds.forEach((wound) => {
             </div>
         </div>
     </div>
-    <div id="Background" class="background-section {{actor._id}}-tab">
+
+    {{!-- Background Tab --}}
+    <div id="Background" class="tab background-section {{actor._id}}-tab" data-group="primary" data-tab="Background">
         <div class="two-column">
             <div "background-box">
                 <div class="section-label">{{localize "k4lt.WhatYouHoldDear"}}</div>
                 <div class="free-text">
-                    {{editor content=data.whatyouholddear target="data.whatyouholddear" button=true owner=owner editable=editable}}
+                    {{editor system.whatyouholddear target="system.whatyouholddear" button=true owner=owner editable=editable}}
                 </div>
             </div>
             <div>
                 <div class="section-label">{{localize "k4lt.ThingsInYourPossession"}}</div>
                 <div class="free-text">
-                    {{editor content=data.thingsinyourpossession target="data.thingsinyourpossession" button=true owner=owner editable=editable}}
+                    {{editor system.thingsinyourpossession target="system.thingsinyourpossession" button=true owner=owner editable=editable}}
                 </div>
             </div>
         </div>
@@ -314,26 +286,29 @@ wounds.forEach((wound) => {
             <div "background-box">
                 <div class="section-label">{{localize "k4lt.RelationToTheOtherCharacters"}}</div>
                 <div class="free-text">
-                    {{editor content=data.relationtotheothercharacters target="data.relationtotheothercharacters" button=true owner=owner editable=editable}}
+                    {{editor system.relationtotheothercharacters target="system.relationtotheothercharacters" button=true owner=owner editable=editable}}
                 </div>
             </div>
             <div>
                 <div class="section-label">{{localize "k4lt.DramaticHooks"}}</div>
                 <div class="free-text">
-                    {{editor content=data.dramatichooks target="data.dramatichooks" button=true owner=owner editable=editable}}
+                    {{editor system.dramatichooks target="system.dramatichooks" button=true owner=owner editable=editable}}
                 </div>
             </div>
         </div>
     </div>
-    <div id="Notes" class="background-section {{actor._id}}-tab">
+
+    {{!-- Notes Tab --}}
+    <div id="Notes" class="tab background-section {{actor._id}}-tab" data-group="primary" data-tab="Notes">
         <div class="one-column">
             <div "notes-box">
                 <div class="free-text">
-                    {{editor content=data.notes target="data.notes" button=true owner=owner editable=editable}}
+                    {{editor system.notes target="system.notes" button=true owner=owner editable=editable}}
                 </div>
             </div>
         </div>
     </div>
 
-
+    </section>
+    
 </form>

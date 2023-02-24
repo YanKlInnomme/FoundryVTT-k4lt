@@ -3,8 +3,8 @@ export default class k4ltPCsheet extends ActorSheet {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "Stats" }],
-      width: 950,
-      height: 1200,
+      width: 775,
+      height: 1253,
     });
   }
 

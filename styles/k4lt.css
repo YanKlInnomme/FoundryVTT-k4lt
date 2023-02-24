@@ -1,49 +1,6 @@
-/* Polices d'écritures */
-
-@font-face {
-    font-family: "Alverata";
-    src: url("../fonts/Alverata.ttf") format("truetype"),
-        url("../fonts/Alverata-Bold.ttf") format("truetype"),
-        url("../fonts/Alverata-BoldItalic.ttf") format("truetype"),
-        url("../fonts/Alverata-Italic.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Infidel-C";
-    src: url("../fonts/Infidel-C.woff2") format("woff2"),
-        url("../fonts/Infidel-C.ttf") format("truetype");
-    font-weight: 700;
-    font-style: normal;
-}
-
-#logo {
-    width: 120px;
-    height: auto;
-    padding-right: 10px;
-    content: url("../assets/logo_en.webp");
-}
-
-#pause>img {
-    content: url("../assets/pause.webp");
-    height: 220px;
-    width: 220px;
-    top: -65px;
-    left: calc(50% - 110px);
-}
-
-#pause {
-    top: 50%;
-    background: none;
-}
-
-#pause>figcaption {
-    font-family: "Infidel-C";
-    color: rgb(25, 25, 25);
-    text-shadow: 0px 0px 30px rgb(150, 140, 108);
-}
-
+/* ----------------------------------------- */
+/*  Root                                     */
+/* ----------------------------------------- */
 :root {
     --color-text-light-highlight: rgb(153, 138, 97);
     --color-text-light-heading: rgb(129, 116, 81);
@@ -56,199 +13,223 @@
     --font-primary: "Alverata", sans-serif;
 }
 
-h1,
-h2,
-h3 {
+/* ----------------------------------------- */
+/*  Fonts                                    */
+/* ----------------------------------------- */
+@font-face {
+    font-family: "Alverata";
+    src:url("../fonts/Alverata.ttf") format("truetype"),
+        url("../fonts/Alverata-Bold.ttf") format("truetype"),
+        url("../fonts/Alverata-BoldItalic.ttf") format("truetype"),
+        url("../fonts/Alverata-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
     font-family: "Infidel-C";
+    src:url("../fonts/Infidel-C.woff2") format("woff2"),
+        url("../fonts/Infidel-C.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
 }
 
+/* ----------------------------------------- */
+/*  Foundry VTT System Variables             */
+/* ----------------------------------------- */
+#logo {
+    width: 120px;
+    height: auto;
+    padding-right: 10px;
+    content: url("../assets/logo_en.webp");
+}
+#pause {
+    top: 50%;
+    background: none;
+}
+#pause figcaption {
+    font-family: "Infidel-C";
+    color: rgb(25, 25, 25);
+    text-shadow: 0px 0px 30px rgb(150, 140, 108);
+}
+#pause img {
+    content: url("../assets/pause.webp");
+    height: 220px;
+    width: 220px;
+    top: -65px;
+    left: calc(50% - 110px);
+}
+h1,h2,h3 {
+    font-family: "Infidel-C";
+}
 .chat-message.whisper {
     background: rgb(200, 190, 140);
 }
 
-.move-roll:hover {
-    color: rgb(168, 14, 18);
-}
-
-
+/* ----------------------------------------- */
+/*  Modifiers                                */
+/* ----------------------------------------- */
 .forward {
     color: rgb(224, 219, 204);
     text-shadow: 0px 0px 5px rgb(150, 140, 106);
     margin-left: 6px;
 }
-
 .situational-modifier {
     color: rgb(224, 219, 204);
     text-shadow: 0px 0px 5px rgb(150, 140, 106);
     margin-left: 8px;
 }
-
 .hidden-select {
     background-color: transparent;
     border: none;
     outline: none;
     color: rgb(224, 219, 204);
 }
-
 .hidden-select option {
     color: rgb(155, 32, 31);
 }
 
-/* Les caractéristiques */
-
-.foo:hover {
-    color: rgb(168, 14, 18);
-}
-
+/* ----------------------------------------- */
+/*  Attributes                               */
+/* ----------------------------------------- */
 .foo {
     text-align: center;
 }
-
+.foo:hover {
+    color: rgb(168, 14, 18);
+}
 .attmid {
     background: url(../assets/attributes/middle.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
-
 .willpic {
     background: url(../assets/attributes/will.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
 .willpic:hover {
     background: url(../assets/attributes/will-hover.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
 .fortpic {
     background: url(../assets/attributes/fort.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
 .fortpic:hover {
     background: url(../assets/attributes/fort-hover.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
 .refpic {
     background: url(../assets/attributes/ref.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
 .refpic:hover {
     background: url(../assets/attributes/ref-hover.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
 .reasonpic {
     background: url(../assets/attributes/reason.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
 .reasonpic:hover {
     background: url(../assets/attributes/reason-hover.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
 .reasonpic:hover+.attmid {
     background-image: url(../assets/attributes/middle-left.webp);
 }
-
 .intupic {
     background: url(../assets/attributes/intu.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
 .intupic:hover {
     background: url(../assets/attributes/intu-hover.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
 .percpic {
     background: url(../assets/attributes/perc.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
 .percpic:hover {
     background: url(../assets/attributes/perc-hover.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
 .coolpic {
     background: url(../assets/attributes/cool.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
 .coolpic:hover {
     background: url(../assets/attributes/cool-hover.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
 .violpic {
     background: url(../assets/attributes/viol.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
 .violpic:hover {
     background: url(../assets/attributes/viol-hover.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
 .chapic {
     background: url(../assets/attributes/cha.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
 .chapic:hover {
     background: url(../assets/attributes/cha-hover.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
 .soulpic {
     background: url(../assets/attributes/soul.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
 .soulpic:hover {
     background: url(../assets/attributes/soul-hover.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
-
 .attribute-column table {
     border: none;
 }
-
 .attribute-column table tr {
     background-color: transparent;
     border-spacing: 0;
+}
+
+
+
+.move-roll:hover {
+    color: rgb(168, 14, 18);
 }
 
 .tox-toolbar__group {
     zoom: 90%;
 }
 
+/* ----------------------------------------- */
+/*  Attributes                               */
+/* ----------------------------------------- */
+.two-column-wound {
+    display: flex;
+    flex-direction: row;
+}
 .wound {
     width: 26px;
     height: 26px;
@@ -256,16 +237,9 @@ h3 {
     margin-right: 10px;
     border: 1px dashed #968c6a;
 }
-
-.two-column-wound {
-    display: flex;
-    flex-direction: row;
-}
-
 .serious-wounds {
     margin-bottom: 5px;
 }
-
 .critical-wound {
     margin-top: 15px;
     color: #9b201f;

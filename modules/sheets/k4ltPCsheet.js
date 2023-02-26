@@ -3,8 +3,8 @@ export default class k4ltPCsheet extends ActorSheet {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "Stats" }],
-      width: 775,
-      height: 1253,
+      width: 800,
+      height: 1294,
     });
   }
 
@@ -137,7 +137,22 @@ export default class k4ltPCsheet extends ActorSheet {
     html.find('#majorwound3').click(this._onUpdateWound.bind(this));
     html.find('#majorwound4').click(this._onUpdateWound.bind(this));
     html.find('#criticalwound').click(this._onUpdateWound.bind(this));
-
+    
+    $('.reasonpic').hover(function() {
+      $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle-left.webp)');
+      }, function() {
+      $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle.webp)');
+    });
+    $('.intupic').hover(function() {
+        $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle-right.webp)');
+        }, function() {
+        $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle.webp)');
+    });
+    $('.percpic').hover(function() {
+        $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle-bottom.webp)');
+        }, function() {
+        $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle.webp)');
+    });
   }
 
   /**

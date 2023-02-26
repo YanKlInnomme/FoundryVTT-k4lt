@@ -64,6 +64,12 @@ h1,h2,h3 {
 .chat-message.whisper {
     background: rgb(200, 190, 140);
 }
+.sheet nav.sheet-tabs {
+    border-top: none;
+}
+.tabs {
+    justify-content: flex-start;
+}
 
 /* ----------------------------------------- */
 /*  Modifiers                                */
@@ -242,9 +248,16 @@ h1,h2,h3 {
 }
 .critical-wound {
     margin-top: 15px;
-    color: #9b201f;
 }
-
+.titlecaption {
+    padding-top: 30px;
+}
+.woundcaption {
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+    border: 1px dashed #968c6a;
+}
 .checkbox {
     width: 20px;
     height: 20px;
@@ -516,7 +529,7 @@ td textarea {
     background-size: 100% 100%;
     background-position: center;
     padding: 10px;
-    color: #9b201f;
+    color: rgb(32, 32, 32);
     border: none;
 }
 
@@ -540,13 +553,13 @@ td textarea {
 }
 
 .stability-section select {
-    background-color: rgb(209, 207, 195);
     opacity: .8;
     margin: 8px 5px;
     width: calc(100% - 55px);
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    font-size: medium;
 }
 
 .editor {

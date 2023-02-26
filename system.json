@@ -39,14 +39,6 @@
       "type": "Item"
     },
     {
-      "name": "kult-divinity-lost-ost",
-      "label": "Kult Divinity Lost OST",
-      "system": "kult-divinity-lost",
-      "module": "kult-divinity-lost-fr",
-      "path": "packs/kult-divinity-lost-ost.db",
-      "entity": "Playlist"
-    },
-    {
       "name": "examples",
       "label": "Examples",
       "system": "k4lt",

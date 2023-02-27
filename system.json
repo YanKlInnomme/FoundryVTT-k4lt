@@ -72,6 +72,6 @@
   "gridUnits": "ft",
   "primaryTokenAttribute": "harm",
   "url": "https://github.com/YanKlInnomme/k4lt/",
-  "manifest": "https://github.com/YanKlInnomme/FoundryVTT-k4lt/releases/latest/download/module.json",
+  "manifest": "https://github.com/YanKlInnomme/FoundryVTT-k4lt/releases/latest/download/system.json",
   "download": "https://github.com/YanKlInnomme/FoundryVTT-k4lt/releases/download/v2.0.0.0/system.zip"
 }

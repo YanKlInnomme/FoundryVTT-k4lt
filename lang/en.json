@@ -58,6 +58,11 @@
   "k4lt.StabilityIrrational": "Irrational: -2 KIT/ -3 Disadvantage / +1 Illusion",
   "k4lt.StabilityUnhinged": "Unhinged: -2 KIT/ -3 Disadvantage / +1 Illusion",
   "k4lt.StabilityBroken": "Broken: GM Makes a Move",
+
+  "k4lt.Caption": "Caption",
+  "k4lt.NoWound": "No wound",
+  "k4lt.OpenWound": "Wound",
+  "k4lt.StabilizedWound": "Stabilized wound",
   
   "k4lt.Moves": "Moves",
   "k4lt.Move": "Move",

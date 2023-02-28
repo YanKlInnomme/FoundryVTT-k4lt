@@ -24,13 +24,14 @@ Afin de fonctionner ce système nécessite l'installation et la configuration de
 
 ## Version 2.0.0.0
 
+* Ajout de la traduction partielle en Français (fichier fr.json)
 * Ajout des onglets 'Contexte' et 'Notes'
 * Ajout des zones éditables "Ce à quoi vous tenez", "Ce que vous possédez", "Relations avec les autres personnages" et "Ressorts dramatiques"
 * Ajout du champ 'Options' dans Actions pour éviter l'affichage 'undefined' dans le tchat
 * Mise à jour globale de l'esthétique et notamment concernant la fiche de Personnage Joueur
 * Modification esthétique et fonctionnelle de la Pause
-* Nettoyage du code et Migration en V10 réalisé par Christophe Laudon (https://github.com/Qaw)
-* Refonte globale du processus de gestion des Blessures réalisée par Christophe Laudon (https://github.com/Qaw)
+* Nettoyage du code et Migration en V10 réalisé par Kristov (https://github.com/Qaw)
+* Refonte globale du processus de gestion des Blessures réalisée par Kristov (https://github.com/Qaw)
 * Suppression de l'attribut éditable des images sur les items 'Actions'
 * Suppression des champs basiques (Yeux, Taille, Age, etc.) au profit d'une zone plus concrète "Qui êtes-vous ?"
 * Suppression du lancer de dés sur les items 'Relations' de la fiche PJ
@@ -96,13 +97,14 @@ This system requires the installation and configuration of Foundry VTT. The soft
 
 ## Version 2.0.0.0
 
+* Add the partial French translation (fr.json file)
 * Added 'Background' and 'Notes' tabs
 * Added editable fields 'What you hold dear', 'Things in your possession', 'Relation to the other characters' and 'Dramatic Hooks'.
 * Added 'Options' field in Actions to avoid 'undefined' display in chat
 * General aesthetic update, particularly to the character sheet
 * Aesthetic and functional changes to Pause
-* Code cleanup and migration to V10 by Christophe Laudon (https://github.com/Qaw)
-* Global overhaul of the Wound management process by Christophe Laudon (https://github.com/Qaw)
+* Code cleanup and migration to V10 by Kristov (https://github.com/Qaw)
+* Global overhaul of the Wound management process by Kristov (https://github.com/Qaw)
 * Removed the editable image attribute on 'moves' items.
 * Removal of basic fields (eyes, height, age, etc.) in favour of a more concrete "Who are you?
 * Removed the dice roll on 'Relationships' items in the PJ sheet

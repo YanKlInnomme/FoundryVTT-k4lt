@@ -96,9 +96,9 @@
   "k4lt.AddEdge": "Add Edge",
   "k4lt.SpendEdge": "Spend Edge",
   
-  "k4lt.Hold": "Hold",
-  "k4lt.AddHold": "Add Hold",
-  "k4lt.SpendHold": "Spend Hold",
+  "k4lt.Hold": "Temps",
+  "k4lt.AddHold": "Ajouter du Temps",
+  "k4lt.SpendHold": "Retirer du Temps",
   
   "k4lt.Uses": "Utilisations",
   "k4lt.Ammo": "Munitions",

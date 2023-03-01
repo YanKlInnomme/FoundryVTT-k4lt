@@ -279,19 +279,6 @@ h1,h2,h3 {
     margin-right: 10px;
     border: 1px dashed #968c6a;
 }
-.checkbox {
-    width: 20px;
-    height: 20px;
-    background-image: url("../assets/blank.webp");
-    background-size: 20px;
-    background-repeat: no-repeat;
-    position: relative;
-    float: left;
-    cursor: pointer;
-    margin-right: 10px;
-    border: 1px dashed #968c6a;
-}
-
 
 .advantage-box {
     display: flex;

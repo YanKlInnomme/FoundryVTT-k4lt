@@ -1,27 +1,30 @@
 {{!log "npc-sheet" this}}
 <form class="{{cssClass}} kult-sheet" autocomplete="off">
   <header class="sheet-header">
-    <img src="/systems/k4lt/assets/kultlogo.png" height="64" width="167" />
-    <h1 class="character-name"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
-  </header>
-  <section class="flexcol" style="gap: .5rem; margin-top: 1rem;">
-    <div class="flexrow" style="gap: .5rem">
-      <div class="flexrow">
+    <div class="flex-container top-section">
+      <div class="npc-home">
         <label for="npc-home" class="section-label">{{localize "k4lt.NPC.Home"}}</label>
         <input id="npc-home" type="text" class="border-rect" value="{{system.home}}" name="system.home" />
       </div>
-      <div class="flexrow">
+      <br>
+      <div class="npc-type">
         <label for="npc-type" class="section-label">{{localize "k4lt.NPC.Type"}}</label>
         <input id="npc-type" type="text" class="border-rect" value="{{system.creaturetype}}" name="system.creaturetype" />
       </div>
+    </div> 
+    <h1 class="character-name"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
+  </header>
+  <div class="flex-container">
+            <img class="actor-picture" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="324" width="200" />
+             <div style="width: 98% !important;">
+                <div class="section-label">{{localize "k4lt.Description"}}</div>
+                <div class="free-text">
+                    {{editor system.description target="system.description" button=true owner=owner editable=editable}}
+                </div>
+            </div>
     </div>
-    <div class="npc-description">
-      <div class="section-label">{{localize "Description"}}</div>
-      <div class="free-text">
-        {{editor system.description target="system.description" button=true owner=owner editable=editable}}
-      </div>
-    </div>
-    <div class="npc-abilities">
+  <section class="flexcol" style="gap: .5rem; margin-top: 1rem;">
+       <div class="npc-abilities">
       <div class="section-label">{{localize "k4lt.Abilities"}}</div>
       <div class="free-text">
         {{editor system.abilities target="system.abilities" button=true owner=owner editable=editable}}

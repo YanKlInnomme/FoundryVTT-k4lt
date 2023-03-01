@@ -219,7 +219,28 @@ h1,h2,h3 {
     border-spacing: 0;
 }
 
-
+.npc-home label {
+    font-size: small;
+    color: rgb(224, 219, 204);
+    text-shadow: 0px 0px 5px rgb(150, 140, 106);
+}
+.npc-home input {
+    font-size: larger;
+    color: rgb(224, 219, 204);
+    text-shadow: 0px 0px 5px rgb(150, 140, 106);
+    border: 1px dashed #968c6a;
+}
+.npc-type label {
+    font-size: small;
+    color: rgb(224, 219, 204);
+    text-shadow: 0px 0px 5px rgb(150, 140, 106);
+}
+.npc-type input {
+    font-size: larger;
+    color: rgb(224, 219, 204);
+    text-shadow: 0px 0px 5px rgb(150, 140, 106);
+    border: 1px dashed #968c6a;
+}
 
 .move-roll:hover {
     color: rgb(168, 14, 18);
@@ -352,6 +373,7 @@ h1,h2,h3 {
 }
 
 .actor-picture {
+    background-color: rgb(83, 83, 83, 0.5);
     position: relative;
     height: 324px;
     width: 200px;
@@ -532,12 +554,6 @@ td textarea {
     color: rgb(32, 32, 32);
     border: none;
 }
-
-.sheet-header img {
-    background-color: black;
-}
-
-
 
 .wound-section select {
     background-color: #782e22;

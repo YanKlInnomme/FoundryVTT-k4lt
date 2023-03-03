@@ -105,15 +105,18 @@ export default class k4ltActor extends Actor {
         else situation -= 3;
       }
 
+      // Keep It Together
       if (specialflag == 1 && stability > 0) {
         if (3 <= stability && stability <= 5) situation -= 1;
-        else situation -= 2;
+        else situation -= 1;
       }
-        
+
+      // Keep It Together
       if (specialflag == 1 && stability > 5) {
         situation -= 1;
       }
   
+      // See Through the Illusion
       if (specialflag == 2 && stability > 5) {
         situation += 1;
       }

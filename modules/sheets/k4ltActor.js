@@ -98,14 +98,14 @@ export default class k4ltActor extends Actor {
       // Critical wound
       if (this.hasUnstabilizedCriticalWound) situation -= 1;
 
-      // Stability
+      // Stability Disadvantage
       if (moveType == "disadvantage" && stability > 0) {
         if (stability <= 2 ) situation -= 1;
         else if (3 <= stability && stability <= 5) situation -= 2;
         else situation -= 3;
       }
 
-      // Keep It Together
+      // Stability Keep It Together
       if (specialflag == 1 && stability > 0) {
         if (stability <= 5) {
           situation -= 1;
@@ -114,7 +114,7 @@ export default class k4ltActor extends Actor {
         }
       }
   
-      // See Through the Illusion
+      // Stability See Through the Illusion
       if (specialflag == 2 && stability > 5) {
         situation += 1;
       }

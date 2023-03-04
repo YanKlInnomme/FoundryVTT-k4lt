@@ -22,6 +22,10 @@ Afin de fonctionner ce système nécessite l'installation et la configuration de
  * MaeseFingolf (https://github.com/MaeseFingolf) - Traduction espagnole
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 2.0.0.6
+
+ * Correction de la stabilité (prise en compte correcte du modificateur Garder le contrôle: -2 et non -3)
+
 ## Version 2.0.0.5
 
  * Mise à jour de la fiche de Personnage Non Joueur
@@ -99,6 +103,10 @@ This system requires the installation and configuration of Foundry VTT. The soft
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * MaeseFingolf (https://github.com/MaeseFingolf) - Spanish translation
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 2.0.0.6
+
+ * Stability correction (correct consideration of the Keep It Together modifier: -2 and not -3)
 
 ## Version 2.0.0.5
 

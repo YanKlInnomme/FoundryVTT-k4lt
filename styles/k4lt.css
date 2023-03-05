@@ -227,8 +227,8 @@ h1,h2,h3 {
 .npc-home input {
     font-size: larger;
     color: rgb(224, 219, 204);
-    text-shadow: 0px 0px 5px rgb(150, 140, 106);
-    border: 1px dashed #968c6a;
+    text-shadow: 0px 0px 5px rgb(0, 0, 0);
+    border: 1px dashed rgb(150, 140, 106);
 }
 .npc-type label {
     font-size: small;
@@ -238,9 +238,17 @@ h1,h2,h3 {
 .npc-type input {
     font-size: larger;
     color: rgb(224, 219, 204);
-    text-shadow: 0px 0px 5px rgb(150, 140, 106);
+    text-shadow: 0px 0px 5px rgb(0, 0, 0);
     border: 1px dashed #968c6a;
 }
+
+.sheet-header img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
+
 
 .move-roll:hover {
     color: rgb(168, 14, 18);
@@ -589,7 +597,7 @@ td textarea {
 }
 
 .free-text .editor-content {
-    text-shadow: 0px 0px 5px #968c6a;
+    text-shadow: -2px -2px 5px rgb(224, 220, 210), 2px -2px 5px rgb(224, 220, 210), -2px 2px 5px rgb(224, 220, 210), 2px 2px 5px rgb(224, 220, 210);
     padding: 0;
 }
 

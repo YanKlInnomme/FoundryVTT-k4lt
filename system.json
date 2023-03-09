@@ -22,6 +22,7 @@
       "discord": "Kristov#3493"
     }
   ],
+  "background": "systems/k4lt/assets/background.webp",
   "esmodules": ["k4lt.js"],
   "styles": ["styles/k4lt.css"],
   "packs": [

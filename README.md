@@ -22,6 +22,12 @@ Afin de fonctionner ce système nécessite l'installation et la configuration de
  * MaeseFingolf (https://github.com/MaeseFingolf) - Traduction espagnole
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 2.0.0.8
+ * Mise à jour de la traduction en Espagnol par MaeseFingolf (fichier es.json)
+ * Corrections mineures sur les fichiers de langues (fichiers en.json & fr.json)
+ * Ajout d'un arrière plan spécifique au système lors de l'accès à la partie
+ * Ajout de titres éditables dans la zone "contexte"
+
 ## Version 2.0.0.7
 
  * Amélioration du contraste dans les zones texte (notamment 'Qui es-tu' ?)
@@ -108,6 +114,12 @@ This system requires the installation and configuration of Foundry VTT. The soft
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * MaeseFingolf (https://github.com/MaeseFingolf) - Spanish translation
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 2.0.0.8
+ * Update of Spanish translation by MaeseFingolf (es.json file)
+ * Minor corrections on language files (en.json & fr.json files)
+ * Added a system specific background when accessing the game
+ * Added editable titles in the "background" area
 
 ## Version 2.0.0.7
 

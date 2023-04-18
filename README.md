@@ -22,6 +22,10 @@ Afin de fonctionner ce système nécessite l'installation et la configuration de
  * MaeseFingolf (https://github.com/MaeseFingolf) - Traduction espagnole
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 2.0.0.9
+ * Suppression de l'attribut éditable des images sur les items 'Avantages', 'Désavantages' et 'Sombres secrets'
+ * Prise en compte correct de l'attribut 'passif' (affichage avertissement et pas de lancer de dés)
+
 ## Version 2.0.0.8
  * Mise à jour de la traduction en Espagnol par MaeseFingolf (fichier es.json)
  * Corrections mineures sur les fichiers de langues (fichiers en.json & fr.json)
@@ -114,6 +118,10 @@ This system requires the installation and configuration of Foundry VTT. The soft
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * MaeseFingolf (https://github.com/MaeseFingolf) - Spanish translation
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 2.0.0.9
+ * Removed the editable image attribute on 'Advantages', 'Disadvantages' and 'Dark Secrets' items
+ * Correct consideration of the 'passive' attribute (display warning and no dice roll)
 
 ## Version 2.0.0.8
  * Update of Spanish translation by MaeseFingolf (es.json file)

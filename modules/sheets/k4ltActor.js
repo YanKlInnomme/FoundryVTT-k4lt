@@ -48,7 +48,7 @@ export default class k4ltActor extends Actor {
     kultLogger("Move => ", move);
 
     const moveType = move.system.type;
-    const moveName = move.system.name;
+    const moveName = move.name;
     kultLogger("Move Type => ", moveType);
 
     if (moveType === "passive") {

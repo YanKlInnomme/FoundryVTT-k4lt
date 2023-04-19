@@ -22,6 +22,9 @@ Afin de fonctionner ce système nécessite l'installation et la configuration de
  * MaeseFingolf (https://github.com/MaeseFingolf) - Traduction espagnole
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 2.0.1.0
+ * Correction nom des actions non défini : move.system.name > move.name (fichier k4ltActor.js)
+
 ## Version 2.0.0.9
  * Suppression de l'attribut éditable des images sur les items 'Avantages', 'Désavantages' et 'Sombres secrets'
  * Prise en compte correct de l'attribut 'passif' (affichage avertissement et pas de lancer de dés)
@@ -118,6 +121,9 @@ This system requires the installation and configuration of Foundry VTT. The soft
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * MaeseFingolf (https://github.com/MaeseFingolf) - Spanish translation
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 2.0.1.0
+ * Correction name of actions not defined : move.system.name > move.name (file k4ltActor.js)
 
 ## Version 2.0.0.9
  * Removed the editable image attribute on 'Advantages', 'Disadvantages' and 'Dark Secrets' items

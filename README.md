@@ -22,6 +22,9 @@ Afin de fonctionner ce système nécessite l'installation et la configuration de
  * MaeseFingolf (https://github.com/MaeseFingolf) - Traduction espagnole
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 2.0.1.1
+ * Correction de la nonincrémentation de 'token' par Kristov (https://github.com/Qaw)
+
 ## Version 2.0.1.0
  * Correction nom des actions non défini : move.system.name > move.name (fichier k4ltActor.js)
 
@@ -121,6 +124,9 @@ This system requires the installation and configuration of Foundry VTT. The soft
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * MaeseFingolf (https://github.com/MaeseFingolf) - Spanish translation
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 2.0.1.1
+ * Correction of the non-increment of 'token' by Kristov (https://github.com/Qaw)
 
 ## Version 2.0.1.0
  * Correction name of actions not defined : move.system.name > move.name (file k4ltActor.js)

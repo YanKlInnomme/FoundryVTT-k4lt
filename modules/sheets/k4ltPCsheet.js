@@ -120,14 +120,14 @@ export default class k4ltPCsheet extends ActorSheet {
 
     html.find(".token-add").click((ev) => {
       const li = $(ev.currentTarget).parents(".item-name");
-      const item = this.actor.get(li.data("itemId"));
+      const item = this.actor.items.get(li.data("itemId"));
       let newtokens = Number(item.system.tokens) + 1;
       item.update({ "system.tokens": newtokens });
     });
 
     html.find(".token-spend").click((ev) => {
       const li = $(ev.currentTarget).parents(".item-name");
-      const item = this.actor.get(li.data("itemId"));
+      const item = this.actor.items.get(li.data("itemId"));
       let newtokens = Number(item.system.tokens) - 1;
       item.update({ "system.tokens": newtokens });
     });

@@ -19,8 +19,12 @@ Afin de fonctionner ce système nécessite l'installation et la configuration de
 
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 à 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
- * MaeseFingolf (https://github.com/MaeseFingolf) - Traduction espagnole
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
+
+## Version 2.1.0.0
+ * Mise à jour suite à la sortie la version 11 de Foundry VTT
+ * Migration des compendiums 'examples' et 'moves' de NeDB vers LevelDB (NeDB est mort, vive LevelDB)
+ * Mise à jour des chemins d'accès aux packs dans le manifest 
 
 ## Version 2.0.1.1
  * Correction de la nonincrémentation de 'token' par Kristov (https://github.com/Qaw)
@@ -33,7 +37,7 @@ Afin de fonctionner ce système nécessite l'installation et la configuration de
  * Prise en compte correct de l'attribut 'passif' (affichage avertissement et pas de lancer de dés)
 
 ## Version 2.0.0.8
- * Mise à jour de la traduction en Espagnol par MaeseFingolf (fichier es.json)
+ * Mise à jour de la traduction en Espagnol par MaeseFingolf (https://github.com/MaeseFingolf) (fichier es.json) 
  * Corrections mineures sur les fichiers de langues (fichiers en.json & fr.json)
  * Ajout d'un arrière plan spécifique au système lors de l'accès à la partie
  * Ajout de titres éditables dans la zone "contexte"
@@ -122,8 +126,12 @@ This system requires the installation and configuration of Foundry VTT. The soft
 
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 to 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
- * MaeseFingolf (https://github.com/MaeseFingolf) - Spanish translation
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 2.1.0.0
+ * Updated after the release of Foundry VTT version 11
+ * Migration of the 'examples' and 'moves' compendiums from NeDB to LevelDB (NeDB is dead, long live LevelDB)
+ * Updated package paths in the manifest 
 
 ## Version 2.0.1.1
  * Correction of the non-increment of 'token' by Kristov (https://github.com/Qaw)
@@ -136,7 +144,7 @@ This system requires the installation and configuration of Foundry VTT. The soft
  * Correct consideration of the 'passive' attribute (display warning and no dice roll)
 
 ## Version 2.0.0.8
- * Update of Spanish translation by MaeseFingolf (es.json file)
+ * Update of Spanish translation by MaeseFingolf (https://github.com/MaeseFingolf) (es.json file)
  * Minor corrections on language files (en.json & fr.json files)
  * Added a system specific background when accessing the game
  * Added editable titles in the "background" area

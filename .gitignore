@@ -1,2 +1,5 @@
-k4lt.lock
+# Le fichier de vérouillage de Foundry VTT
+*.lock
+
+# Le dossier PSD contenant les fichiers graphiques
 psd

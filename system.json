@@ -2,12 +2,12 @@
   "id": "k4lt",
   "title": "KULT: Divinity Lost (4th Edition)",
   "description": "Kult is a horror role-playing game that focuses on the fears and impulses buried in our subconscious. Players take on the role of characters with dark secrets and can evolve in industrial cities, facing satanic cults, psychopathic killers, corrupt multinationals and more.",
-  "version": "2.0.1.1",
+  "version": "2.1.0.0",
   "license": "LICENSE",
   "compatibility": {
-    "minimum": "10",
-    "verified": "10.291",
-    "maximum": "11"
+    "minimum": "11",
+    "verified": "11.299",
+    "maximum": "12"
   },
   "authors": [
     {
@@ -31,20 +31,18 @@
   "styles": ["styles/k4lt.css"],
   "packs": [
     {
-      "name": "moves",
       "label": "Moves",
+      "name": "moves",
+      "type": "Item",
       "system": "k4lt",
-      "module": "k4lt",
-      "path": "packs/moves.db",
-      "type": "Item"
+      "path": "packs/moves"
     },
     {
-      "name": "examples",
       "label": "Examples",
+      "name": "examples",
+      "type": "Item",
       "system": "k4lt",
-      "module": "k4lt",
-      "path": "packs/examples.db",
-      "type": "Item"
+      "path": "packs/examples.db"
     }
   ],
   "languages": [

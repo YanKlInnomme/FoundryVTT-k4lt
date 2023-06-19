@@ -21,6 +21,9 @@ Afin de fonctionner ce système nécessite l'installation et la configuration de
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 2.1.1.0
+ * Mise à jour visuelle de l'affichage des résultats des actions
+
 ## Version 2.1.0.0
  * Mise à jour suite à la sortie la version 11 de Foundry VTT
  * Migration des compendiums 'examples' et 'moves' de NeDB vers LevelDB (NeDB est mort, vive LevelDB)
@@ -127,6 +130,9 @@ This system requires the installation and configuration of Foundry VTT. The soft
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 to 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 2.1.1.0
+ * Visual update of action results display
 
 ## Version 2.1.0.0
  * Updated after the release of Foundry VTT version 11

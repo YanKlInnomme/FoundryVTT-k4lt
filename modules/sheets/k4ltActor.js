@@ -27,15 +27,17 @@ export default class k4ltActor extends Actor {
   displayRollResult({ roll, moveName, resultText, moveResultText, optionsText }) {
     ChatMessage.create({
       content: `
-        <div class='move-name'>${moveName}</div>
-        <div class='move-name'>${resultText}!</div>
-        <div class='move-result'>${moveResultText}</div>
-        <div class='move-options'>${optionsText}</div>
+        <div class='move-img'>
         <div class='result-roll'>
           <div class='tooltip'>
             ${roll.total}
             <span class='tooltiptext'>${roll.result}</span>
           </div>
+        </div>
+        <div class='move-name'>${moveName}</div>
+        <div class='move-name'>${resultText}!</div>
+        <div class='move-result'>${moveResultText}</div>
+        <div class='move-options'>${optionsText}</div>
         </div>`,
       speaker: ChatMessage.getSpeaker({ alias: this.name }),
     });

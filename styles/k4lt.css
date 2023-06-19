@@ -249,6 +249,21 @@ h1,h2,h3 {
     width: 150px;
 }
 
+.move-img {
+    background: url(../assets/blood.webp);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0px -125px;
+}
+
+.move-result {
+    text-shadow: 1px 1px 5px rgb(200, 200, 200), -1px -1px 5px rgb(200, 200, 200);
+}
+
+.move-options {
+    text-shadow: 1px 1px 5px rgb(200, 200, 200), -1px -1px 5px rgb(200, 200, 200);
+}
+
 
 .move-roll:hover {
     color: rgb(168, 14, 18);
@@ -460,11 +475,10 @@ div.right-middle-column {
 }
 
 .move-name {
-    background-color: black;
-    color: #9b201f;
     text-align: center;
     margin-top: 3px;
-    font-size: large
+    font-size: large;
+    text-shadow: 1px 1px 5px rgb(150, 140, 106), -1px -1px 5px rgb(150, 140, 106);
 }
 
 .result-roll {
@@ -472,7 +486,7 @@ div.right-middle-column {
     color: black;
     text-align: center;
     margin-top: 3px;
-    font-size: large
+    font-size: large;
 }
 
 .tooltip {
@@ -770,10 +784,6 @@ input.short-input {
 
 .kult-item-sheet .editor-row {
     background-color: transparent !important;
-}
-
-.kult-item-sheet .results-input {
-    /* margin-left: 10px; */
 }
 
 .kult-item-sheet .editor {

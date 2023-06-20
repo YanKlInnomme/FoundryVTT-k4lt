@@ -250,7 +250,7 @@ h1,h2,h3 {
 }
 
 .move-img {
-    background: url(../assets/blood.webp);
+    background: url(../assets/blood/blood1.webp);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: 0px -125px;
@@ -599,7 +599,7 @@ td textarea {
 }
 
 .tox.tox-tinymce .tox-edit-area__iframe {
-    background: #782e22;
+    background: rgba(255, 255, 255, 0.75);
     border-top: 1px solid #968c6a;
 }
 
@@ -622,20 +622,6 @@ td textarea {
     padding: 5px;
 }
 
-/* .modifier-section div {
-    background-color: #000000;
-} */
-
-/* .modifier-section select {
-    background-color: #000000;
-} */
-
-
-
-/* input {
-    background-color: white;
-} */
-
 .attribute-box {
     color: rgb(0, 0, 0);
     border: 1px;
@@ -646,14 +632,6 @@ td textarea {
     font-style: oblique;
     font-size: 10px;
 }
-
-/* .attribute-box option {
-    background-color: black;
-}
-
-.attribute-box tr {
-    background-color: black !important;
-} */
 
 .modifier-section {
     display: flex;

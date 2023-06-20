@@ -27,7 +27,7 @@ export default class k4ltActor extends Actor {
   displayRollResult({ roll, moveName, resultText, moveResultText, optionsText }) {
     ChatMessage.create({
       content: `
-        <div class='move-img'>
+        <div id='background-element' class='move-img'>
         <div class='result-roll'>
           <div class='tooltip'>
             ${roll.total}

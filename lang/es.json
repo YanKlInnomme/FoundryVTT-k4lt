@@ -1,17 +1,18 @@
 {
-  "ACTOR": {
-    "TypePc": "Personaje Jugador",
-    "TypeNpc": "Personaje No Jugador"
-  },
-
-  "ITEM": {
-      "TypeMove": "Movimiento",
-      "TypeWeapon": "Arma",
-      "TypeAdvantage": "Ventaja",
-      "TypeDisadvantage": "Desventaja",
-      "TypeDarksecret": "Secreto Inconfesable",
-      "TypeRelationship": "Relación",
-      "TypeGear": "Equipo"
+  "TYPES": {
+    "Actor": {
+      "pc": "Personaje Jugador",
+      "npc": "Personaje No Jugador"
+    },
+    "Item": {
+      "move": "Movimiento",
+      "weapon": "Arma",
+      "advantage": "Ventaja",
+      "disadvantage": "Desventaja",
+      "darksecret": "Secreto Inconfesable",
+      "relationship": "Relación",
+      "gear": "Equipo"
+    }
   },
 
   "k4lt.Forward": "Modificador permanente",

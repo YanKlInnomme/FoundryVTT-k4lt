@@ -1,17 +1,18 @@
 {
-  "ACTOR": {
-    "TypePc": "Player Character",
-    "TypeNpc": "Non Player Character"
-  },
-
-  "ITEM": {
-      "TypeMove": "Move",
-      "TypeWeapon": "Weapon",
-      "TypeAdvantage": "Advantage",
-      "TypeDisadvantage": "Disadvantage",
-      "TypeDarksecret": "Dark Secret",
-      "TypeRelationship": "Relationship",
-      "TypeGear": "Gear"
+  "TYPES": {
+    "Actor": {
+      "pc": "Player Character",
+      "npc": "Non Player Character"
+    },
+    "Item": {
+      "move": "Move",
+      "weapon": "Weapon",
+      "advantage": "Advantage",
+      "disadvantage": "Disadvantage",
+      "darksecret": "Dark Secret",
+      "relationship": "Relationship",
+      "gear": "Gear"
+    }
   },
 
   "k4lt.Forward": "Forward",

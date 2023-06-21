@@ -1,17 +1,18 @@
 {
-  "ACTOR": {
-    "TypePc": "Personnage Joueur",
-    "TypeNpc": "Personnage Non Joueur"
-  },
-
-  "ITEM": {
-      "TypeMove": "Action",
-      "TypeWeapon": "Arme",
-      "TypeAdvantage": "Avantage",
-      "TypeDisadvantage": "Désavantage",
-      "TypeDarksecret": "Sombre Secret",
-      "TypeRelationship": "Relation",
-      "TypeGear": "Ressort Dramatique"
+  "TYPES": {
+    "Actor": {
+      "pc": "Personnage Joueur",
+      "npc": "Personnage Non Joueur"
+    },
+    "Item": {
+      "move": "Action",
+      "weapon": "Arme",
+      "advantage": "Avantage",
+      "disadvantage": "Désavantage",
+      "darksecret": "Sombre Secret",
+      "relationship": "Relation",
+      "gear": "Ressort Dramatique"
+    }
   },
 
   "k4lt.Forward": "Mod. Continu",

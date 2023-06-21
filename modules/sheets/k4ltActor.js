@@ -24,23 +24,24 @@ export default class k4ltActor extends Actor {
     if (this.system.criticalwound.state == "unstabilized") return true;
   }
 
-  displayRollResult({ roll, moveName, resultText, moveResultText, optionsText }) {
-    ChatMessage.create({
-      content: `
-        <div id='background-element' class='move-img'>
-        <div class='result-roll'>
-          <div class='tooltip'>
-            ${roll.total}
-            <span class='tooltiptext'>${roll.result}</span>
-          </div>
-        </div>
-        <div class='move-name'>${moveName}</div>
-        <div class='move-name'>${resultText}!</div>
-        <div class='move-result'>${moveResultText}</div>
-        <div class='move-options'>${optionsText}</div>
-        </div>`,
+  async displayRollResult({ roll, moveName, resultText, moveResultText, optionsText }) {
+    const templateData = {
+      total: roll.total,
+      result: roll.result,
+      moveName: moveName,
+      resultText: resultText,
+      moveResultText: moveResultText,
+      optionsText: optionsText
+    };
+
+    const content = await renderTemplate('systems/k4lt/templates/chat/roll-card.hbs', templateData);
+
+    const data = {
       speaker: ChatMessage.getSpeaker({ alias: this.name }),
-    });
+      content: content
+    }
+
+    ChatMessage.create(data);
   }
 
   async moveroll(moveID) {
@@ -135,11 +136,11 @@ export default class k4ltActor extends Actor {
       }
 
       if (r.total >= 15) {
-        this.displayRollResult({ roll: r, moveName, resultText: game.i18n.localize("k4lt.Success"), moveResultText: successtext, optionsText: optionstext });
+        await this.displayRollResult({ roll: r, moveName, resultText: game.i18n.localize("k4lt.Success"), moveResultText: successtext, optionsText: optionstext });
       } else if (r.total < 10) {
-        this.displayRollResult({ roll: r, moveName, resultText: game.i18n.localize("k4lt.Failure"), moveResultText: failuretext, optionsText: optionstext });
+        await this.displayRollResult({ roll: r, moveName, resultText: game.i18n.localize("k4lt.Failure"), moveResultText: failuretext, optionsText: optionstext });
       } else {
-        this.displayRollResult({ roll: r, moveName, resultText: game.i18n.localize("k4lt.PartialSuccess"), moveResultText: partialsuccess, optionsText: optionstext });
+        await this.displayRollResult({ roll: r, moveName, resultText: game.i18n.localize("k4lt.PartialSuccess"), moveResultText: partialsuccess, optionsText: optionstext });
       }
     }
   }

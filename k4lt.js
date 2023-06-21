@@ -5,6 +5,7 @@ import k4ltActor from "./modules/sheets/k4ltActor.js";
 import Macros from "./modules/system/macros.js";
 import { registerSystemSettings } from "./modules/system/settings.js";
 import { registerLogger } from "./modules/system/logger.js";
+import registerHandlebarsHelpers from "./modules/system/helpers.js";
 
 async function preloadHandlebarTemplates() {
   const templatepaths = [
@@ -36,16 +37,8 @@ Hooks.once("init", function () {
 
   preloadHandlebarTemplates();
 
-  Handlebars.registerHelper("getWoundsImage", function (state) {
-    switch (state) {
-      case "none":
-        return "systems/k4lt/assets/blank.webp";
-      case "unstabilized":
-        return "systems/k4lt/assets/bleeding-wound.webp";
-      case "stabilized":
-        return "systems/k4lt/assets/sticking-plaster.webp";
-    }
-  });
+  // Register Handlebars Helpers
+	registerHandlebarsHelpers();
 
   kultLogger("K4lt Initialized");
 });

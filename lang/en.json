@@ -78,7 +78,7 @@
   "k4lt.DramaticHooks": "Dramatic Hooks",
 
   "k4lt.AskAttribute": "What Attribute Do You Want to Roll?",
-  "k4lt.Attribute": "Attribute",
+  "k4lt.AttributePrompt": "Attribute",
   "k4lt.None": "None",
   "k4lt.Ask": "Always Ask",
 

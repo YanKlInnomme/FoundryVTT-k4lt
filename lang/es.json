@@ -78,7 +78,7 @@
   "k4lt.DramaticHooks": "Ganchos dramáticos",
 
   "k4lt.AskAttribute": "¿Qué atributo quieres usar?",
-  "k4lt.Attribute": "Atributo",
+  "k4lt.AttributePrompt": "Atributo",
   "k4lt.None": "Ninguno",
   "k4lt.Ask": "Preguntar siempre",
 

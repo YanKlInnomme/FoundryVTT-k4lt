@@ -3,8 +3,8 @@ export default class k4ltitemsheet extends ItemSheet {
     return `systems/k4lt/templates/sheets/${this.item.type}-sheet.hbs`;
   }
 
-  getData() {
-    const context = super.getData();
+  async getData() {
+    const context = await super.getData();
     context.system = context.item.system;
     return context;
   }

@@ -78,7 +78,7 @@
   "k4lt.DramaticHooks": "Ressorts Dramatiques",
 
   "k4lt.AskAttribute": "Quelle caractéristique voulez-vous utiliser?",
-  "k4lt.Attribute": "Caractéristique",
+  "k4lt.AttributePrompt": "Caractéristique",
   "k4lt.None": "Aucune",
   "k4lt.Ask": "Toujours demander",
 

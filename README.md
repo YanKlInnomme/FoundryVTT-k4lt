@@ -21,6 +21,12 @@ Afin de fonctionner ce système nécessite l'installation et la configuration de
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 2.1.2.0
+ * Affichage aléatoire d'images dans les résultats par Kristov (https://github.com/Qaw)
+ * Ajout d'un template distinct pour le chat par Kristov (https://github.com/Qaw)
+ * Mise à jour des traductions en duo avec Kristov (https://github.com/Qaw)
+ * Optimisation globale du code
+
 ## Version 2.1.1.0
  * Mise à jour visuelle de l'affichage des résultats des actions
 
@@ -130,6 +136,12 @@ This system requires the installation and configuration of Foundry VTT. The soft
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 to 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 2.1.2.0
+ * Random image display in results by Kristov (https://github.com/Qaw)
+ * Separate chat template added by Kristov (https://github.com/Qaw)
+ * Translation update duo with Kristov (https://github.com/Qaw)
+ * Global code optimization
 
 ## Version 2.1.1.0
  * Visual update of action results display

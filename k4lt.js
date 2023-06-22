@@ -35,12 +35,12 @@ Hooks.once("init", function () {
   Actors.registerSheet("k4lt", k4ltPCsheet, { types: ["pc"], makeDefault: true });
   Actors.registerSheet("k4lt", k4ltNPCsheet, { types: ["npc"], makeDefault: true });
 
-  preloadHandlebarTemplates();
+  preloadHandlebarTemplates().then(() => {
+    // Register Handlebars Helpers
+    registerHandlebarsHelpers();
 
-  // Register Handlebars Helpers
-	registerHandlebarsHelpers();
-
-  kultLogger("K4lt Initialized");
+    kultLogger("K4lt Initialized");
+  });
 });
 
 /**
@@ -48,14 +48,12 @@ Hooks.once("init", function () {
  */
 Hooks.on("createActor", async (actor) => {
   if (actor.type === "pc") {
-    let pack = game.packs.get("k4lt.moves");
-    let index = pack.indexed ? pack.index : await pack.getIndex();
-    let moves = [];
-    for (const move of index) {
-      let item = await pack.getDocument(move._id);
-      moves.push(item.toObject());
-    }
-    await actor.createEmbeddedDocuments("Item", moves);
+    const pack = game.packs.get("k4lt.moves");
+    const index = pack.indexed ? pack.index : await pack.getIndex();
+    const moves = index.map(move => pack.getDocument(move._id).then(item => item.toObject()));
+    await Promise.all(moves).then(async (objects) => {
+      await actor.createEmbeddedDocuments("Item", objects);
+    });
   }
 });
 
@@ -63,7 +61,7 @@ Hooks.on("createActor", async (actor) => {
  * Create a macro when dropping an item on the hotbar
  */
 Hooks.on("hotbarDrop", (bar, data, slot) => {
-  if (["Item"].includes(data.type)) {
+  if (data.type === "Item") {
     Macros.createK4ltMacro(data, slot);
     return false;
   }

@@ -37,4 +37,4 @@ export default class Macros {
       game.user.assignHotbarMacro(macro, slot);
     }
   };
-}
+};

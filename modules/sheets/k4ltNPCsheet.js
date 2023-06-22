@@ -7,11 +7,14 @@ export default class k4ltNPCsheet extends ActorSheet {
   /** @override */
   getData() {
     const context = super.getData();
+
     context.system = context.actor.system;
-    context.moves = context.items.filter(function (item) {
-      return item.type == "move" || "advantage" || "disadvantage" || "darksecret" || "relationship";
-    });
+
+    const allowedTypes = ["move", "advantage", "disadvantage", "darksecret", "relationship"];
+    context.moves = context.items.filter(item => allowedTypes.includes(item.type));
+
     kultLogger("NPCSheet getData => ", context);
+
     return context;
   }
 }

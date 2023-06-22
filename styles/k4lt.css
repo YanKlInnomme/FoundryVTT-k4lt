@@ -604,7 +604,7 @@ td textarea {
 }
 
 .tox.tox-tinymce .tox-edit-area__iframe {
-    background: #782e22;
+    background: rgb(255, 255, 255, 0.75);
     border-top: 1px solid #968c6a;
 }
 

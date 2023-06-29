@@ -5,8 +5,8 @@ Ce système de jeu est un ensemble de fichiers qui fournissent à Foundry VTT to
 
 Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost autorisé par la politique de contenu d'Helmgast (https://helmgast.se/en/meta/fan-content-policy).
 
-![Capture d’écran 2023-06-22 024241](https://github.com/YanKlInnomme/FoundryVTT-k4lt/assets/100078854/f31ee760-5d0e-490f-84e7-6f633cfc9ff3)
-![Capture d’écran 2023-06-22 024643](https://github.com/YanKlInnomme/FoundryVTT-k4lt/assets/100078854/ec9b7361-0200-4aa7-912b-96c54d24f20a)
+![Capture d’écran 2023-06-29 150900](https://github.com/YanKlInnomme/FoundryVTT-k4lt/assets/100078854/f339aa32-3905-48bd-9d69-cfed7ba254a1)
+![Capture d’écran 2023-06-29 142439](https://github.com/YanKlInnomme/FoundryVTT-k4lt/assets/100078854/083ea7d0-3869-4f86-9fb6-41ded35b37ff)
 
 Si vous appréciez le système et que vous avez les moyens de le faire, vous pouvez me soutenir via Tipeee (https://fr.tipeee.com/yank/news) pour m'aider à continuer l'aventure. Dans tous les cas, je vous souhaite de vous amuser pleinement, et n'hésitez pas à me contacter pour me donner votre avis ou me signaler tout problème éventuel.
 

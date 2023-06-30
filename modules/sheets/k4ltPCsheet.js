@@ -5,6 +5,7 @@ export default class k4ltPCsheet extends ActorSheet {
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "Stats" }],
       width: 800,
       height: 1294,
+      dragDrop: [ { dragSelector: '.item-list .item-draggable', dropSelector: null }]
     });
   }
 
@@ -31,15 +32,6 @@ export default class k4ltPCsheet extends ActorSheet {
   /** @override */
   activateListeners(html) {
     super.activateListeners(html);
-
-    const dragHandler = ev => this._onDragStart(ev);
-
-    const makeDraggable = (index, element) => {
-      element.setAttribute("draggable", true);
-      element.addEventListener("dragstart", dragHandler, false);
-    };
-
-    html.find("ul.item-list li.item.item-draggable").each(makeDraggable);
 
     html.find(".item-delete").click(ev => {
       const li = $(ev.currentTarget).parents(".item-name");

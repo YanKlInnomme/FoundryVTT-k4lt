@@ -47,7 +47,7 @@ Hooks.once("init", function () {
  * Add the basic moves from the compendium to a new actor of type pc
  */
 Hooks.on("createActor", async (actor) => {
-  if (actor.type === "pc") {
+  if (actor.type === "pc"  && actor.items.size === 0) {
     const pack = game.packs.get("k4lt.moves");
     const index = pack.indexed ? pack.index : await pack.getIndex();
     const moves = index.map(move => pack.getDocument(move._id).then(item => item.toObject()));

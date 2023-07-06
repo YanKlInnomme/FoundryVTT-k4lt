@@ -20,6 +20,11 @@ Afin de fonctionner ce système nécessite l'installation et la configuration de
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 2.1.2.1
+ * Mise à jour des valeurs disponibles pour les caractéristiques
+ * Réactivation du glisser-déposer par Kristov (https://github.com/Qaw)
+ * Résolution du problème de duplication des actions lors de la copie ou de l'importation d'un PJ par Kristov (https://github.com/Qaw)
+
 ## Version 2.1.2.0
  * Affichage aléatoire d'images dans les résultats par Kristov (https://github.com/Qaw)
  * Ajout d'un template distinct pour le chat par Kristov (https://github.com/Qaw)
@@ -135,6 +140,11 @@ This system requires the installation and configuration of Foundry VTT. The soft
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 to 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 2.1.2.1
+ * Updated available values for features
+ * Drag'n'drop reactivated by Kristov (https://github.com/Qaw)
+ * Action duplication problem solved when copying or importing a PJ by Kristov (https://github.com/Qaw)
 
 ## Version 2.1.2.0
  * Random image display in results by Kristov (https://github.com/Qaw)

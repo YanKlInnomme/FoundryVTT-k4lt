@@ -560,10 +560,10 @@ td textarea {
 }
 
 .kult-sheet {
-    background: url(../assets/background-sheet.webp);
+    background: url(../assets/background-sheet.svg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    background-position: center;
+    background-color: #782e22;
     padding: 10px;
     color: rgb(32, 32, 32);
     border: none;

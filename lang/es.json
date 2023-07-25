@@ -9,6 +9,8 @@
       "weapon": "Arma",
       "advantage": "Ventaja",
       "disadvantage": "Desventaja",
+      "abilitity": "Capacidad",
+      "limitation": "Limitación",
       "darksecret": "Secreto Inconfesable",
       "relationship": "Relación",
       "gear": "Equipo"
@@ -41,6 +43,10 @@
   "k4lt.Disadvantage": "Desventaja",
   "k4lt.Relationships": "Relaciones",
   "k4lt.Relationship": "Relación",
+  "k4lt.Abilitities": "Capacidades",
+  "k4lt.Abilitity": "Capacidad",
+  "k4lt.Limitations": "Limitaciones",
+  "k4lt.Limitation": "Limitación",
 
   "k4lt.Wounds": "Heridas",
   "k4lt.MajorWound1": "Herida grave #1",

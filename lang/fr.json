@@ -9,6 +9,8 @@
       "weapon": "Arme",
       "advantage": "Avantage",
       "disadvantage": "Désavantage",
+      "abilitity": "Capacité",
+      "limitation": "Limitation",
       "darksecret": "Sombre Secret",
       "relationship": "Relation",
       "gear": "Ressort Dramatique"
@@ -41,6 +43,10 @@
   "k4lt.Disadvantage": "Désavantage",
   "k4lt.Relationships": "Relations",
   "k4lt.Relationship": "Relation",
+  "k4lt.Abilitities": "Capacités",
+  "k4lt.Abilitity": "Capacité",
+  "k4lt.Limitations": "Limitations",
+  "k4lt.Limitation": "Limitation",
 
   "k4lt.Wounds": "Blessures",
   "k4lt.MajorWound1": "Blessures Sérieuses #1",

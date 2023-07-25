@@ -21,6 +21,8 @@ export default class k4ltPCsheet extends ActorSheet {
     context.moves = context.items.filter(item => item.type === "move").sort((a, b) => a.name.localeCompare(b.name));
     context.advantages = context.items.filter(item => item.type === "advantage");
     context.disadvantages = context.items.filter(item => item.type === "disadvantage");
+    context.abilitities = context.items.filter(item => item.type === "abilitity");
+    context.limitations = context.items.filter(item => item.type === "limitation");
     context.darksecrets = context.items.filter(item => item.type === "darksecret");
     context.relationships = context.items.filter(item => item.type === "relationship");
     context.weapons = context.items.filter(item => item.type === "weapon");
@@ -51,7 +53,7 @@ export default class k4ltPCsheet extends ActorSheet {
       const item = this.actor.items.get(li.data("itemId"));
       kultLogger("Show Item => ", item);
       let effect;
-      if (item.type === "disadvantage" || item.type === "advantage") {
+      if (item.type === "disadvantage" || item.type === "advantage" || item.type === "abilitity" || item.type === "limitation") {
         effect = item.system.effect;
       } else if (item.type === "move") {
         effect = item.system.trigger;

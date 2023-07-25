@@ -183,6 +183,18 @@
                         {{> "systems/k4lt/templates/partials/relationship-card.hbs" relationship}}
                     {{/each}}
                 </div>
+                <div class="section-label">{{localize "k4lt.Abilitities"}}</div>
+                <div class="item-list abilitity-list">
+                    {{#each abilitities as |abilitity id|}}
+                        {{> "systems/k4lt/templates/partials/abilitity-card.hbs" abilitity}}
+                    {{/each}}
+                </div>
+                <div class="section-label">{{localize "k4lt.Limitations"}}</div>
+                <div class="item-list limitation-list">
+                    {{#each limitations as |limitation id|}}
+                        {{> "systems/k4lt/templates/partials/limitation-card.hbs" limitation}}
+                    {{/each}}
+                </div>
             </div>
             <div class="right-middle-column">
                 <div class="section-label" style="margin-bottom: 12px;">{{localize "k4lt.Wounds"}}</div>

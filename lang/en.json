@@ -9,6 +9,8 @@
       "weapon": "Weapon",
       "advantage": "Advantage",
       "disadvantage": "Disadvantage",
+      "abilitity": "Abilitity",
+      "limitation": "Limitation",
       "darksecret": "Dark Secret",
       "relationship": "Relationship",
       "gear": "Gear"
@@ -41,6 +43,10 @@
   "k4lt.Disadvantage": "Disadvantage",
   "k4lt.Relationships": "Relationships",
   "k4lt.Relationship": "Relationship",
+  "k4lt.Abilitities": "Abilitities",
+  "k4lt.Abilitity": "Abilitity",
+  "k4lt.Limitations": "Limitations",
+  "k4lt.Limitation": "Limitation",
 
   "k4lt.Wounds": "Wounds",
   "k4lt.MajorWound1": "Major Wound #1",

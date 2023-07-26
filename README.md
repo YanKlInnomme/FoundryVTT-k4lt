@@ -1,6 +1,6 @@
-# Système de Jeu KULT: Divinity Lost pour Foundry VTT
 **See below for the English version**
 
+# Système de Jeu KULT: Divinity Lost pour Foundry VTT
 Kult est un jeu de rôle d'horreur qui se concentre sur les peurs et les pulsions enfouies dans notre subconscient. Les joueurs incarnent des personnages aux sombres secrets et évoluent dans des villes industrielles, affrontant des cultes sataniques, des tueurs psychopathes, des multinationales corrompues et bien plus encore.
 
 Ce système de jeu est un ensemble de fichiers qui fournissent à Foundry VTT toutes les informations nécessaires pour prendre en charge les règles, les mécanismes et les éléments de jeu spécifiques à KULT: Divinity Lost.
@@ -23,7 +23,11 @@ Afin de fonctionner ce système nécessite l'installation et la configuration de
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
 ## Version 2.1.3.0
- * Passage 
+ * Passage en vectoriel pour l'arrière-plan des fiches (background-sheet.svg)
+ * Ajout des objets 'Capacité' et 'Limitation' pour les Illuminés
+ * Ajout des espaces 'Capacités' et 'Limitations' dans la fiche joueur avec prise en charge du glisser/déposer
+ * Correction du compendium 'Moves' notamment l'action 'Influence Other' qui était incomplète
+ * Ajout des liens Boutique, Dépot et Tipeee dans l'onglet 'Paramètres' 
 
 ## Version 2.1.2.1
  * Mise à jour des valeurs disponibles pour les caractéristiques
@@ -145,6 +149,13 @@ This system requires the installation and configuration of Foundry VTT. The soft
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 to 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 2.1.3.0
+ * Vectorization of sheet background (background-sheet.svg)
+ * Added 'Ability' and 'Limitation' objects for Enlightened
+ * Added 'Abilities' and 'Limitations' spaces in the player sheet with drag'n'drop support
+ * Corrected the 'Moves' compendium, in particular the 'Influence Other' action, which was incomplete.
+ * Store, Deposit and Tipeee links added to 'Settings' tab
 
 ## Version 2.1.2.1
  * Updated available values for features

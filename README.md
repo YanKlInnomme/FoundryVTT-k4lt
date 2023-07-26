@@ -1,5 +1,5 @@
 # Système de Jeu KULT: Divinity Lost pour Foundry VTT
-See below for the English version <i class="fa-regular fa-circle-down"></i>
+**See below for the English version**
 
 Kult est un jeu de rôle d'horreur qui se concentre sur les peurs et les pulsions enfouies dans notre subconscient. Les joueurs incarnent des personnages aux sombres secrets et évoluent dans des villes industrielles, affrontant des cultes sataniques, des tueurs psychopathes, des multinationales corrompues et bien plus encore.
 
@@ -21,6 +21,9 @@ Afin de fonctionner ce système nécessite l'installation et la configuration de
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 à 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
+
+## Version 2.1.3.0
+ * Passage 
 
 ## Version 2.1.2.1
  * Mise à jour des valeurs disponibles pour les caractéristiques

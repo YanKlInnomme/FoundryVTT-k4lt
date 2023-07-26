@@ -68,3 +68,36 @@ Hooks.on("hotbarDrop", (bar, data, slot) => {
     return false;
   }
 });
+
+Hooks.on("renderSettings", (app, html) => {
+  let lotdSection = $("<h2>K4lt Links</h2>");
+  html.find("#settings-game").after(lotdSection);
+  let lotdDiv = $(`<div id="d352-help"></div>`);
+  lotdSection.after(lotdDiv);
+  let helpButton = $(
+    `<button id="d35e-help-btn" data-action="d35e-help"><i class="fa-solid fa-cart-shopping"></i> Kult: Divinity Lost</button>`
+  );
+  lotdDiv.append(helpButton);
+  helpButton.on("click", (ev) => {
+    ev.preventDefault();
+    window.open("https://kultdivinitylost.com/products/", "_blank");
+  });
+
+  let dicordButton = $(
+    `<button id="d35e-discord" data-action="d35e-discord"><i class="fab fa-github"></i> System repository</button>`
+  );
+  lotdDiv.append(dicordButton);
+  dicordButton.on("click", (ev) => {
+    ev.preventDefault();
+    window.open("https://github.com/YanKlInnomme/FoundryVTT-k4lt", "_blank");
+  });
+
+  let patreonButton = $(
+    `<button id="d35e-discord" data-action="d35e-discord"><i class="fa-solid fa-heart fa-beat fa-xs"></i> Support on Tipeee</button>`
+  );
+  lotdDiv.append(patreonButton);
+  patreonButton.on("click", (ev) => {
+    ev.preventDefault();
+    window.open("https://en.tipeee.com/yank", "_blank");
+  });
+});

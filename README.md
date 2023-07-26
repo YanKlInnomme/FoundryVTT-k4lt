@@ -1,4 +1,6 @@
 # Système de Jeu KULT: Divinity Lost pour Foundry VTT
+See below for the English version <i class="fa-regular fa-circle-down"></i>
+
 Kult est un jeu de rôle d'horreur qui se concentre sur les peurs et les pulsions enfouies dans notre subconscient. Les joueurs incarnent des personnages aux sombres secrets et évoluent dans des villes industrielles, affrontant des cultes sataniques, des tueurs psychopathes, des multinationales corrompues et bien plus encore.
 
 Ce système de jeu est un ensemble de fichiers qui fournissent à Foundry VTT toutes les informations nécessaires pour prendre en charge les règles, les mécanismes et les éléments de jeu spécifiques à KULT: Divinity Lost.

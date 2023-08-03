@@ -22,6 +22,9 @@ Afin de fonctionner ce système nécessite l'installation et la configuration de
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 2.1.3.1
+ * Correction de l'affichage de l'entrée 'options' dans le chat (le html n'était pas pris en compte)
+
 ## Version 2.1.3.0
  * Passage en vectoriel pour l'arrière-plan des fiches (background-sheet.svg)
  * Ajout des objets 'Capacité' et 'Limitation' pour les Illuminés
@@ -149,6 +152,9 @@ This system requires the installation and configuration of Foundry VTT. The soft
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 to 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 2.1.3.1
+ * Fixed display of 'options' entry in chat (html was not considered)
 
 ## Version 2.1.3.0
  * Vectorization of sheet background (background-sheet.svg)

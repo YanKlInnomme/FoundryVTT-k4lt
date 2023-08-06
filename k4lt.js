@@ -72,10 +72,10 @@ Hooks.on("hotbarDrop", (bar, data, slot) => {
 Hooks.on("renderSettings", (app, html) => {
   let lotdSection = $("<h2>K4lt Links</h2>");
   html.find("#settings-game").after(lotdSection);
-  let lotdDiv = $(`<div id="d352-help"></div>`);
+  let lotdDiv = $(`<div></div>`);
   lotdSection.after(lotdDiv);
   let helpButton = $(
-    `<button id="d35e-help-btn" data-action="d35e-help"><i class="fa-solid fa-cart-shopping"></i> Kult: Divinity Lost</button>`
+    `<button><i class="fa-solid fa-cart-shopping"></i> Kult: Divinity Lost</button>`
   );
   lotdDiv.append(helpButton);
   helpButton.on("click", (ev) => {
@@ -84,7 +84,7 @@ Hooks.on("renderSettings", (app, html) => {
   });
 
   let dicordButton = $(
-    `<button id="d35e-discord" data-action="d35e-discord"><i class="fab fa-github"></i> System repository</button>`
+    `<button><i class="fab fa-github"></i> System repository</button>`
   );
   lotdDiv.append(dicordButton);
   dicordButton.on("click", (ev) => {
@@ -93,7 +93,7 @@ Hooks.on("renderSettings", (app, html) => {
   });
 
   let patreonButton = $(
-    `<button id="d35e-discord" data-action="d35e-discord"><i class="fa-solid fa-heart fa-beat fa-xs"></i> Support on Tipeee</button>`
+    `<button><i class="fa-solid fa-heart fa-beat fa-xs"></i> Support on Tipeee</button>`
   );
   lotdDiv.append(patreonButton);
   patreonButton.on("click", (ev) => {

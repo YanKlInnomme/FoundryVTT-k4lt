@@ -22,6 +22,9 @@ Afin de fonctionner ce système nécessite l'installation et la configuration de
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 2.1.3.3
+ * Ajout de la traduction en Polonais par Otimor (https://github.com/otimor) (fichier pl.json) 
+
 ## Version 2.1.3.2
  * Ajout de la traduction en Allemand par Devilscryer (https://github.com/Devilscryer) (fichier de.json) 
 
@@ -155,6 +158,9 @@ This system requires the installation and configuration of Foundry VTT. The soft
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 to 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 2.1.3.3
+ * Polish translation added by Otimor (https://github.com/otimor) (pl.json file)
 
 ## Version 2.1.3.2
  * German translation added by Devilscryer (https://github.com/Devilscryer) (de.json file) 

@@ -51,9 +51,12 @@ export default class k4ltActor extends Actor {
 
     const data = {
       speaker: ChatMessage.getSpeaker({ alias: this.name }),
-      content: content
+      content: content,
+      type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+      rolls: [roll]
     }
 
+    ChatMessage.applyRollMode(data, "roll");
     ChatMessage.create(data);
   }
 
@@ -146,12 +149,7 @@ export default class k4ltActor extends Actor {
 
       // Effectue le lancer de dés avec les modificateurs et la situation modifiée.
       let r = new Roll(`2d10 + ${mod} + ${situation} - ${harm}`);
-      r.roll({ async: false });
-
-      if (game.dice3d) {
-        // Affiche les dés en 3D s'ils sont activés dans les paramètres du jeu.
-        await game.dice3d.showForRoll(r);
-      }
+      await r.roll({ async: true });
 
       if (r.total) {
         // Si le résultat du lancer est supérieur à zéro, met à jour la valeur de sitmod de l'acteur à zéro.

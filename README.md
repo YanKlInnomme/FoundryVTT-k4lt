@@ -22,6 +22,9 @@ Afin de fonctionner ce système nécessite l'installation et la configuration de
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 2.1.4.1
+ * Correction pour prise en compte des malus dû à la stabilité sur les jets de 'Désavantages'
+
 ## Version 2.1.4.0
  * Mise à jour du système de jet de dés par Kristov (https://github.com/Qaw) pour assurer un bon fonctionnement du module Nice so Dice (https://gitlab.com/riccisi/foundryvtt-dice-so-nice) et permettre de réaliser des jets cachés
 
@@ -161,6 +164,9 @@ This system requires the installation and configuration of Foundry VTT. The soft
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 to 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 2.1.4.1
+ * Correction to take into account stability malus on 'Disadvantages' rolls
 
 ## Version 2.1.4.0
  * Update of the dice roll system by Kristov (https://github.com/Qaw) to ensure smooth operation of the Nice so Dice module (https://gitlab.com/riccisi/foundryvtt-dice-so-nice) and enable hidden rolls

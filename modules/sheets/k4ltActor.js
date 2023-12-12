@@ -69,11 +69,12 @@ export default class k4ltActor extends Actor {
     let move = this.items.get(moveID);
     kultLogger("Move => ", move);
 
-    const moveType = move.system.type;
+    const moveSystemType = move.system.type; // active ou passive
+    const moveType = move.type; // advantage, disadvantage...
     const moveName = move.name;
     kultLogger("Move Type => ", moveType);
 
-    if (moveType === "passive") {
+    if (moveSystemType === "passive") {
       // Si le type d'action est "passive", affiche un avertissement dans les notifications du jeu.
       ui.notifications.warn(game.i18n.localize("k4lt.PassiveAbility"));
     } else {
@@ -128,9 +129,7 @@ export default class k4ltActor extends Actor {
 
       // Réduit la situation modifiée en fonction de la stabilité pour les actions de type "disadvantage".
       if (moveType == "disadvantage" && stability > 0) {
-        if (stability <= 2 ) situation -= 1;
-        else if (3 <= stability && stability <= 5) situation -= 2;
-        else situation -= 3;
+        situation -= (stability <= 2) ? 1 : ((stability <= 5) ? 2 : 3);
       }
 
       // Réduit la situation modifiée en fonction de la stabilité pour l'action "Stability Keep It Together".

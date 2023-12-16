@@ -125,7 +125,7 @@
   "k4lt.Strength": "Forza",
   "k4lt.Range": "Raggio",
   "k4lt.Special": "Speciale",
-  "k4lt.Trigger": "Causa Scatenante",
+  "k4lt.Trigger": "Attivazione",
   "k4lt.SpecialMove": "Mossa speciale",
   "k4lt.KeepItTogether": "Forza e Coraggio",
   "k4lt.SeeThroughTheIllusion": "Vedere Oltre L'Illusione",
@@ -134,8 +134,8 @@
   "k4lt.Combat": "Combattimento",
   "k4lt.Influence": "Influenza",
   "k4lt.Magic": "Magia",
-  "k4lt.EndureInjuryDialog": "Quanto danno ai sofferto?",
-  "k4lt.LostStability": "Subisci danni alla stavilità",
+  "k4lt.EndureInjuryDialog": "Quanto danno hai sofferto?",
+  "k4lt.LostStability": "Subisci danni alla stabilità",
   "k4lt.PCIsBroken": "Il personaggio è distrutto",
   "k4lt.HealedStability": "Hai curato stabilità",
   "k4lt.PCIsComposed": "Il personaggio è stabile",
@@ -144,7 +144,7 @@
   "k4lt.Abilities": "Abilità",
   "k4lt.Attacks": "Attacchi",
   "k4lt.NPC": {
-    "Home": "Rifugio",
+    "Home": "Dimora",
     "Type": "Tipo di creatura"
   }
  

@@ -22,6 +22,9 @@ Afin de fonctionner ce système nécessite l'installation et la configuration de
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 2.1.4.2
+ * Ajout de la traduction en Italien par Arcadio21 (https://github.com/Arcadio21) (fichier it.json) 
+
 ## Version 2.1.4.1
  * Correction pour prise en compte des malus dû à la stabilité sur les jets de 'Désavantages'
 
@@ -164,6 +167,9 @@ This system requires the installation and configuration of Foundry VTT. The soft
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 to 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 2.1.4.2
+ * Italian translation added by Arcadio21 (https://github.com/Arcadio21) (it.json file)
 
 ## Version 2.1.4.1
  * Correction to take into account stability malus on 'Disadvantages' rolls

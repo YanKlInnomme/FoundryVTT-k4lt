@@ -2,7 +2,7 @@
   "id": "k4lt",
   "title": "KULT: Divinity Lost (4th Edition)",
   "description": "Kult is a horror role-playing game that focuses on the fears and impulses buried in our subconscious. Players take on the role of characters with dark secrets and can evolve in industrial cities, facing satanic cults, psychopathic killers, corrupt multinationals and more.",
-  "version": "2.1.4.2",
+  "version": "2.1.4.3",
   "license": "LICENSE",
   "compatibility": {
     "minimum": "11",
@@ -12,7 +12,7 @@
   "authors": [
     {
       "name": "YanK",
-      "url": "https://fr.tipeee.com/yank",
+      "url": "https://www.buymeacoffee.com/yank",
       "email": "yanklinnomme@gmail.com",
       "discord": "YanK#8683"
     },
@@ -54,7 +54,7 @@
       "name": "examples",
       "type": "Item",
       "system": "k4lt",
-      "path": "packs/examples.db"
+      "path": "packs/examples"
     }
   ],
   "languages": [

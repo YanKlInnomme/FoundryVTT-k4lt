@@ -3,6 +3,8 @@
 # Système de Jeu KULT: Divinity Lost pour Foundry VTT
 Kult est un jeu de rôle d'horreur qui se concentre sur les peurs et les pulsions enfouies dans notre subconscient. Les joueurs incarnent des personnages aux sombres secrets et évoluent dans des villes industrielles, affrontant des cultes sataniques, des tueurs psychopathes, des multinationales corrompues et bien plus encore.
 
+Attention, ce jeu explore des thèmes matures liés à l'horreur psychologique et corporelle. Au sein des différents ouvrages qui le constitue, on y trouve des exemples explicites d'abus physiques et mentaux, de violence, d'agression sexuelle, d'exploitation religieuse, de maltraitance des enfants, de maladie mentale, d'enlèvement et de rapt, de cruauté et de mort animale, de grossesse et d'accouchement, de fausse couche et d'avortement, de consommation de drogue, d'automutilation et de suicide, de sang et de mort.
+
 Ce système de jeu est un ensemble de fichiers qui fournissent à Foundry VTT toutes les informations nécessaires pour prendre en charge les règles, les mécanismes et les éléments de jeu spécifiques à KULT: Divinity Lost.
 
 Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost autorisé par la politique de contenu d'Helmgast (https://helmgast.se/en/meta/fan-content-policy).
@@ -10,7 +12,7 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost a
 ![Capture d’écran 2023-07-26 095550](https://github.com/YanKlInnomme/FoundryVTT-k4lt/assets/100078854/12de9632-3c98-4a0e-af85-a6900b38438f)
 ![Capture d’écran 2023-07-26 095717](https://github.com/YanKlInnomme/FoundryVTT-k4lt/assets/100078854/28bd913c-e8b1-44a8-97ce-40273e8ff703)
 
-Si vous appréciez le système et que vous avez les moyens de le faire, vous pouvez me soutenir via Tipeee (https://fr.tipeee.com/yank/news) pour m'aider à continuer l'aventure. Dans tous les cas, je vous souhaite de vous amuser pleinement, et n'hésitez pas à me contacter pour me donner votre avis ou me signaler tout problème éventuel.
+Si vous appréciez le système et que vous avez les moyens de le faire, vous pouvez si vous le souhaitez m'offrir un café (https://www.buymeacoffee.com/yank) pour me marquer votre soutien et m'aider à poursuivre le développement. Dans tous les cas, je vous souhaite de vous amuser pleinement, et n'hésitez pas à me contacter pour me donner votre avis ou me signaler tout problème éventuel.
 
 ## Prérequis
 
@@ -152,11 +154,13 @@ Afin de fonctionner ce système nécessite l'installation et la configuration de
 # KULT: Divinity Lost Game System for Foundry VTT
 Kult is a horror role-playing game that focuses on the fears and impulses buried in our subconscious. Players take on the role of characters with dark secrets and move through industrial cities, battling satanic cults, psychopathic killers, corrupt multinational corporations and more.
 
+Warning: this game explores mature themes of psychological and body horror. Within its individual books, there are explicit examples of physical and mental abuse, violence, sexual assault, religious exploitation, child abuse, mental illness, kidnapping and abduction, animal cruelty and death, pregnancy and childbirth, miscarriage and abortion, drug use, self-harm and suicide, blood and death.
+
 This game system is a set of files that provides Foundry VTT with all the information needed to support the rules, mechanics and gameplay elements specific to KULT: Divinity Lost.
 
 This digital adaptation is unofficial content of KULT: Divinity Lost, allowed by the content policy of Helmgast (https://helmgast.se/en/meta/fan-content-policy).
 
-If you like the system and have the means, you can support me via Tipeee (https://fr.tipeee.com/yank/news) to help me continue the adventure. In any case, have fun and don't hesitate to contact me to give me your opinion or to report any problems.
+If you like the system and have the means to do so, you can buy me a coffee (https://www.buymeacoffee.com/yank) to show your support and help me continue development. In any case, I hope you have a great time, and please don't hesitate to contact me to give me your opinion or report any problems.
 
 ## Requirements
 

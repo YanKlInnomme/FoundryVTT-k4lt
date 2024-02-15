@@ -9,8 +9,6 @@ Attention, ce jeu explore des thèmes matures liés à l'horreur psychologique e
 
 Ce système de jeu est un ensemble de fichiers qui fournissent à Foundry VTT toutes les informations nécessaires pour prendre en charge les règles, les mécanismes et les éléments de jeu spécifiques à KULT: Divinity Lost.
 
-Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost autorisé par la politique de contenu d'Helmgast (https://helmgast.se/en/meta/fan-content-policy).
-
 ![Capture d’écran 2023-07-26 095550](https://github.com/YanKlInnomme/FoundryVTT-k4lt/assets/100078854/12de9632-3c98-4a0e-af85-a6900b38438f)
 ![Capture d’écran 2023-07-26 095717](https://github.com/YanKlInnomme/FoundryVTT-k4lt/assets/100078854/28bd913c-e8b1-44a8-97ce-40273e8ff703)
 
@@ -19,6 +17,20 @@ Si vous appréciez le système et que vous avez les moyens de le faire, vous pou
 ## Prérequis
 
 Afin de fonctionner ce système nécessite l'installation et la configuration de Foundry VTT. Le logiciel est téléchargeable à l'adresse suivante : https://foundryvtt.com/
+
+## Licences
+
+Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, autorisé par la [politique de contenu d'Helmgast](https://helmgast.se/en/meta/fan-content-policy). En outre, ce projet inclut :
+
+- **Contenu et logo** : [Kult Divinity Lost] (https://kultdivinitylost.com/) est © 2021 Cabinet Licensing LLC. Tous droits réservés. Les parties de ce projet protégées par ce copyright ne peuvent être distribuées commercialement ou librement. Cela inclut les illustrations, le logo et le texte couverts par le droit d'auteur.
+
+- **Code source** : Tout le code source _(javascript, css, etc.)_ est sous licence [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
+
+- **Foundry VTT** : Le projet est créé conformément à l'[accord de licence limitée de Foundry VTT concernant le développement de modules](https://foundryvtt.com/article/license/).
+
+- **Icônes** : Les icônes du dossier `assets/moves/` sont une gracieuseté de [Game-icons.net](https://game-icons.net/) et sont sous licence [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
+
+- **Polices de caractères** : Les polices utilisées dans ce projet ont leurs propres licences.
 
 ## Contributeur·rice·s précédent·e·s
 

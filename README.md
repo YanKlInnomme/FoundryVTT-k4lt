@@ -33,7 +33,6 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
 - **Polices de caractères** : Les polices utilisées dans ce projet ont leurs propres licences.
 
 ## Contributeur·rice·s précédent·e·s
-
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 à 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
@@ -99,21 +98,17 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
  * Ajout de titres éditables dans la zone "contexte"
 
 ## Version 2.0.0.7
-
  * Amélioration du contraste dans les zones texte (notamment 'Qui es-tu' ?)
  * Reformulation de la formule liée à la stabilité pour la prise en compte correcte du modificateur Garder le contrôle
 
 ## Version 2.0.0.6
-
  * Correction de la stabilité (prise en compte correcte du modificateur Garder le contrôle: -2 et non -3)
 
 ## Version 2.0.0.5
-
  * Mise à jour de la fiche de Personnage Non Joueur
  * Corrections mineures
 
 ## Version 2.0.0.0
-
  * Ajout de la traduction partielle en Français (fichier fr.json)
  * Ajout des onglets 'Contexte' et 'Notes'
  * Ajout des zones éditables "Ce à quoi vous tenez", "Ce que vous possédez", "Relations avec les autres personnages" et "Ressorts dramatiques"
@@ -127,40 +122,31 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
  * Suppression du lancer de dés sur les items 'Relations' de la fiche PJ
 
 ## Version 1.5.0.0
-
  * Ajout des champs manquants dans la fiche de Personnage Non Joueur, y compris réorganisation
  * Correction de la fiche de Personnage Non Joueur
 
 ## Version 1.4.1.0
-
  * Correction des attributs uniquement dans la plage -3 à 3
 
 ## Version 1.4.0.1
-
  * Correction des liens incorrects dans le fichier 'system.json'
 
 ## Version 1.4.0.0
-
  * Ajout de la traduction espagnole
 
 ## Version 1.3.1.0
-
  * Correction de l'erreur de suppression des actions du Personnage Joueur
 
 ## Version 1.3.0.0
-
  * Ajout du champ 'Options' dans Avantages et Désavantages
 
 ## Version 1.2.3.0
-
  * Migration du système en V9.269
 
 ## Version 1.2.2.0
-
  * Correction des entrées invalides dans le fichier manifeste
 
 ## Version 1.2.1.0
-
  * Correction des entrées invalides dans le fichier manifeste
 
 ---------------------------------------------------------------------
@@ -172,13 +158,25 @@ Warning: this game explores mature themes of psychological and body horror. With
 
 This game system is a set of files that provides Foundry VTT with all the information needed to support the rules, mechanics and gameplay elements specific to KULT: Divinity Lost.
 
-This digital adaptation is unofficial content of KULT: Divinity Lost, allowed by the content policy of Helmgast (https://helmgast.se/en/meta/fan-content-policy).
-
 If you like the system and have the means to do so, you can buy me a coffee (https://www.buymeacoffee.com/yank) to show your support and help me continue development. In any case, I hope you have a great time, and please don't hesitate to contact me to give me your opinion or report any problems.
 
 ## Requirements
 
 This system requires the installation and configuration of Foundry VTT. The software can be downloaded from the following address: https://foundryvtt.com/
+
+## Licenses
+
+This digital adaptation is unofficial content from KULT: Divinity Lost, licensed under the [Helmgast Content Policy](https://helmgast.se/en/meta/fan-content-policy). In addition, this project includes:
+
+- **Content and logo**: [Kult Divinity Lost] (https://kultdivinitylost.com/) is © 2021 Cabinet Licensing LLC. All rights reserved. Portions of this project protected by this copyright may not be distributed commercially or freely. This includes illustrations, logo and text covered by copyright.
+
+- **Source code**: All source code _(javascript, css, etc.)_ is licensed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
+
+- **Foundry VTT**: The project is created in accordance with the [Foundry VTT Limited License Agreement for Module Development](https://foundryvtt.com/article/license/).
+
+- **Icons** : The icons in the `assets/moves/` folder are courtesy of [Game-icons.net](https://game-icons.net/) and are licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
+
+- **Fonts** : The fonts used in this project have their own licenses.
 
 ## Previous contributors
 
@@ -247,21 +245,17 @@ This system requires the installation and configuration of Foundry VTT. The soft
  * Added editable titles in the "background" area
 
 ## Version 2.0.0.7
-
  * Improved contrast in text boxes (especially 'Who are you'?)
  * Rewording of the stability formula to correctly reflect the 'Keep Control' modifier
 
 ## Version 2.0.0.6
-
  * Stability correction (correct consideration of the Keep It Together modifier: -2 and not -3)
 
 ## Version 2.0.0.5
-
  * Update of the Non-Player Character form
  * Minor corrections
 
 ## Version 2.0.0.0
-
  * Add the partial French translation (fr.json file)
  * Added 'Background' and 'Notes' tabs
  * Added editable fields 'What you hold dear', 'Things in your possession', 'Relation to the other characters' and 'Dramatic Hooks'.
@@ -275,38 +269,29 @@ This system requires the installation and configuration of Foundry VTT. The soft
  * Removed the dice roll on 'Relationships' items in the PJ sheet
 
 ## Version 1.5.0.0
-
  * Added missing fields to the Non-Player Character form, including reorganisation
  * Correcting the Non-Player Character form
 
 ## Version 1.4.1.0
-
  * Correction of attributes only in the range -3 to 3
 
 ## Version 1.4.0.1
-
  * Fixed incorrect links in 'system.json' file
 
 ## Version 1.4.0.0
-
  * Added Spanish translation
 
 ## Version 1.3.1.0
-
  * Fixed the error of deleting the Player Character's actions
 
 ## Version 1.3.0.0
-
  * Added 'Options' field to Advantages and Disadvantages
 
 ## Version 1.2.3.0
-
  * Migration of the system to V9.269
 
 ## Version 1.2.2.0
-
  * Fix invalid entries in the manifest file
 
 ## Version 1.2.1.0
-
  * Fixed invalid entries in manifest file

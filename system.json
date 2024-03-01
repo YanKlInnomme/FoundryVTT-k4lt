@@ -2,7 +2,7 @@
   "id": "k4lt",
   "title": "KULT: Divinity Lost (4th Edition)",
   "description": "Kult is a horror role-playing game that focuses on the fears and impulses buried in our subconscious. Players take on the role of characters with dark secrets and can evolve in industrial cities, facing satanic cults, psychopathic killers, corrupt multinationals and more.",
-  "version": "2.1.4.3",
+  "version": "3.0.0.0",
   "license": "LICENSE",
   "compatibility": {
     "minimum": "11",
@@ -12,14 +12,14 @@
   "authors": [
     {
       "name": "YanK",
-      "url": "https://www.buymeacoffee.com/yank",
+      "url": "yank-solutions.fr",
       "email": "yanklinnomme@gmail.com",
-      "discord": "YanK#8683"
+      "discord": "yanklinnomme"
     },
     {
       "name": "Kristov",
       "url": "https://github.com/Qaw",
-      "discord": "Kristov#3493"
+      "discord": "kristovqaw"
     },
     {
       "name": "MaeseFingolf",
@@ -94,7 +94,7 @@
       "path": "lang/pt-BR.json"
     }
   ],
-  "url": "https://github.com/YanKlInnomme/k4lt/",
+  "url": "https://github.com/YanKlInnomme/FoundryVTT-k4lt",
   "manifest": "",
   "download": ""
 }

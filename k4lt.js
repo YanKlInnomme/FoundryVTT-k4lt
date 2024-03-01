@@ -75,7 +75,7 @@ Hooks.on("renderSettings", (app, html) => {
   let lotdDiv = $(`<div></div>`);
   lotdSection.after(lotdDiv);
   let helpButton = $(
-    `<button><i class="fa-solid fa-cart-shopping"></i> Kult: Divinity Lost</button>`
+    `<button><i class="fa-solid fa-cart-shopping"></i> Kult: Divinity Lost <sup><i class="fa-light fa-up-right-from-square"></i></sup></button></button>`
   );
   lotdDiv.append(helpButton);
   helpButton.on("click", (ev) => {
@@ -84,7 +84,7 @@ Hooks.on("renderSettings", (app, html) => {
   });
 
   let dicordButton = $(
-    `<button><i class="fab fa-github"></i> System repository</button>`
+    `<button><i class="fab fa-github"></i> System repository <sup><i class="fa-light fa-up-right-from-square"></i></sup></button></button>`
   );
   lotdDiv.append(dicordButton);
   dicordButton.on("click", (ev) => {
@@ -93,11 +93,11 @@ Hooks.on("renderSettings", (app, html) => {
   });
 
   let patreonButton = $(
-    `<button><i class="fa-solid fa-heart fa-beat fa-xs"></i> Support on Tipeee</button>`
+    `<button><i class="fa-regular fa-mug-hot fa-bounce"></i> Buy me a coffee <sup><i class="fa-light fa-up-right-from-square"></i></sup></button>`
   );
   lotdDiv.append(patreonButton);
   patreonButton.on("click", (ev) => {
     ev.preventDefault();
-    window.open("https://en.tipeee.com/yank", "_blank");
+    window.open("https://www.buymeacoffee.com/yank", "_blank");
   });
 });

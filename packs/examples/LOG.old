@@ -1,3 +1,8 @@
-2024/03/01-15:17:24.690 8588 Recovering log #419
-2024/03/01-15:17:24.693 8588 Delete type=0 #419
-2024/03/01-15:17:24.693 8588 Delete type=3 #418
+2024/03/04-23:21:05.221 7a28 Log #421: 0 ops saved to Table #424 OK
+2024/03/04-23:21:05.222 7a28 Archiving D:\FoundryVTT\Data\systems\k4lt\packs\examples/000421.log: OK
+2024/03/04-23:21:05.222 7a28 Log #423: 0 ops saved to Table #425 OK
+2024/03/04-23:21:05.222 7a28 Archiving D:\FoundryVTT\Data\systems\k4lt\packs\examples/000423.log: OK
+2024/03/04-23:21:05.222 7a28 Table #15: 1 entries OK
+2024/03/04-23:21:05.224 7a28 Archiving D:\FoundryVTT\Data\systems\k4lt\packs\examples/MANIFEST-000420: OK
+2024/03/04-23:21:05.225 7a28 Archiving D:\FoundryVTT\Data\systems\k4lt\packs\examples/MANIFEST-000422: OK
+2024/03/04-23:21:05.226 7a28 **** Repaired leveldb D:\FoundryVTT\Data\systems\k4lt\packs\examples; recovered 1 files; 687 bytes. Some data may have been lost. ****

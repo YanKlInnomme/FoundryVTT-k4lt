@@ -43,8 +43,8 @@
   "k4lt.Disadvantage": "Komplikacja",
   "k4lt.Relationships": "Relacje",
   "k4lt.Relationship": "Relacja",
-  "k4lt.Abilitities": "Zdolności",
-  "k4lt.Abilitity": "Zdolność",
+  "k4lt.Abilities": "Zdolności",
+  "k4lt.Ability": "Zdolność",
   "k4lt.Limitations": "Ograniczenia",
   "k4lt.Limitation": "Ograniczenie",
 
@@ -141,7 +141,6 @@
   "k4lt.PCIsComposed": "Postać jest Spokojna",
   "k4lt.PassiveAbility": "Ta Zdolnośc jest pasywna",
   
-  "k4lt.Abilities": "Zdolności",
   "k4lt.Attacks": "Ataki",
   "k4lt.NPC": {
     "Home": "Pochodzenie",

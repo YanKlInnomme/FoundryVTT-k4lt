@@ -43,8 +43,8 @@
   "k4lt.Disadvantage": "Svantaggio",
   "k4lt.Relationships": "Relazioni",
   "k4lt.Relationship": "Relazione",
-  "k4lt.Abilitities": "Capacità",
-  "k4lt.Abilitity": "Capacità",
+  "k4lt.Abilities": "Capacità",
+  "k4lt.Ability": "Capacità",
   "k4lt.Limitations": "Limitazioni",
   "k4lt.Limitation": "Limitazione",
 
@@ -141,7 +141,6 @@
   "k4lt.PCIsComposed": "Il personaggio è stabile",
   "k4lt.PassiveAbility": "Questa abilità è passiva",
   
-  "k4lt.Abilities": "Abilità",
   "k4lt.Attacks": "Attacchi",
   "k4lt.NPC": {
     "Home": "Dimora",

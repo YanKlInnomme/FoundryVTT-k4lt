@@ -17,7 +17,7 @@
     }
   },
 
-  "k4lt.Forward": "Forward",
+  "k4lt.Forward": "Ongoing",
   "k4lt.SitMod": "Situational Modifier",
   "k4lt.WhoAreYou": "Who are you?",
   "k4lt.Stats": "Stats",
@@ -43,16 +43,16 @@
   "k4lt.Disadvantage": "Disadvantage",
   "k4lt.Relationships": "Relationships",
   "k4lt.Relationship": "Relationship",
-  "k4lt.Abilitities": "Abilitities",
-  "k4lt.Abilitity": "Abilitity",
+  "k4lt.Abilities": "Abilities",
+  "k4lt.Ability": "Ability",
   "k4lt.Limitations": "Limitations",
   "k4lt.Limitation": "Limitation",
 
   "k4lt.Wounds": "Wounds",
-  "k4lt.MajorWound1": "Major Wound #1",
-  "k4lt.MajorWound2": "Major Wound #2",
-  "k4lt.MajorWound3": "Major Wound #3",
-  "k4lt.MajorWound4": "Major Wound #4",
+  "k4lt.MajorWound1": "Serious Wound #1",
+  "k4lt.MajorWound2": "Serious Wound #2",
+  "k4lt.MajorWound3": "Serious Wound #3",
+  "k4lt.MajorWound4": "Serious Wound #4",
   "k4lt.CriticalWound": "Critical Wound",
   "k4lt.Stability": "Stability",
   "k4lt.StabilityComposed": "Composed: No Modifiers",
@@ -141,7 +141,6 @@
   "k4lt.PCIsComposed": "Character is Fully Stable",
   "k4lt.PassiveAbility": "This ability is Passive",
   
-  "k4lt.Abilities": "Abilities",
   "k4lt.Attacks": "Attacks",
   "k4lt.NPC": {
     "Home": "Home",

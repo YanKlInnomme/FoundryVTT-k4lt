@@ -1,8 +1,3 @@
-2024/03/04-23:21:05.206 7430 Log #191: 0 ops saved to Table #194 OK
-2024/03/04-23:21:05.207 7430 Archiving D:\FoundryVTT\Data\systems\k4lt\packs\moves/000191.log: OK
-2024/03/04-23:21:05.207 7430 Log #193: 0 ops saved to Table #195 OK
-2024/03/04-23:21:05.207 7430 Archiving D:\FoundryVTT\Data\systems\k4lt\packs\moves/000193.log: OK
-2024/03/04-23:21:05.208 7430 Table #9: 11 entries OK
-2024/03/04-23:21:05.209 7430 Archiving D:\FoundryVTT\Data\systems\k4lt\packs\moves/MANIFEST-000190: OK
-2024/03/04-23:21:05.210 7430 Archiving D:\FoundryVTT\Data\systems\k4lt\packs\moves/MANIFEST-000192: OK
-2024/03/04-23:21:05.211 7430 **** Repaired leveldb D:\FoundryVTT\Data\systems\k4lt\packs\moves; recovered 1 files; 7596 bytes. Some data may have been lost. ****
+2024/03/06-23:46:19.350 12024 Recovering log #219
+2024/03/06-23:46:19.352 12024 Delete type=0 #219
+2024/03/06-23:46:19.353 12024 Delete type=3 #217

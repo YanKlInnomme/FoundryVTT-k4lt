@@ -43,18 +43,46 @@
   "styles": ["styles/k4lt.css"],
   "packs": [
     {
+      "label": "Abilities",
+      "name": "abilities",
+      "type": "Item",
+      "system": "k4lt",
+      "path": "packs/abilities"
+    },
+    {
+      "label": "Advantages",
+      "name": "advantages",
+      "type": "Item",
+      "system": "k4lt",
+      "path": "packs/advantages"
+    },
+    {
+      "label": "Dark Secrets",
+      "name": "dark-secrets",
+      "type": "Item",
+      "system": "k4lt",
+      "path": "packs/dark-secrets"
+    },
+    {
+      "label": "Disadvantages",
+      "name": "disadvantages",
+      "type": "Item",
+      "system": "k4lt",
+      "path": "packs/disadvantages"
+    },
+    {
+      "label": "Limitations",
+      "name": "limitations",
+      "type": "Item",
+      "system": "k4lt",
+      "path": "packs/limitations"
+    },
+    {
       "label": "Moves",
       "name": "moves",
       "type": "Item",
       "system": "k4lt",
       "path": "packs/moves"
-    },
-    {
-      "label": "Examples",
-      "name": "examples",
-      "type": "Item",
-      "system": "k4lt",
-      "path": "packs/examples"
     }
   ],
   "languages": [

@@ -43,8 +43,8 @@
   "k4lt.Disadvantage": "Desventaja",
   "k4lt.Relationships": "Relaciones",
   "k4lt.Relationship": "Relación",
-  "k4lt.Abilitities": "Capacidades",
-  "k4lt.Abilitity": "Capacidad",
+  "k4lt.Abilities": "Capacidades",
+  "k4lt.Ability": "Capacidad",
   "k4lt.Limitations": "Limitaciones",
   "k4lt.Limitation": "Limitación",
 
@@ -141,7 +141,6 @@
   "k4lt.PCIsComposed": "El personaje ya está Tranquilo",
   "k4lt.PassiveAbility": "Este rasgo es pasivo, no necesita tirada",
  
-  "k4lt.Abilities": "Habilidades",
   "k4lt.Attacks": "Ataques",
   "k4lt.NPC": {
     "Home": "Hogar",

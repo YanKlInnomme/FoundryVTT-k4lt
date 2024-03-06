@@ -9,8 +9,7 @@ Attention, ce jeu explore des thèmes matures liés à l'horreur psychologique e
 
 Ce système de jeu est un ensemble de fichiers qui fournissent à Foundry VTT toutes les informations nécessaires pour prendre en charge les règles, les mécanismes et les éléments de jeu spécifiques à KULT: Divinity Lost.
 
-![Capture d’écran 2023-07-26 095550](https://github.com/YanKlInnomme/FoundryVTT-k4lt/assets/100078854/12de9632-3c98-4a0e-af85-a6900b38438f)
-![Capture d’écran 2023-07-26 095717](https://github.com/YanKlInnomme/FoundryVTT-k4lt/assets/100078854/28bd913c-e8b1-44a8-97ce-40273e8ff703)
+
 
 Si vous appréciez le système et que vous avez les moyens de le faire, vous pouvez me soutenir en m'offrant un café sur Buy Me a Coffee (https://www.buymeacoffee.com/yank). Votre geste serait grandement apprécié et contribuerait à soutenir le développement continu. Quoi qu'il en soit, je vous souhaite une expérience enrichissante et divertissante. N'hésitez pas à me contacter pour partager vos commentaires ou signaler tout problème éventuel.
 
@@ -22,7 +21,7 @@ Afin de fonctionner ce système nécessite l'installation et la configuration de
 
 Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, autorisé par la [politique de contenu d'Helmgast](https://helmgast.se/en/meta/fan-content-policy). En outre, ce projet inclut :
 
-- **Contenu et logo** : [Kult Divinity Lost] (https://kultdivinitylost.com/) est © 2021 Cabinet Licensing LLC. Tous droits réservés. Les parties de ce projet protégées par ce copyright ne peuvent être distribuées commercialement ou librement. Cela inclut les illustrations, le logo et le texte couverts par le droit d'auteur.
+- **Contenu et logo** : KULT et les logos, personnages, noms et ressemblances qui y sont associés sont des marques commerciales ou des marques déposées de Cabinet Licensing LLC. [Kult Divinity Lost](https://kultdivinitylost.com/) est développé et publié par Helmgast AB. Utilisées avec autorisation. Tous droits réservés. Les parties de ce projet protégées par ce copyright ne peuvent être distribuées commercialement ou librement. Cela inclut les illustrations, le logo et le texte couverts par le droit d'auteur.
 
 - **Code source** : Tout le code source _(javascript, css, etc.)_ est sous licence [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
@@ -36,6 +35,13 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 à 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
+
+## Version 3.0.0.0
+ * Ajout des compendiums 'Avantages', 'Désavantages', 'Sombres secrets', 'Capacités' et 'Limitations'
+ * Suppression du compendium 'Examples'
+ * Corrections orthographiques dans les fichiers linguistiques
+ * Agrandissement du champ de saisie de la portée dans l'objet 'Arme'
+ * Mise à jour des liens Boutique, Dépot et Donation dans l'onglet 'Paramètres' 
 
 ## Version 2.1.4.2
  * Ajout de la traduction en Italien par Arcadio21 (https://github.com/Arcadio21) (fichier it.json) 
@@ -95,7 +101,7 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
  * Mise à jour de la traduction en Espagnol par MaeseFingolf (https://github.com/MaeseFingolf) (fichier es.json) 
  * Corrections mineures sur les fichiers de langues (fichiers en.json & fr.json)
  * Ajout d'un arrière plan spécifique au système lors de l'accès à la partie
- * Ajout de titres éditables dans la zone "contexte"
+ * Ajout de titres éditables dans la zone 'contexte'
 
 ## Version 2.0.0.7
  * Amélioration du contraste dans les zones texte (notamment 'Qui es-tu' ?)
@@ -111,14 +117,14 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
 ## Version 2.0.0.0
  * Ajout de la traduction partielle en Français (fichier fr.json)
  * Ajout des onglets 'Contexte' et 'Notes'
- * Ajout des zones éditables "Ce à quoi vous tenez", "Ce que vous possédez", "Relations avec les autres personnages" et "Ressorts dramatiques"
+ * Ajout des zones éditables 'Ce à quoi vous tenez', 'Ce que vous possédez', 'Relations avec les autres personnages' et 'Ressorts dramatiques'
  * Ajout du champ 'Options' dans Actions pour éviter l'affichage 'undefined' dans le tchat
  * Mise à jour globale de l'esthétique et notamment concernant la fiche de Personnage Joueur
  * Modification esthétique et fonctionnelle de la Pause
  * Nettoyage du code et Migration en V10 réalisé par Kristov (https://github.com/Qaw)
  * Refonte globale du processus de gestion des Blessures réalisée par Kristov (https://github.com/Qaw)
  * Suppression de l'attribut éditable des images sur les items 'Actions'
- * Suppression des champs basiques (Yeux, Taille, Age, etc.) au profit d'une zone plus concrète "Qui êtes-vous ?"
+ * Suppression des champs basiques (Yeux, Taille, Age, etc.) au profit d'une zone plus concrète 'Qui êtes-vous ?'
  * Suppression du lancer de dés sur les items 'Relations' de la fiche PJ
 
 ## Version 1.5.0.0
@@ -166,9 +172,9 @@ This system requires the installation and configuration of Foundry VTT. The soft
 
 ## Licenses
 
-This digital adaptation is unofficial content from KULT: Divinity Lost, licensed under the [Helmgast Content Policy](https://helmgast.se/en/meta/fan-content-policy). In addition, this project includes:
+This digital adaptation is unofficial content from KULT: Divinity Lost, authorized by [Helmgast content policy](https://helmgast.se/en/meta/fan-content-policy). In addition, this project includes:
 
-- **Content and logo**: [Kult Divinity Lost] (https://kultdivinitylost.com/) is © 2021 Cabinet Licensing LLC. All rights reserved. Portions of this project protected by this copyright may not be distributed commercially or freely. This includes illustrations, logo and text covered by copyright.
+- **Content and Logo**: KULT and associated logos, characters, names and likenesses are trademarks or registered trademarks of Cabinet Licensing LLC. [Kult Divinity Lost](https://kultdivinitylost.com/) is developed and published by Helmgast AB. Used with permission. All rights reserved. Portions of this project protected by this copyright may not be distributed commercially or freely. This includes illustrations, logo and text covered by copyright.
 
 - **Source code**: All source code _(javascript, css, etc.)_ is licensed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
@@ -183,6 +189,13 @@ This digital adaptation is unofficial content from KULT: Divinity Lost, licensed
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 to 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 3.0.0.0
+ * Added 'Advantages', 'Disadvantages', 'Dark secrets', 'Capabilities' and 'Limitations' compendiums
+ * Removal of the 'Examples' compendium
+ * Spelling corrections in language files
+ * Enlarged scope input field in 'Weapon' object
+ * Shop, Deposit and Donation links updated in 'Settings' tab
 
 ## Version 2.1.4.2
  * Italian translation added by Arcadio21 (https://github.com/Arcadio21) (it.json file)
@@ -242,7 +255,7 @@ This digital adaptation is unofficial content from KULT: Divinity Lost, licensed
  * Update of Spanish translation by MaeseFingolf (https://github.com/MaeseFingolf) (es.json file)
  * Minor corrections on language files (en.json & fr.json files)
  * Added a system specific background when accessing the game
- * Added editable titles in the "background" area
+ * Added editable titles in the 'background' area
 
 ## Version 2.0.0.7
  * Improved contrast in text boxes (especially 'Who are you'?)
@@ -265,7 +278,7 @@ This digital adaptation is unofficial content from KULT: Divinity Lost, licensed
  * Code cleanup and migration to V10 by Kristov (https://github.com/Qaw)
  * Global overhaul of the Wound management process by Kristov (https://github.com/Qaw)
  * Removed the editable image attribute on 'moves' items.
- * Removal of basic fields (eyes, height, age, etc.) in favour of a more concrete "Who are you?
+ * Removal of basic fields (eyes, height, age, etc.) in favour of a more concrete 'Who are you?
  * Removed the dice roll on 'Relationships' items in the PJ sheet
 
 ## Version 1.5.0.0

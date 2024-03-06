@@ -43,8 +43,8 @@
   "k4lt.Disadvantage": "Desvantagem",
   "k4lt.Relationships": "Relacionamentos",
   "k4lt.Relationship": "Relacionamento",
-  "k4lt.Abilitities": "Habilidades",
-  "k4lt.Abilitity": "Habilidade",
+  "k4lt.Abilities": "Habilidades",
+  "k4lt.Ability": "Habilidade",
   "k4lt.Limitations": "Limitações",
   "k4lt.Limitation": "Limitação",
 
@@ -141,7 +141,6 @@
   "k4lt.PCIsComposed": "Personagem está Totalmente Estável",
   "k4lt.PassiveAbility": "Essa habilidade é Passiva",
   
-  "k4lt.Abilities": "Habilidades",
   "k4lt.Attacks": "Ataques",
   "k4lt.NPC": {
     "Home": "Casa",

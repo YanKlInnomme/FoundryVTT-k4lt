@@ -43,8 +43,8 @@
     "k4lt.Disadvantage": "Nachteil",
     "k4lt.Relationships": "Beziehungen",
     "k4lt.Relationship": "Beziehung",
-    "k4lt.Abilitities": "Fähigkeiten",
-    "k4lt.Abilitity": "Fähigkeit",
+    "k4lt.Abilities": "Fähigkeiten",
+    "k4lt.Ability": "Fähigkeit",
     "k4lt.Limitations": "Einschränkungen",
     "k4lt.Limitation": "Einschränkung",
   
@@ -141,7 +141,6 @@
     "k4lt.PCIsComposed": "Charakter ist vollständig stabilisiert",
     "k4lt.PassiveAbility": "Diese Fähigkeit ist passiv",
     
-    "k4lt.Abilities": "Fähigkeiten",
     "k4lt.Attacks": "Angriffe",
     "k4lt.NPC": {
       "Home": "Herkunft",

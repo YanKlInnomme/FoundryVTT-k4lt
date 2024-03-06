@@ -18,9 +18,13 @@
 /* ----------------------------------------- */
 @font-face {
     font-family: "Alverata";
-    src:url("../fonts/Alverata.ttf") format("truetype"),
+    src:url("../fonts/Alverata.woff2") format("woff2"),
+        url("../fonts/Alverata.ttf") format("truetype"),
+        url("../fonts/Alverata-Bold.woff2") format("woff2"),
         url("../fonts/Alverata-Bold.ttf") format("truetype"),
+        url("../fonts/Alverata-BoldItalic.woff2") format("woff2"),
         url("../fonts/Alverata-BoldItalic.ttf") format("truetype"),
+        url("../fonts/Alverata-Italic.woff2") format("woff2"),
         url("../fonts/Alverata-Italic.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
@@ -259,6 +263,10 @@ h1,h2,h3 {
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: 0px -125px;
+}
+
+.blood-img:hover {
+    background-size: 0%;
 }
 
 .move-result {

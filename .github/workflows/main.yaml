@@ -28,7 +28,7 @@ jobs:
         download: https://github.com/${{github.repository}}/releases/download/${{github.event.release.tag_name}}/system.zip
 
     # Create a zip file with all files required by the system to add to the release
-    - run: zip -r ./system.zip k4lt.js LICENSE README.md system.json template.json assets/ fonts/ lang/ modules/ packs/ styles/ templates/
+    - run: zip -r ./system2.zip k4lt.js LICENSE README.md system.json template.json assets/ fonts/ lang/ modules/ packs/ styles/ templates/
 
     # Create a release for this specific version
     - name: Update Release with Files

@@ -38,7 +38,7 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
 ## Version 3.0.0.0
- * Ajout des compendiums 'Avantages', 'Désavantages', 'Sombres secrets', 'Capacités' et 'Limitations'
+ * Ajout des compendiums 'Avantages', 'Désavantages', 'Sombres Secrets', 'Capacités' et 'Limitations'
  * Suppression du compendium 'Examples'
  * Corrections orthographiques dans les fichiers linguistiques
  * Agrandissement du champ de saisie de la portée dans l'objet 'Arme'
@@ -192,7 +192,7 @@ This digital adaptation is unofficial content from KULT: Divinity Lost, authoriz
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
 
 ## Version 3.0.0.0
- * Added 'Advantages', 'Disadvantages', 'Dark secrets', 'Capabilities' and 'Limitations' compendiums
+ * Added 'Advantages', 'Disadvantages', 'Dark Secrets', 'Abilities' and 'Limitations' compendiums
  * Removal of the 'Examples' compendium
  * Spelling corrections in language files
  * Enlarged scope input field in 'Weapon' object

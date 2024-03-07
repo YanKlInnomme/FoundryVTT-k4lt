@@ -159,11 +159,11 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
 ---------------------------------------------------------------------
 
 # KULT: Divinity Lost Game System for Foundry VTT
-Kult is a horror role-playing game that focuses on the fears and impulses buried in our subconscious. Players take on the role of characters with dark secrets and move through industrial cities, battling satanic cults, psychopathic killers, corrupt multinational corporations and more.
+Kult is a horror role-playing game that focuses on the fears and impulses buried in our subconscious. Players embody characters with dark secrets and evolve in industrial cities, confronting satanic cults, psychopathic killers, corrupt multinationals and much more.
 
-Warning: this game explores mature themes of psychological and body horror. Within its individual books, there are explicit examples of physical and mental abuse, violence, sexual assault, religious exploitation, child abuse, mental illness, kidnapping and abduction, animal cruelty and death, pregnancy and childbirth, miscarriage and abortion, drug use, self-harm and suicide, blood and death.
+Be warned: this game explores mature themes of psychological and body horror. Within the various books that make it up, there are explicit examples of physical and mental abuse, violence, sexual assault, religious exploitation, child abuse, mental illness, kidnapping and abduction, animal cruelty and death, pregnancy and childbirth, miscarriage and abortion, drug use, self-mutilation and suicide, blood and death.
 
-This game system is a set of files that provides Foundry VTT with all the information needed to support the rules, mechanics and gameplay elements specific to KULT: Divinity Lost.
+This game system is a set of files that provide Foundry VTT with all the information needed to support the rules, mechanics and gameplay elements specific to KULT: Divinity Lost.
 
 If you like the system and have the means to do so, you can buy me a coffee (https://www.buymeacoffee.com/yank) to show your support and help me continue development. In any case, I hope you have a great time, and please don't hesitate to contact me to give me your opinion or report any problems.
 

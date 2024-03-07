@@ -1,7 +1,6 @@
-# From https://github.com/League-of-Foundry-Developers/FoundryVTT-Module-Template/blob/master/.github/workflows/main.yml
 name: Release Creation
 
-on:
+on: 
   release:
     types: [published]
 
@@ -9,88 +8,38 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+    - uses: actions/checkout@v2
 
-      # Substitute the Manifest and Download URLs in the "system.json"
-      # for a FULL RELEASE
-      - name: Substitute Manifest and Download Links For Versioned Ones
-        if: "!github.event.release.prerelease"
-        id: sub_release_manifest_version
-        uses: microsoft/variable-substitution@v1
-        with:
-          files: 'system.json'
-        env:
-          version: ${{github.event.release.tag_name}}
-          url: https://github.com/${{github.repository}}
-          manifest: https://github.com/${{github.repository}}/releases/latest/download/system.json
-          download: https://github.com/${{github.repository}}/releases/download/${{github.event.release.tag_name}}/system.zip
+    # get part of the tag after the `v`
+    - name: Extract tag version number
+      id: get_version
+      uses: battila7/get-version-action@v2
 
-      # Substitute the Manifest and Download URLs in the system.json
-      # for a PRE RELEASE. Manifest pointing to live system.json on branch,
-      # which is updated after tag.
-      - name: Substitute Manifest and Download Links For Versioned Ones
-        if: "github.event.release.prerelease"
-        id: sub_prerelease_manifest_version
-        uses: microsoft/variable-substitution@v1
-        with:
-          files: 'system.json'
-        env:
-          version: ${{github.event.release.tag_name}}
-          url: https://github.com/${{github.repository}}
-          manifest: https://raw.githubusercontent.com/${{github.repository}}/next/system.json
-          download: https://github.com/${{github.repository}}/releases/download/${{github.event.release.tag_name}}/system.zip
+    # Substitute the Manifest and Download URLs in the system.json
+    - name: Substitute Manifest and Download Links For Versioned Ones
+      id: sub_manifest_link_version
+      uses: microsoft/variable-substitution@v1
+      with:
+        files: 'system.json'
+      env:
+        version: ${{steps.get_version.outputs.version-without-v}}
+        url: https://github.com/${{github.repository}}
+        manifest: https://github.com/${{github.repository}}/releases/latest/download/system.json
+        download: https://github.com/${{github.repository}}/releases/download/${{github.event.release.tag_name}}/system.zip
 
-      # Install packages.
-      - run: npm install
+    # Create a zip file with all files required by the system to add to the release
+    - run: zip -r ./system.zip k4lt.js LICENSE README.md system.json template.json assets/ fonts/ lang/ modules/ packs/ styles/ templates/
 
-      # Build distribution.
-      - run: npm run build
-
-      # Create a zip file with all files required by the module to add to the release
-      - run: zip -r ./system.zip k4lt.js LICENSE README.md system.json template.json assets/ fonts/ lang/ modules/ packs/ styles/ templates/ 
-
-      # Create a release for this specific version
-      - name: Update Release with Files
-        if: "!github.event.release.prerelease"
-        id: create_version_release
-        uses: ncipollo/release-action@v1
-        with:
-          allowUpdates: true # Set this to false if you want to prevent updating existing releases
-          name: ${{ github.event.release.name }}
-          draft: false
-          prerelease: false
-          token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: './system.json, ./system.zip'
-          tag: ${{ github.event.release.tag_name }}
-          body: ${{ github.event.release.body }}
-
-      #  OR create a pre-release for this specific version
-      - name: Update Release with Files
-        if: "github.event.release.prerelease"
-        id: create_version_prerelease
-        uses: ncipollo/release-action@v1
-        with:
-          allowUpdates: true # Set this to false if you want to prevent updating existing releases
-          name: ${{ github.event.release.name }}
-          draft: false
-          prerelease: true
-          token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: './system.json, ./system.zip'
-          tag: ${{ github.event.release.tag_name }}
-          body: ${{ github.event.release.body }}
-
-      #update next branch
-      - name: Prepare repository
-        if: "github.event.release.prerelease"
-        run: |
-          git config --global user.name '${{github.actor}}'
-          git config --global user.email '${{github.actor}}@users.noreply.github.com'
-          git add system.json
-          git stash
-          git clean -f
-          git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY"
-          git fetch origin "next"
-          git switch -c "next" "origin/next"
-          git checkout stash system.json
-          git commit -m "${{github.event.release.tag_name}} manifest"
-          git push -f
+    # Create a release for this specific version
+    - name: Update Release with Files
+      id: create_version_release
+      uses: ncipollo/release-action@v1
+      with:
+        allowUpdates: true # Set this to false if you want to prevent updating existing releases
+        name: ${{ github.event.release.name }}
+        draft: ${{ github.event.release.unpublished }}
+        prerelease: ${{ github.event.release.prerelease }}
+        token: ${{ secrets.GITHUB_TOKEN }}
+        artifacts: './system.json, ./system.zip'
+        tag: ${{ github.event.release.tag_name }}
+        body: ${{ github.event.release.body }}

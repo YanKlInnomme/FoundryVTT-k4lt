@@ -37,6 +37,10 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 3.0.1.1
+ * Corrections mineures des compendiums 'Actions', 'Avantages', 'Capacités', 'Sombres Secrets', 'Désavantages' et 'Limitations'
+ * Corrections mineures dans le fichier de langue (fr.json)
+
 ## Version 3.0.0.1
  * Ajout du compendium 'Exemples de personnages'
 
@@ -193,6 +197,10 @@ This digital adaptation is unofficial content from KULT: Divinity Lost, authoriz
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 to 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 3.0.1.1
+ * Minor corrections to the 'Actions', 'Advantages', 'Abilities', 'Dark Secrets', 'Disadvantages' and 'Limitations' compendiums.
+ * Minor corrections to the french language file (fr.json)
 
 ## Version 3.0.0.1
  * Added 'Character Examples' compendium

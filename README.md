@@ -26,7 +26,7 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
 
 - **Code source** : Tout le code source _(javascript, css, etc.)_ est sous licence [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
-- **Foundry VTT** : Le projet est créé conformément à l'[accord de licence limitée de Foundry VTT concernant le développement de modules](https://foundryvtt.com/article/license/).
+- **Foundry VTT** : Le projet est créé conformément à l'[accord de licence limitée de Foundry VTT concernant le développement de paquets](https://foundryvtt.com/article/license/).
 
 - **Icônes** : Les icônes du dossier `assets/moves/` sont une gracieuseté de [Game-icons.net](https://game-icons.net/) et sont sous licence [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
 

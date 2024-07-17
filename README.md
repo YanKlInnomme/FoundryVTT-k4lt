@@ -37,6 +37,11 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 3.1.1.0
+ * Correction des modificateurs 'Mod. Continu' et 'Mod. Situation' (affichage dans le chat des valeurs prises en compte lors du lancer + remise à zéro automatique du modificateur 'Mod. Situation' après le jet)
+ * Affichage en privé (seulement pour le MJ et le joueur concerné) du résultat des jets de dés pour les actions avec 'Désavantages'
+ * Ajout d'une vignette spécifique pour le système de jeu (thumbnail.webp), l'image lors de la création de monde reste inchangée (background.webp)
+
 ## Version 3.1.0.0
  * Passage à la version 12 de Foundry VTT
 
@@ -200,6 +205,11 @@ This digital adaptation is unofficial content from KULT: Divinity Lost, authoriz
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 to 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 3.1.1.0
+ * Correction of the 'Ongoing' and 'Forward' modifiers (display in the chat of the values taken into account during the roll + automatic reset of the 'Forward' modifier after the roll)
+ * Private display (only for the GM and the player concerned) of the dice roll results for actions with 'Disadvantages'
+ * Addition of a specific thumbnail for the game system (thumbnail.webp), the image when creating a world remains unchanged (background.webp)
 
 ## Version 3.1.0.0
  * Upgrade to Foundry VTT version 12

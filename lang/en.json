@@ -17,8 +17,8 @@
     }
   },
 
-  "k4lt.Forward": "Ongoing",
-  "k4lt.SitMod": "Situational Modifier",
+  "k4lt.Ongoing": "Ongoing",
+  "k4lt.Forward": "Forward",
   "k4lt.WhoAreYou": "Who are you?",
   "k4lt.Stats": "Stats",
   "k4lt.Background": "Background",

@@ -33,7 +33,6 @@
         "min": 0,
         "max": 9
       },
-      "sitmod": 0,
       "attributes": {
         "willpower": 0,
         "fortitude": 0,
@@ -46,6 +45,7 @@
         "charisma": 0,
         "soul": 0
       },
+        "ongoing": 0,
         "forward": 0
     },
     "npc": {

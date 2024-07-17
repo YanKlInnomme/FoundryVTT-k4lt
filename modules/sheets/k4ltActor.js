@@ -34,7 +34,7 @@ export default class k4ltActor extends Actor {
     if (this.system.criticalwound.state == "unstabilized") return true;
   }
 
-  async displayRollResult({ roll, moveName, resultText, moveResultText, optionsText }) {
+  async displayRollResult({ roll, moveName, resultText, moveResultText, optionsText, whisper = [] }) {
     // Cette méthode affiche le résultat d'un lancer de dés dans le chat.
     // Les informations nécessaires sont passées en tant qu'objet dans le paramètre.
     // Les données sont ensuite utilisées pour générer le contenu du message à afficher.
@@ -52,7 +52,7 @@ export default class k4ltActor extends Actor {
     const data = {
       speaker: ChatMessage.getSpeaker({ alias: this.name }),
       content: content,
-      type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+      whisper: whisper,
       rolls: [roll]
     }
 
@@ -73,6 +73,12 @@ export default class k4ltActor extends Actor {
     const moveType = move.type; // advantage, disadvantage...
     const moveName = move.name;
     kultLogger("Move Type => ", moveType);
+
+    let whisper = [];
+    if (moveType == "disadvantage") {
+      whisper = [game.user.uuid, game.users.find(u => u.isGM).uuid];
+    }
+    kultLogger("Whisper => ", whisper);
 
     if (moveSystemType === "passive") {
       // Si le type d'action est "passive", affiche un avertissement dans les notifications du jeu.
@@ -118,8 +124,12 @@ export default class k4ltActor extends Actor {
       }
 
       let stability = this.system.stability.value;
-      let situation = parseInt(this.system.sitmod) + parseInt(this.system.forward);
-      kultLogger("Sitmod => ", this.system.sitmod);
+      let forward = parseInt(this.system.forward);
+      let ongoing = parseInt(this.system.ongoing);
+      kultLogger("Forward => ", this.system.forward);
+      kultLogger("Ongoing => ", this.system.ongoing);
+
+      let situation = 0;
 
       // Réduit la situation modifiée en fonction des blessures majeures non stabilisées.
       if (this.hasUnstabilizedMajorWounds) situation -= 1;
@@ -143,17 +153,17 @@ export default class k4ltActor extends Actor {
       }
 
       kultLogger("Attribute Mod => ", mod);
-      kultLogger("Situation Mod => ", situation);
+      kultLogger("Stability Mod => ", situation);
       kultLogger("Harm => ", harm);
 
       // Effectue le lancer de dés avec les modificateurs et la situation modifiée.
-      let r = new Roll(`2d10 + ${mod} + ${situation} - ${harm}`);
+      let r = new Roll(`2d10 + ${mod} + ${ongoing} + ${forward} + ${situation} - ${harm}`);
       await r.roll({ async: true });
-
+      
       if (r.total) {
-        // Si le résultat du lancer est supérieur à zéro, met à jour la valeur de sitmod de l'acteur à zéro.
-        this.update({ "data.sitmod": 0 });
-        kultLogger(`Sitmod is ` + this.system.sitmod);
+        // Si le résultat du lancer est supérieur à zéro, met à jour la valeur de forward de l'acteur à zéro.
+        this.update({ "system.forward": 0 });
+        kultLogger(`Forward is ` + this.system.forward);
       }
 
       if (r.total >= 15) {

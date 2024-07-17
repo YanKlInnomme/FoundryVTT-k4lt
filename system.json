@@ -39,6 +39,17 @@
     }
   ],
   "background": "systems/k4lt/assets/background.webp",
+  "media": [
+        {
+            "type": "cover",
+            "loop": false,
+            "flags": {}
+        },
+        {
+            "type": "setup",
+            "thumbnail": "systems/k4lt/assets/thumbnail.webp"
+        }
+    ],
   "esmodules": ["k4lt.js"],
   "styles": ["styles/k4lt.css"],
   "packs": [

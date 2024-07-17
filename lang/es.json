@@ -17,8 +17,8 @@
     }
   },
 
-  "k4lt.Forward": "Modificador permanente",
-  "k4lt.SitMod": "Modificador situacional",
+  "k4lt.Ongoing": "Modificador permanente",
+  "k4lt.Forward": "Modificador situacional",
   "k4lt.WhoAreYou": "¿Quién eres?",
   "k4lt.Stats": "Estadísticas",
   "k4lt.Background": "Trasfondo",

@@ -2,18 +2,18 @@
 <form class="{{cssClass}} kult-sheet" autocomplete="off">
     <header class="sheet-header">
         <div class="flex-container top-section">
-            <div class="forward">
-                {{localize "k4lt.Forward"}}:
-                <select class="hidden-select" name="system.forward" value="{{system.forward}}">
-                    {{#select system.forward}}
+            <div class="ongoing">
+                {{localize "k4lt.Ongoing"}}:
+                <select class="hidden-select" name="system.ongoing" value="{{system.ongoing}}">
+                    {{#select system.ongoing}}
                         {{>"systems/k4lt/templates/partials/modifier-values.hbs"}}
                     {{/select}}
                 </select>
             </div>
-            <div class="situational-modifier">
-                {{localize "k4lt.SitMod"}}:
-                <select class="hidden-select" name="system.sitmod" value="{{system.sitmod}}">
-                    {{#select system.sitmod}}
+            <div class="forward">
+                {{localize "k4lt.Forward"}}:
+                <select class="hidden-select" name="system.forward" value="{{system.forward}}">
+                    {{#select system.forward}}
                         {{>"systems/k4lt/templates/partials/modifier-values.hbs"}}
                     {{/select}}
                 </select>

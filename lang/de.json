@@ -17,8 +17,8 @@
       }
     },
   
-    "k4lt.Forward": "Fortdauerndermodifikator",
-    "k4lt.SitMod": "Situationsmodmodifikator",
+    "k4lt.Ongoing": "Fortdauerndermodifikator",
+    "k4lt.Forward": "Situationsmodmodifikator",
     "k4lt.WhoAreYou": "Wer bist du?",
     "k4lt.Stats": "Werte",
     "k4lt.Background": "Hintergrund",

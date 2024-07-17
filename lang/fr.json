@@ -17,8 +17,10 @@
     }
   },
 
-  "k4lt.Forward": "Mod. Continu",
-  "k4lt.SitMod": "Mod. Situation",
+  "_comment": "Forward est un bonus immédiat et unique qui s'applique à l'action suivante, tandis que Ongoing est un bonus continu qui persiste sur une période plus longue ou de manière permanente, affectant plusieurs actions à venir.",
+
+  "k4lt.Ongoing": "Mod. Continu",
+  "k4lt.Forward": "Mod. Situation",
   "k4lt.WhoAreYou": "Qui es-tu ?",
   "k4lt.Stats": "Caractéristiques",
   "k4lt.Background": "Contexte",

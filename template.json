@@ -62,7 +62,12 @@
       "magicmoves": "",
       "description": "",
       "attacks": "",
-      "abilities": ""
+      "abilities": "",
+      "level": {
+        "combat": "",
+        "influence": "",
+        "magic": ""
+      }
     }
   },
   "Item": {

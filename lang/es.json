@@ -150,6 +150,18 @@
   "k4lt.Settings.Debug": "Activar modo de depuración",
   "k4lt.Settings.DebugHint": "Mostrar información adicional de depuración en la consola de desarrollo",
   "k4lt.Settings.LowSpec": "Activar modo de baja resolución",
-  "k4lt.Settings.LowSpecHint": "Optimizar el fondo de la hoja para computadoras de baja especificación utilizando una imagen más simple."
+  "k4lt.Settings.LowSpecHint": "Optimizar el fondo de la hoja para computadoras de baja especificación utilizando una imagen más simple.",
 
+  "k4lt.LevelAttributes": {
+    "1": "Débil",
+    "2": "Principiante",
+    "3": "Considerable",
+    "4": "Poderoso",
+    "5": "Excepcional",
+    "6": "Legendario",
+    "7": "Divino/Despierto",
+    "8": "Arcángel caído o Ángel de la Muerte",
+    "9": "Arcángel debilitado o Ángel de la Muerte",
+    "10": "Arcángel o Ángel de la Muerte"
+  }
 }

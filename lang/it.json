@@ -150,6 +150,18 @@
   "k4lt.Settings.Debug": "Attiva modalità debug",
   "k4lt.Settings.DebugHint": "Mostra informazioni di debug aggiuntive nella console di sviluppo",
   "k4lt.Settings.LowSpec": "Attiva modalità a bassa risoluzione",
-  "k4lt.Settings.LowSpecHint": "Ottimizza lo sfondo del foglio per computer a bassa specifica utilizzando un'immagine più semplice."
-  
+  "k4lt.Settings.LowSpecHint": "Ottimizza lo sfondo del foglio per computer a bassa specifica utilizzando un'immagine più semplice.",
+
+  "k4lt.LevelAttributes": {
+    "1": "Debole",
+    "2": "Novizio",
+    "3": "Considerevole",
+    "4": "Potente",
+    "5": "Eccezionale",
+    "6": "Leggendario",
+    "7": "Divino/Risvegliato",
+    "8": "Arcangelo caduto o Angelo della Morte",
+    "9": "Arcangelo indebolito o Angelo della Morte",
+    "10": "Arcangelo o Angelo della Morte"
+  }  
 }

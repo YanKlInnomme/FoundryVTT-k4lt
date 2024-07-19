@@ -150,6 +150,18 @@
   "k4lt.Settings.Debug": "Activate debug mode",
   "k4lt.Settings.DebugHint": "Display additional debugging information in the development console",
   "k4lt.Settings.LowSpec": "Activate low-resolution mode",
-  "k4lt.Settings.LowSpecHint": "Optimize the sheet's background for lower-spec computers by using a simpler image."
- 
+  "k4lt.Settings.LowSpecHint": "Optimize the sheet's background for lower-spec computers by using a simpler image.",
+
+  "k4lt.LevelAttributes": {
+    "1": "Weak",
+    "2": "Novice",
+    "3": "Considerable",
+    "4": "Powerful",
+    "5": "Exceptional",
+    "6": "Legendary",
+    "7": "Divine/Awakened",
+    "8": "Fallen Archon or Death Angel",
+    "9": "Weakened Archon or Death Angel",
+    "10": "Archon or Death Angel"
+  }
 }

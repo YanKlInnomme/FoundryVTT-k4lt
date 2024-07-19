@@ -150,7 +150,19 @@
   "k4lt.Settings.Debug": "Debug-Modus aktivieren",
   "k4lt.Settings.DebugHint": "Zusätzliche Debug-Informationen in der Entwicklungskonsole anzeigen",
   "k4lt.Settings.LowSpec": "Niedrigauflösungsmodus aktivieren",
-  "k4lt.Settings.LowSpecHint": "Optimieren Sie den Hintergrund des Blattes für Computer mit niedriger Spezifikation durch die Verwendung eines einfacheren Bildes."
-    
+  "k4lt.Settings.LowSpecHint": "Optimieren Sie den Hintergrund des Blattes für Computer mit niedriger Spezifikation durch die Verwendung eines einfacheren Bildes.",
+
+  "k4lt.LevelAttributes": {
+    "1": "Schwach",
+    "2": "Anfänger",
+    "3": "Erheblich",
+    "4": "Kraftvoll",
+    "5": "Außergewöhnlich",
+    "6": "Legendär",
+    "7": "Göttlich/Erwacht",
+    "8": "Gefallener Erzengel oder Todesengel",
+    "9": "Geschwächter Erzengel oder Todesengel",
+    "10": "Erzengel oder Todesengel"
   }
+}
     

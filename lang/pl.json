@@ -150,6 +150,18 @@
   "k4lt.Settings.Debug": "Aktywuj tryb debugowania",
   "k4lt.Settings.DebugHint": "Wyświetl dodatkowe informacje debugowania w konsoli deweloperskiej",
   "k4lt.Settings.LowSpec": "Aktywuj tryb niskiej rozdzielczości",
-  "k4lt.Settings.LowSpecHint": "Optymalizuj tło arkusza dla komputerów o niższych parametrach, używając prostszego obrazu."
+  "k4lt.Settings.LowSpecHint": "Optymalizuj tło arkusza dla komputerów o niższych parametrach, używając prostszego obrazu.",
 
+  "k4lt.LevelAttributes": {
+    "1": "Słaby",
+    "2": "Początkujący",
+    "3": "Znaczący",
+    "4": "Potężny",
+    "5": "Wyjątkowy",
+    "6": "Legendarny",
+    "7": "Boski/Przebudzony",
+    "8": "Upadły Archanioł lub Anioł Śmierci",
+    "9": "Oslabiony Archanioł lub Anioł Śmierci",
+    "10": "Archanioł lub Anioł Śmierci"
+  }
 }

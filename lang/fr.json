@@ -152,6 +152,18 @@
   "k4lt.Settings.Debug": "Activer le mode débogage",
   "k4lt.Settings.DebugHint": "Afficher des informations de débogage supplémentaires dans la console de développement",
   "k4lt.Settings.LowSpec": "Activer le mode basse résolution",
-  "k4lt.Settings.LowSpecHint": "Optimiser l'arrière-plan de la feuille pour les ordinateurs à faible spécification en utilisant une image plus simple."
+  "k4lt.Settings.LowSpecHint": "Optimiser l'arrière-plan de la feuille pour les ordinateurs à faible spécification en utilisant une image plus simple.",
 
+  "k4lt.LevelAttributes": {
+    "1": "Faible",
+    "2": "Novice",
+    "3": "Considérable",
+    "4": "Puissant",
+    "5": "Exceptionnel",
+    "6": "Légendaire",
+    "7": "Divin/Éveillé",
+    "8": "Archonte déchu ou Ange de la Mort",
+    "9": "Archonte affaibli ou Ange de la Mort",
+    "10": "Archonte ou Ange de la Mort"
+  }
 }

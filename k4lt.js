@@ -21,6 +21,7 @@ async function preloadHandlebarTemplates() {
     "systems/k4lt/templates/partials/active-attribute-values.hbs",
     "systems/k4lt/templates/partials/abilitity-card.hbs",
     "systems/k4lt/templates/partials/limitation-card.hbs",
+    "systems/k4lt/templates/partials/level-values.hbs",
   ];
   return loadTemplates(templatepaths);
 }

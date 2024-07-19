@@ -150,6 +150,18 @@
   "k4lt.Settings.Debug": "Ativar modo de depuração",
   "k4lt.Settings.DebugHint": "Exibir informações adicionais de depuração no console de desenvolvimento",
   "k4lt.Settings.LowSpec": "Ativar modo de baixa resolução",
-  "k4lt.Settings.LowSpecHint": "Otimizar o fundo da planilha para computadores de baixa especificação, utilizando uma imagem mais simples."
+  "k4lt.Settings.LowSpecHint": "Otimizar o fundo da planilha para computadores de baixa especificação, utilizando uma imagem mais simples.",
 
+  "k4lt.LevelAttributes": {
+    "1": "Fraco",
+    "2": "Novato",
+    "3": "Considerável",
+    "4": "Poderoso",
+    "5": "Excepcional",
+    "6": "Lendário",
+    "7": "Divino/Desperto",
+    "8": "Arconte caído ou Anjo da Morte",
+    "9": "Arconte enfraquecido ou Anjo da Morte",
+    "10": "Arconte ou Anjo da Morte"
+  }
 }

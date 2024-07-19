@@ -49,19 +49,37 @@
       </div>
     </div>
     <div class="npc-combat">
-      <div class="section-label">{{localize "k4lt.Combat"}}</div>
+      <div class="section-label">{{localize "k4lt.Combat"}}:
+        <select class="level-select" name="system.level.combat" value="{{system.level.combat}}">
+            {{#select system.level.combat}}
+              {{>"systems/k4lt/templates/partials/level-values.hbs"}}
+            {{/select}}
+        </select>
+      </div>
       <div class="free-text">
         {{editor system.combatmoves target="system.combatmoves" button=true owner=owner editable=editable}}
       </div>
     </div>
     <div class="npc-influence">
-      <div class="section-label">{{localize "k4lt.Influence"}}</div>
+      <div class="section-label">{{localize "k4lt.Influence"}}:
+        <select class="level-select" name="system.level.influence" value="{{system.level.influence}}">
+            {{#select system.level.influence}}
+              {{>"systems/k4lt/templates/partials/level-values.hbs"}}
+            {{/select}}
+        </select>
+      </div>
       <div class="free-text">
         {{editor system.influencemoves target="system.influencemoves" button=true owner=owner editable=editable}}
       </div>
     </div>
     <div class="npc-magic">
-      <div class="section-label">{{localize "k4lt.Magic"}}</div>
+      <div class="section-label">{{localize "k4lt.Magic"}}:
+        <select class="level-select" name="system.level.magic" value="{{system.level.magic}}">
+            {{#select system.level.magic}}
+              {{>"systems/k4lt/templates/partials/level-values.hbs"}}
+            {{/select}}
+        </select>
+      </div>
       <div class="free-text">
         {{editor system.magicmoves target="system.magicmoves" button=true owner=owner editable=editable}}
       </div>

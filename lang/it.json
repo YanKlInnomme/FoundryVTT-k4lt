@@ -145,6 +145,11 @@
   "k4lt.NPC": {
     "Home": "Dimora",
     "Type": "Tipo di creatura"
-  }
- 
+  },
+
+  "k4lt.Settings.Debug": "Attiva modalità debug",
+  "k4lt.Settings.DebugHint": "Mostra informazioni di debug aggiuntive nella console di sviluppo",
+  "k4lt.Settings.LowSpec": "Attiva modalità a bassa risoluzione",
+  "k4lt.Settings.LowSpecHint": "Ottimizza lo sfondo del foglio per computer a bassa specifica utilizzando un'immagine più semplice."
+  
 }

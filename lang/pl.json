@@ -145,6 +145,11 @@
   "k4lt.NPC": {
     "Home": "Pochodzenie",
     "Type": "Typ stwora"
-  }
- 
+  },
+
+  "k4lt.Settings.Debug": "Aktywuj tryb debugowania",
+  "k4lt.Settings.DebugHint": "Wyświetl dodatkowe informacje debugowania w konsoli deweloperskiej",
+  "k4lt.Settings.LowSpec": "Aktywuj tryb niskiej rozdzielczości",
+  "k4lt.Settings.LowSpecHint": "Optymalizuj tło arkusza dla komputerów o niższych parametrach, używając prostszego obrazu."
+
 }

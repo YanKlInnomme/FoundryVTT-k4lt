@@ -147,6 +147,11 @@
   "k4lt.NPC": {
     "Home": "Demeure",
     "Type": "Type de créature"
-  }
- 
+  },
+
+  "k4lt.Settings.Debug": "Activer le mode débogage",
+  "k4lt.Settings.DebugHint": "Afficher des informations de débogage supplémentaires dans la console de développement",
+  "k4lt.Settings.LowSpec": "Activer le mode basse résolution",
+  "k4lt.Settings.LowSpecHint": "Optimiser l'arrière-plan de la feuille pour les ordinateurs à faible spécification en utilisant une image plus simple."
+
 }

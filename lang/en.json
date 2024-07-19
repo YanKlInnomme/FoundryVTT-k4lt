@@ -145,6 +145,11 @@
   "k4lt.NPC": {
     "Home": "Home",
     "Type": "Creature Type"
-  }
+  },
+
+  "k4lt.Settings.Debug": "Activate debug mode",
+  "k4lt.Settings.DebugHint": "Display additional debugging information in the development console",
+  "k4lt.Settings.LowSpec": "Activate low-resolution mode",
+  "k4lt.Settings.LowSpecHint": "Optimize the sheet's background for lower-spec computers by using a simpler image."
  
 }

@@ -145,5 +145,11 @@
   "k4lt.NPC": {
     "Home": "Hogar",
     "Type": "Tipo de criatura"
-  }
+  },
+
+  "k4lt.Settings.Debug": "Activar modo de depuración",
+  "k4lt.Settings.DebugHint": "Mostrar información adicional de depuración en la consola de desarrollo",
+  "k4lt.Settings.LowSpec": "Activar modo de baja resolución",
+  "k4lt.Settings.LowSpecHint": "Optimizar el fondo de la hoja para computadoras de baja especificación utilizando una imagen más simple."
+
 }

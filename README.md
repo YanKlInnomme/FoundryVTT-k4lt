@@ -37,9 +37,15 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 3.1.2.0
+ * Mise à jour du mode de débogage, y compris traductions
+ * Optimisation de l'image d'arrière-plan de la fiche de personnage (background-sheet.svg) de 1.76Mb à 516kB
+ * Ajout d'un mode basse résolution pour changer l'image d'arrière-plan de la fiche de personnage (background-sheet.webp) pour les ordinateurs à faible spécification
+ * Ajout des niveaux d'attributs sur la fiche des PNJ
+
 ## Version 3.1.1.0
  * Correction des modificateurs 'Mod. Continu' et 'Mod. Situation' (affichage dans le chat des valeurs prises en compte lors du lancer + remise à zéro automatique du modificateur 'Mod. Situation' après le jet)
- * Affichage en privé (seulement pour le MJ et le joueur concerné) du résultat des jets de dés pour les actions avec 'Désavantages'
+ * Affichage en privé (seulement pour le MJ et le joueur concerné) du résultat des jets de dés pour les actions 'Désavantages'
  * Ajout d'une vignette spécifique pour le système de jeu (thumbnail.webp), l'image lors de la création de monde reste inchangée (background.webp)
 
 ## Version 3.1.0.0
@@ -206,9 +212,15 @@ This digital adaptation is unofficial content from KULT: Divinity Lost, authoriz
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
 
+## Version 3.1.2.0
+ * Update of the debug mode, including translations
+ * Optimization of the character sheet background image (background-sheet.svg) from 1.76Mb to 516kB
+ * Addition of a low resolution mode to switch the character sheet background image (background-sheet.webp) for low specification computers
+ * Addition of attribute levels on the NPC sheet
+
 ## Version 3.1.1.0
  * Correction of the 'Ongoing' and 'Forward' modifiers (display in the chat of the values taken into account during the roll + automatic reset of the 'Forward' modifier after the roll)
- * Private display (only for the GM and the player concerned) of the dice roll results for actions with 'Disadvantages'
+ * Private display (only for the GM and the player concerned) of the dice roll results for 'Disadvantages' moves
  * Addition of a specific thumbnail for the game system (thumbnail.webp), the image when creating a world remains unchanged (background.webp)
 
 ## Version 3.1.0.0

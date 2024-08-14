@@ -2,48 +2,58 @@
   "id": "k4lt",
   "title": "KULT: Divinity Lost (4th Edition)",
   "description": "Kult is a horror role-playing game that focuses on the fears and impulses buried in our subconscious. Players take on the role of characters with dark secrets and can evolve in industrial cities, facing satanic cults, psychopathic killers, corrupt multinationals and more.",
-  "version": "3.1.2.0",
+  "version": "3.1.2.1",
   "license": "LICENSE",
   "compatibility": {
     "minimum": "12",
-    "verified": "12.329"
+    "verified": "12.330",
+    "maximum": "13"
   },
   "authors": [
     {
       "name": "YanK",
-      "url": "yank-solutions.fr",
+      "url": "https://yank-solutions.fr",
       "email": "yanklinnomme@gmail.com",
-      "discord": "yanklinnomme",
-      "flags": {}
+      "discord": "yanklinnomme"
     },
     {
       "name": "Kristov",
       "url": "https://github.com/Qaw",
-      "discord": "kristovqaw",
-      "flags": {}
+      "discord": "kristovqaw"
     },
     {
       "name": "MaeseFingolf",
-      "url": "https://github.com/MaeseFingolf",
-      "flags": {}
+      "url": "https://github.com/MaeseFingolf"
     },
     {
       "name": "Devilscryer",
-      "url": "https://github.com/Devilscryer",
-      "flags": {}
+      "url": "https://github.com/Devilscryer"
     },
     {
       "name": "Otimor",
-      "url": "https://github.com/otimor",
-      "flags": {}
+      "url": "https://github.com/otimor"
     },
     {
       "name": "Arcadio21",
-      "url": "https://github.com/Arcadio21",
-      "flags": {}
+      "url": "https://github.com/Arcadio21"
+    },
+    {
+      "name": "JornieNonsubia",
+      "url": "https://github.com/JornieNonsubia"
     }
   ],
   "background": "systems/k4lt/assets/background.webp",
+  "media": [
+    {
+      "type": "cover",
+      "loop": false
+    },
+    {
+      "type": "setup",
+      "loop": false,
+      "thumbnail": "systems/k4lt/assets/thumbnail.webp"
+    }
+  ],
   "esmodules": [
     "k4lt.js"
   ],
@@ -60,8 +70,7 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      }
     },
     {
       "label": "Advantages",
@@ -72,8 +81,7 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      }
     },
     {
       "label": "Character Examples",
@@ -84,8 +92,7 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      }
     },
     {
       "label": "Dark Secrets",
@@ -96,8 +103,7 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      }
     },
     {
       "label": "Disadvantages",
@@ -108,8 +114,7 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      }
     },
     {
       "label": "Limitations",
@@ -120,8 +125,7 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      }
     },
     {
       "label": "Moves",
@@ -132,22 +136,19 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "flags": {}
+      }
     }
   ],
   "languages": [
     {
       "lang": "de",
       "name": "German",
-      "path": "lang/de.json",
-      "flags": {}
+      "path": "lang/de.json"
     },
     {
       "lang": "en",
       "name": "English",
-      "path": "lang/en.json",
-      "flags": {}
+      "path": "lang/en.json"
     },
     {
       "lang": "es",
@@ -158,48 +159,30 @@
     {
       "lang": "fr",
       "name": "French",
-      "path": "lang/fr.json",
-      "flags": {}
+      "path": "lang/fr.json"
     },
     {
       "lang": "it",
       "name": "Italian",
-      "path": "lang/it.json",
-      "flags": {}
+      "path": "lang/it.json"
     },
     {
       "lang": "pl",
       "name": "Polski",
-      "path": "lang/pl.json",
-      "flags": {}
+      "path": "lang/pl.json"
     },
     {
       "lang": "pt-BR",
       "name": "Português (Brasil)",
-      "path": "lang/pt-BR.json",
-      "flags": {}
+      "path": "lang/pt-BR.json"
     },
     {
       "lang": "uk",
       "name": "Українська",
-      "path": "lang/uk.json",
-      "flags": {}
+      "path": "lang/uk.json"
     }
   ],
   "url": "https://github.com/YanKlInnomme/FoundryVTT-k4lt",
-  "manifest": "https://github.com/YanKlInnomme/FoundryVTT-k4lt/releases/latest/download/system.json",
-  "download": "https://github.com/YanKlInnomme/FoundryVTT-k4lt/releases/download/3.1.2.0/system.zip",
-  "media": [
-    {
-      "type": "cover",
-      "loop": false,
-      "flags": {}
-    },
-    {
-      "type": "setup",
-      "loop": false,
-      "thumbnail": "systems/k4lt/assets/thumbnail.webp",
-      "flags": {}
-    }
-  ]
+  "manifest": "",
+  "download": ""
 }

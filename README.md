@@ -37,6 +37,9 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 3.1.2.1
+ * Ajout de la traduction en Ukrainien par JornieNonsubia (https://github.com/JornieNonsubia) (fichier uk.json)
+
 ## Version 3.1.2.0
  * Mise à jour du mode de débogage, y compris traductions
  * Optimisation de l'image d'arrière-plan de la fiche de personnage (background-sheet.svg) de 1.76Mb à 516kB
@@ -211,6 +214,9 @@ This digital adaptation is unofficial content from KULT: Divinity Lost, authoriz
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 to 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 3.1.2.1
+ * Ukrainian translation added by JornieNonsubia (https://github.com/JornieNonsubia) (uk.json file)
 
 ## Version 3.1.2.0
  * Update of the debug mode, including translations

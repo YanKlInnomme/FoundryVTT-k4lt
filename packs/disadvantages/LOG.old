@@ -1,3 +1,7 @@
-2024/07/20-02:20:44.593 24e30 Recovering log #249
-2024/07/20-02:20:44.595 24e30 Delete type=0 #249
-2024/07/20-02:20:44.595 24e30 Delete type=3 #248
+2024/07/24-15:04:34.524 3380 Recovering log #268
+2024/07/24-15:04:34.526 3380 Delete type=0 #268
+2024/07/24-15:04:34.526 3380 Delete type=3 #266
+2024/07/24-15:09:35.415 a340 Level-0 table #273: started
+2024/07/24-15:09:35.416 a340 Level-0 table #273: 0 bytes OK
+2024/07/24-15:09:35.416 a340 Delete type=0 #271
+2024/07/24-15:09:35.419 a340 Manual compaction at level-0 from '!items!08mCUZ2oxmOO4Z94' @ 72057594037927935 : 1 .. '!items!xRemmX4JGmuOigZE' @ 0 : 0; will stop at (end)

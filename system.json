@@ -6,141 +6,200 @@
   "license": "LICENSE",
   "compatibility": {
     "minimum": "12",
-    "verified": "12.329",
-    "maximum": "13"
+    "verified": "12.329"
   },
   "authors": [
     {
       "name": "YanK",
       "url": "yank-solutions.fr",
       "email": "yanklinnomme@gmail.com",
-      "discord": "yanklinnomme"
+      "discord": "yanklinnomme",
+      "flags": {}
     },
     {
       "name": "Kristov",
       "url": "https://github.com/Qaw",
-      "discord": "kristovqaw"
+      "discord": "kristovqaw",
+      "flags": {}
     },
     {
       "name": "MaeseFingolf",
-      "url": "https://github.com/MaeseFingolf"
+      "url": "https://github.com/MaeseFingolf",
+      "flags": {}
     },
     {
       "name": "Devilscryer",
-      "url": "https://github.com/Devilscryer"
+      "url": "https://github.com/Devilscryer",
+      "flags": {}
     },
     {
       "name": "Otimor",
-      "url": "https://github.com/otimor"
+      "url": "https://github.com/otimor",
+      "flags": {}
     },
     {
       "name": "Arcadio21",
-      "url": "https://github.com/Arcadio21"
+      "url": "https://github.com/Arcadio21",
+      "flags": {}
     }
   ],
   "background": "systems/k4lt/assets/background.webp",
-  "media": [
-        {
-            "type": "cover",
-            "loop": false,
-            "flags": {}
-        },
-        {
-            "type": "setup",
-            "thumbnail": "systems/k4lt/assets/thumbnail.webp"
-        }
-    ],
-  "esmodules": ["k4lt.js"],
-  "styles": ["styles/k4lt.css"],
+  "esmodules": [
+    "k4lt.js"
+  ],
+  "styles": [
+    "styles/k4lt.css"
+  ],
   "packs": [
     {
       "label": "Abilities",
       "name": "abilities",
       "type": "Item",
       "system": "k4lt",
-      "path": "packs/abilities"
+      "path": "packs/abilities",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "label": "Advantages",
       "name": "advantages",
       "type": "Item",
       "system": "k4lt",
-      "path": "packs/advantages"
+      "path": "packs/advantages",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "label": "Character Examples",
       "name": "character-examples",
       "type": "Actor",
       "system": "k4lt",
-      "path": "packs/character-examples"
+      "path": "packs/character-examples",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "label": "Dark Secrets",
       "name": "dark-secrets",
       "type": "Item",
       "system": "k4lt",
-      "path": "packs/dark-secrets"
+      "path": "packs/dark-secrets",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "label": "Disadvantages",
       "name": "disadvantages",
       "type": "Item",
       "system": "k4lt",
-      "path": "packs/disadvantages"
+      "path": "packs/disadvantages",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "label": "Limitations",
       "name": "limitations",
       "type": "Item",
       "system": "k4lt",
-      "path": "packs/limitations"
+      "path": "packs/limitations",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "label": "Moves",
       "name": "moves",
       "type": "Item",
       "system": "k4lt",
-      "path": "packs/moves"
+      "path": "packs/moves",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     }
   ],
   "languages": [
     {
       "lang": "de",
       "name": "German",
-      "path": "lang/de.json"
+      "path": "lang/de.json",
+      "flags": {}
     },
     {
       "lang": "en",
       "name": "English",
-      "path": "lang/en.json"
+      "path": "lang/en.json",
+      "flags": {}
     },
     {
       "lang": "es",
       "name": "Español",
-      "path": "lang/es.json"
+      "path": "lang/es.json",
+      "flags": {}
     },
     {
       "lang": "fr",
       "name": "French",
-      "path": "lang/fr.json"
+      "path": "lang/fr.json",
+      "flags": {}
     },
-	 {
+    {
       "lang": "it",
       "name": "Italian",
-      "path": "lang/it.json"
-    }, 
-	 {
+      "path": "lang/it.json",
+      "flags": {}
+    },
+    {
       "lang": "pl",
       "name": "Polski",
-      "path": "lang/pl.json"
+      "path": "lang/pl.json",
+      "flags": {}
     },
     {
       "lang": "pt-BR",
       "name": "Português (Brasil)",
-      "path": "lang/pt-BR.json"
+      "path": "lang/pt-BR.json",
+      "flags": {}
+    },
+    {
+      "lang": "uk",
+      "name": "Українська",
+      "path": "lang/uk.json",
+      "flags": {}
     }
   ],
   "url": "https://github.com/YanKlInnomme/FoundryVTT-k4lt",
-  "manifest": "",
-  "download": ""
+  "manifest": "https://github.com/YanKlInnomme/FoundryVTT-k4lt/releases/latest/download/system.json",
+  "download": "https://github.com/YanKlInnomme/FoundryVTT-k4lt/releases/download/3.1.2.0/system.zip",
+  "media": [
+    {
+      "type": "cover",
+      "loop": false,
+      "flags": {}
+    },
+    {
+      "type": "setup",
+      "loop": false,
+      "thumbnail": "systems/k4lt/assets/thumbnail.webp",
+      "flags": {}
+    }
+  ]
 }

@@ -101,8 +101,16 @@ export default class k4ltActor extends Actor {
 
       let situation = 0;
 
-      if (this.hasUnstabilizedMajorWounds) situation -= 1;
-      if (this.hasUnstabilizedCriticalWound) situation -= 1;
+      const hasGrittedTeeth = this.items.some(item => {
+        const sourceId = item.getFlag("core", "sourceId");
+        return sourceId === "Compendium.k4lt.advantages.Item.35QIDleyEBhrQf4k";
+      });
+      kultLogger("Has Gritted Teeth => ", hasGrittedTeeth);
+      if (!hasGrittedTeeth) {
+        if (this.hasUnstabilizedMajorWounds) situation -= 1;
+        if (this.hasUnstabilizedCriticalWound) situation -= 1;
+      }
+      
       if (moveType == "disadvantage" && stability > 0) {
         situation -= (stability <= 2) ? 1 : ((stability <= 5) ? 2 : 3);
       }

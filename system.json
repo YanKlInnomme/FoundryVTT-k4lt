@@ -2,11 +2,11 @@
   "id": "k4lt",
   "title": "KULT: Divinity Lost (4th Edition)",
   "description": "Kult is a horror role-playing game that focuses on the fears and impulses buried in our subconscious. Players take on the role of characters with dark secrets and can evolve in industrial cities, facing satanic cults, psychopathic killers, corrupt multinationals and more.",
-  "version": "3.1.2.1",
+  "version": "3.1.3.0",
   "license": "LICENSE",
   "compatibility": {
     "minimum": "12",
-    "verified": "12.330",
+    "verified": "12.331",
     "maximum": "13"
   },
   "authors": [
@@ -40,6 +40,10 @@
     {
       "name": "JornieNonsubia",
       "url": "https://github.com/JornieNonsubia"
+    },
+    {
+      "name": "kevintheradioguy",
+      "url": "https://github.com/kevintheradioguy"
     }
   ],
   "background": "systems/k4lt/assets/background.webp",
@@ -180,6 +184,11 @@
       "lang": "uk",
       "name": "Українська",
       "path": "lang/uk.json"
+    },
+    {
+      "lang": "ru",
+      "name": "Русский",
+      "path": "lang/ru.json"
     }
   ],
   "url": "https://github.com/YanKlInnomme/FoundryVTT-k4lt",

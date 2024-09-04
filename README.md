@@ -37,6 +37,11 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 3.1.3.0
+ * Ajout de la traduction en Russe par kevintheradioguy (https://github.com/kevintheradioguy) (fichier ru.json)
+ * Modification du niveau maximun des caractéristiques à +5
+ * Prise en compte de la présence de l'objet 'Dents serrées' sur la fiche du personnage pour les lancers de dés
+
 ## Version 3.1.2.1
  * Ajout de la traduction en Ukrainien par JornieNonsubia (https://github.com/JornieNonsubia) (fichier uk.json)
 
@@ -214,6 +219,11 @@ This digital adaptation is unofficial content from KULT: Divinity Lost, authoriz
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 to 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 3.1.3.0
+ * Russian translation added by kevintheradioguy (https://github.com/kevintheradioguy) (ru.json file)
+ * Modification of the maximum level of attributes to +5
+ * Taking into account the presence of the 'Gritted Teeth' object on the character sheet for dice rolls
 
 ## Version 3.1.2.1
  * Ukrainian translation added by JornieNonsubia (https://github.com/JornieNonsubia) (uk.json file)

@@ -8,9 +8,9 @@ export const registerSystemSettings = () => {
     type: Boolean,
     onChange: value => {
       if (value) {
-        // Code à exécuter lorsque la valeur de "debug" change à true
+        // Code to execute when "debug" value changes to true
       } else {
-        // Code à exécuter lorsque la valeur de "debug" change à false
+        // Code to execute when "debug" value changes to false
       }
     }
   };

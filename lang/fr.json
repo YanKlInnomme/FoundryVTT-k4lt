@@ -5,15 +5,17 @@
       "npc": "Personnage Non Joueur"
     },
     "Item": {
-      "move": "Action",
-      "weapon": "Arme",
-      "advantage": "Avantage",
-      "disadvantage": "Désavantage",
       "abilitity": "Capacité",
-      "limitation": "Limitation",
+      "advantage": "Avantage",
       "darksecret": "Sombre Secret",
+      "disadvantage": "Désavantage",
+      "family": "Famille",
+      "gear": "Ressort Dramatique",
+      "limitation": "Limitation",
+      "move": "Action",
+      "occupation": "Métier",
       "relationship": "Relation",
-      "gear": "Ressort Dramatique"
+      "weapon": "Arme"
     }
   },
 
@@ -49,6 +51,13 @@
   "k4lt.Ability": "Capacité",
   "k4lt.Limitations": "Limitations",
   "k4lt.Limitation": "Limitation",
+  "k4lt.Families": "Familles",
+  "k4lt.Family": "Famille",
+  "k4lt.Occupations": "Métiers",
+  "k4lt.Occupation": "Métier",
+
+  "k4lt.Archetypes": "Archétypes",
+  "k4lt.Archetype": "Archétype",
 
   "k4lt.Wounds": "Blessures",
   "k4lt.MajorWound1": "Blessure Sérieuse #1",

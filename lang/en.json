@@ -5,15 +5,17 @@
       "npc": "Non Player Character"
     },
     "Item": {
-      "move": "Move",
-      "weapon": "Weapon",
-      "advantage": "Advantage",
-      "disadvantage": "Disadvantage",
       "abilitity": "Abilitity",
-      "limitation": "Limitation",
+      "advantage": "Advantage",
       "darksecret": "Dark Secret",
+      "disadvantage": "Disadvantage",
+      "family": "Family",
+      "gear": "Gear",
+      "limitation": "Limitation",
+      "move": "Move",
+      "occupation": "Occupation",
       "relationship": "Relationship",
-      "gear": "Gear"
+      "weapon": "Weapon"
     }
   },
 
@@ -47,6 +49,13 @@
   "k4lt.Ability": "Ability",
   "k4lt.Limitations": "Limitations",
   "k4lt.Limitation": "Limitation",
+  "k4lt.Families": "Families",
+  "k4lt.Family": "Family",
+  "k4lt.Occupations": "Occupations",
+  "k4lt.Occupation": "Occupation",
+
+  "k4lt.Archetypes": "Archetypes",
+  "k4lt.Archetype": "Archetype",
 
   "k4lt.Wounds": "Wounds",
   "k4lt.MajorWound1": "Serious Wound #1",
@@ -163,5 +172,7 @@
     "8": "Fallen Archon or Death Angel",
     "9": "Weakened Archon or Death Angel",
     "10": "Archon or Death Angel"
-  }
+  },
+
+  "k4lt.Summary": "Summary"
 }

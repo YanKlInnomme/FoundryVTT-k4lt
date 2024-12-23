@@ -1,7 +1,7 @@
 export default class k4ltPCsheet extends ActorSheet {
   /** @override */
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "Stats" }],
       width: 800,
       height: 1294,
@@ -18,15 +18,73 @@ export default class k4ltPCsheet extends ActorSheet {
   getData() {
     const context = super.getData();
     context.system = context.actor.system;
+    context.abilitities = context.items.filter(item => item.type === "abilitity").sort((a, b) => a.name.localeCompare(b.name));
+    context.advantages = context.items.filter(item => item.type === "advantage").sort((a, b) => a.name.localeCompare(b.name));
+    context.darksecrets = context.items.filter(item => item.type === "darksecret").sort((a, b) => a.name.localeCompare(b.name));
+    context.disadvantages = context.items.filter(item => item.type === "disadvantage").sort((a, b) => a.name.localeCompare(b.name));
+    context.families = context.items.filter(item => item.type === "family").sort((a, b) => a.name.localeCompare(b.name));
+    context.gear = context.items.filter(item => item.type === "gear").sort((a, b) => a.name.localeCompare(b.name));
+    context.limitations = context.items.filter(item => item.type === "limitation").sort((a, b) => a.name.localeCompare(b.name));
     context.moves = context.items.filter(item => item.type === "move").sort((a, b) => a.name.localeCompare(b.name));
-    context.advantages = context.items.filter(item => item.type === "advantage");
-    context.disadvantages = context.items.filter(item => item.type === "disadvantage");
-    context.abilitities = context.items.filter(item => item.type === "abilitity");
-    context.limitations = context.items.filter(item => item.type === "limitation");
-    context.darksecrets = context.items.filter(item => item.type === "darksecret");
-    context.relationships = context.items.filter(item => item.type === "relationship");
-    context.weapons = context.items.filter(item => item.type === "weapon");
-    context.gear = context.items.filter(item => item.type === "gear");
+    context.occupations = context.items.filter(item => item.type === "occupation").sort((a, b) => a.name.localeCompare(b.name));
+    context.relationships = context.items.filter(item => item.type === "relationship").sort((a, b) => a.name.localeCompare(b.name));
+    context.weapons = context.items.filter(item => item.type === "weapon").sort((a, b) => a.name.localeCompare(b.name));
+
+    const modifierValues = [
+      { value: "5", label: "\u00A0+5\u00A0" },
+      { value: "4", label: "\u00A0+4\u00A0" },
+      { value: "3", label: "\u00A0+3\u00A0" },
+      { value: "2", label: "\u00A0+2\u00A0" },
+      { value: "1", label: "\u00A0+1\u00A0" },
+      { value: "0", label: "\u00A00\u00A0" },
+      { value: "-1", label: "\u00A0-1\u00A0" },
+      { value: "-2", label: "\u00A0-2\u00A0" },
+      { value: "-3", label: "\u00A0-3\u00A0" },
+      { value: "-4", label: "\u00A0-4\u00A0" },
+      { value: "-5", label: "\u00A0-5\u00A0" }
+    ];
+    context.modifierValues = modifierValues;
+
+    const passiveAttributeValues = [
+      { value: "5", label: "\u00A0+5\u00A0" },
+      { value: "4", label: "\u00A0+4\u00A0" },
+      { value: "3", label: "\u00A0+3\u00A0" },
+      { value: "2", label: "\u00A0+2\u00A0" },
+      { value: "1", label: "\u00A0+1\u00A0" },
+      { value: "0", label: "\u00A00\u00A0" },
+      { value: "-1", label: "\u00A0-1\u00A0" },
+      { value: "-2", label: "\u00A0-2\u00A0" },
+    ];
+    context.passiveAttributeValues = passiveAttributeValues;
+
+    const activeAttributeValues = [
+      { value: "5", label: "\u00A0+5\u00A0" },
+      { value: "4", label: "\u00A0+4\u00A0" },
+      { value: "3", label: "\u00A0+3\u00A0" },
+      { value: "2", label: "\u00A0+2\u00A0" },
+      { value: "1", label: "\u00A0+1\u00A0" },
+      { value: "0", label: "\u00A00\u00A0" },
+      { value: "-1", label: "\u00A0-1\u00A0" },
+      { value: "-2", label: "\u00A0-2\u00A0" },
+      { value: "-3", label: "\u00A0-3\u00A0" },
+      { value: "-4", label: "\u00A0-4\u00A0" }
+    ];
+    context.activeAttributeValues = activeAttributeValues;
+
+    const stabilityValues = [
+      { value: "0", label: game.i18n.localize("k4lt.StabilityComposed") },
+      { value: "1", label: game.i18n.localize("k4lt.StabilityUneasy") },
+      { value: "2", label: game.i18n.localize("k4lt.StabilityUnfocused") },
+      { value: "3", label: game.i18n.localize("k4lt.StabilityShaken") },
+      { value: "4", label: game.i18n.localize("k4lt.StabilityDistressed") },
+      { value: "5", label: game.i18n.localize("k4lt.StabilityNeurotic") },
+      { value: "6", label: game.i18n.localize("k4lt.StabilityAnxious") },
+      { value: "7", label: game.i18n.localize("k4lt.StabilityIrrational") },
+      { value: "8", label: game.i18n.localize("k4lt.StabilityUnhinged") },
+      { value: "9", label: game.i18n.localize("k4lt.StabilityBroken") },
+    ];
+    context.stabilityValues = stabilityValues;
+          
     kultLogger("PCSheet getData => ", context);
     return context;
   }
@@ -145,3 +203,4 @@ export default class k4ltPCsheet extends ActorSheet {
     this.actor.update({ [key]: { value: wound.value, state: newState } });
   }
 }
+

@@ -3,6 +3,16 @@
     <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64" />
     <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
   </header>
+    <div class="kult-item-sheet">
+    <div class="editor-row">
+      <label>{{localize "k4lt.Description"}}:</label>
+      <div>{{editor system.description target="system.description" button=true owner=owner editable=editable}}</div>
+    </div>
+    <div>
+      <label>{{localize "k4lt.Summary"}}:</label>
+      <input name="system.summary" type="text" value="{{system.summary}}" />
+    </div>
+  </div>
   <div class="kult-item-sheet kult-item-flex">
     <div>
       <label>{{localize "k4lt.Target"}}:</label>

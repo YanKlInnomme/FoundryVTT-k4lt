@@ -1,6 +1,8 @@
 <div class="move-card">
   <div class="move-info item-name" data-item-id="{{_id}}">
-    <a class="move-card-text item-edit"> {{system.target}} ({{system.summary}}): {{system.strength}}</a>
+    <img src="{{img}}" title="{{name}}"/>
+    <a class="move-card-text item-edit">{{name}}
+    <br>({{system.occupation.archetype}})</a>
     <a class="item-control item-delete" title="{{localize 'k4lt.DeleteItem'}}"><i class="fas fa-trash"></i></a>
   </div>
 </div>

@@ -50,10 +50,8 @@
     </div>
     <div class="npc-combat">
       <div class="section-label">{{localize "k4lt.Combat"}}:
-        <select class="level-select" name="system.level.combat" value="{{system.level.combat}}">
-            {{#select system.level.combat}}
-              {{>"systems/k4lt/templates/partials/level-values.hbs"}}
-            {{/select}}
+        <select class="level-select" name="system.level.combat">
+          {{selectOptions levelValues selected=system.level.combat valueAttr="value" labelAttr="label"}}
         </select>
       </div>
       <div class="free-text">
@@ -62,10 +60,8 @@
     </div>
     <div class="npc-influence">
       <div class="section-label">{{localize "k4lt.Influence"}}:
-        <select class="level-select" name="system.level.influence" value="{{system.level.influence}}">
-            {{#select system.level.influence}}
-              {{>"systems/k4lt/templates/partials/level-values.hbs"}}
-            {{/select}}
+        <select class="level-select" name="system.level.influence">
+          {{selectOptions levelValues selected=system.level.influence valueAttr="value" labelAttr="label"}}
         </select>
       </div>
       <div class="free-text">
@@ -74,10 +70,8 @@
     </div>
     <div class="npc-magic">
       <div class="section-label">{{localize "k4lt.Magic"}}:
-        <select class="level-select" name="system.level.magic" value="{{system.level.magic}}">
-            {{#select system.level.magic}}
-              {{>"systems/k4lt/templates/partials/level-values.hbs"}}
-            {{/select}}
+        <select class="level-select" name="system.level.magic">
+          {{selectOptions levelValues selected=system.level.magic valueAttr="value" labelAttr="label"}}
         </select>
       </div>
       <div class="free-text">

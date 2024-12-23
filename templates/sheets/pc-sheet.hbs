@@ -4,18 +4,14 @@
         <div class="flex-container top-section">
             <div class="ongoing">
                 {{localize "k4lt.Ongoing"}}:
-                <select class="hidden-select" name="system.ongoing" value="{{system.ongoing}}">
-                    {{#select system.ongoing}}
-                        {{>"systems/k4lt/templates/partials/modifier-values.hbs"}}
-                    {{/select}}
+                <select class="hidden-select" name="system.ongoing">
+                    {{selectOptions modifierValues selected=system.ongoing valueAttr="value" labelAttr="label"}}
                 </select>
             </div>
             <div class="forward">
                 {{localize "k4lt.Forward"}}:
-                <select class="hidden-select" name="system.forward" value="{{system.forward}}">
-                    {{#select system.forward}}
-                        {{>"systems/k4lt/templates/partials/modifier-values.hbs"}}
-                    {{/select}}
+                <select class="hidden-select" name="system.forward">
+                    {{selectOptions modifierValues selected=system.forward valueAttr="value" labelAttr="label"}}
                 </select>
             </div>
             <h1 class="character-name"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
@@ -49,28 +45,22 @@
                     <tr>
                         <td></td>
                         <td class="willpic">
-                            <select class="foo" name="system.attributes.willpower" value="{{system.attributes.willpower}}">
-                                {{#select system.attributes.willpower}}
-                                    {{>"systems/k4lt/templates/partials/passive-attribute-values.hbs"}}
-                                {{/select}}
+                            <select class="foo" name="system.attributes.willpower">
+                               {{selectOptions passiveAttributeValues selected=system.attributes.willpower valueAttr="value" labelAttr="label"}}
                             </select>
                         </td>
                         <td></td>
                     </tr>
                     <tr>
                         <td class="fortpic">
-                            <select class="foo" name="system.attributes.fortitude" value="{{system.attributes.fortitude}}">
-                                {{#select system.attributes.fortitude}}
-                                    {{>"systems/k4lt/templates/partials/passive-attribute-values.hbs"}}
-                                {{/select}}
+                            <select class="foo" name="system.attributes.fortitude">
+                               {{selectOptions passiveAttributeValues selected=system.attributes.fortitude valueAttr="value" labelAttr="label"}}
                             </select>
                         </td>
                         <td>{{localize "k4lt.Willpower"}}</td>
                         <td class="refpic">
-                            <select class="foo" name="system.attributes.reflexes" value="{{system.attributes.reflexes}}">
-                                {{#select system.attributes.reflexes}}
-                                    {{>"systems/k4lt/templates/partials/passive-attribute-values.hbs"}}
-                                {{/select}}
+                            <select class="foo" name="system.attributes.reflexes">
+                               {{selectOptions passiveAttributeValues selected=system.attributes.reflexes valueAttr="value" labelAttr="label"}}
                             </select>
                         </td>
                     </tr>
@@ -81,56 +71,44 @@
                     </tr>
                     <tr>
                         <td class="reasonpic">
-                            <select class="foo" name="system.attributes.reason" value="{{system.attributes.reason}}">
-                                {{#select system.attributes.reason}}
-                                    {{>"systems/k4lt/templates/partials/active-attribute-values.hbs"}}
-                                {{/select}}
+                            <select class="foo" name="system.attributes.reason">
+                               {{selectOptions activeAttributeValues selected=system.attributes.reason valueAttr="value" labelAttr="label"}}
                             </select>
                         </td>
                         <td class="attmid"></td>
                         <td class="intupic">
-                            <select class="foo" name="system.attributes.intuition" value="{{system.attributes.intuition}}">
-                                {{#select system.attributes.intuition}}
-                                    {{>"systems/k4lt/templates/partials/active-attribute-values.hbs"}}
-                                {{/select}}
+                            <select class="foo" name="system.attributes.intuition">
+                               {{selectOptions activeAttributeValues selected=system.attributes.intuition valueAttr="value" labelAttr="label"}}
                             </select>
                         </td>
                     </tr>
                     <tr>
                         <td>{{localize "k4lt.Reason"}}</td>
                         <td class="percpic">
-                            <select class="foo" name="system.attributes.perception" value="{{system.attributes.perception}}">
-                                {{#select system.attributes.perception}}
-                                    {{>"systems/k4lt/templates/partials/active-attribute-values.hbs"}}
-                                {{/select}}
+                            <select class="foo" name="system.attributes.perception">
+                               {{selectOptions activeAttributeValues selected=system.attributes.perception valueAttr="value" labelAttr="label"}}
                             </select>
                         </td>
                         <td>{{localize "k4lt.Intuition"}}</td>
                     </tr>
                     <tr>
                         <td class="coolpic">
-                            <select class="foo" name="system.attributes.coolness" value="{{system.attributes.coolness}}">
-                                {{#select system.attributes.coolness}}
-                                    {{>"systems/k4lt/templates/partials/active-attribute-values.hbs"}}
-                                {{/select}}
+                            <select class="foo" name="system.attributes.coolness">
+                               {{selectOptions activeAttributeValues selected=system.attributes.coolness valueAttr="value" labelAttr="label"}}
                             </select>
                         </td>
                         <td>{{localize "k4lt.Perception"}}</td>
                         <td class="violpic">
-                            <select class="foo" name="system.attributes.violence" value="{{system.attributes.violence}}">
-                                {{#select system.attributes.violence}}
-                                    {{>"systems/k4lt/templates/partials/active-attribute-values.hbs"}}
-                                {{/select}}
+                            <select class="foo" name="system.attributes.violence">
+                               {{selectOptions activeAttributeValues selected=system.attributes.violence valueAttr="value" labelAttr="label"}}
                             </select>
                         </td>
                     </tr>
                     <tr>
                         <td>{{localize "k4lt.Coolness"}}</td>
                         <td class="chapic">
-                            <select class="foo" name="system.attributes.charisma" value="{{system.attributes.charisma}}">
-                                {{#select system.attributes.charisma}}
-                                    {{>"systems/k4lt/templates/partials/active-attribute-values.hbs"}}
-                                {{/select}}
+                            <select class="foo" name="system.attributes.charisma">
+                               {{selectOptions activeAttributeValues selected=system.attributes.charisma valueAttr="value" labelAttr="label"}}
                             </select>
                         </td>
                         <td>{{localize "k4lt.Violence"}}</td>
@@ -143,10 +121,8 @@
                     <tr>
                         <td></td>
                         <td class="soulpic">
-                            <select class="foo" name="system.attributes.soul" value="{{system.attributes.soul}}">
-                                {{#select system.attributes.soul}}
-                                    {{>"systems/k4lt/templates/partials/active-attribute-values.hbs"}}
-                                {{/select}}
+                            <select class="foo" name="system.attributes.soul">
+                               {{selectOptions activeAttributeValues selected=system.attributes.soul valueAttr="value" labelAttr="label"}}
                             </select>
                         </td>
                         <td></td>
@@ -159,16 +135,18 @@
                 </table>
             </div>
             <div class="advantage-box">
+                {{#if occupations.length}}
+                <div class="section-label">{{localize "k4lt.Occupations"}}</div>
+                <div class="item-list occupation-list">
+                    {{#each occupations as |occupation id|}}
+                        {{> "systems/k4lt/templates/partials/occupation-card.hbs" occupation}}
+                    {{/each}}
+                </div>
+                {{/if}}
                 <div class="section-label">{{localize "k4lt.DarkSecrets"}}</div>
                 <div class="item-list darksecret-list">
                     {{#each darksecrets as |darksecret id|}}
                         {{> "systems/k4lt/templates/partials/darksecret-card.hbs" darksecret}}
-                    {{/each}}
-                </div>
-                <div class="section-label">{{localize "k4lt.Advantages"}}</div>
-                <div class="item-list advantage-list">
-                    {{#each advantages as |advantage id|}}
-                        {{> "systems/k4lt/templates/partials/advantage-card.hbs" advantage}}
                     {{/each}}
                 </div>
                 <div class="section-label">{{localize "k4lt.Disadvantages"}}</div>
@@ -177,24 +155,45 @@
                         {{> "systems/k4lt/templates/partials/disadvantage-card.hbs" disadvantage}}
                     {{/each}}
                 </div>
-                <div class="section-label">{{localize "k4lt.Relationships"}}</div>
-                <div class="item-list relationship-list">
-                    {{#each relationships as |relationship id|}}
-                        {{> "systems/k4lt/templates/partials/relationship-card.hbs" relationship}}
+                {{#if advantages.length}}
+                <div class="section-label">{{localize "k4lt.Advantages"}}</div>
+                <div class="item-list advantage-list">
+                    {{#each advantages as |advantage id|}}
+                        {{> "systems/k4lt/templates/partials/advantage-card.hbs" advantage}}
                     {{/each}}
                 </div>
+                {{/if}}
+                {{#if abilitities.length}}
                 <div class="section-label">{{localize "k4lt.Abilities"}}</div>
                 <div class="item-list abilitity-list">
                     {{#each abilitities as |abilitity id|}}
                         {{> "systems/k4lt/templates/partials/abilitity-card.hbs" abilitity}}
                     {{/each}}
                 </div>
+                {{/if}}
+                {{#if limitations.length}}
                 <div class="section-label">{{localize "k4lt.Limitations"}}</div>
                 <div class="item-list limitation-list">
                     {{#each limitations as |limitation id|}}
                         {{> "systems/k4lt/templates/partials/limitation-card.hbs" limitation}}
                     {{/each}}
                 </div>
+                {{/if}}
+                {{#if families.length}}
+                <div class="section-label">{{localize "k4lt.Families"}}</div>
+                <div class="item-list family-list">
+                    {{#each families as |family id|}}
+                        {{> "systems/k4lt/templates/partials/family-card.hbs" family}}
+                    {{/each}}
+                </div>
+                {{/if}}
+                <div class="section-label">{{localize "k4lt.Relationships"}}</div>
+                <div class="item-list relationship-list">
+                    {{#each relationships as |relationship id|}}
+                        {{> "systems/k4lt/templates/partials/relationship-card.hbs" relationship}}
+                    {{/each}}
+                </div>
+
             </div>
             <div class="right-middle-column">
                 <div class="section-label" style="margin-bottom: 12px;">{{localize "k4lt.Wounds"}}</div>
@@ -227,18 +226,8 @@
             <div class="flex-column stability-section">
                 <div class="section-label">{{localize "k4lt.Stability"}}</div>
                 <div>
-                    <select name="system.stability.value" value="{{system.stability.value}}">{{#select system.stability.value}}
-                        <option value="0">{{localize "k4lt.StabilityComposed"}}</option>
-                        <option value="1">{{localize "k4lt.StabilityUneasy"}}</option>
-                        <option value="2">{{localize "k4lt.StabilityUnfocused"}}</option>
-                        <option value="3">{{localize "k4lt.StabilityShaken"}}</option>
-                        <option value="4">{{localize "k4lt.StabilityDistressed"}}</option>
-                        <option value="5">{{localize "k4lt.StabilityNeurotic"}}</option>
-                        <option value="6">{{localize "k4lt.StabilityAnxious"}}</option>
-                        <option value="7">{{localize "k4lt.StabilityIrrational"}}</option>
-                        <option value="8">{{localize "k4lt.StabilityUnhinged"}}</option>
-                        <option value="9">{{localize "k4lt.StabilityBroken"}}</option>
-                    {{/select}}
+                    <select name="system.stability.value">
+                        {{selectOptions stabilityValues selected=system.stability.value valueAttr="value" labelAttr="label"}}
                     </select>
                     <a class="stability-minus" title="{{localize "k4lt.MinusStability"}}"><i class="fas fa-minus-circle"></i></a>
                     <a class="stability-plus" title="{{localize "k4lt.PlusStability"}}"><i class="fas fa-plus-circle"></i></a>

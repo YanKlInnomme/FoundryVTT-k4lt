@@ -44,6 +44,12 @@ export default class k4ltActor extends Actor {
       rollMode: rollMode
     };
 
+    // Appliquer les destinataires pour le mode gmroll
+    if (rollMode === "gmroll") {
+      chatData.whisper = ChatMessage.getWhisperRecipients("GM");
+    }
+
+    kultLogger("chatData => ", chatData);
     ChatMessage.create(chatData);
   }
 
@@ -102,7 +108,7 @@ export default class k4ltActor extends Actor {
       let situation = 0;
 
       const hasGrittedTeeth = this.items.some(item => {
-        const sourceId = item.getFlag("core", "sourceId");
+        const sourceId = item._stats?.compendiumSource;
         return sourceId === "Compendium.k4lt.advantages.Item.35QIDleyEBhrQf4k";
       });
       kultLogger("Has Gritted Teeth => ", hasGrittedTeeth);
@@ -126,7 +132,7 @@ export default class k4ltActor extends Actor {
       kultLogger("Harm => ", harm);
 
       let r = new Roll(`2d10 + ${mod} + ${ongoing} + ${forward} + ${situation} - ${harm}`);
-      await r.roll({ async: true });
+      await r.evaluate();
 
       if (r.total) {
         this.update({ "system.forward": 0 });
@@ -136,6 +142,7 @@ export default class k4ltActor extends Actor {
       let rollMode = game.settings.get("core", "rollMode");
       if (moveType == "disadvantage") {
         rollMode = "gmroll";
+        kultLogger("rollMode => ", rollMode);
       }
 
       if (r.total >= 15) {

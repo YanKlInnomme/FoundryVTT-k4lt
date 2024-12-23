@@ -1,3 +1,6 @@
+/**
+ * Import modules
+ */
 import k4ltitemsheet from "./modules/sheets/k4ltitemsheet.js";
 import k4ltPCsheet from "./modules/sheets/k4ltPCsheet.js";
 import k4ltNPCsheet from "./modules/sheets/k4ltNPCsheet.js";
@@ -8,24 +11,26 @@ import { registerLogger } from "./modules/system/logger.js";
 import registerHandlebarsHelpers from "./modules/system/helpers.js";
 
 async function preloadHandlebarTemplates() {
-  const templatepaths = [
-    "systems/k4lt/templates/partials/move-card.hbs",
+  const templatePaths = [
+    "systems/k4lt/templates/partials/abilitity-card.hbs",
+    "systems/k4lt/templates/partials/advantage-card.hbs",
     "systems/k4lt/templates/partials/darksecret-card.hbs",
+    "systems/k4lt/templates/partials/disadvantage-card.hbs",
+    "systems/k4lt/templates/partials/family-card.hbs",
+    "systems/k4lt/templates/partials/gear-card.hbs",
+    "systems/k4lt/templates/partials/limitation-card.hbs",
+    "systems/k4lt/templates/partials/move-card.hbs",
+    "systems/k4lt/templates/partials/occupation-card.hbs",
     "systems/k4lt/templates/partials/relationship-card.hbs",
     "systems/k4lt/templates/partials/weapon-card.hbs",
-    "systems/k4lt/templates/partials/gear-card.hbs",
-    "systems/k4lt/templates/partials/advantage-card.hbs",
-    "systems/k4lt/templates/partials/disadvantage-card.hbs",
-    "systems/k4lt/templates/partials/modifier-values.hbs",
-    "systems/k4lt/templates/partials/passive-attribute-values.hbs",
-    "systems/k4lt/templates/partials/active-attribute-values.hbs",
-    "systems/k4lt/templates/partials/abilitity-card.hbs",
-    "systems/k4lt/templates/partials/limitation-card.hbs",
-    "systems/k4lt/templates/partials/level-values.hbs",
   ];
-  return loadTemplates(templatepaths);
+  kultLogger("Loading templates:", templatePaths); // Log the template paths
+  return loadTemplates(templatePaths);
 }
 
+/**
+ * Initialize the system
+ */
 Hooks.once("init", function () {
   registerSystemSettings();
   registerLogger();
@@ -70,6 +75,9 @@ Hooks.on("hotbarDrop", (bar, data, slot) => {
   }
 });
 
+/**
+ * Add K4lt links to the settings
+ */
 Hooks.on("renderSettings", (app, html) => {
   let lotdSection = $("<h2>K4lt Links</h2>");
   html.find("#settings-game").after(lotdSection);
@@ -102,3 +110,29 @@ Hooks.on("renderSettings", (app, html) => {
     window.open("https://www.buymeacoffee.com/yank", "_blank");
   });
 });
+
+Hooks.on('renderActorSheet', (app, html, data) => {
+  // Sélectionner l'image de la fiche
+  const imgElement = html.find('.actor-picture');
+
+  // Ajouter un événement de clic droit
+  imgElement.on('contextmenu', (event) => {
+    event.preventDefault(); // Empêche le menu contextuel par défaut
+    
+    // Récupérer l'objet acteur de la fiche
+    const actor = app.actor;
+
+    // Ouvre l'image dans une fenêtre pop-up
+    new ImagePopout(actor.img, {
+      title: actor.name,   // Titre de la fenêtre
+      shareable: true,     // Partage possible avec les joueurs
+    }).render(true);
+  });
+});
+
+
+//* Modifier l'éditeur TinyMCE utilisé par défaut dans les zones de texte dans Foundry VTT pour utiliser EasyMDE configuré comme Notion
+
+
+
+

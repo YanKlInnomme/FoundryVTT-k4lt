@@ -71,7 +71,7 @@
     }
   },
   "Item": {
-    "types": ["move", "advantage", "disadvantage", "darksecret", "relationship", "gear", "abilitity", "limitation", "weapon"],
+    "types": ["abilitity", "advantage", "darksecret", "disadvantage", "family", "gear", "limitation", "move", "occupation", "relationship", "weapon"],
     "templates": {
       "modifier": {
         "description": "",
@@ -124,11 +124,20 @@
       "effect": ""
     },
     "relationship": {
+      "description": "",
+      "summary": "",
       "target": "",
       "strength": 0
     },
     "gear": {
       "uses": "",
+      "description": ""
+    },
+    "occupation": {
+      "archetype": "",
+      "description": ""
+    },
+    "family": {
       "description": ""
     }
   }

@@ -37,6 +37,12 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 3.2.0.0
+ * Migration v12 complète du système (select>selectOptions et mergeObject>foundry.utils.mergeObject)
+ * Ajout des objets 'Famille' et 'Métier' pour les personnages joueurs
+ * Gestion dynamiques des sections 'Métiers', 'Avantages', 'Capacités', 'Limitations' et 'Familles' dans la fiche du personnage
+ * Correction de l'affichage en privé (seulement pour le MJ et le joueur concerné) du résultat des jets de dés pour les actions 'Désavantages'
+
 ## Version 3.1.3.0
  * Ajout de la traduction en Russe par kevintheradioguy (https://github.com/kevintheradioguy) (fichier ru.json)
  * Modification du niveau maximun des caractéristiques à +5
@@ -219,6 +225,12 @@ This digital adaptation is unofficial content from KULT: Divinity Lost, authoriz
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 to 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 3.2.0.0
+ * Full migration to v12 of the system (select>selectOptions and mergeObject>foundry.utils.mergeObject)
+ * Added 'Family' and 'Occupation' objects for player characters
+ * Dynamic management of the 'Occupations', 'Advantages', 'Abilities', 'Limitations' and 'Families' sections in the character sheet
+ * Correction of the private display (only for the GM and the player concerned) of the dice roll results for 'Disadvantages' actions
 
 ## Version 3.1.3.0
  * Russian translation added by kevintheradioguy (https://github.com/kevintheradioguy) (ru.json file)

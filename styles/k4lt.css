@@ -550,10 +550,6 @@ td textarea {
     min-height: 100px;
 }
 
-.background-box {
-    height: 100%;
-}
-
 .move-card-text {
     padding-left: 3px;
     vertical-align: middle;
@@ -820,9 +816,142 @@ input.short-input {
     border-bottom: 1px dashed rgba(148, 140, 104, 50%);
 }
 
+.tabs > [data-tab].active {
+    text-shadow: none;
+    color: rgb(224, 219, 204);
+}
+
+.actor .token-icon {
+    width: 66px;
+    height: 66px;
+}
+  
+.actor-extra-info {
+    font-size: 0.9em;
+    color: rgb(136, 136, 136);
+    margin-top: -32px;
+}
+
+.directory .directory-item img {
+    height: auto;
+}
+
+/* ----------------------------------------- */
+/*  Conditions                               */
+/* ----------------------------------------- */
+
+.condition-checkbox {
+    width: 25x;
+    height: 25px;
+    cursor: pointer;
+    margin-right: 5px;
+    border: 1px dashed #968c6a;
+}
+
+.condition-count {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: rgb(224, 219, 204);
+    position: relative;
+    top: -1px;
+    right: -5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    line-height: 25px;
+}
+
+.condition-section {
+    font-size: 1.25em;
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.condition-question {
+    color: #9b201f;
+    border-bottom: 1px solid #9b201f;
+    text-align: left;
+    font-size: 1.25em;
+    padding-left: 10px;
+    text-shadow: 0px 0px 5px #968c6a;
+}
+
+.condition-hold {
+    display: block;
+    margin-left: 80%;
+    font-size: 1.25em;
+    margin-top: 7px;
+    margin-bottom: 5px;
+}
+
+/* ----------------------------------------- */
+/*  Advancement                               */
+/* ----------------------------------------- */
+
+.advancement-checkbox {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    border: 1px dashed #968c6a;
+    margin-right: 5px;
+}
+
+.advancement-line {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.advancement-input {
+    width: 25px !important;
+}
+
+.tab-content {
+    margin-top: 10px;
+}
+
+.advancement-title {
+    color: rgb(40, 40, 40);
+    text-shadow: 0px 0px 5px #968c6a;
+    border-bottom: 1px solid #968c6a;
+    text-align: left;
+    font-size: 1.25em;
+    padding-left: 10px;
+}
+
+.advancement-info {
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+.advancement-sub-heading {
+    font-size: 1.25em;
+    margin-top: 7px;
+    margin-bottom: 2px;
+}
+
+.advancement-section {
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
 
 
-.k4lt.ap-tracker {
+
+
+
+
+
+
+/* .k4lt.ap-tracker {
     position: absolute;
     display: block;
     margin: 5px;
@@ -886,4 +1015,4 @@ input.short-input {
     align-items: center;
     background-color: bisque;
     border-radius: 6px;
-  }
+  } */

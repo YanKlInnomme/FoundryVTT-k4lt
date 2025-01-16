@@ -9,7 +9,7 @@
       "weapon": "Broń",
       "advantage": "Atut",
       "disadvantage": "Komplikacja",
-      "abilitity": "Zdolność",
+      "ability": "Zdolność",
       "limitation": "Ograniczenie",
       "darksecret": "Mroczny Sekret",
       "relationship": "Relacja",
@@ -163,5 +163,87 @@
     "8": "Upadły Archanioł lub Anioł Śmierci",
     "9": "Oslabiony Archanioł lub Anioł Śmierci",
     "10": "Archanioł lub Anioł Śmierci"
+  },
+
+  "k4lt.Families": "Rodziny",
+  "k4lt.Family": "Rodzina",
+  "k4lt.Occupations": "Zawody",
+  "k4lt.Occupation": "Zawód",
+  "k4lt.Archetypes": "Archetypy",
+  "k4lt.Archetype": "Archetyp",
+
+  "k4lt.Summary": "Podsumowanie",
+
+  "k4lt.Conditions": "Warunki",
+  "k4lt.Angry": "Zły",
+  "k4lt.WhoOrWhatIsTheCharacterAngryAt": "Na kogo lub na co jest zły bohater?",
+  "k4lt.HowIsTheAngerManifesting": "Jak objawia się złość?",
+  "k4lt.Sad": "Smutny",
+  "k4lt.WhatIsCausingTheSadness": "Co powoduje smutek?",
+  "k4lt.HowDoesTheCharacterDealWithIt": "Jak bohater sobie z tym radzi?",
+  "k4lt.Scared": "Przestraszony",
+  "k4lt.WhatIsTheSourceOfTheFear": "Co jest źródłem strachu?",
+  "k4lt.HowDoesTheFearAffectTheCharactersActions": "Jak strach wpływa na działania bohatera?",
+  "k4lt.GuiltRidden": "Obciążony winą",
+  "k4lt.WhatDoesTheCharacterFeelGuiltyAbout": "Za co bohater czuje się winny?",
+  "k4lt.WhoDoesTheCharacterSeekForgivenessFrom": "Od kogo bohater szuka przebaczenia?",
+  "k4lt.Obsessed": "Opętany",
+  "k4lt.WhatIsTheCharacterObsessedWith": "Czym jest opętany bohater?",
+  "k4lt.WhyDoesTheCharacterFindItCompelling": "Dlaczego bohater uważa to za fascynujące?",
+  "k4lt.Distracted": "Rozproszony",
+  "k4lt.WhatIsTheCharacterDistractedBy": "Co rozprasza bohatera?",
+  "k4lt.HowDoesThisDistractionImpactTheSituation": "Jak to rozproszenie wpływa na sytuację?",
+  "k4lt.Haunted": "Nawiedzony",
+  "k4lt.WhatIsHauntingTheCharacter": "Co nawiedza bohatera?",
+
+  "k4lt.Sleeper": "Śpiący",
+  "k4lt.Aware": "Świadomy",
+  "k4lt.Enlightened": "Oświecony",
+
+  "k4lt.LevelUp": " zdobył 5 punktów doświadczenia, gracz może wybrać dostępny postęp na karcie postaci.",
+  "k4lt.NoOwner": "Brak właściciela",
+  
+  "k4lt.Advancement": {
+    "Title": "Postęp",
+    "ExperiencePoints": "Punkty doświadczenia",
+    "Level": "Poziom",
+    "StateOfConsciousness": "Stan świadomości",
+    "Sleeper": {
+      "Title": "Postęp Śpiącego",
+      "Info": "Twój śpiący PC postępuje w następujących krokach:",
+      "OneToFive": "Przypominają sobie coś o swoim Mrocznym Sekrecie.",
+      "Six": "Budzą się. Wybierasz Świadomy Archetyp. PC zachowuje swój Mroczny Sekret i swoje Komplikacje, ale gracz wybiera trzy Atuty z nowego Archetypu."
+    },
+    "Aware": {
+      "Title": "Postęp Świadomego",
+      "Info": "Kiedy twoja postać postępuje, możesz wybrać z następujących postępów.",
+      "Title1": "Wybierz jedno z tych:",
+      "One": "Zwiększ jeden aktywny Atrybut o +1 (maks +3).",
+      "Two": "Zwiększ jeden pasywny Atrybut o +1 (maks +3).",
+      "Three": "Zwiększ dowolny Atrybut o +1 (maks +4).",
+      "Four": "Wybierz nowy Atut ze swojego Archetypu.",
+      "Title2": "Po 5 Postępach możesz również wybrać:",
+      "Five": "Zwiększ dowolny Atrybut o +1 (maks +4).",
+      "Six": "Wybierz nowy Atut z dowolnego Świadomego Archetypu.",
+      "Seven": "Zakończ wątek fabularny swojej postaci według własnego uznania i stwórz nową Świadomą postać, która zaczyna z 2 Postępami.",
+      "Eight": "Zamień swój obecny Archetyp na inny Świadomy Archetyp i usuń jeden z twoich początkowych 3 Atutów.",
+      "Title3": "Po 10 Postępach możesz również wybrać:",
+      "Nine": "Awansuj swoją postać do Oświeconego Archetypu."
+    },
+    "Enlightened": {
+      "Title": "Postęp Oświeconego",
+      "Title1": "Wybierz jedno z tych:",
+      "One": "Dodaj +1 do dowolnego Atrybutu (maks +5).",
+      "Two": "Dodaj +1 do aktywnego Atrybutu (maks +4).",
+      "Three": "Dodaj +1 do pasywnego Atrybutu (maks +4).",
+      "Four": "Zdobądź Zdolność dostępną dla twojego Archetypu.",
+      "Title2": "Po 5 Postępach możesz również wybrać:",
+      "Five": "Dodaj +1 do dowolnego Atrybutu (maks +5).",
+      "Six": "Zdobądź Zdolność lub Atut według własnego wyboru.",
+      "Seven": "Zakończ historię swojej postaci i stwórz nową PC.",
+      "Eight": "Zmień Archetyp swojej postaci na nowy Oświecony Archetyp.",
+      "Title3": "Po 10 Postępach możesz również wybrać:",
+      "Nine": "Rozpocznij swoją podróż do Przebudzenia."
+    }
   }
 }

@@ -5,7 +5,7 @@
       "npc": "Personnage Non Joueur"
     },
     "Item": {
-      "abilitity": "Capacité",
+      "ability": "Capacité",
       "advantage": "Avantage",
       "darksecret": "Sombre Secret",
       "disadvantage": "Désavantage",
@@ -174,5 +174,80 @@
     "8": "Archonte (Ange de la Mort) déchu",
     "9": "Archonte (Ange de la Mort) affaibli",
     "10": "Archonte ou Ange de la Mort"
+  },
+  
+  "k4lt.Summary": "Résumé",
+  
+  "k4lt.Conditions": "Conditions",
+  "k4lt.Angry": "En colère",
+  "k4lt.WhoOrWhatIsTheCharacterAngryAt": "Qui ou quoi met le personnage en colère ?",
+  "k4lt.HowIsTheAngerManifesting": "Comment se manifeste la colère ?",
+  "k4lt.Sad": "Triste",
+  "k4lt.WhatIsCausingTheSadness": "Qu'est-ce qui cause la tristesse ?",
+  "k4lt.HowDoesTheCharacterDealWithIt": "Comment le personnage gère-t-il cela ?",
+  "k4lt.Scared": "Effrayé·e",
+  "k4lt.WhatIsTheSourceOfTheFear": "Quelle est la source de la peur ?",
+  "k4lt.HowDoesTheFearAffectTheCharactersActions": "Comment la peur affecte-t-elle les actions du personnage ?",
+  "k4lt.GuiltRidden": "Accablé·e de culpabilité",
+  "k4lt.WhatDoesTheCharacterFeelGuiltyAbout": "De quoi le personnage se sent-il coupable ?",
+  "k4lt.WhoDoesTheCharacterSeekForgivenessFrom": "De qui le personnage cherche-t-il le pardon ?",
+  "k4lt.Obsessed": "Obsédé·e",
+  "k4lt.WhatIsTheCharacterObsessedWith": "Par quoi le personnage est-il obsédé ?",
+  "k4lt.WhyDoesTheCharacterFindItCompelling": "Pourquoi le personnage trouve-t-il cela captivant ?",
+  "k4lt.Distracted": "Distrait·e",
+  "k4lt.WhatIsTheCharacterDistractedBy": "Par quoi le personnage est-il distrait ?",
+  "k4lt.HowDoesThisDistractionImpactTheSituation": "Comment cette distraction impacte-t-elle la situation ?",
+  "k4lt.Haunted": "Hanté·e",
+  "k4lt.WhatIsHauntingTheCharacter": "Qu'est-ce qui hante le personnage ?",
+
+  "k4lt.Sleeper": "Dormeur·euse",
+  "k4lt.Aware": "Conscient·e",
+  "k4lt.Enlightened": "Éclairé·e",
+
+  "k4lt.LevelUp": " a accumulé 5 points d'EXPérience, la joueuse ou le joueur peut choisir une progression disponible sur sa feuille de personnage.",
+  "k4lt.NoOwner": "Aucun propriétaire",
+
+  "k4lt.Advancement": {
+    "Title": "Progression",
+    "ExperiencePoints": "Points d'EXPérience",
+    "Level": "Niveau",
+    "StateOfConsciousness": "État de conscience",
+    "Sleeper": {
+      "Title": "Progression de la Dormeuse ou du Dormeur",
+      "Info": "Votre PJ endormi progresse selon les étapes suivantes :",
+      "OneToFive": "Il se souvient de quelque chose à propos de son Sombre Secret.",
+      "Six": "Il s'éveille. Vous choisissez un Archétype Conscient·e. Le PJ garde son Sombre Secret et ses Désavantages, mais le joueur choisit trois Avantages de son nouvel Archétype."
+    },
+    "Aware": {
+      "Title": "Progression du Conscient ou de la Consciente",
+      "Info": "Lorsque votre personnage progresse, vous pouvez choisir parmi les progressions suivantes.",
+      "Title1": "Choisissez l'un de ces éléments :",
+      "One": "Augmentez un Attribut actif de +1 (max +3).",
+      "Two": "Augmentez un Attribut passif de +1 (max +3).",
+      "Three": "Augmentez n'importe quel Attribut de +1 (max +4).",
+      "Four": "Sélectionnez un nouvel Avantage de votre Archétype.",
+      "Title2": "Après 5 Progressions, vous pouvez également choisir :",
+      "Five": "Augmentez n'importe quel Attribut de +1 (max +4).",
+      "Six": "Sélectionnez un nouvel Avantage de n'importe quel Archétype Conscient·e.",
+      "Seven": "Terminez l'arc narratif de votre personnage comme vous le souhaitez, et créez un nouveau personnage Conscient·e, qui commence avec 2 Progressions.",
+      "Eight": "Remplacez votre Archétype actuel par un autre Archétype Conscient·e, et effacez l'un de vos 3 Avantages de départ.",
+      "Title3": "Après 10 Progressions, vous pouvez également choisir :",
+      "Nine": "Faites progresser votre personnage vers un Archétype Éclairé·e."
+    },
+    "Enlightened": {
+      "Title": "Progression de l'Éclairé·e",
+      "Title1": "Choisissez l'un de ces éléments :",
+      "One": "Ajoutez +1 à n'importe quel Attribut (max +5).",
+      "Two": "Ajoutez +1 à un Attribut actif (max +4).",
+      "Three": "Ajoutez +1 à un Attribut passif (max +4).",
+      "Four": "Gagnez une Capacité disponible pour votre Archétype.",
+      "Title2": "Après 5 Progressions, vous pouvez également choisir :",
+      "Five": "Ajoutez +1 à n'importe quel Attribut (max +5).",
+      "Six": "Gagnez une Capacité ou un Avantage de votre choix.",
+      "Seven": "Terminez l'histoire de votre personnage et créez un nouveau PJ.",
+      "Eight": "Changez l'Archétype de votre personnage pour un nouvel Archétype Éclairé·e.",
+      "Title3": "Après 10 Progressions, vous pouvez également choisir :",
+      "Nine": "Commencez votre voyage vers l'Éveil."
+    }
   }
 }

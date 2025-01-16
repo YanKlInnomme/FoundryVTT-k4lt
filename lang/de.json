@@ -9,7 +9,7 @@
       "weapon": "Waffe",
       "advantage": "Vorteil",
       "disadvantage": "Nachteil",
-      "abilitity": "Fähigkeit",
+      "ability": "Fähigkeit",
       "limitation": "Einschränkung",
       "darksecret": "Dunkles Geheimnis",
       "relationship": "Beziehung",
@@ -163,6 +163,87 @@
     "8": "Gefallener Erzengel oder Todesengel",
     "9": "Geschwächter Erzengel oder Todesengel",
     "10": "Erzengel oder Todesengel"
+  },
+
+  "k4lt.Families": "Familien",
+  "k4lt.Family": "Familie",
+  "k4lt.Occupations": "Berufe",
+  "k4lt.Occupation": "Beruf",
+  "k4lt.Archetypes": "Archetypen",
+  "k4lt.Archetype": "Archetyp",
+
+  "k4lt.Summary": "Zusammenfassung",
+
+  "k4lt.Conditions": "Bedingungen",
+  "k4lt.Angry": "Wütend",
+  "k4lt.WhoOrWhatIsTheCharacterAngryAt": "Auf wen oder was ist der Charakter wütend?",
+  "k4lt.HowIsTheAngerManifesting": "Wie manifestiert sich die Wut?",
+  "k4lt.Sad": "Traurig",
+  "k4lt.WhatIsCausingTheSadness": "Was verursacht die Traurigkeit?",
+  "k4lt.HowDoesTheCharacterDealWithIt": "Wie geht der Charakter damit um?",
+  "k4lt.Scared": "Verängstigt",
+  "k4lt.WhatIsTheSourceOfTheFear": "Was ist die Quelle der Angst?",
+  "k4lt.HowDoesTheFearAffectTheCharactersActions": "Wie beeinflusst die Angst die Handlungen des Charakters?",
+  "k4lt.GuiltRidden": "Schuldbeladen",
+  "k4lt.WhatDoesTheCharacterFeelGuiltyAbout": "Wofür fühlt sich der Charakter schuldig?",
+  "k4lt.WhoDoesTheCharacterSeekForgivenessFrom": "Von wem sucht der Charakter Vergebung?",
+  "k4lt.Obsessed": "Besessen",
+  "k4lt.WhatIsTheCharacterObsessedWith": "Wovon ist der Charakter besessen?",
+  "k4lt.WhyDoesTheCharacterFindItCompelling": "Warum findet der Charakter es faszinierend?",
+  "k4lt.Distracted": "Abgelenkt",
+  "k4lt.WhatIsTheCharacterDistractedBy": "Wovon wird der Charakter abgelenkt?",
+  "k4lt.HowDoesThisDistractionImpactTheSituation": "Wie beeinflusst diese Ablenkung die Situation?",
+  "k4lt.Haunted": "Verfolgt",
+  "k4lt.WhatIsHauntingTheCharacter": "Was verfolgt den Charakter?",
+
+  "k4lt.Sleeper": "Schläfer",
+  "k4lt.Aware": "Bewusst",
+  "k4lt.Enlightened": "Erleuchtet",
+
+  "k4lt.LevelUp": " hat 5 Erfahrungspunkte gesammelt, der Spieler kann einen verfügbaren Fortschritt auf seinem Charakterbogen wählen.",
+  "k4lt.NoOwner": "Kein Besitzer",
+  
+  "k4lt.Advancement": {
+    "Title": "Fortschritt",
+    "ExperiencePoints": "Erfahrungspunkte",
+    "Level": "Stufe",
+    "StateOfConsciousness": "Bewusstseinszustand",
+    "Sleeper": {
+      "Title": "Fortschritt des Schläfers",
+      "Info": "Dein schlafender SC schreitet in den folgenden Schritten voran:",
+      "OneToFive": "Sie erinnern sich an etwas über ihr Dunkles Geheimnis.",
+      "Six": "Sie erwachen. Du wählst einen Bewussten Archetyp. Der SC behält sein Dunkles Geheimnis und seine Nachteile, aber der Spieler wählt drei Vorteile aus seinem neuen Archetyp."
+    },
+    "Aware": {
+      "Title": "Fortschritt des Bewussten",
+      "Info": "Wenn dein Charakter voranschreitet, kannst du aus den folgenden Fortschritten wählen.",
+      "Title1": "Wähle einen dieser Punkte:",
+      "One": "Erhöhe ein aktives Attribut um +1 (max +3).",
+      "Two": "Erhöhe ein passives Attribut um +1 (max +3).",
+      "Three": "Erhöhe ein beliebiges Attribut um +1 (max +4).",
+      "Four": "Wähle einen neuen Vorteil aus deinem Archetyp.",
+      "Title2": "Nach 5 Fortschritten kannst du auch wählen:",
+      "Five": "Erhöhe ein beliebiges Attribut um +1 (max +4).",
+      "Six": "Wähle einen neuen Vorteil aus einem beliebigen Bewussten Archetyp.",
+      "Seven": "Beende die Geschichte deines Charakters nach Belieben und erstelle einen neuen Bewussten Charakter, der mit 2 Fortschritten beginnt.",
+      "Eight": "Ersetze deinen aktuellen Archetyp durch einen anderen Bewussten Archetyp und lösche einen deiner 3 Startvorteile.",
+      "Title3": "Nach 10 Fortschritten kannst du auch wählen:",
+      "Nine": "Lass deinen Charakter zu einem Erleuchteten Archetyp aufsteigen."
+    },
+    "Enlightened": {
+      "Title": "Fortschritt des Erleuchteten",
+      "Title1": "Wähle einen dieser Punkte:",
+      "One": "Füge einem beliebigen Attribut +1 hinzu (max +5).",
+      "Two": "Füge einem aktiven Attribut +1 hinzu (max +4).",
+      "Three": "Füge einem passiven Attribut +1 hinzu (max +4).",
+      "Four": "Erhalte eine Fähigkeit, die deinem Archetyp zur Verfügung steht.",
+      "Title2": "Nach 5 Fortschritten kannst du auch wählen:",
+      "Five": "Füge einem beliebigen Attribut +1 hinzu (max +5).",
+      "Six": "Erhalte eine Fähigkeit oder einen Vorteil deiner Wahl.",
+      "Seven": "Beende die Geschichte deines Charakters und erstelle einen neuen SC.",
+      "Eight": "Ändere den Archetyp deines Charakters zu einem neuen Erleuchteten Archetyp.",
+      "Title3": "Nach 10 Fortschritten kannst du auch wählen:",
+      "Nine": "Beginne deine Reise zum Erwachen."
+    }
   }
 }
-    

@@ -31,6 +31,8 @@
     <nav class="sheet-tabs tabs align-center" data-group="primary">
         <a class="choice" data-tab="Stats">{{localize "k4lt.Stats"}}</a>
         <a class="choice" data-tab="Background">{{localize "k4lt.Background"}}</a>
+        <a class="choice" data-tab="Conditions">{{localize "k4lt.Conditions"}}<span class="condition-count" style="display: none;"></span></a>
+        <a class="choice" data-tab="Advancement">{{localize "k4lt.Advancement.Title"}}</a>
         <a class="choice" data-tab="Notes">{{localize "k4lt.Notes"}}</a>
     </nav>   
 
@@ -163,11 +165,11 @@
                     {{/each}}
                 </div>
                 {{/if}}
-                {{#if abilitities.length}}
+                {{#if abilities.length}}
                 <div class="section-label">{{localize "k4lt.Abilities"}}</div>
-                <div class="item-list abilitity-list">
-                    {{#each abilitities as |abilitity id|}}
-                        {{> "systems/k4lt/templates/partials/abilitity-card.hbs" abilitity}}
+                <div class="item-list ability-list">
+                    {{#each abilities as |ability id|}}
+                        {{> "systems/k4lt/templates/partials/ability-card.hbs" ability}}
                     {{/each}}
                 </div>
                 {{/if}}
@@ -283,7 +285,7 @@
     {{!-- Background Tab --}}
     <div id="Background" class="tab background-section {{actor._id}}-tab" data-group="primary" data-tab="Background">
         <div class="two-column">
-            <div "background-box">
+            <div>
                 <div class="section-label"><input name="system.background.section1" type="text" style="border: none; background-color: transparent;" value="{{system.background.section1}}" placeholder="{{localize "k4lt.WhatYouHoldDear"}}" /></div>
                 <div class="free-text">
                     {{editor system.whatyouholddear target="system.whatyouholddear" button=true owner=owner editable=editable}}
@@ -297,7 +299,7 @@
             </div>
         </div>
          <div class="two-column">
-            <div "background-box">
+            <div>
                 <div class="section-label"><input name="system.background.section3" type="text" style="border: none; background-color: transparent;" value="{{system.background.section3}}" placeholder="{{localize "k4lt.RelationToTheOtherCharacters"}}" /></div>
                 <div class="free-text">
                     {{editor system.relationtotheothercharacters target="system.relationtotheothercharacters" button=true owner=owner editable=editable}}
@@ -312,7 +314,238 @@
         </div>
     </div>
 
-    {{!-- Notes Tab --}}
+    {{!-- Conditions Tab --}}
+    <div id="Conditions" class="tab conditions-section {{actor._id}}-tab" data-group="primary" data-tab="Conditions">
+            <div>
+                <div class="condition-section">
+                    <img id="conditionAngry" class="condition-checkbox" src="{{getConditionsImage system.conditionAngry.state}}">
+                    {{localize "k4lt.Angry"}}
+                </div>
+                {{#if (eq system.conditionAngry.state "checked")}}
+                <div class="condition-question">{{localize "k4lt.WhoOrWhatIsTheCharacterAngryAt"}}</div>
+                <div class="free-text">
+                    {{editor system.conditionAngry.answer1 target="system.conditionAngry.answer1" button=true owner=owner editable=editable}}
+                </div>
+                <div class="condition-question">{{localize "k4lt.HowIsTheAngerManifesting"}}</div>
+                <div class="free-text">
+                    {{editor system.conditionAngry.answer2 target="system.conditionAngry.answer2" button=true owner=owner editable=editable}}
+                </div>
+                {{/if}}
+            </div>
+            <div>
+                <div class="condition-section">
+                    <img id="conditionSad" class="condition-checkbox" src="{{getConditionsImage system.conditionSad.state}}">
+                    {{localize "k4lt.Sad"}}
+                </div>
+                {{#if (eq system.conditionSad.state "checked")}}
+                <div class="condition-question">{{localize "k4lt.WhatIsCausingTheSadness"}}</div>
+                <div class="free-text">
+                    {{editor system.conditionSad.answer1 target="system.conditionSad.answer1" button=true owner=owner editable=editable}}
+                </div>
+                <div class="condition-question">{{localize "k4lt.HowDoesTheCharacterDealWithIt"}}</div>
+                <div class="free-text">
+                    {{editor system.conditionSad.answer2 target="system.conditionSad.answer2" button=true owner=owner editable=editable}}
+                </div> 
+                {{/if}}
+            </div>
+            <div>
+                <div class="condition-section">
+                    <img id="conditionScared" class="condition-checkbox" src="{{getConditionsImage system.conditionScared.state}}">
+                    {{localize "k4lt.Scared"}}
+                </div> 
+                {{#if (eq system.conditionScared.state "checked")}}
+                <div class="condition-question">{{localize "k4lt.WhatIsTheSourceOfTheFear"}}</div>
+                <div class="free-text">
+                    {{editor system.conditionScared.answer1 target="system.conditionScared.answer1" button=true owner=owner editable=editable}}
+                </div>
+                <div class="condition-question">{{localize "k4lt.HowDoesTheFearAffectTheCharactersActions"}}</div>
+                <div class="free-text">
+                    {{editor system.conditionScared.answer2 target="system.conditionScared.answer2" button=true owner=owner editable=editable}}
+                </div>
+                {{/if}}
+            </div>
+            <div>
+                <div class="condition-section">
+                    <img id="conditionGuiltRidden" class="condition-checkbox" src="{{getConditionsImage system.conditionGuiltRidden.state}}">
+                    {{localize "k4lt.GuiltRidden"}}
+                </div>
+                {{#if (eq system.conditionGuiltRidden.state "checked")}}
+                <div class="condition-question">{{localize "k4lt.WhatDoesTheCharacterFeelGuiltyAbout"}}</div>
+                <div class="free-text">
+                    {{editor system.conditionGuiltRidden.answer1 target="system.conditionGuiltRidden.answer1" button=true owner=owner editable=editable}}
+                </div>
+                <div class="condition-question">{{localize "k4lt.WhoDoesTheCharacterSeekForgivenessFrom"}}</div>
+                <div class="free-text">
+                    {{editor system.conditionGuiltRidden.answer2 target="system.conditionGuiltRidden.answer2" button=true owner=owner editable=editable}}
+                </div>
+                {{/if}}
+            </div>
+            <div>
+                <div class="condition-section">
+                    <img id="conditionObsessed" class="condition-checkbox" src="{{getConditionsImage system.conditionObsessed.state}}">
+                    {{localize "k4lt.Obsessed"}}
+                </div>
+                {{#if (eq system.conditionObsessed.state "checked")}}
+                <div class="condition-question">{{localize "k4lt.WhatIsTheCharacterObsessedWith"}}</div>
+                <div class="free-text">
+                    {{editor system.conditionObsessed.answer1 target="system.conditionObsessed.answer1" button=true owner=owner editable=editable}}
+                </div>
+                <div class="condition-question">{{localize "k4lt.WhyDoesTheCharacterFindItCompelling"}}</div>
+                <div class="free-text">
+                    {{editor system.conditionObsessed.answer2 target="system.conditionObsessed.answer2" button=true owner=owner editable=editable}}
+                </div>
+                {{/if}}
+            </div>
+            <div>
+                <div class="condition-section">
+                    <img id="conditionDistracted" class="condition-checkbox" src="{{getConditionsImage system.conditionDistracted.state}}">
+                    {{localize "k4lt.Distracted"}}
+                </div>
+                {{#if (eq system.conditionDistracted.state "checked")}}
+                <div class="condition-question">{{localize "k4lt.WhatIsTheCharacterDistractedBy"}}</div>
+                <div class="free-text">
+                    {{editor system.conditionDistracted.answer1 target="system.conditionDistracted.answer1" button=true owner=owner editable=editable}}
+                </div>
+                <div class="condition-question">{{localize "k4lt.HowDoesThisDistractionImpactTheSituation"}}</div>
+                <div class="free-text">
+                    {{editor system.conditionDistracted.answer2 target="system.conditionDistracted.answer2" button=true owner=owner editable=editable}}
+                </div>
+                {{/if}}
+            </div>
+            <div>
+                <div class="condition-section">
+                    <img id="conditionHaunted" class="condition-checkbox" src="{{getConditionsImage system.conditionHaunted.state}}">
+                    {{localize "k4lt.Haunted"}}
+                </div>
+                {{#if (eq system.conditionHaunted.state "checked")}}
+                <div class="condition-hold">{{localize "k4lt.Hold"}}:
+                    <a class="token-condition-add" title="{{localize 'k4lt.AddHold'}}"><i class="far fa-plus-square"></i></a>
+                    {{system.conditionHaunted.tokens}}
+                    {{#if (gte system.conditionHaunted.tokens 1)}}
+                        <a class="token-condition-spend" title="{{localize 'k4lt.SpendHold'}}"><i class="far fa-minus-square"></i></a>
+                    {{/if}}
+                </div>
+                <div class="condition-question">{{localize "k4lt.WhatIsHauntingTheCharacter"}}</div>
+                <div class="free-text">
+                    {{editor system.conditionHaunted.answer target="system.conditionHaunted.answer" button=true owner=owner editable=editable}}
+                </div>
+                {{/if}}
+            </div>
+    </div>
+
+{{!-- Advancement Tab --}}
+<div id="Advancement" class="tab background-section {{actor._id}}-tab" data-group="primary" data-tab="Advancement">
+    <div class="advancement-line">
+        {{localize "k4lt.Advancement.ExperiencePoints"}}:
+        <img id="advancementExp1" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementExp1.state}}">
+        <img id="advancementExp2" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementExp2.state}}">
+        <img id="advancementExp3" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementExp3.state}}">
+        <img id="advancementExp4" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementExp4.state}}">
+        <img id="advancementExp5" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementExp5.state}}">
+        <div>&nbsp;</div><div>&nbsp;</div>
+        <div>{{localize "k4lt.Advancement.Level"}}:</div>
+        <input type="number" class="advancement-input" name="system.advancementLevel.value" value="{{system.advancementLevel.value}}"  />
+    </div>
+    <!-- Menu déroulant -->
+    <div class="dropdown">
+        {{localize "k4lt.Advancement.StateOfConsciousness"}}:
+        <select name="system.advancement.statut">
+            {{selectOptions StatutValues selected=system.advancement.statut valueAttr="value" labelAttr="label"}}
+        </select>
+    </div>
+    <!-- Contenu des onglets -->
+    <div id="tab-content">
+        <div id="sleeper-tab" class="tab-content">
+            <div class="advancement-title">{{localize "k4lt.Advancement.Sleeper.Title"}}</div>
+            <div class="advancement-info">{{localize "k4lt.Advancement.Sleeper.Info"}}</div>
+            <div class="advancement-section"><img id="advancementSleeper1" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementSleeper1.state}}">
+                {{localize "k4lt.Advancement.Sleeper.OneToFive"}}</div>
+            <div class="advancement-section"><img id="advancementSleeper2" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementSleeper2.state}}">
+                {{localize "k4lt.Advancement.Sleeper.OneToFive"}}</div>
+            <div class="advancement-section"><img id="advancementSleeper3" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementSleeper3.state}}">
+                {{localize "k4lt.Advancement.Sleeper.OneToFive"}}</div>
+            <div class="advancement-section"><img id="advancementSleeper4" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementSleeper4.state}}">
+                {{localize "k4lt.Advancement.Sleeper.OneToFive"}}</div>
+            <div class="advancement-section"><img id="advancementSleeper5" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementSleeper5.state}}">
+                {{localize "k4lt.Advancement.Sleeper.OneToFive"}}</div>
+            <div class="advancement-section"><img id="advancementSleeper6" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementSleeper6.state}}">
+                {{localize "k4lt.Advancement.Sleeper.Six"}}</div>
+        </div>
+        <div id="aware-tab" class="tab-content">
+            <div class="advancement-title">{{localize "k4lt.Advancement.Aware.Title"}}</div>
+            <div class="advancement-info">{{localize "k4lt.Advancement.Aware.Info"}}</div>
+            <div class="advancement-sub-heading">{{localize "k4lt.Advancement.Aware.Title1"}}</div>
+            <div class="advancement-section"><img id="advancementAware11" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementAware11.state}}">
+                <img id="advancementAware12" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementAware12.state}}">
+                <img id="advancementAware13" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementAware13.state}}">
+                <img id="advancementAware14" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementAware14.state}}">
+                <img id="advancementAware15" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementAware15.state}}">
+                <img id="advancementAware16" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementAware16.state}}">                
+                {{localize "k4lt.Advancement.Aware.One"}}</div>
+            <div class="advancement-section"><img id="advancementAware21" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementAware21.state}}">
+                <img id="advancementAware22" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementAware22.state}}">
+                {{localize "k4lt.Advancement.Aware.Two"}}</div>
+            <div class="advancement-section"><img id="advancementAware31" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementAware31.state}}">
+                {{localize "k4lt.Advancement.Aware.Three"}}</div>
+            <div class="advancement-section"><img id="advancementAware41" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementAware41.state}}">
+                <img id="advancementAware42" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementAware42.state}}">
+                <img id="advancementAware43" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementAware43.state}}">
+                {{localize "k4lt.Advancement.Aware.Four"}}</div>
+            <div class="advancement-sub-heading">{{localize "k4lt.Advancement.Aware.Title2"}}</div>
+            <div class="advancement-section"><img id="advancementAware51" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementAware51.state}}">
+                <img id="advancementAware52" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementAware52.state}}">
+                {{localize "k4lt.Advancement.Aware.Five"}}</div>
+            <div class="advancement-section"><img id="advancementAware61" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementAware61.state}}">
+                <img id="advancementAware62" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementAware62.state}}">
+                {{localize "k4lt.Advancement.Aware.Six"}}</div>
+            <div class="advancement-section"><img id="advancementAware71" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementAware71.state}}">
+                {{localize "k4lt.Advancement.Aware.Seven"}}</div>
+            <div class="advancement-section"><img id="advancementAware81" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementAware81.state}}">
+                {{localize "k4lt.Advancement.Aware.Eight"}}</div>
+            <div class="advancement-sub-heading">{{localize "k4lt.Advancement.Aware.Title3"}}</div>
+            <div class="advancement-section"><img id="advancementAware91" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementAware91.state}}">
+                {{localize "k4lt.Advancement.Aware.Nine"}}</div>
+        </div>
+        <div id="enlightened-tab" class="tab-content">
+            <div class="advancement-title">{{localize "k4lt.Advancement.Enlightened.Title"}}</div>
+            <div class="advancement-sub-heading">{{localize "k4lt.Advancement.Enlightened.Title1"}}</div>
+            <div class="advancement-section"><img id="advancementEnlightened11" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementEnlightened11.state}}">
+                {{localize "k4lt.Advancement.Enlightened.One"}}</div>
+            <div class="advancement-section"><img id="advancementEnlightened21" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementEnlightened21.state}}">
+                <img id="advancementEnlightened22" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementEnlightened22.state}}">
+                <img id="advancementEnlightened23" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementEnlightened23.state}}">
+                <img id="advancementEnlightened24" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementEnlightened24.state}}">
+                <img id="advancementEnlightened25" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementEnlightened25.state}}">
+                <img id="advancementEnlightened26" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementEnlightened26.state}}">
+                {{localize "k4lt.Advancement.Enlightened.Two"}}</div>
+            <div class="advancement-section"><img id="advancementEnlightened31" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementEnlightened31.state}}">
+                <img id="advancementEnlightened32" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementEnlightened32.state}}">
+                {{localize "k4lt.Advancement.Enlightened.Three"}}</div>
+            <div class="advancement-section"><img id="advancementEnlightened41" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementEnlightened41.state}}">
+                <img id="advancementEnlightened42" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementEnlightened42.state}}">
+                <img id="advancementEnlightened43" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementEnlightened43.state}}">
+                {{localize "k4lt.Advancement.Enlightened.Four"}}</div>
+            <div class="advancement-sub-heading">{{localize "k4lt.Advancement.Enlightened.Title2"}}</div>
+            <div class="advancement-section"><img id="advancementEnlightened51" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementEnlightened51.state}}">
+                <img id="advancementEnlightened52" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementEnlightened52.state}}">
+                {{localize "k4lt.Advancement.Enlightened.Five"}}</div>
+            <div class="advancement-section"><img id="advancementEnlightened61" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementEnlightened61.state}}">
+                <img id="advancementEnlightened62" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementEnlightened62.state}}">
+                <img id="advancementEnlightened63" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementEnlightened63.state}}">
+                {{localize "k4lt.Advancement.Enlightened.Six"}}</div>
+            <div class="advancement-section"><img id="advancementEnlightened71" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementEnlightened71.state}}">
+                {{localize "k4lt.Advancement.Enlightened.Seven"}}</div>
+            <div class="advancement-section"><img id="advancementEnlightened81" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementEnlightened81.state}}">
+                {{localize "k4lt.Advancement.Enlightened.Eight"}}</div>
+            <div class="advancement-sub-heading">{{localize "k4lt.Advancement.Enlightened.Title3"}}</div>
+            <div class="advancement-section"><img id="advancementEnlightened91" class="advancement-checkbox" src="{{getAdvancementsImage system.advancementEnlightened91.state}}">
+                {{localize "k4lt.Advancement.Enlightened.Nine"}}</div>
+        </div>
+    </div>
+</div>
+
+
+        {{!-- Notes Tab --}}
     <div id="Notes" class="tab background-section {{actor._id}}-tab" data-group="primary" data-tab="Notes">
         <div class="one-column">
             <div "notes-box">

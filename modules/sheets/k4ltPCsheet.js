@@ -18,7 +18,7 @@ export default class k4ltPCsheet extends ActorSheet {
   getData() {
     const context = super.getData();
     context.system = context.actor.system;
-    context.abilitities = context.items.filter(item => item.type === "abilitity").sort((a, b) => a.name.localeCompare(b.name));
+    context.abilities = context.items.filter(item => item.type === "ability").sort((a, b) => a.name.localeCompare(b.name));
     context.advantages = context.items.filter(item => item.type === "advantage").sort((a, b) => a.name.localeCompare(b.name));
     context.darksecrets = context.items.filter(item => item.type === "darksecret").sort((a, b) => a.name.localeCompare(b.name));
     context.disadvantages = context.items.filter(item => item.type === "disadvantage").sort((a, b) => a.name.localeCompare(b.name));
@@ -84,6 +84,13 @@ export default class k4ltPCsheet extends ActorSheet {
       { value: "9", label: game.i18n.localize("k4lt.StabilityBroken") },
     ];
     context.stabilityValues = stabilityValues;
+
+    const StatutValues = [
+      { value: "Sleeper", label: game.i18n.localize("k4lt.Sleeper") },
+      { value: "Aware", label: game.i18n.localize("k4lt.Aware") },
+      { value: "Enlightened", label: game.i18n.localize("k4lt.Enlightened") }
+    ];
+    context.StatutValues = StatutValues;
           
     kultLogger("PCSheet getData => ", context);
     return context;
@@ -111,7 +118,7 @@ export default class k4ltPCsheet extends ActorSheet {
       const item = this.actor.items.get(li.data("itemId"));
       kultLogger("Show Item => ", item);
       let effect;
-      if (item.type === "disadvantage" || item.type === "advantage" || item.type === "abilitity" || item.type === "limitation") {
+      if (item.type === "disadvantage" || item.type === "advantage" || item.type === "ability" || item.type === "limitation") {
         effect = item.system.effect;
       } else if (item.type === "move") {
         effect = item.system.trigger;
@@ -181,6 +188,36 @@ export default class k4ltPCsheet extends ActorSheet {
       () => $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle-bottom.webp)'),
       () => $('.attmid').css('background-image', 'url(systems/k4lt/assets/attributes/middle.webp)')
     );
+
+    html.find('#conditionAngry, #conditionSad, #conditionScared, #conditionGuiltRidden, #conditionObsessed, #conditionDistracted, #conditionHaunted').click(this._onUpdateCondition.bind(this));
+
+    html.find('#advancementExp1, #advancementExp2, #advancementExp3, #advancementExp4, #advancementExp5, #advancementSleeper1, #advancementSleeper2, #advancementSleeper3, #advancementSleeper4, #advancementSleeper5, #advancementSleeper6, #advancementAware11, #advancementAware12, #advancementAware13, #advancementAware14, #advancementAware15, #advancementAware16, #advancementAware21, #advancementAware22, #advancementAware31, #advancementAware41, #advancementAware42, #advancementAware43, #advancementAware51, #advancementAware52, #advancementAware61, #advancementAware62, #advancementAware71, #advancementAware81, #advancementAware91, #advancementEnlightened11, #advancementEnlightened21, #advancementEnlightened22, #advancementEnlightened23, #advancementEnlightened24, #advancementEnlightened25, #advancementEnlightened26, #advancementEnlightened31, #advancementEnlightened32, #advancementEnlightened41, #advancementEnlightened42, #advancementEnlightened43, #advancementEnlightened51, #advancementEnlightened52, #advancementEnlightened61, #advancementEnlightened62, #advancementEnlightened63, #advancementEnlightened71, #advancementEnlightened81, #advancementEnlightened91').click(this._onUpdateAdvancement.bind(this));
+
+    // Call badge update when the sheet is rendered
+    this.updateConditionBadge();
+
+    // Add hooks for live updates
+    Hooks.on("updateActor", actor => {
+        if (actor.id === this.actor.id) {
+            this.updateConditionBadge();
+        }
+    });
+
+        // Ajouter un événement pour incrémenter les tokens
+    html.find(".token-condition-add").click(ev => {
+      // Récupérer les tokens actuels depuis la propriété spécifique
+      const currentTokens = Number(this.actor.system.conditionHaunted.tokens || 0);
+      const newTokens = currentTokens + 1;
+      this.actor.update({ "system.conditionHaunted.tokens": newTokens });
+    });
+
+    // Ajouter un événement pour décrémenter les tokens
+    html.find(".token-condition-spend").click(ev => {
+      // Récupérer les tokens actuels depuis la propriété spécifique
+      const currentTokens = Number(this.actor.system.conditionHaunted.tokens || 0);
+      const newTokens = Math.max(currentTokens - 1, 0); // Empêcher les valeurs négatives
+      this.actor.update({ "system.conditionHaunted.tokens": newTokens });
+    });
   }
 
   _onUpdateWound(ev) {
@@ -201,6 +238,52 @@ export default class k4ltPCsheet extends ActorSheet {
     }
     const key = `system.${id}`;
     this.actor.update({ [key]: { value: wound.value, state: newState } });
+  }
+
+  _onUpdateCondition(ev) {
+    ev.preventDefault();
+    const id = ev.currentTarget.id;
+    const condition = this.actor.system[id];
+    let newState;
+    switch (condition.state) {
+      case "none":
+        newState = "checked";
+        break;
+      case "checked":
+        newState = "none";
+        break;
+    }
+    const key = `system.${id}`;
+    this.actor.update({ [key]: { value: condition.value, state: newState } });
+  }
+  
+  updateConditionBadge() {
+    const conditionCount = this.actor.updateConditionCount();
+    const navElement = this.element.find(`.tabs a[data-tab="Conditions"]`);
+    if (navElement.length > 0) {
+        let badge = navElement.find(".condition-count");
+        if (badge.length === 0) {
+            badge = $(`<span class="condition-count"></span>`).appendTo(navElement);
+        }
+        badge.text(conditionCount > 0 ? conditionCount : "").toggle(conditionCount > 0);
+    }
+  }
+
+  _onUpdateAdvancement(ev) {
+    ev.preventDefault();
+    const id = ev.currentTarget.id;
+    const advancement = this.actor.system[id];
+    let newState;
+    switch (advancement.state) {
+      case "none":
+        newState = "checked";
+        break;
+      case "checked":
+        newState = "none";
+        break;
+    }
+    const key = `system.${id}`;
+    this.actor.update({ [key]: { value: advancement.value, state: newState } });
   }
 }
 

@@ -1,8 +1,16 @@
 export default function registerHandlebarsHelpers() {
-  const images = [
+  const woundImages = [
     "blank.webp",
     "bleeding-wound.webp",
     "sticking-plaster.webp"
+  ];
+  const conditionImages = [
+    "blank.webp",
+    "checked.webp"
+  ];
+  const advancementImages = [
+    "blank.webp",
+    "checked.webp"
   ];
   const bloodImages = [
     "blood1.webp",
@@ -18,14 +26,36 @@ export default function registerHandlebarsHelpers() {
   ];
   const path = "systems/k4lt/assets/";
 
-  Handlebars.registerHelper("getWoundsImage", function (state) {
-    switch (state) {
+  Handlebars.registerHelper("getWoundsImage", function (woundState) {
+    switch (woundState) {
       case "none":
-        return path + images[0];
+        return path + woundImages[0];
       case "unstabilized":
-        return path + images[1];
+        return path + woundImages[1];
       case "stabilized":
-        return path + images[2];
+        return path + woundImages[2];
+    }
+  });
+
+  Handlebars.registerHelper("getConditionsImage", function (conditionState) {
+    switch (conditionState) {
+      case "none":
+        return path + conditionImages[0];
+      case "checked":
+        return path + conditionImages[1];
+      default:
+        return path + conditionImages[0]; // default case
+    }
+  });
+
+  Handlebars.registerHelper("getAdvancementsImage", function (advancementState) {
+    switch (advancementState) {
+      case "none":
+        return path + advancementImages[0];
+      case "checked":
+        return path + advancementImages[1];
+      default:
+        return path + advancementImages[0]; // default case
     }
   });
 

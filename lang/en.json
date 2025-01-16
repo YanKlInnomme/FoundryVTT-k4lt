@@ -5,7 +5,7 @@
       "npc": "Non Player Character"
     },
     "Item": {
-      "abilitity": "Abilitity",
+      "ability": "Ability",
       "advantage": "Advantage",
       "darksecret": "Dark Secret",
       "disadvantage": "Disadvantage",
@@ -174,5 +174,78 @@
     "10": "Archon or Death Angel"
   },
 
-  "k4lt.Summary": "Summary"
+  "k4lt.Summary": "Summary",
+
+  "k4lt.Conditions": "Conditions",
+  "k4lt.Angry": "Angry",
+  "k4lt.WhoOrWhatIsTheCharacterAngryAt": "Who or what is the character angry at?",
+  "k4lt.HowIsTheAngerManifesting": "How is the anger manifesting?",
+  "k4lt.Sad": "Sad",
+  "k4lt.WhatIsCausingTheSadness": "What is causing the sadness?",
+  "k4lt.HowDoesTheCharacterDealWithIt": "How does the character deal with it?",
+  "k4lt.Scared": "Scared",
+  "k4lt.WhatIsTheSourceOfTheFear": "What is the source of the fear?",
+  "k4lt.HowDoesTheFearAffectTheCharactersActions": "How does the fear affect the character's actions?",
+  "k4lt.GuiltRidden": "Guilt-Ridden",
+  "k4lt.WhatDoesTheCharacterFeelGuiltyAbout": "What does the character feel guilty about?",
+  "k4lt.WhoDoesTheCharacterSeekForgivenessFrom": "Who does the character seek forgiveness from?",
+  "k4lt.Obsessed": "Obsessed",
+  "k4lt.WhatIsTheCharacterObsessedWith": "What is the character obsessed with?",
+  "k4lt.WhyDoesTheCharacterFindItCompelling": "Why does the character find it compelling?",
+  "k4lt.Distracted": "Distracted",
+  "k4lt.WhatIsTheCharacterDistractedBy": "What is the character distracted by?",
+  "k4lt.HowDoesThisDistractionImpactTheSituation": "How does this distraction impact the situation?",
+  "k4lt.Haunted": "Haunted",
+  "k4lt.WhatIsHauntingTheCharacter": "What is haunting the character?",
+
+  "k4lt.Sleeper": "Sleeper",
+  "k4lt.Aware": "Aware",
+  "k4lt.Enlightened": "Enlightened",
+  
+  "k4lt.LevelUp": " has accumulated 5 Experience, the player may choose an advancement available on their character sheet.",
+  "k4lt.NoOwner": "No Owner",
+  
+  "k4lt.Advancement": {
+    "Title": "Advancement",
+    "ExperiencePoints": "EXPerience Points",
+    "Level": "Level",
+    "StateOfConsciousness": "State of Consciousness",
+    "Sleeper": {
+      "Title": "Sleeper Advancement",
+      "Info": "Your sleeping PC advances in the following steps:",
+      "OneToFive": "They remember something about their Dark Secret.",
+      "Six": "They awaken. You choose an Aware Archetype. The PC keeps their Dark Secret and their Disadvantages, but the player picks three Advantages from their new Archetype."
+    },
+    "Aware": {
+      "Title": "Aware Advancement",
+      "Info": "When your character advances you get to choose from the following advancements.",
+      "Title1": "Choose One of These:",
+      "One": "Increase one active Attribute +1 (to max +3).",
+      "Two": "Increase one passive Attribute +1 (to max +3).",
+      "Three": "Increase any one Attribute +1 (to max +4).",
+      "Four": "Select a new Advantage from your Archetype.",
+      "Title2": "After 5 Advancements You May Also Choose:",
+      "Five": "Increase any one Attribute +1 (to max +4).",
+      "Six": "Select a new Advantage from any Aware Archetype.",
+      "Seven": "End your character’s story arc as you see fit, and create a new Aware character, who starts with 2 Advancements.",
+      "Eight": "Replace your current Archetype with another Aware Archetype, and erase one of your starting 3 Advantages.",
+      "Title3": "After 10 Advancements You May Also Choose:",
+      "Nine": "Advance your character to an Enlightened Archetype."
+    },
+    "Enlightened": {
+      "Title": "Enlightened Advancement",
+      "Title1": "Choose One of These:",
+      "One": "Add +1 to any Attribute (max +5).",
+      "Two": "Add +1 to an active Attribute (max +4).",
+      "Three": "Add +1 to a passive Attribute (max +4).",
+      "Four": "Gain an Ability available to your Archetype.",
+      "Title2": "After 5 Advancements You May Also Choose:",
+      "Five": "Add +1 to any Attribute (max +5).",
+      "Six": "Gain an Ability or Advantage of your choosing.",
+      "Seven": "Finish your character’s story and make a new PC.",
+      "Eight": "Change your character’s Archetype to a new Enlightened one.",
+      "Title3": "After 10 Advancements You May Also Choose:",
+      "Nine": "Start your journey towards Awakening."
+    }
+  }
 }

@@ -187,4 +187,19 @@ export default class k4ltActor extends Actor {
 
     return result;
   }
+  
+  updateConditionCount() {
+    const conditions = [
+        this.system.conditionAngry?.state,
+        this.system.conditionSad?.state,
+        this.system.conditionScared?.state,
+        this.system.conditionGuiltRidden?.state,
+        this.system.conditionObsessed?.state,
+        this.system.conditionDistracted?.state,
+        this.system.conditionHaunted?.state
+    ];
+
+    return conditions.filter(condition => condition === "checked").length;
+  }
 }
+

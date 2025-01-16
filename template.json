@@ -45,8 +45,198 @@
         "charisma": 0,
         "soul": 0
       },
-        "ongoing": 0,
-        "forward": 0
+      "ongoing": 0,
+      "forward": 0,
+      "conditionAngry": {
+        "state": "none",
+        "answer1": "",
+        "answer2": ""
+      },
+      "conditionSad": {
+        "state": "none",
+        "answer1": "",
+        "answer2": ""
+      },
+      "conditionScared": {
+        "state": "none",
+        "answer1": "",
+        "answer2": ""
+      },
+      "conditionGuiltRidden": {
+        "state": "none",
+        "answer1": "",
+        "answer2": ""
+      },
+      "conditionObsessed": {
+        "state": "none",
+        "answer1": "",
+        "answer2": ""
+      },
+      "conditionDistracted": {
+        "state": "none",
+        "answer1": "",
+        "answer2": ""
+      },
+      "conditionHaunted": {
+        "state": "none",
+        "tokens": 0,
+        "answer": ""
+      },
+      "advancementExp1": {
+        "state": "none"
+      },
+      "advancementExp2": {
+        "state": "none"
+      },
+      "advancementExp3": {
+        "state": "none"
+      },
+      "advancementExp4": {
+        "state": "none"
+      },
+      "advancementExp5": {
+        "state": "none"
+      },
+      "advancementLevel": {
+        "value": 0,
+        "sleeper": 0,
+        "aware": 6
+      },
+      "advancementSleeper1": {
+        "state": "none"
+      },
+      "advancementSleeper2": {
+        "state": "none"
+      },
+      "advancementSleeper3": {
+        "state": "none"
+      },
+      "advancementSleeper4": {
+        "state": "none"
+      },
+      "advancementSleeper5": {
+        "state": "none"
+      },
+      "advancementSleeper6": {
+        "state": "none"
+      },
+      "advancementAware11": {
+        "state": "none"
+      },
+      "advancementAware12": {
+        "state": "none"
+      },
+      "advancementAware13": {
+        "state": "none"
+      },
+      "advancementAware14": {
+        "state": "none"
+      },
+      "advancementAware15": {
+        "state": "none"
+      },
+      "advancementAware16": {
+        "state": "none"
+      },
+      "advancementAware21": {
+        "state": "none"
+      },
+      "advancementAware22": {
+        "state": "none"
+      },
+      "advancementAware31": {
+        "state": "none"
+      },
+      "advancementAware41": {
+        "state": "none"
+      },
+      "advancementAware42": {
+        "state": "none"
+      },
+      "advancementAware43": {
+        "state": "none"
+      },
+      "advancementAware51": {
+        "state": "none"
+      },
+      "advancementAware52": {
+        "state": "none"
+      },
+      "advancementAware61": {
+        "state": "none"
+      },
+      "advancementAware62": {
+        "state": "none"
+      },
+      "advancementAware71": {
+        "state": "none"
+      },
+      "advancementAware81": {
+        "state": "none"
+      },
+      "advancementAware91": {
+        "state": "none"
+      },
+      "advancementEnlightened11": {
+        "state": "none"
+      },
+      "advancementEnlightened21": {
+        "state": "none"
+      },
+      "advancementEnlightened22": {
+        "state": "none"
+      },
+      "advancementEnlightened23": {
+        "state": "none"
+      },
+      "advancementEnlightened24": {
+        "state": "none"
+      },
+      "advancementEnlightened25": {
+        "state": "none"
+      },
+      "advancementEnlightened26": {
+        "state": "none"
+      },
+      "advancementEnlightened31": {
+        "state": "none"
+      },
+      "advancementEnlightened32": {
+        "state": "none"
+      },
+      "advancementEnlightened41": {
+        "state": "none"
+      },
+      "advancementEnlightened42": {
+        "state": "none"
+      },
+      "advancementEnlightened43": {
+        "state": "none"
+      },
+      "advancementEnlightened51": {
+        "state": "none"
+      },
+      "advancementEnlightened52": {
+        "state": "none"
+      },
+      "advancementEnlightened61": {
+        "state": "none"
+      },
+      "advancementEnlightened62": {
+        "state": "none"
+      },
+      "advancementEnlightened63": {
+        "state": "none"
+      },
+      "advancementEnlightened71": {
+        "state": "none"
+      },
+      "advancementEnlightened81": {
+        "state": "none"
+      },
+      "advancementEnlightened91": {
+        "state": "none"
+      }
     },
     "npc": {
       "home": "",
@@ -71,7 +261,7 @@
     }
   },
   "Item": {
-    "types": ["abilitity", "advantage", "darksecret", "disadvantage", "family", "gear", "limitation", "move", "occupation", "relationship", "weapon"],
+    "types": ["ability", "advantage", "darksecret", "disadvantage", "family", "gear", "limitation", "move", "occupation", "relationship", "weapon"],
     "templates": {
       "modifier": {
         "description": "",
@@ -92,7 +282,7 @@
     "disadvantage": {
       "templates": ["modifier"]
     },
-    "abilitity": {
+    "ability": {
       "templates": ["modifier"]
     },
     "limitation": {

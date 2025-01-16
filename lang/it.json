@@ -9,7 +9,7 @@
       "weapon": "Arma",
       "advantage": "Vantaggio",
       "disadvantage": "Svantaggio",
-      "abilitity": "Capacità",
+      "ability": "Capacità",
       "limitation": "Limitazione",
       "darksecret": "Segreto Oscuro",
       "relationship": "Relazione",
@@ -163,5 +163,87 @@
     "8": "Arcangelo caduto o Angelo della Morte",
     "9": "Arcangelo indebolito o Angelo della Morte",
     "10": "Arcangelo o Angelo della Morte"
-  }  
+  },
+
+  "k4lt.Families": "Famiglie",
+  "k4lt.Family": "Famiglia",
+  "k4lt.Occupations": "Occupazioni",
+  "k4lt.Occupation": "Occupazione",
+  "k4lt.Archetypes": "Archetipi",
+  "k4lt.Archetype": "Archetipo",
+
+  "k4lt.Summary": "Riepilogo",
+
+  "k4lt.Conditions": "Condizioni",
+  "k4lt.Angry": "Arrabbiato",
+  "k4lt.WhoOrWhatIsTheCharacterAngryAt": "Con chi o con cosa è arrabbiato il personaggio?",
+  "k4lt.HowIsTheAngerManifesting": "Come si manifesta la rabbia?",
+  "k4lt.Sad": "Triste",
+  "k4lt.WhatIsCausingTheSadness": "Cosa causa la tristezza?",
+  "k4lt.HowDoesTheCharacterDealWithIt": "Come affronta il personaggio?",
+  "k4lt.Scared": "Spaventato",
+  "k4lt.WhatIsTheSourceOfTheFear": "Qual è la fonte della paura?",
+  "k4lt.HowDoesTheFearAffectTheCharactersActions": "Come la paura influenza le azioni del personaggio?",
+  "k4lt.GuiltRidden": "Pieno di colpa",
+  "k4lt.WhatDoesTheCharacterFeelGuiltyAbout": "Di cosa si sente in colpa il personaggio?",
+  "k4lt.WhoDoesTheCharacterSeekForgivenessFrom": "Da chi cerca il perdono il personaggio?",
+  "k4lt.Obsessed": "Ossessionato",
+  "k4lt.WhatIsTheCharacterObsessedWith": "Con cosa è ossessionato il personaggio?",
+  "k4lt.WhyDoesTheCharacterFindItCompelling": "Perché il personaggio lo trova affascinante?",
+  "k4lt.Distracted": "Distratto",
+  "k4lt.WhatIsTheCharacterDistractedBy": "Da cosa è distratto il personaggio?",
+  "k4lt.HowDoesThisDistractionImpactTheSituation": "Come influisce questa distrazione sulla situazione?",
+  "k4lt.Haunted": "Ossessionato",
+  "k4lt.WhatIsHauntingTheCharacter": "Cosa ossessiona il personaggio?",
+  
+  "k4lt.Sleeper": "Dormiente",
+  "k4lt.Aware": "Consapevole",
+  "k4lt.Enlightened": "Illuminato",
+
+  "k4lt.LevelUp": " ha accumulato 5 punti esperienza, il giocatore può scegliere un avanzamento disponibile sulla scheda del personaggio.",
+  "k4lt.NoOwner": "Nessun proprietario",
+
+  "k4lt.Advancement": {
+    "Title": "Avanzamento",
+    "ExperiencePoints": "Punti esperienza",
+    "Level": "Livello",
+    "StateOfConsciousness": "Stato di coscienza",
+    "Sleeper": {
+      "Title": "Avanzamento del Dormiente",
+      "Info": "Il tuo PC dormiente avanza nei seguenti passaggi:",
+      "OneToFive": "Ricordano qualcosa del loro Segreto Oscuro.",
+      "Six": "Si svegliano. Scegli un Archetipi Consapevole. Il PC mantiene il suo Segreto Oscuro e i suoi Svantaggi, ma il giocatore sceglie tre Vantaggi dal nuovo Archetipi."
+    },
+    "Aware": {
+      "Title": "Avanzamento del Consapevole",
+      "Info": "Quando il tuo personaggio avanza, puoi scegliere tra i seguenti avanzamenti.",
+      "Title1": "Scegli uno di questi:",
+      "One": "Aumenta un Attributo attivo di +1 (max +3).",
+      "Two": "Aumenta un Attributo passivo di +1 (max +3).",
+      "Three": "Aumenta qualsiasi Attributo di +1 (max +4).",
+      "Four": "Seleziona un nuovo Vantaggio dal tuo Archetipi.",
+      "Title2": "Dopo 5 Avanzamenti, puoi anche scegliere:",
+      "Five": "Aumenta qualsiasi Attributo di +1 (max +4).",
+      "Six": "Seleziona un nuovo Vantaggio da qualsiasi Archetipi Consapevole.",
+      "Seven": "Termina l'arco narrativo del tuo personaggio come desideri e crea un nuovo personaggio Consapevole, che inizia con 2 Avanzamenti.",
+      "Eight": "Sostituisci il tuo Archetipi attuale con un altro Archetipi Consapevole e cancella uno dei tuoi 3 Vantaggi iniziali.",
+      "Title3": "Dopo 10 Avanzamenti, puoi anche scegliere:",
+      "Nine": "Avanza il tuo personaggio a un Archetipi Illuminato."
+    },
+    "Enlightened": {
+      "Title": "Avanzamento dell'Illuminato",
+      "Title1": "Scegli uno di questi:",
+      "One": "Aggiungi +1 a qualsiasi Attributo (max +5).",
+      "Two": "Aggiungi +1 a un Attributo attivo (max +4).",
+      "Three": "Aggiungi +1 a un Attributo passivo (max +4).",
+      "Four": "Ottieni una Capacità disponibile per il tuo Archetipi.",
+      "Title2": "Dopo 5 Avanzamenti, puoi anche scegliere:",
+      "Five": "Aggiungi +1 a qualsiasi Attributo (max +5).",
+      "Six": "Ottieni una Capacità o un Vantaggio a tua scelta.",
+      "Seven": "Termina la storia del tuo personaggio e crea un nuovo PC.",
+      "Eight": "Cambia l'Archetipi del tuo personaggio con un nuovo Archetipi Illuminato.",
+      "Title3": "Dopo 10 Avanzamenti, puoi anche scegliere:",
+      "Nine": "Inizia il tuo viaggio verso il Risveglio."
+    }
+  }
 }

@@ -6,21 +6,8 @@
   <div class="forms kult-item-sheet">
     <div>
       <label>{{localize "k4lt.AttributePrompt"}}:</label>
-      <select name="system.attributemod" value="{{system.attributemod}}">
-        {{#select system.attributemod}}
-          <option value="none">{{localize "k4lt.None"}}</option>
-          <option value="willpower">{{localize "k4lt.Willpower"}}</option>
-          <option value="fortitude">{{localize "k4lt.Fortitude"}}</option>
-          <option value="reflexes">{{localize "k4lt.Reflexes"}}</option>
-          <option value="reason">{{localize "k4lt.Reason"}}</option>
-          <option value="intuition">{{localize "k4lt.Intuition"}}</option>
-          <option value="perception">{{localize "k4lt.Perception"}}</option>
-          <option value="coolness">{{localize "k4lt.Coolness"}}</option>
-          <option value="violence">{{localize "k4lt.Violence"}}</option>
-          <option value="charisma">{{localize "k4lt.Charisma"}}</option>
-          <option value="soul">{{localize "k4lt.Soul"}}</option>
-          <option value="ask">{{localize "k4lt.Ask"}}</option>
-        {{/select}}
+      <select name="system.attributemod">
+        {{selectOptions attributeMoveValues selected=system.attributemod valueAttr="value" labelAttr="label"}}
       </select>
     </div>
     <div class="editor-row">
@@ -50,13 +37,8 @@
     </div>
     <div>
       <label>{{localize "k4lt.SpecialMove"}}:</label>
-      <select name="system.specialflag" value="{{system.specialflag}}">
-        {{#select system.specialflag}}
-          <option value="0">{{localize "k4lt.None"}}</option>
-          <option value="1">{{localize "k4lt.KeepItTogether"}}</option>
-          <option value="2">{{localize "k4lt.SeeThroughTheIllusion"}}</option>
-          <option value="3">{{localize "k4lt.EndureInjury"}}</option>
-        {{/select}}
+      <select name="system.specialflag">
+        {{selectOptions specialMoveValues selected=system.specialflag valueAttr="value" labelAttr="label"}}
       </select>
     </div>
   </div>

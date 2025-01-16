@@ -37,6 +37,16 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 4.0.0.0
+ * Migration v12 véritablement complète (enfin j'espère, j'avais oublié les objets) du système (select>selectOptions)
+ * Ajout des conditions 'En colère', 'Triste', 'Effrayé·e', 'Accablé·e de culpabilité', 'Obsédé·e', 'Distrait·e' et 'Hanté·e' pour les personnages joueurs, y compris gestion de la retenue pour 'Hanté·e'
+ * Création de questionnaires liés aux conditions (outil de narration, créé par mes soins)
+ * Mise en évidence des conditions actives via un badge sur la fiche du personnage
+ * Ajout d'une gestion complète de la progression (Points d'EXPérience, Niveau, État de conscience, Progressions, etc.) pour les personnages joueurs
+ * Mise en évidence des personnages joueurs dans l'onglet Acteurs en y ajoutant l'état de conscience et le niveau
+ * Passage automatique de niveau lors de l'acquisition de 5 points d'EXPérience avec message dans le chat
+ * Mise à jour de l'ensemble des fichiers de langue (.json) avec l'ajout des nouvelles entrées (à vérifier par les concerné·e·s)
+
 ## Version 3.2.0.0
  * Migration v12 complète du système (select>selectOptions et mergeObject>foundry.utils.mergeObject)
  * Ajout des objets 'Famille' et 'Métier' pour les personnages joueurs
@@ -225,6 +235,16 @@ This digital adaptation is unofficial content from KULT: Divinity Lost, authoriz
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 to 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 4.0.0.0
+ * Full migration to v12 of the system (select>selectOptions and mergeObject>foundry.utils.mergeObject)
+ * Added 'Angry', 'Sad', 'Scared', 'Guilt Ridden', 'Obsessed', 'Distracted' and 'Haunted' conditions for player characters, including hold management for 'Haunted'
+ * Creation of questionnaires related to conditions (narrative tool, created by myself)
+ * Highlighting of active conditions via a badge on the character sheet
+ * Added complete progression management (Experience Points, Level, State of consciousness, Progressions, etc.) for player characters
+ * Highlighting of player characters in the Actors tab by adding the state of consciousness and level
+ * Automatic level increase when acquiring 5 Experience Points with a message in the chat
+ * Update of all language files (.json) with the addition of new entries (to be checked by those concerned)
 
 ## Version 3.2.0.0
  * Full migration to v12 of the system (select>selectOptions and mergeObject>foundry.utils.mergeObject)

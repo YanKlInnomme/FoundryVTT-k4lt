@@ -9,7 +9,7 @@
       "weapon": "Arma",
       "advantage": "Ventaja",
       "disadvantage": "Desventaja",
-      "abilitity": "Capacidad",
+      "ability": "Capacidad",
       "limitation": "Limitación",
       "darksecret": "Secreto Inconfesable",
       "relationship": "Relación",
@@ -163,5 +163,87 @@
     "8": "Arcángel caído o Ángel de la Muerte",
     "9": "Arcángel debilitado o Ángel de la Muerte",
     "10": "Arcángel o Ángel de la Muerte"
+  },
+
+  "k4lt.Families": "Familias",
+  "k4lt.Family": "Familia",
+  "k4lt.Occupations": "Ocupaciones",
+  "k4lt.Occupation": "Ocupación",
+  "k4lt.Archetypes": "Arquetipos",
+  "k4lt.Archetype": "Arquetipo",
+
+  "k4lt.Summary": "Resumen",
+
+  "k4lt.Conditions": "Condiciones",
+  "k4lt.Angry": "Enfadado",
+  "k4lt.WhoOrWhatIsTheCharacterAngryAt": "¿Con quién o con qué está enfadado el personaje?",
+  "k4lt.HowIsTheAngerManifesting": "¿Cómo se manifiesta la ira?",
+  "k4lt.Sad": "Triste",
+  "k4lt.WhatIsCausingTheSadness": "¿Qué está causando la tristeza?",
+  "k4lt.HowDoesTheCharacterDealWithIt": "¿Cómo lo maneja el personaje?",
+  "k4lt.Scared": "Asustado",
+  "k4lt.WhatIsTheSourceOfTheFear": "¿Cuál es la fuente del miedo?",
+  "k4lt.HowDoesTheFearAffectTheCharactersActions": "¿Cómo afecta el miedo a las acciones del personaje?",
+  "k4lt.GuiltRidden": "Lleno de culpa",
+  "k4lt.WhatDoesTheCharacterFeelGuiltyAbout": "¿De qué se siente culpable el personaje?",
+  "k4lt.WhoDoesTheCharacterSeekForgivenessFrom": "¿De quién busca el perdón el personaje?",
+  "k4lt.Obsessed": "Obsesionado",
+  "k4lt.WhatIsTheCharacterObsessedWith": "¿Con qué está obsesionado el personaje?",
+  "k4lt.WhyDoesTheCharacterFindItCompelling": "¿Por qué el personaje lo encuentra fascinante?",
+  "k4lt.Distracted": "Distraído",
+  "k4lt.WhatIsTheCharacterDistractedBy": "¿Qué distrae al personaje?",
+  "k4lt.HowDoesThisDistractionImpactTheSituation": "¿Cómo afecta esta distracción a la situación?",
+  "k4lt.Haunted": "Atormentado",
+  "k4lt.WhatIsHauntingTheCharacter": "¿Qué atormenta al personaje?",
+  
+  "k4lt.Sleeper": "Durmiente",
+  "k4lt.Aware": "Consciente",
+  "k4lt.Enlightened": "Iluminado",
+
+  "k4lt.LevelUp": " ha acumulado 5 puntos de experiencia, el jugador puede elegir un avance disponible en su hoja de personaje.",
+  "k4lt.NoOwner": "Sin propietario",
+
+  "k4lt.Advancement": {
+    "Title": "Avance",
+    "ExperiencePoints": "Puntos de EXPeriencia",
+    "Level": "Nivel",
+    "StateOfConsciousness": "Estado de conciencia",
+    "Sleeper": {
+      "Title": "Avance del Durmiente",
+      "Info": "Tu PJ durmiente avanza en los siguientes pasos:",
+      "OneToFive": "Recuerdan algo sobre su Secreto Inconfesable.",
+      "Six": "Despiertan. Eliges un Arquetipo Consciente. El PJ conserva su Secreto Inconfesable y sus Desventajas, pero el jugador elige tres Ventajas de su nuevo Arquetipo."
+    },
+    "Aware": {
+      "Title": "Avance del Consciente",
+      "Info": "Cuando tu personaje avanza, puedes elegir entre los siguientes avances.",
+      "Title1": "Elige uno de estos:",
+      "One": "Aumenta un Atributo activo +1 (máx +3).",
+      "Two": "Aumenta un Atributo pasivo +1 (máx +3).",
+      "Three": "Aumenta cualquier Atributo +1 (máx +4).",
+      "Four": "Selecciona una nueva Ventaja de tu Arquetipo.",
+      "Title2": "Después de 5 Avances, también puedes elegir:",
+      "Five": "Aumenta cualquier Atributo +1 (máx +4).",
+      "Six": "Selecciona una nueva Ventaja de cualquier Arquetipo Consciente.",
+      "Seven": "Termina el arco de la historia de tu personaje como desees, y crea un nuevo personaje Consciente, que comienza con 2 Avances.",
+      "Eight": "Reemplaza tu Arquetipo actual con otro Arquetipo Consciente, y borra una de tus 3 Ventajas iniciales.",
+      "Title3": "Después de 10 Avances, también puedes elegir:",
+      "Nine": "Avanza tu personaje a un Arquetipo Iluminado."
+    },
+    "Enlightened": {
+      "Title": "Avance del Iluminado",
+      "Title1": "Elige uno de estos:",
+      "One": "Añade +1 a cualquier Atributo (máx +5).",
+      "Two": "Añade +1 a un Atributo activo (máx +4).",
+      "Three": "Añade +1 a un Atributo pasivo (máx +4).",
+      "Four": "Gana una Capacidad disponible para tu Arquetipo.",
+      "Title2": "Después de 5 Avances, también puedes elegir:",
+      "Five": "Añade +1 a cualquier Atributo (máx +5).",
+      "Six": "Gana una Capacidad o Ventaja de tu elección.",
+      "Seven": "Termina la historia de tu personaje y crea un nuevo PJ.",
+      "Eight": "Cambia el Arquetipo de tu personaje a un nuevo Arquetipo Iluminado.",
+      "Title3": "Después de 10 Avances, también puedes elegir:",
+      "Nine": "Comienza tu viaje hacia el Despertar."
+    }
   }
 }

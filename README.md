@@ -13,7 +13,7 @@ Ce système de jeu est un ensemble de fichiers qui fournissent à Foundry VTT to
 ![Capture d'écran 2025-01-16 092327](https://github.com/user-attachments/assets/1ff4e22c-df6b-4f6a-93bf-2ab53e1668a0)
 ![Capture d’écran 2024-03-07 234841](https://github.com/YanKlInnomme/FoundryVTT-k4lt/assets/100078854/aefb90b2-9af0-4149-ba5b-dc205895ff06)
 
-Si vous appréciez le système et que vous avez les moyens de le faire, vous pouvez me soutenir en m'offrant un café sur Buy Me a Coffee (https://www.buymeacoffee.com/yank). Votre geste serait grandement apprécié et contribuerait à soutenir le développement continu. Quoi qu'il en soit, je vous souhaite une expérience enrichissante et divertissante. N'hésitez pas à me contacter pour partager vos commentaires ou signaler tout problème éventuel.
+Si vous appréciez le système et que vous avez les moyens de le faire, vous pouvez me soutenir en m'offrant un café sur Buy Me a Coffee (https://www.buymeacoffee.com/yank). Votre geste sera grandement apprécié et contribuera à soutenir le développement continu. Quoi qu'il en soit, je vous souhaite une expérience enrichissante et divertissante. N'hésitez pas à me contacter pour partager vos commentaires ou signaler tout problème éventuel.
 
 ## Prérequis
 

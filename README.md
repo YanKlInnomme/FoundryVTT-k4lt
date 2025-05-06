@@ -9,9 +9,9 @@ Attention, ce jeu explore des thèmes matures liés à l'horreur psychologique e
 
 Ce système de jeu est un ensemble de fichiers qui fournissent à Foundry VTT toutes les informations nécessaires pour prendre en charge les règles, les mécanismes et les éléments de jeu spécifiques à KULT: Divinity Lost.
 
-![Capture d'écran 2025-01-16 092150](https://github.com/user-attachments/assets/3665a9e6-41d0-4aba-98d3-07569e33bfb1)
-![Capture d'écran 2025-01-16 092327](https://github.com/user-attachments/assets/1ff4e22c-df6b-4f6a-93bf-2ab53e1668a0)
-![Capture d’écran 2024-03-07 234841](https://github.com/YanKlInnomme/FoundryVTT-k4lt/assets/100078854/aefb90b2-9af0-4149-ba5b-dc205895ff06)
+![Capture d'écran 2025-05-06 163629](https://github.com/user-attachments/assets/a3b28bd4-407c-47b5-81af-dd8e00641904)
+![Capture d'écran 2025-05-06 163840](https://github.com/user-attachments/assets/156faab8-f65a-46e1-82da-1011e275b418)
+![Capture d'écran 2025-05-06 164047](https://github.com/user-attachments/assets/9a80a9c8-769a-41df-b3d7-bbc7785958d1)
 
 Si vous appréciez le système et que vous avez les moyens de le faire, vous pouvez me soutenir en m'offrant un café sur Buy Me a Coffee (https://www.buymeacoffee.com/yank). Votre geste sera grandement apprécié et contribuera à soutenir le développement continu. Quoi qu'il en soit, je vous souhaite une expérience enrichissante et divertissante. N'hésitez pas à me contacter pour partager vos commentaires ou signaler tout problème éventuel.
 

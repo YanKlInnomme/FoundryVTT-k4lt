@@ -1,4 +1,4 @@
-export default class k4ltitemsheet extends ItemSheet {
+export default class k4ltitemsheet extends foundry.appv1.sheets.ItemSheet {
   get template() {
     return `systems/k4lt/templates/sheets/${this.item.type}-sheet.hbs`;
   }

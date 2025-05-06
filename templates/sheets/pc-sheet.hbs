@@ -22,7 +22,7 @@
              <div style="width: 98% !important;">
                 <div class="section-label">{{localize "k4lt.WhoAreYou"}}</div>
                 <div class="free-text">
-                    {{editor system.whoareyou target="system.whoareyou" button=true owner=owner editable=editable}}
+                    {{editor system.whoareyou target="system.whoareyou" button=true owner=owner editable=editable engine="prosemirror"}}
                 </div>
             </div>
     </div>
@@ -262,10 +262,10 @@
                 </div>
             </div>
         </div>
-        <div class="two-column">
+        <div class="two-column-package">
             <div class="weapon-section">
                 <div class="section-label">{{localize "k4lt.Weapons"}}</div>
-                <div class=" item-list weapon-list">
+                <div class="item-list weapon-list">
                     {{#each weapons as |weapon id|}}
                         {{> "systems/k4lt/templates/partials/weapon-card.hbs" weapon}}
                     {{/each}}
@@ -273,7 +273,7 @@
             </div>
             <div class="gear-section">
                 <div class="section-label">{{localize "k4lt.Gear"}}</div>
-                <div class=" item-list weapon-list">
+                <div class="item-list gear-list">
                     {{#each gear as |gear id|}}
                         {{> "systems/k4lt/templates/partials/gear-card.hbs" gear}}
                     {{/each}}
@@ -288,13 +288,13 @@
             <div>
                 <div class="section-label"><input name="system.background.section1" type="text" style="border: none; background-color: transparent;" value="{{system.background.section1}}" placeholder="{{localize "k4lt.WhatYouHoldDear"}}" /></div>
                 <div class="free-text">
-                    {{editor system.whatyouholddear target="system.whatyouholddear" button=true owner=owner editable=editable}}
+                    {{editor system.whatyouholddear target="system.whatyouholddear" button=true owner=owner editable=editable engine="prosemirror"}}
                 </div>
             </div>
             <div>
                 <div class="section-label"><input name="system.background.section2" type="text" style="border: none; background-color: transparent;" value="{{system.background.section2}}" placeholder="{{localize "k4lt.ThingsInYourPossession"}}" /></div>
                 <div class="free-text">
-                    {{editor system.thingsinyourpossession target="system.thingsinyourpossession" button=true owner=owner editable=editable}}
+                    {{editor system.thingsinyourpossession target="system.thingsinyourpossession" button=true owner=owner editable=editable engine="prosemirror"}}
                 </div>
             </div>
         </div>
@@ -302,13 +302,13 @@
             <div>
                 <div class="section-label"><input name="system.background.section3" type="text" style="border: none; background-color: transparent;" value="{{system.background.section3}}" placeholder="{{localize "k4lt.RelationToTheOtherCharacters"}}" /></div>
                 <div class="free-text">
-                    {{editor system.relationtotheothercharacters target="system.relationtotheothercharacters" button=true owner=owner editable=editable}}
+                    {{editor system.relationtotheothercharacters target="system.relationtotheothercharacters" button=true owner=owner editable=editable engine="prosemirror"}}
                 </div>
             </div>
             <div>
                 <div class="section-label"><input name="system.background.section4" type="text" style="border: none; background-color: transparent;" value="{{system.background.section4}}" placeholder="{{localize "k4lt.DramaticHooks"}}" /></div>
                 <div class="free-text">
-                    {{editor system.dramatichooks target="system.dramatichooks" button=true owner=owner editable=editable}}
+                    {{editor system.dramatichooks target="system.dramatichooks" button=true owner=owner editable=editable engine="prosemirror"}}
                 </div>
             </div>
         </div>
@@ -324,11 +324,11 @@
                 {{#if (eq system.conditionAngry.state "checked")}}
                 <div class="condition-question">{{localize "k4lt.WhoOrWhatIsTheCharacterAngryAt"}}</div>
                 <div class="free-text">
-                    {{editor system.conditionAngry.answer1 target="system.conditionAngry.answer1" button=true owner=owner editable=editable}}
+                    {{editor system.conditionAngry.answer1 target="system.conditionAngry.answer1" button=true owner=owner editable=editable engine="prosemirror"}}
                 </div>
                 <div class="condition-question">{{localize "k4lt.HowIsTheAngerManifesting"}}</div>
                 <div class="free-text">
-                    {{editor system.conditionAngry.answer2 target="system.conditionAngry.answer2" button=true owner=owner editable=editable}}
+                    {{editor system.conditionAngry.answer2 target="system.conditionAngry.answer2" button=true owner=owner editable=editable engine="prosemirror"}}
                 </div>
                 {{/if}}
             </div>
@@ -340,11 +340,11 @@
                 {{#if (eq system.conditionSad.state "checked")}}
                 <div class="condition-question">{{localize "k4lt.WhatIsCausingTheSadness"}}</div>
                 <div class="free-text">
-                    {{editor system.conditionSad.answer1 target="system.conditionSad.answer1" button=true owner=owner editable=editable}}
+                    {{editor system.conditionSad.answer1 target="system.conditionSad.answer1" button=true owner=owner editable=editable engine="prosemirror"}}
                 </div>
                 <div class="condition-question">{{localize "k4lt.HowDoesTheCharacterDealWithIt"}}</div>
                 <div class="free-text">
-                    {{editor system.conditionSad.answer2 target="system.conditionSad.answer2" button=true owner=owner editable=editable}}
+                    {{editor system.conditionSad.answer2 target="system.conditionSad.answer2" button=true owner=owner editable=editable engine="prosemirror"}}
                 </div> 
                 {{/if}}
             </div>
@@ -356,11 +356,11 @@
                 {{#if (eq system.conditionScared.state "checked")}}
                 <div class="condition-question">{{localize "k4lt.WhatIsTheSourceOfTheFear"}}</div>
                 <div class="free-text">
-                    {{editor system.conditionScared.answer1 target="system.conditionScared.answer1" button=true owner=owner editable=editable}}
+                    {{editor system.conditionScared.answer1 target="system.conditionScared.answer1" button=true owner=owner editable=editable engine="prosemirror"}}
                 </div>
                 <div class="condition-question">{{localize "k4lt.HowDoesTheFearAffectTheCharactersActions"}}</div>
                 <div class="free-text">
-                    {{editor system.conditionScared.answer2 target="system.conditionScared.answer2" button=true owner=owner editable=editable}}
+                    {{editor system.conditionScared.answer2 target="system.conditionScared.answer2" button=true owner=owner editable=editable engine="prosemirror"}}
                 </div>
                 {{/if}}
             </div>
@@ -372,11 +372,11 @@
                 {{#if (eq system.conditionGuiltRidden.state "checked")}}
                 <div class="condition-question">{{localize "k4lt.WhatDoesTheCharacterFeelGuiltyAbout"}}</div>
                 <div class="free-text">
-                    {{editor system.conditionGuiltRidden.answer1 target="system.conditionGuiltRidden.answer1" button=true owner=owner editable=editable}}
+                    {{editor system.conditionGuiltRidden.answer1 target="system.conditionGuiltRidden.answer1" button=true owner=owner editable=editable engine="prosemirror"}}
                 </div>
                 <div class="condition-question">{{localize "k4lt.WhoDoesTheCharacterSeekForgivenessFrom"}}</div>
                 <div class="free-text">
-                    {{editor system.conditionGuiltRidden.answer2 target="system.conditionGuiltRidden.answer2" button=true owner=owner editable=editable}}
+                    {{editor system.conditionGuiltRidden.answer2 target="system.conditionGuiltRidden.answer2" button=true owner=owner editable=editable engine="prosemirror"}}
                 </div>
                 {{/if}}
             </div>
@@ -388,11 +388,11 @@
                 {{#if (eq system.conditionObsessed.state "checked")}}
                 <div class="condition-question">{{localize "k4lt.WhatIsTheCharacterObsessedWith"}}</div>
                 <div class="free-text">
-                    {{editor system.conditionObsessed.answer1 target="system.conditionObsessed.answer1" button=true owner=owner editable=editable}}
+                    {{editor system.conditionObsessed.answer1 target="system.conditionObsessed.answer1" button=true owner=owner editable=editable engine="prosemirror"}}
                 </div>
                 <div class="condition-question">{{localize "k4lt.WhyDoesTheCharacterFindItCompelling"}}</div>
                 <div class="free-text">
-                    {{editor system.conditionObsessed.answer2 target="system.conditionObsessed.answer2" button=true owner=owner editable=editable}}
+                    {{editor system.conditionObsessed.answer2 target="system.conditionObsessed.answer2" button=true owner=owner editable=editable engine="prosemirror"}}
                 </div>
                 {{/if}}
             </div>
@@ -404,11 +404,11 @@
                 {{#if (eq system.conditionDistracted.state "checked")}}
                 <div class="condition-question">{{localize "k4lt.WhatIsTheCharacterDistractedBy"}}</div>
                 <div class="free-text">
-                    {{editor system.conditionDistracted.answer1 target="system.conditionDistracted.answer1" button=true owner=owner editable=editable}}
+                    {{editor system.conditionDistracted.answer1 target="system.conditionDistracted.answer1" button=true owner=owner editable=editable engine="prosemirror"}}
                 </div>
                 <div class="condition-question">{{localize "k4lt.HowDoesThisDistractionImpactTheSituation"}}</div>
                 <div class="free-text">
-                    {{editor system.conditionDistracted.answer2 target="system.conditionDistracted.answer2" button=true owner=owner editable=editable}}
+                    {{editor system.conditionDistracted.answer2 target="system.conditionDistracted.answer2" button=true owner=owner editable=editable engine="prosemirror"}}
                 </div>
                 {{/if}}
             </div>
@@ -427,7 +427,7 @@
                 </div>
                 <div class="condition-question">{{localize "k4lt.WhatIsHauntingTheCharacter"}}</div>
                 <div class="free-text">
-                    {{editor system.conditionHaunted.answer target="system.conditionHaunted.answer" button=true owner=owner editable=editable}}
+                    {{editor system.conditionHaunted.answer target="system.conditionHaunted.answer" button=true owner=owner editable=editable engine="prosemirror"}}
                 </div>
                 {{/if}}
             </div>
@@ -550,7 +550,7 @@
         <div class="one-column">
             <div "notes-box">
                 <div class="free-text">
-                    {{editor system.notes target="system.notes" button=true owner=owner editable=editable}}
+                    {{editor system.notes target="system.notes" button=true owner=owner editable=editable engine="prosemirror"}}
                 </div>
             </div>
         </div>

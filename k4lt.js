@@ -26,7 +26,7 @@ const templatePaths = [
 
 async function preloadHandlebarTemplates() {
   kultLogger("Loading templates:", templatePaths); // Log the template paths
-  return loadTemplates(templatePaths);
+  return foundry.applications.handlebars.loadTemplates(templatePaths);
 }
 
 function initializeSystem() {
@@ -35,11 +35,17 @@ function initializeSystem() {
 
   kultLogger("Initializing K4lt");
   CONFIG.Actor.documentClass = k4ltActor;
-  Items.unregisterSheet("core", ItemSheet);
-  Actors.unregisterSheet("core", ActorSheet);
-  Items.registerSheet("k4lt", k4ltitemsheet, { makeDefault: true });
-  Actors.registerSheet("k4lt", k4ltPCsheet, { types: ["pc"], makeDefault: true });
-  Actors.registerSheet("k4lt", k4ltNPCsheet, { types: ["npc"], makeDefault: true });
+  foundry.documents.collections.Items.unregisterSheet("core", foundry.appv1.sheets.ItemSheet);
+  foundry.documents.collections.Actors.unregisterSheet("core", foundry.appv1.sheets.ActorSheet);
+  foundry.documents.collections.Items.registerSheet("k4lt", k4ltitemsheet, { makeDefault: true });
+  foundry.documents.collections.Actors.registerSheet("k4lt", k4ltPCsheet, { types: ["pc"], makeDefault: true });
+  foundry.documents.collections.Actors.registerSheet("k4lt", k4ltNPCsheet, { types: ["npc"], makeDefault: true });
+  // Log the registration of the sheets
+  kultLogger("Registered K4lt sheets:", {
+    k4ltitemsheet: k4ltitemsheet,
+    k4ltPCsheet: k4ltPCsheet,
+    k4ltNPCsheet: k4ltNPCsheet,
+  });
 
   preloadHandlebarTemplates().then(() => {
     registerHandlebarsHelpers();
@@ -66,25 +72,52 @@ function createMacroOnHotbarDrop(bar, data, slot) {
 }
 
 function addK4ltLinksToSettings(app, html) {
-  const lotdSection = $("<h2>K4lt Links</h2>");
-  html.find("#settings-game").after(lotdSection);
-  const lotdDiv = $("<div></div>");
-  lotdSection.after(lotdDiv);
+  // On prend le premier <h4 class="divider">
+  const gameSettingsHeader = html.querySelector("h4.divider");
 
-  const links = [
-    { icon: "fa-solid fa-cart-shopping", text: "Kult: Divinity Lost", url: "https://kultdivinitylost.com/products/" },
-    { icon: "fab fa-github", text: "System repository", url: "https://github.com/YanKlInnomme/FoundryVTT-k4lt" },
-    { icon: "fa-regular fa-mug-hot fa-bounce", text: "Buy me a coffee", url: "https://www.buymeacoffee.com/yank" }
+  if (!gameSettingsHeader) {
+    kultLogger("No header <h4.divider> found in parameters");
+    return;
+  }
+
+  // Création de la section personnalisée
+  const section = document.createElement("section");
+  section.classList.add("settings", "flexcol");
+  section.innerHTML = `
+    <h4 class="divider">${game.i18n.localize("WORLD.FIELDS.system.label")}</h4>
+    <div class="k4lt system-badge">
+      <img src="systems/k4lt/assets/logo-en.svg">
+    </div>
+  `;
+
+  // Définition des liens
+  const linkKeys = [
+    { icon: "fa-solid fa-cart-shopping", key: "KultWebsite" },
+    { icon: "fab fa-github", key: "SystemRepo" },
+    { icon: "fa-regular fa-mug-hot fa-bounce", key: "BuyCoffee" }
   ];
 
-  links.forEach(link => {
-    const button = $(`<button><i class="${link.icon}"></i> ${link.text} <sup><i class="fa-light fa-up-right-from-square"></i></sup></button>`);
-    lotdDiv.append(button);
-    button.on("click", (ev) => {
+  for (const link of linkKeys) {
+    const localizedText = game.i18n.localize(`k4lt.Links.${link.key}`);
+    const localizedURL = game.i18n.localize(`k4lt.Links.${link.key}URL`);
+
+    const linkSection = document.createElement("section");
+    linkSection.classList.add("settings", "flexcol");
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.innerHTML = `<i class="${link.icon}"></i> ${localizedText} <sup><i class="fa-light fa-up-right-from-square"></i></sup>`;
+    button.addEventListener("click", ev => {
       ev.preventDefault();
-      window.open(link.url, "_blank");
+      window.open(localizedURL, "_blank");
     });
-  });
+
+    linkSection.appendChild(button);
+    section.appendChild(linkSection);
+  }
+
+  // Insère la section avant le premier header
+  gameSettingsHeader.parentNode.insertBefore(section, gameSettingsHeader);
 }
 
 function openActorImageInPopup(app, html) {
@@ -127,7 +160,7 @@ function handleAdvancementTabChange(app, html) {
 }
 
 function updateActorDisplay(actorId) {
-  const directoryItem = document.querySelector(`.directory-item.actor[data-document-id="${actorId}"]`);
+  const directoryItem = document.querySelector(`.directory-item.actor[data-entry-id="${actorId}"]`);
   const actor = game.actors.get(actorId);
 
   if (!directoryItem || !actor) {
@@ -141,27 +174,34 @@ function updateActorDisplay(actorId) {
 
   const level = actor.system?.advancementLevel?.value || "0";
 
-  kultLogger(`Update information for: ${actor.name}\nStatut: ${statut}`);
+  kultLogger(`Update information for: ${actor.name}\nStatut: ${statut}\nLevel: ${level}`);
 
+  // Trouver le lien <a class="entry-name">
+  const nameElement = directoryItem.querySelector('.entry-name');
+  if (!nameElement) return;
+
+  // Vérifie s'il y a déjà un champ d'info pour éviter les doublons
   let extraInfo = directoryItem.querySelector('.actor-extra-info');
   if (!extraInfo) {
-    const nameElement = directoryItem.querySelector('.entity-name') || directoryItem.querySelector('h4');
-    if (nameElement) {
-      extraInfo = document.createElement('div');
-      extraInfo.classList.add('actor-extra-info');
-      nameElement.appendChild(extraInfo);
-    }
+    extraInfo = document.createElement('div');
+    extraInfo.classList.add('actor-extra-info');
+    extraInfo.style.fontSize = '0.75em';
+    extraInfo.style.color = '#888';
+    extraInfo.style.marginTop = '2px';
+    directoryItem.appendChild(extraInfo); // append après le <a>
   }
 
-  if (extraInfo) {
-    extraInfo.textContent = `${statut} (${level})`;
-  }
+  // Met à jour le texte
+  extraInfo.textContent = `${statut} (${level})`;
 }
 
 function updateActorDirectory(app, html) {
   kultLogger("Additional information for PJs");
-  html.find('.directory-item.actor').each((index, element) => {
-    const actorId = element.dataset.documentId;
+
+  const actorElements = html.querySelectorAll('.directory-item.actor');
+
+  actorElements.forEach((element) => {
+    const actorId = element.dataset.entryId;
     const actor = game.actors.get(actorId);
 
     if (!actor) {
@@ -219,5 +259,16 @@ Hooks.on('updateActor', (actor, data, options, userId) => {
   if (actor.type === 'pc') {
     updateActorDisplay(actor.id);
     checkAdvancements(actor);
+  }
+});
+
+
+Hooks.on("renderActorDirectory", (app, html, data) => {
+  kultLogger("Injecting additional actor info into Actor Directory");
+
+  for (const actor of game.actors) {
+    if (actor.hasPlayerOwner) {
+      updateActorDisplay(actor.id);
+    }
   }
 });

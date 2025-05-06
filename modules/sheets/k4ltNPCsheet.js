@@ -1,4 +1,4 @@
-export default class k4ltNPCsheet extends ActorSheet {
+export default class k4ltNPCsheet extends foundry.appv1.sheets.ActorSheet {
   /** @override */
   get template() {
     return `systems/k4lt/templates/sheets/npc-sheet.hbs`;

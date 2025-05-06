@@ -38,6 +38,17 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 5.0.0.0
+ * Passage à la version 13 de Foundry VTT :
+    - Ajout d'un compendium 'Macros' pour la macro actuelle et celles à venir
+    - Correction de l'affichage de la pause suite à la refonte de l'interface de Foundry VTT
+    - Correction de l'affichage des liens Boutique, Dépot et Donation dans l'onglet 'Paramètres'
+    - Migration v13 du système (renderTemplate>foundry.applications.handlebars.renderTemplate, Actors>foundry.documents.collections.Actors, Items>foundry.documents.collections.Items, ActorSheet>foundry.appv1.sheets.ActorSheet et ItemSheet>foundry.appv1.sheets.ItemSheet)
+    - Modification de l'éditeur de texte utilisé (tinymce>prosemirror)
+    - Prise en charge CSS des thèmes clair et sombre du nouveau Foundry VTT
+    - Refonte de l'affichage des objets 'Actions', 'Avantages', 'Désavantages', 'Capacités', etc. pour une meilleure lisibilité
+    - Refonte en profondeur du CSS pour corriger les problèmes d'affichage (Styles perdus, altérés ou autres)
+
 ## Version 4.0.0.1
  * Correction d'un bug mineur dans le compendium 'Capacités'
 
@@ -239,6 +250,17 @@ This digital adaptation is unofficial content from KULT: Divinity Lost, authoriz
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 to 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 5.0.0.0
+* Transition to Foundry VTT version 13:
+    - Added a 'Macros' compendium for the current and future macros
+    - Fixed the display of the pause due to the redesign of the Foundry VTT interface
+    - Fixed the display of the Shop, Deposit and Donation links in the 'Settings' tab
+    - Migration v13 of the system (renderTemplate>foundry.applications.handlebars.renderTemplate, Actors>foundry.documents.collections.Actors, Items>foundry.documents.collections.Items, ActorSheet>foundry.appv1.sheets.ActorSheet and ItemSheet>foundry.appv1.sheets.ItemSheet)
+    - Changed text editor used (tinymce>prosemirror)
+    - CSS support for light and dark themes of the new Foundry VTT
+    - Redesign of the display of 'Moves', 'Advantages', 'Disadvantages', 'Abilities', etc. objects for better readability
+    - In-depth redesign of CSS to fix display issues (Lost styles, altered or other)
 
 ## Version 4.0.0.1
  * Fixed a minor bug in the 'Abilities' compendium

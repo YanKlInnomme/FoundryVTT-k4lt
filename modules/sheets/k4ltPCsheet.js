@@ -1,4 +1,4 @@
-export default class k4ltPCsheet extends ActorSheet {
+export default class k4ltPCsheet extends foundry.appv1.sheets.ActorSheet {
   /** @override */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {

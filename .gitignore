@@ -4,5 +4,6 @@
 # Le dossier PSD contenant les fichiers graphiques
 psd
 sources
-
+nodes_modules/
 _source
+.prettierrc

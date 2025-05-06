@@ -19,7 +19,7 @@
              <div style="width: 98% !important;">
                 <div class="section-label">{{localize "k4lt.Description"}}</div>
                 <div class="free-text">
-                    {{editor system.description target="system.description" button=true owner=owner editable=editable}}
+                    {{editor system.description target="system.description" button=true owner=owner editable=editable engine="prosemirror"}}
                 </div>
             </div>
     </div>
@@ -27,7 +27,7 @@
        <div class="npc-abilities">
       <div class="section-label">{{localize "k4lt.Abilities"}}</div>
       <div class="free-text">
-        {{editor system.abilities target="system.abilities" button=true owner=owner editable=editable}}
+        {{editor system.abilities target="system.abilities" button=true owner=owner editable=editable engine="prosemirror"}}
       </div>
     </div>
     <div class="npc-harm">
@@ -39,13 +39,13 @@
           <span>/</span>
           <input class="short-input" style="width: 80px" name="system.harm.max" value="{{system.harm.max}}" type="text" aria-label="Max Harm" data-dtype="Number" />
         </div>
-        {{editor system.harmmoves target="system.harmmoves" button=true owner=owner editable=editable}}
+        {{editor system.harmmoves target="system.harmmoves" button=true owner=owner editable=editable engine="prosemirror"}}
       </div>
     </div>
     <div class="npc-attacks">
       <div class="section-label">{{localize "k4lt.Attacks"}}</div>
       <div class="free-text">
-        {{editor system.attacks target="system.attacks" button=true owner=owner editable=editable}}
+        {{editor system.attacks target="system.attacks" button=true owner=owner editable=editable engine="prosemirror"}}
       </div>
     </div>
     <div class="npc-combat">
@@ -55,7 +55,7 @@
         </select>
       </div>
       <div class="free-text">
-        {{editor system.combatmoves target="system.combatmoves" button=true owner=owner editable=editable}}
+        {{editor system.combatmoves target="system.combatmoves" button=true owner=owner editable=editable engine="prosemirror"}}
       </div>
     </div>
     <div class="npc-influence">
@@ -65,7 +65,7 @@
         </select>
       </div>
       <div class="free-text">
-        {{editor system.influencemoves target="system.influencemoves" button=true owner=owner editable=editable}}
+        {{editor system.influencemoves target="system.influencemoves" button=true owner=owner editable=editable engine="prosemirror"}}
       </div>
     </div>
     <div class="npc-magic">
@@ -75,7 +75,7 @@
         </select>
       </div>
       <div class="free-text">
-        {{editor system.magicmoves target="system.magicmoves" button=true owner=owner editable=editable}}
+        {{editor system.magicmoves target="system.magicmoves" button=true owner=owner editable=editable engine="prosemirror"}}
       </div>
     </div>
 

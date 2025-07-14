@@ -38,9 +38,24 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 5.0.1.0
+ * Correction de la mise en forme de la fiche de personnage non joueur (PNJ)
+ * Ajout de macros supplémentaires :
+    - `Enhanced Fog of War Reset` : Rermet de réinitialiser les données du brouillard de guerre (Fog of War) pour toutes les scènes.
+    - `Extinguish All Scene Lights` : Permet d'éteindre toutes les lumières de la scène en cours.
+    - `Flickering Light Horror Effect` : Permet d'ajouter un effet de lumière vacillante pour créer une ambiance d'horreur.
+    - `Ignite All Scene Lights` : Permet d'allumer toutes les lumières de la scène en cours.
+    - `NPC Token Rotation Lock` : Permet de verrouiller la rotation des jetons PNJ (Rotation Off).
+    - `NPC Token Rotation Unlock` : Permet de déverrouiller la rotation des jetons PNJ (Rotation On).
+    - `Random Token Scatter` : Permet de disperser aléatoirement les jetons sélectionnés sur la scène en cours.
+    - `Randomize Pulse Light Settings` : Permet de randomiser les paramètres des lumières pulsées (Pulse Light) pour créer un éclairage varié sur la scène en cours.
+    - `Remove All PC Tokens` : Permet de supprimer tous les jetons de personnages joueurs (PC) de la scène en cours ou de toutes les scènes.
+    - `Remove Orphaned Tokens` : Permet de supprimer les jetons orphelins (tokens sans acteur) de toutes les scènes.
+    - `Validate Actor Images` : Permet de vérifier et réparer automatiquement les images cassées des Acteurs et de leurs Tokens.
+
 ## Version 5.0.0.0
  * Passage à la version 13 de Foundry VTT :
-    - Ajout d'un compendium 'Macros' pour la macro actuelle et celles à venir
+    - Ajout d'un compendium 'Macros' pour la macro actuelle `World Reset Macro` et celles à venir
     - Correction de l'affichage de la pause suite à la refonte de l'interface de Foundry VTT
     - Correction de l'affichage des liens Boutique, Dépot et Donation dans l'onglet 'Paramètres'
     - Migration v13 du système (renderTemplate>foundry.applications.handlebars.renderTemplate, Actors>foundry.documents.collections.Actors, Items>foundry.documents.collections.Items, ActorSheet>foundry.appv1.sheets.ActorSheet et ItemSheet>foundry.appv1.sheets.ItemSheet)
@@ -251,9 +266,24 @@ This digital adaptation is unofficial content from KULT: Divinity Lost, authoriz
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
 
+## Version 5.0.1.0
+ * Fixed the Non-Player Character sheet display
+ * Added additional macros:
+    - `Enhanced Fog of War Reset`: Resets the fog of war data for all scenes.
+    - `Extinguish All Scene Lights`: Turns off all lights in the current scene.
+    - `Flickering Light Horror Effect`: Adds a flickering light effect to create a horror ambiance.
+    - `Ignite All Scene Lights`: Turns on all lights in the current scene.
+    - `NPC Token Rotation Lock`: Locks the rotation of NPC tokens (Rotation Off).
+    - `NPC Token Rotation Unlock`: Unlocks the rotation of NPC tokens (Rotation On).
+    - `Random Token Scatter`: Randomly scatters selected tokens across the current scene.
+    - `Randomize Pulse Light Settings`: Randomizes pulse light settings for varied lighting effects in the current scene.
+    - `Remove All PC Tokens`: Removes all player character tokens from the current or all scenes.
+    - `Remove Orphaned Tokens`: Removes orphaned tokens (tokens without actors) from all scenes.
+    - `Validate Actor Images`: Checks and automatically repairs broken images for Actors and their Tokens.
+
 ## Version 5.0.0.0
 * Transition to Foundry VTT version 13:
-    - Added a 'Macros' compendium for the current and future macros
+    - Added a 'Macros' compendium for the current `World Reset Macro` and future macros
     - Fixed the display of the pause due to the redesign of the Foundry VTT interface
     - Fixed the display of the Shop, Deposit and Donation links in the 'Settings' tab
     - Migration v13 of the system (renderTemplate>foundry.applications.handlebars.renderTemplate, Actors>foundry.documents.collections.Actors, Items>foundry.documents.collections.Items, ActorSheet>foundry.appv1.sheets.ActorSheet and ItemSheet>foundry.appv1.sheets.ItemSheet)

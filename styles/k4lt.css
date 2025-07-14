@@ -1070,3 +1070,23 @@ prose-mirror menu button {
     margin-top: 2px;
     margin-bottom: 2px;
 }
+
+.adventure-header h1 {
+    font-family: "Infidel-C";
+    position: relative;
+    top: 8px;
+    text-align: left;
+    padding-left: 15px;
+}
+
+header.adventure-header {
+    height: 30px;
+}
+
+.npc-home {
+  width: 180px;
+}
+
+.npc-type {
+  width: 180px;
+}

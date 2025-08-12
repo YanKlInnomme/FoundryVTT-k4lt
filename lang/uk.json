@@ -245,5 +245,14 @@
       "Title3": "Після 10 Просувань ви також можете вибрати:",
       "Nine": "Почніть свою подорож до Пробудження."
     }
+  },
+
+  "k4lt.Links": {
+    "ShopTitle": "Helmgast",
+    "ShopURL": "https://webshop.helmgast.se/kult/",
+    "GitTitle": "Репозиторій системи",
+    "GitURL": "https://github.com/YanKlInnomme/FoundryVTT-k4lt",
+    "DonationTitle": "Купи мені каву",
+    "DonationURL": "https://www.buymeacoffee.com/yank"
   }
 }

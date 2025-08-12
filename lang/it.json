@@ -245,5 +245,14 @@
       "Title3": "Dopo 10 Avanzamenti, puoi anche scegliere:",
       "Nine": "Inizia il tuo viaggio verso il Risveglio."
     }
+  },
+
+  "k4lt.Links": {
+    "ShopTitle": "Raven Distribution",
+    "ShopURL": "https://www.ravendistribution.it/?s=kult",
+    "GitTitle": "Deposito del sistema",
+    "GitURL": "https://github.com/YanKlInnomme/FoundryVTT-k4lt",
+    "DonationTitle": "Offrimi un caffè",
+    "DonationURL": "https://www.buymeacoffee.com/yank"
   }
 }

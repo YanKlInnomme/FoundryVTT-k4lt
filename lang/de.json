@@ -245,5 +245,14 @@
       "Title3": "Nach 10 Fortschritten kannst du auch wählen:",
       "Nine": "Beginne deine Reise zum Erwachen."
     }
+  },
+
+  "k4lt.Links": {
+    "ShopTitle": "Truant",
+    "ShopURL": "https://truant.com/?s=kult&post_type=product",
+    "GitTitle": "System-Repository",
+    "GitURL": "https://github.com/YanKlInnomme/FoundryVTT-k4lt",
+    "DonationTitle": "Kauf mir einen Kaffee",
+    "DonationURL": "https://www.buymeacoffee.com/yank"
   }
 }

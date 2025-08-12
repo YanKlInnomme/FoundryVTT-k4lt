@@ -245,5 +245,14 @@
       "Title3": "После 10 Продвижений ты также можешь выбрать:",
       "Nine": "Начни путешествие к Пробуждению."
     }
+  },
+
+  "k4lt.Links": {
+    "ShopTitle": "Helmgast",
+    "ShopURL": "https://webshop.helmgast.se/kult/",
+    "GitTitle": "Репозиторий системы",
+    "GitURL": "https://github.com/YanKlInnomme/FoundryVTT-k4lt",
+    "DonationTitle": "Купи мне кофе",
+    "DonationURL": "https://www.buymeacoffee.com/yank"
   }
 }

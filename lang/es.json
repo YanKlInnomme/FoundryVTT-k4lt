@@ -245,5 +245,14 @@
       "Title3": "Después de 10 Avances, también puedes elegir:",
       "Nine": "Comienza tu viaje hacia el Despertar."
     }
+  },
+
+  "k4lt.Links": {
+    "ShopTitle": "Nosolorol",
+    "ShopURL": "https://www.nosolorol.com/144-kult-divinidad-perdida",
+    "GitTitle": "Depósito del sistema",
+    "GitURL": "https://github.com/YanKlInnomme/FoundryVTT-k4lt",
+    "DonationTitle": "Invítame un café",
+    "DonationURL": "https://www.buymeacoffee.com/yank"
   }
 }

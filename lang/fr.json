@@ -249,5 +249,14 @@
       "Title3": "Après 10 Progressions, vous pouvez également choisir :",
       "Nine": "Commencez votre voyage vers l'Éveil."
     }
+  },
+
+  "k4lt.Links": {
+    "ShopTitle": "Arkhane Asylum Publishing",
+    "ShopURL": "https://www.arkhane-asylum.fr/shop/?v=1029",
+    "GitTitle": "Dépôt du système",
+    "GitURL": "https://github.com/YanKlInnomme/FoundryVTT-k4lt",
+    "DonationTitle": "Offre-moi un café",
+    "DonationURL": "https://www.buymeacoffee.com/yank"
   }
 }

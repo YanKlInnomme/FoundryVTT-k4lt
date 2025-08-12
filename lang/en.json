@@ -260,5 +260,14 @@
       "Title3": "After 10 Advancements You May Also Choose:",
       "Nine": "Start your journey towards Awakening."
     }
+  },
+
+  "k4lt.Links": {
+    "ShopTitle": "Helmgast",
+    "ShopURL": "https://webshop.helmgast.se/kult/",
+    "GitTitle": "System deposit",
+    "GitURL": "https://github.com/YanKlInnomme/FoundryVTT-k4lt",
+    "DonationTitle": "Buy me a coffee",
+    "DonationURL": "https://www.buymeacoffee.com/yank"
   }
 }

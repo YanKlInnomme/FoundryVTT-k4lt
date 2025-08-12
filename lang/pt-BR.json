@@ -245,5 +245,14 @@
       "Title3": "Após 10 Avanços, você também pode escolher:",
       "Nine": "Comece sua jornada em direção ao Despertar."
     }
+  },
+
+  "k4lt.Links": {
+    "ShopTitle": "Buró",
+    "ShopURL": "https://www.burobrasil.com/produtos/kult/",
+    "GitTitle": "Repositório do sistema",
+    "GitURL": "https://github.com/YanKlInnomme/FoundryVTT-k4lt",
+    "DonationTitle": "Me compre um café",
+    "DonationURL": "https://www.buymeacoffee.com/yank"
   }
 }

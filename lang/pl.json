@@ -245,5 +245,14 @@
       "Title3": "Po 10 Postępach możesz również wybrać:",
       "Nine": "Rozpocznij swoją podróż do Przebudzenia."
     }
+  },
+
+  "k4lt.Links": {
+    "ShopTitle": "Alis Games",
+    "ShopURL": "https://alisgames.pl/pl_PL/taxons/wszystkie-kategorie/gry-rpg/alis-games/kult",
+    "GitTitle": "Repozytorium systemu",
+    "GitURL": "https://github.com/YanKlInnomme/FoundryVTT-k4lt",
+    "DonationTitle": "Kup mi kawę",
+    "DonationURL": "https://www.buymeacoffee.com/yank"
   }
 }

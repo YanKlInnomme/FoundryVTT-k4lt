@@ -72,41 +72,99 @@ function createMacroOnHotbarDrop(bar, data, slot) {
 }
 
 function addK4ltLinksToSettings(app, html) {
-  // On prend le premier <h4 class="divider">
   const gameSettingsHeader = html.querySelector("h4.divider");
-
   if (!gameSettingsHeader) {
-    kultLogger("No header <h4.divider> found in parameters");
+    console.error("No header <h4.divider> found in parameters");
     return;
+  }
+
+  const currentLang = game.i18n.lang;
+
+  const logoMap = {
+    "de": {
+      "light": "logo-de.svg",
+      "dark": "logo-de-dark.svg"
+    },
+    "es": {
+      "light": "logo-es.svg",
+      "dark": "logo-es-dark.svg"
+    },
+    "fr": {
+      "light": "logo-fr.svg",
+      "dark": "logo-fr-dark.svg"
+    },
+    "it": {
+      "light": "logo-it.svg",
+      "dark": "logo-it-dark.svg"
+    },
+    "pl": {
+      "light": "logo-pl.svg",
+      "dark": "logo-pl-dark.svg"
+    },
+    "pt-BR": {
+      "light": "logo-pt-BR.svg",
+      "dark": "logo-pt-BR-dark.svg"
+    }
+  };
+
+  const defaultLogos = {
+    "light": "logo.svg",
+    "dark": "logo-dark.svg"
+  };
+
+  function getCurrentTheme() {
+    if (html.classList.contains("theme-dark")) return "dark";
+    if (html.classList.contains("theme-light")) return "light";
+    return game.settings.get("core", "uiConfig")?.colorScheme?.interface || "light";
+  }
+
+  function getLogoPath() {
+    const theme = getCurrentTheme();
+
+    let logoFile;
+    if (logoMap[currentLang]?.[theme]) {
+      logoFile = logoMap[currentLang][theme];
+    } else if (logoMap[currentLang]) {
+      logoFile = logoMap[currentLang]["light"] || Object.values(logoMap[currentLang])[0];
+    } else {
+      logoFile = defaultLogos[theme] || defaultLogos["light"];
+    }
+
+    return `systems/k4lt/assets/${logoFile}`;
   }
 
   // Création de la section personnalisée
   const section = document.createElement("section");
   section.classList.add("settings", "flexcol");
+
   section.innerHTML = `
     <h4 class="divider">${game.i18n.localize("WORLD.FIELDS.system.label")}</h4>
     <div class="k4lt system-badge">
-      <img src="systems/k4lt/assets/logo-en.svg">
+      <img class="dynamic-logo" src="${getLogoPath()}">
     </div>
   `;
 
-  // Définition des liens
   const linkKeys = [
-    { icon: "fa-solid fa-cart-shopping", key: "KultWebsite" },
-    { icon: "fab fa-github", key: "SystemRepo" },
-    { icon: "fa-regular fa-mug-hot fa-bounce", key: "BuyCoffee" }
+    { icon: "fa-solid fa-cart-shopping", key: "Shop" },
+    { icon: "fab fa-github", key: "Git" },
+    { icon: "fa-regular fa-mug-hot fa-bounce", key: "Donation" }
   ];
 
-  for (const link of linkKeys) {
-    const localizedText = game.i18n.localize(`k4lt.Links.${link.key}`);
+  for (let i = 0; i < linkKeys.length; i++) {
+    const link = linkKeys[i];
+    const localizedText = game.i18n.localize(`k4lt.Links.${link.key}Title`);
     const localizedURL = game.i18n.localize(`k4lt.Links.${link.key}URL`);
-
     const linkSection = document.createElement("section");
     linkSection.classList.add("settings", "flexcol");
 
     const button = document.createElement("button");
     button.type = "button";
     button.innerHTML = `<i class="${link.icon}"></i> ${localizedText} <sup><i class="fa-light fa-up-right-from-square"></i></sup>`;
+
+    if (i === linkKeys.length - 1) {
+      button.style.marginBottom = "1rem";
+    }
+
     button.addEventListener("click", ev => {
       ev.preventDefault();
       window.open(localizedURL, "_blank");
@@ -116,8 +174,17 @@ function addK4ltLinksToSettings(app, html) {
     section.appendChild(linkSection);
   }
 
-  // Insère la section avant le premier header
   gameSettingsHeader.parentNode.insertBefore(section, gameSettingsHeader);
+
+  // Observer pour changer le logo selon thème
+  const logoImg = section.querySelector(".dynamic-logo");
+  const observer = new MutationObserver(() => {
+    const newSrc = getLogoPath();
+    if (logoImg.getAttribute("src") !== newSrc) {
+      logoImg.setAttribute("src", newSrc);
+    }
+  });
+  observer.observe(html, { attributes: true, attributeFilter: ["class"] });
 }
 
 function openActorImageInPopup(app, html) {
@@ -270,5 +337,84 @@ Hooks.on("renderActorDirectory", (app, html, data) => {
     if (actor.hasPlayerOwner) {
       updateActorDisplay(actor.id);
     }
+  }
+});
+
+function generateTokenImageFilenames(name, ext) {
+  const variants = [
+    '-token', '_token', 'token', '(token)', '[token]', 
+    '%20-%20token', '%20_%20token', '%20token', '%20(token)', '%20[token]',
+    '-Token', '_Token', 'Token', '(Token)', '[Token]', 
+    '%20-%20Token', '%20_%20Token', '%20Token', '%20(Token)', '%20[Token]'
+  ];
+
+  return variants.map(variant => `${name}${variant}.${ext}`);
+}
+
+async function fileExists(filePath) {
+  const basePath = filePath.split('/').slice(0, -1).join('/');
+  try {
+    const result = await FilePicker.browse('data', basePath);
+    return result.files.includes(filePath);
+  } catch (error) {
+    return false;
+  }
+}
+
+async function getTokenImagePath(actorImgPath) {
+  const imgParts = actorImgPath.split('/');
+  const fileName = imgParts.pop();
+  const [name, ext] = fileName.split('.');
+  const basePath = imgParts.join('/');
+
+  const possibleFilenames = generateTokenImageFilenames(name, ext);
+
+  const fileChecks = possibleFilenames.map(async (tokenFileName) => {
+    const tokenImgPath = `${basePath}/${tokenFileName}`;
+    return await fileExists(tokenImgPath) ? tokenImgPath : null;
+  });
+
+  const results = await Promise.all(fileChecks);
+  const tokenImgPath = results.find(path => path !== null);
+
+  return tokenImgPath || actorImgPath;
+}
+
+Hooks.on("createActor", async (actor, options, userId) => {
+  try {
+    if (options.duplicate) return;
+
+    if (!actor.img || actor.img === "icons/svg/mystery-man.svg") {
+      const actorImg = "icons/svg/mystery-man.svg";
+      const tokenImg = await getTokenImagePath(actorImg);
+
+      await actor.update({ "img": actorImg });
+      await actor.prototypeToken.update({ "texture.src": tokenImg });
+
+      Hooks.once("renderActorSheet", (sheet) => {
+        if (sheet.actor.id === actor.id) {
+          sheet.render();
+        }
+      });
+    }
+  } catch (error) {
+    console.error('Error in createActor hook:', error);
+  }
+});
+
+Hooks.on("updateActor", async (actor, data, options, userId) => {
+  try {
+    if (data.img) {
+      const tokenImg = await getTokenImagePath(data.img);
+
+      await actor.prototypeToken.update({ "texture.src": tokenImg });
+
+      const tokens = actor.getActiveTokens(true);
+      for (let token of tokens) {
+        await token.document.update({ "texture.src": tokenImg });
+      }
+    }
+  } catch (error) {
+    console.error('Error in updateActor hook:', error);
   }
 });

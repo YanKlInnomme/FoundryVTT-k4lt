@@ -38,6 +38,11 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 5.0.2.1
+ * Corrections mineures dans le fichier CSS
+ * Ajout des logos localisés de KULT: Divinity Lost et variations selon le thème (clair/sombre) choisi
+ * Recherche et assignation d'images de tokens aux acteurs en cherchant des variantes de noms de fichiers (avec "-token", "_token", "(token)", etc.)
+
 ## Version 5.0.1.0
  * Correction de la mise en forme de la fiche de personnage non joueur (PNJ)
  * Ajout de macros supplémentaires :
@@ -281,8 +286,13 @@ This digital adaptation is unofficial content from KULT: Divinity Lost, authoriz
     - `Remove Orphaned Tokens`: Removes orphaned tokens (tokens without actors) from all scenes.
     - `Validate Actor Images`: Checks and automatically repairs broken images for Actors and their Tokens.
 
+## Version 5.0.2.1
+ * Minor corrections in the CSS file
+ * Added localized logos for KULT: Divinity Lost and variations based on the chosen theme (light/dark)
+ * Search and assign token images to actors by looking for file name variations (with "-token", "_token", "(token)", etc.)
+
 ## Version 5.0.0.0
-* Transition to Foundry VTT version 13:
+ * Transition to Foundry VTT version 13:
     - Added a 'Macros' compendium for the current `World Reset Macro` and future macros
     - Fixed the display of the pause due to the redesign of the Foundry VTT interface
     - Fixed the display of the Shop, Deposit and Donation links in the 'Settings' tab

@@ -19,19 +19,6 @@
     }
   },
 
-  "k4lt": {
-    "Links": {
-     "KultWebsite": "Kult: Divinity Lost",
-      "KultWebsiteURL": "https://kultdivinitylost.com/products/",
-      "SystemRepo": "System Repository",
-      "SystemRepoURL": "https://github.com/YanKlInnomme/FoundryVTT-k4lt",
-      "BuyCoffee": "Buy Me a Coffee",
-      "BuyCoffeeURL": "https://www.buymeacoffee.com/yank"
-    }
-  },
- 
-  
-
   "k4lt.Ongoing": "Ongoing",
   "k4lt.Forward": "Forward",
   "k4lt.WhoAreYou": "Who are you?",

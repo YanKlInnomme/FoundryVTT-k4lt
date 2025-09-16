@@ -38,6 +38,12 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 5.0.2.2
+ * Suppression de variables redondantes dans le fichier en.json
+ * Ajout de deux nouvelles macros :
+    - `Quick Token Setup for PCs`: Configure automatiquement les tokens joueurs avec des paramètres de vision, d'affichage de nom et de liaison à l’acteur.
+    - `Regenerate All Scene Thumbnails`: Régénère les vignettes de toutes les scènes du monde.
+
 ## Version 5.0.2.1
  * Corrections mineures dans le fichier CSS
  * Ajout des logos localisés de KULT: Divinity Lost et variations selon le thème (clair/sombre) choisi
@@ -46,7 +52,7 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
 ## Version 5.0.1.0
  * Correction de la mise en forme de la fiche de personnage non joueur (PNJ)
  * Ajout de macros supplémentaires :
-    - `Enhanced Fog of War Reset` : Rermet de réinitialiser les données du brouillard de guerre (Fog of War) pour toutes les scènes.
+    - `Enhanced Fog of War Reset` : Permet de réinitialiser les données du brouillard de guerre (Fog of War) pour toutes les scènes.
     - `Extinguish All Scene Lights` : Permet d'éteindre toutes les lumières de la scène en cours.
     - `Flickering Light Horror Effect` : Permet d'ajouter un effet de lumière vacillante pour créer une ambiance d'horreur.
     - `Ignite All Scene Lights` : Permet d'allumer toutes les lumières de la scène en cours.
@@ -270,6 +276,17 @@ This digital adaptation is unofficial content from KULT: Divinity Lost, authoriz
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 to 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+# Version 5.0.2.2
+ * Removed redundant variables in en.json file
+ * Added two new macros:
+    - `Quick Token Setup for PCs`: Automatically configures player tokens with vision, name display, and actor linkage settings.
+    - `Regenerate All Scene Thumbnails`: Regenerates thumbnails for all scenes in the world.
+
+## Version 5.0.2.1
+ * Minor corrections in the CSS file
+ * Added localized logos for KULT: Divinity Lost and variations based on the chosen theme (light/dark)
+ * Search and assign token images to actors by looking for file name variations (with "-token", "_token", "(token)", etc.)
 
 ## Version 5.0.1.0
  * Fixed the Non-Player Character sheet display

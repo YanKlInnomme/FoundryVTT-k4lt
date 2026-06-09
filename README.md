@@ -1,5 +1,80 @@
 ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FYanKlInnomme%2FFoundryVTT-k4lt%2Fmaster%2Fsystem.json&query=%24.compatibility.verified&label=foundry%20vtt&color=%23ee9b3a) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FYanKlInnomme%2FFoundryVTT-k4lt%2Fmaster%2Fsystem.json&query=%24.version&label=version&color=%230f2f2b) ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/YanKlInnomme/FoundryVTT-k4lt/total) ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues-raw/YanKlInnomme/FoundryVTT-k4lt) ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues-closed-raw/YanKlInnomme/FoundryVTT-k4lt) ![GitHub forks](https://img.shields.io/github/forks/YanKlInnomme/FoundryVTT-k4lt) ![GitHub Repo stars](https://img.shields.io/github/stars/YanKlInnomme/FoundryVTT-k4lt) [![Static Badge](https://img.shields.io/badge/buy_me_a_coffee-FFDD00?logo=Buy%20Me%20A%20Coffee&logoColor=black)](https://www.buymeacoffee.com/yank)
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ffbd0272-59ac-4912-9ee1-200c66ad10eb" alt="KULT System for Foundry VTT" width="100%">
+</p>
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/user-attachments/assets/115d78b3-8791-46f3-bbfe-a3b6b139c926">
+        <img src="https://github.com/user-attachments/assets/115d78b3-8791-46f3-bbfe-a3b6b139c926" width="350" alt="Status">
+      </a>
+      <br>Status
+    </td>
+    <td align="center">
+      <a href="https://github.com/user-attachments/assets/4e94e503-368d-43c4-b72b-b06111f42dc5">
+        <img src="https://github.com/user-attachments/assets/4e94e503-368d-43c4-b72b-b06111f42dc5" width="350" alt="Inventory">
+      </a>
+      <br>Inventory
+    </td>
+    <td align="center">
+      <a href="https://github.com/user-attachments/assets/cfae793f-a907-46ca-8733-0bf049811a30">
+        <img src="https://github.com/user-attachments/assets/cfae793f-a907-46ca-8733-0bf049811a30" width="350" alt="Background">
+      </a>
+      <br>Background
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/user-attachments/assets/92b323f2-1f21-493d-9f64-fbc205e2f539">
+        <img src="https://github.com/user-attachments/assets/92b323f2-1f21-493d-9f64-fbc205e2f539" width="350" alt="Relationship Viewer">
+      </a>
+      <br>Relationship Viewer
+    </td>
+    <td align="center">
+      <a href="https://github.com/user-attachments/assets/8a0fe972-1732-405f-ac37-75d0af02a28f">
+        <img src="https://github.com/user-attachments/assets/8a0fe972-1732-405f-ac37-75d0af02a28f" width="350" alt="Advancement">
+      </a>
+      <br>Advancement
+    </td>
+    <td align="center">
+      <a href="https://github.com/user-attachments/assets/64f4bc26-ea64-4d17-8275-110f09857e65">
+        <img src="https://github.com/user-attachments/assets/64f4bc26-ea64-4d17-8275-110f09857e65" width="350" alt="Click to Roll Move">
+      </a>
+      <br>Click to Roll Move
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/user-attachments/assets/5aec91f4-c9be-4ee1-b2c1-0fcedd8e291b">
+        <img src="https://github.com/user-attachments/assets/5aec91f4-c9be-4ee1-b2c1-0fcedd8e291b" width="350" alt="Automatic Hold Resolution">
+      </a>
+      <br>Automatic Hold Resolution
+    </td>
+    <td align="center">
+      <a href="https://github.com/user-attachments/assets/3e47ae1b-df49-48df-a2ca-34844f71d15e">
+        <img src="https://github.com/user-attachments/assets/3e47ae1b-df49-48df-a2ca-34844f71d15e" width="350" alt="Wounds, Conditions & Stability">
+      </a>
+      <br>Wounds, Conditions & Stability
+    </td>
+    <td align="center">
+      <a href="https://github.com/user-attachments/assets/090b8f02-0065-4cc6-92fd-6e4b629c5690">
+        <img src="https://github.com/user-attachments/assets/090b8f02-0065-4cc6-92fd-6e4b629c5690" width="350" alt="Combat Selector">
+      </a>
+      <br>Combat Selector
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/user-attachments/assets/eed79177-1d9a-48b7-b460-135c32cb53b1">
+        <img src="https://github.com/user-attachments/assets/eed79177-1d9a-48b7-b460-135c32cb53b1" width="350" alt="Reloading">
+      </a>
+      <br>Reloading
+    </td>
+  </tr>
+</table>
+
 [**See below for the English version**](#KULT-Divinity-Lost-Game-System-for-Foundry-VTT)
 
 # Système de Jeu KULT: Divinity Lost pour Foundry VTT

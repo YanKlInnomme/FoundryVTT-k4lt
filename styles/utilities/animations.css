@@ -1,0 +1,53 @@
+/* animations.css */
+@keyframes k4lt-glitch-combined {
+  0% {
+    transform: translate(-50%, -50%);
+    filter: none;
+  }
+  6% {
+    transform: translate(calc(-50% + 1px), calc(-50% - 1px));
+  }
+  9% {
+    transform: translate(-50%, -50%);
+  }
+  17% {
+    filter: blur(0.5px) grayscale(10%);
+  }
+  23% {
+    filter: none;
+  }
+  31% {
+    transform: translate(calc(-50% - 2px), calc(-50% + 1px));
+    filter: sepia(20%) saturate(110%);
+  }
+  36% {
+    transform: translate(-50%, -50%);
+    filter: none;
+  }
+  48% {
+    filter: blur(1px) grayscale(30%);
+  }
+  54% {
+    filter: none;
+  }
+  63% {
+    transform: translate(calc(-50% + 1px), calc(-50% + 2px));
+    filter: sepia(35%) saturate(120%);
+  }
+  68% {
+    transform: translate(-50%, -50%);
+    filter: none;
+  }
+  82% {
+    transform: translate(calc(-50% + 2px), calc(-50% - 2px));
+    filter: blur(1.2px) sepia(40%) saturate(130%);
+  }
+  87% {
+    transform: translate(-50%, -50%);
+    filter: none;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    filter: none;
+  }
+}

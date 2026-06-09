@@ -1,0 +1,13 @@
+/* section.css */
+.k4lt-section {
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--k4lt-radius);
+  padding: var(--k4lt-space-sm);
+  background: rgba(0, 0, 0, 0.05);
+}
+.k4lt-section-title {
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: var(--k4lt-space-xs);
+  opacity: 0.8;
+}

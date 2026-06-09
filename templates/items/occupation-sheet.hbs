@@ -1,0 +1,18 @@
+<!-- occupation-sheet.hbs -->
+<section class="k4lt-section k4lt-scrollY k4lt-flex k4lt-flex-col k4lt-gap-md">
+  {{!-- ARCHETYPE --}}
+  <fieldset class="k4lt-sheet-block">
+    <legend>{{localize "k4lt.collections.Archetype"}}</legend>
+    <select name="system.archetype">
+      {{selectOptions archetypeValues selected=system.archetype valueAttr="value" labelAttr="label"}}
+    </select>
+    {{#if (eq system.archetype "other")}}
+      <input type="text" name="system.customArchetype" value="{{system.customArchetype}}" placeholder="Custom archetype">
+    {{/if}}
+  </fieldset>
+  {{!-- DESCRIPTION --}}
+  <fieldset class="k4lt-sheet-block">
+    <legend>{{localize "k4lt.ui.Description"}}</legend>
+    {{formInput systemFields.description value=system.description enriched=system.description toggled=true engine="prosemirror"}}
+  </fieldset>
+</section>

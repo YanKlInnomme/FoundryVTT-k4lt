@@ -1,0 +1,32 @@
+/* chat-buttons.css */
+.k4lt-chat-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: 6px 14px;
+  margin: 4px 2px;
+  min-height: 28px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--k4lt-color-light-red), var(--k4lt-color-dark-red));
+  color: var(--k4lt-color-white);
+  font-size: .85rem;
+  cursor: pointer;
+  transition: all .15s ease;
+}
+.k4lt-chat-btn:hover {
+  background: linear-gradient(135deg, var(--k4lt-color-dark-red), var(--k4lt-color-light-red));
+  transform: scale(.97);
+}
+.k4lt-chat-btn:focus-visible {
+  outline: 2px solid var(--k4lt-color-light-gold);
+  outline-offset: 2px;
+}
+.k4lt-chat-btn-success {
+  background: linear-gradient(135deg, var(--k4lt-color-light-gold), var(--k4lt-color-dark-gold));
+  color: var(--k4lt-color-black);
+}
+.k4lt-chat-btn-success:hover {
+  background: linear-gradient(135deg, var(--k4lt-color-dark-gold), var(--k4lt-color-light-gold));
+}

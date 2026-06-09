@@ -1,0 +1,86 @@
+<!-- trait-sheet.hbs -->
+<section class="k4lt-section k4lt-scrollY k4lt-flex k4lt-flex-col k4lt-gap-md">
+  <fieldset class="k4lt-sheet-block">
+    <div class="k4lt-grid k4lt-cols-2 k4lt-gap-md">
+      <div class="k4lt-field">
+        <label class="k4lt-label">{{localize "k4lt.mechanics.AttributePrompt"}}</label>
+        <select name="system.attributemod">
+          {{selectOptions attributeValues selected=system.attributemod valueAttr="value" labelAttr="label"}}
+        </select>
+      </div>
+      <div class="k4lt-field">
+        <label class="k4lt-label">{{localize "k4lt.ui.Type"}}</label>
+        <select name="system.type">
+          {{selectOptions typeValues selected=system.type valueAttr="value" labelAttr="label"}}
+        </select>
+      </div>
+    </div>
+    <div class="k4lt-field-inline k4lt-m-sm">
+      <label class="k4lt-label">{{localize "k4lt.item.HasTokens"}}</label>
+      <input type="checkbox" name="system.hasTokens" {{checked system.hasTokens}}>
+    </div>
+    {{#if system.hasTokens}}
+      <div class="k4lt-grid k4lt-cols-2 k4lt-gap-md">
+        <div class="k4lt-field">
+          <label class="k4lt-label">{{localize "k4lt.item.TokenType"}}</label>
+          <select name="system.tokenType">
+            <option value=""></option>
+            <option value="edge" {{#if (eq system.tokenType "edge")}}selected{{/if}}>{{localize "k4lt.item.Edge"}}</option>
+            <option value="hold" {{#if (eq system.tokenType "hold")}}selected{{/if}}>{{localize "k4lt.item.Hold"}}</option>
+            <option value="time" {{#if (eq system.tokenType "time")}}selected{{/if}}>{{localize "k4lt.item.Time"}}</option>
+            <option value="rage" {{#if (eq system.tokenType "rage")}}selected{{/if}}>{{localize "k4lt.item.Rage"}}</option>
+          </select>
+        </div>
+        <div class="k4lt-field">
+          <label class="k4lt-label">{{localize "k4lt.item.CurrentTokens"}}</label>
+          <input type="number" name="system.tokens" value="{{system.tokens}}" min="0">
+        </div>
+      </div>
+      <div class="k4lt-grid k4lt-cols-3 k4lt-gap-md k4lt-m-sm">
+        <div class="k4lt-field">
+          <label class="k4lt-label">15+</label>
+          <input type="number" name="system.completeTokenValue" value="{{system.completeTokenValue}}" min="0">
+        </div>
+        <div class="k4lt-field">
+          <label class="k4lt-label">10–14</label>
+          <input type="number" name="system.partialTokenValue" value="{{system.partialTokenValue}}" min="0">
+        </div>
+        <div class="k4lt-field">
+          <label class="k4lt-label">0–9</label>
+          <input type="number" name="system.failureTokenValue" value="{{system.failureTokenValue}}" min="0">
+        </div>
+      </div>
+      {{#if (eq system.tokenType "time")}}
+        <div class="k4lt-field k4lt-m-sm">
+          <label class="k4lt-label">{{localize "k4lt.item.TimeTokenMax"}}</label>
+          <input type="number" name="system.timeTokenMax" value="{{system.timeTokenMax}}" min="0">
+        </div>
+      {{/if}}
+    {{/if}}
+  </fieldset>
+  <fieldset class="k4lt-sheet-block">
+    <legend>{{localize "k4lt.item.Effect"}}</legend>
+    {{formInput systemFields.effect value=system.effect enriched=system.effect toggled=true engine="prosemirror"}}
+  </fieldset>
+  <fieldset class="k4lt-sheet-block">
+    <legend>{{localize "k4lt.ui.Options"}}</legend>
+    {{formInput systemFields.options value=system.options enriched=system.options toggled=true engine="prosemirror"}}
+  </fieldset>
+  <fieldset class="k4lt-sheet-block">
+    <legend>{{localize "k4lt.ui.Results"}}</legend>
+    <div class="k4lt-grid k4lt-cols-1 k4lt-gap-md">
+      <div class="k4lt-field">
+        <label class="k4lt-label">15+</label>
+        {{formInput systemFields.completesuccess value=system.completesuccess enriched=system.completesuccess toggled=true engine="prosemirror"}}
+      </div>
+      <div class="k4lt-field">
+        <label class="k4lt-label">10–14</label>
+        {{formInput systemFields.partialsuccess value=system.partialsuccess enriched=system.partialsuccess toggled=true engine="prosemirror"}}
+      </div>
+      <div class="k4lt-field">
+        <label class="k4lt-label">0–9</label>
+        {{formInput systemFields.failure value=system.failure enriched=system.failure toggled=true engine="prosemirror"}}
+      </div>
+    </div>
+  </fieldset>
+</section>

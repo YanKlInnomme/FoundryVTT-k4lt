@@ -1,0 +1,11 @@
+/* tooltip.css */
+.k4lt-tooltip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: help;
+  transition: opacity .2s ease;
+}
+.k4lt-tooltip:hover {
+  color: var(--k4lt-color-dark-red);
+}

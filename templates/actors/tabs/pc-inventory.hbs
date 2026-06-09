@@ -1,0 +1,62 @@
+<!-- pc-inventory.hbs -->
+<section
+  class="k4lt-scrollY tab tab-content {{tab.cssClass}}"
+  data-group="sheet"
+  data-tab="inventory"
+>
+  <div class="k4lt-inventory-layout">
+    {{!-- LEFT : NOTES --}}
+    <fieldset class="k4lt-sheet-block k4lt-inventory-notes">
+      <legend>{{localize "k4lt.character.ThingsInYourPossession"}}</legend>
+      {{formInput systemFields.thingsinyourpossession value=system.thingsinyourpossession enriched=system.thingsinyourpossession toggled=true engine="prosemirror"}}
+    </fieldset>
+    {{!-- RIGHT : DROP ZONES --}}
+    <div class="k4lt-inventory-sidebar">
+      {{!-- GEAR --}}
+      <div class="k4lt-dropzone" data-drop-zone data-types="gear" data-collection="gears">
+        <div class="k4lt-dropzone-title">{{localize "k4lt.collections.Gears"}}
+          <span class="k4lt-tooltip" data-tooltip="{{localize 'k4lt.ui.DropOrCreateGear'}}">
+            <i class="fas fa-question-circle"></i>
+          </span>
+        </div>
+          <div class="k4lt-dropzone-content">
+            {{#each collections.gears}}
+              {{> "systems/k4lt/templates/partials/drop-item.hbs"}}
+            {{/each}}
+            {{!-- CREATE GEAR --}}
+            <div class="k4lt-drop-entry k4lt-drop-create" data-action="createGear" title="{{localize 'k4lt.ui.CreateGear'}}">
+              <div class="k4lt-drop-item k4lt-drop-item--create">
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+          </div>
+      </div>
+      {{!-- WEAPON --}}
+      <div class="k4lt-dropzone" data-drop-zone data-types="weapon" data-collection="weapons">
+        <div class="k4lt-dropzone-title">{{localize "k4lt.collections.Weapons"}}
+          <span class="k4lt-tooltip" data-tooltip="{{localize 'k4lt.ui.DropHereWeapon'}}">
+            <i class="fas fa-question-circle"></i>
+          </span>
+        </div>
+        <div class="k4lt-dropzone-content">
+          {{#each collections.weapons}}
+            {{> "systems/k4lt/templates/partials/drop-item.hbs"}}
+          {{/each}}
+        </div>
+      </div>
+      {{!-- ARMOR --}}
+      <div class="k4lt-dropzone" data-drop-zone data-types="armor" data-collection="armors">
+        <div class="k4lt-dropzone-title">{{localize "k4lt.collections.Armors"}}
+          <span class="k4lt-tooltip" data-tooltip="{{localize 'k4lt.ui.DropHereArmor'}}">
+            <i class="fas fa-question-circle"></i>
+          </span>
+        </div>
+        <div class="k4lt-dropzone-content">
+          {{#each collections.armors}}
+            {{> "systems/k4lt/templates/partials/drop-item.hbs"}}
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

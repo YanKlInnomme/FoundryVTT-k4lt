@@ -1,0 +1,176 @@
+<!-- pc-advancement.hbs -->
+<section class="k4lt-scrollY tab tab-content {{tab.cssClass}}" data-group="sheet" data-tab="advancement">
+  <div class="k4lt-advancement-layout">
+    {{!-- EXPERIENCE --}}
+    <fieldset class="k4lt-sheet-block">
+      <legend>{{localize "k4lt.advancement.ExperiencePoints"}}</legend>
+      <div class="k4lt-advancement-header">
+        {{!-- XP TRACK --}}
+        <div class="k4lt-advancement-track">
+          {{#each advancement.xp}}
+            <button
+              type="button"
+              class="
+              k4lt-advancement-dot
+              {{#if checked}}active{{/if}}
+              {{#unless @root.user.isGM}}readonly{{/unless}}
+              "
+              data-action="toggleAdvancementXP"
+              data-id="{{id}}"
+            >
+            </button>
+          {{/each}}
+        </div>
+        {{!-- AVAILABLE ADVANCEMENTS --}}
+        <div
+        class="
+        k4lt-advancement-points">
+          <span>
+            {{localize
+            "k4lt.advancement.Available"}}
+          </span>
+          <strong>
+            {{system
+            .advancementPoints
+            .value}}
+          </strong>
+          {{#if @root.user.isGM}}
+          <button
+            type="button"
+            class="k4lt-btn-small"
+            data-action="resetAdvancements"
+            title="{{localize 'k4lt.advancement.ResetAdvancements'}}"
+          >
+            <i class="fas fa-rotate-left"></i>
+          </button>
+          <button
+            type="button"
+            class="k4lt-btn-small danger"
+            data-action="resetProgression"
+            title="{{localize 'k4lt.advancement.ResetProgression'}}"
+          >
+            <i class="fas fa-skull"></i>
+          </button>
+          {{/if}}
+        </div>
+      </div>
+    </fieldset>
+    {{!-- CONSCIOUSNESS --}}
+    <fieldset class="k4lt-sheet-block">
+      <legend>
+        {{localize "k4lt.advancement.StateOfConsciousness"}}
+      </legend>
+      <div class="k4lt-consciousness-track">
+        {{#each advancement.states}}
+          <button
+            type="button"
+            class="
+            k4lt-consciousness-step
+            {{#if active}}active{{/if}}
+            "
+            data-action="viewConsciousness"
+            data-state="{{id}}"
+          >
+            <div class="k4lt-consciousness-circle">
+              {{localize label}}
+            </div>
+          </button>
+        {{/each}}
+      </div>
+    </fieldset>
+    {{!-- CURRENT ADVANCEMENTS --}}
+    <fieldset class="k4lt-sheet-block k4lt-advancement-section">
+      <legend>{{advancement.current.label}}</legend>{{#if advancement.current.info}}
+        <div class="k4lt-advancement-info">{{{advancement.current.info}}}</div>
+      {{/if}}
+      {{!-- GROUPS --}}
+      {{#each advancement.current.groups}}
+        <div class="k4lt-advancement-group {{#unless unlocked}} locked {{/unless}}">
+        {{!-- GROUP TITLE --}} {{#if title}}
+            <div class="k4lt-advancement-group-title">{{title}}</div>
+          {{/if}}
+           {{!-- GROUP LOCK --}}
+           {{#unless unlocked}}
+            <div class="k4lt-advancement-group-lock">
+              <i class="fas fa-lock"></i>
+              <span>{{localize "k4lt.advancement.Requires"}} {{min}} {{localize "k4lt.advancement.AdvancementsToUnlock"}}</span>
+            </div>
+          {{/unless}}
+          {{!-- TIMELINE --}}
+          <div class="k4lt-advancement-timeline">{{#each entries}}
+            <button
+              type="button"
+              class="
+              k4lt-advancement-node
+              {{#if completed}}completed{{/if}}
+              {{#if available}}available{{else}}locked{{/if}}
+              {{#if archived}}archived{{/if}}
+              {{#if checked}}checked{{/if}}
+              "
+              data-action="buyAdvancement"
+              data-id="{{id}}"
+            >
+              {{!-- INDEX --}}
+              {{#if index}}
+                  <div class="k4lt-advancement-index">{{index}}</div>
+                {{else}}
+                  <div class="k4lt-advancement-index empty"></div>
+                {{/if}}
+                {{!-- USES --}}
+                <div class="k4lt-advancement-checks">{{#each uses}}
+                    <span class="k4lt-advancement-use {{#if used}} used {{/if}}"></span>{{/each}}
+                </div>
+                {{!-- CONTENT --}}
+                <div class="k4lt-advancement-content">
+                  <div class="k4lt-advancement-title">{{{label}}}</div>{{#if description}}
+                    <div class="k4lt-advancement-description">{{{description}}}</div>
+                  {{/if}}
+                </div>
+                {{!-- COST --}}
+                {{#if completed}}
+                <div
+                class="
+                k4lt-advancement-cost
+                completed">
+                  <i
+                  class="
+                  fas
+                  fa-book-open">
+                  </i>
+                </div>
+              {{else if archived}}
+                <div
+                class="
+                k4lt-advancement-cost
+                archived">
+                  <i
+                  class="
+                  fas
+                  fa-book-open">
+                  </i>
+                </div>
+              {{else if available}}
+                <div
+                class="
+                k4lt-advancement-cost">
+                  1
+                </div>
+              {{else}}
+                <div
+                class="
+                k4lt-advancement-cost
+                locked">
+                  <i
+                  class="
+                  fas
+                  fa-lock">
+                  </i>
+                </div>
+              {{/if}}
+              </button>{{/each}}
+          </div>
+        </div>
+      {{/each}}
+    </fieldset>
+  </div>
+</section>

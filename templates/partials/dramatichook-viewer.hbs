@@ -1,0 +1,19 @@
+<!-- dramatichook-viewer.hbs -->
+<section class="k4lt-dramatichook-viewer">
+  <div><strong>{{localize "k4lt.ui.LinkedElement"}}</strong> : {{system.linkedDocument.name}}</div>
+  <div>
+    <strong>{{localize "k4lt.ui.DramaticHook.Status"}}</strong> :
+    {{#if system.completed}}
+      {{localize "k4lt.ui.DramaticHook.Completed"}}
+    {{else}}
+      {{localize "k4lt.ui.DramaticHook.NotCompleted"}}
+    {{/if}}
+    <img
+      class="k4lt-dramatichook-viewer-status-img"
+      src="{{#if system.completed}}systems/k4lt/assets/checked.webp{{else}}systems/k4lt/assets/blank.webp{{/if}}"
+    >
+  </div>
+  {{#if system.description}}
+    <div class="k4lt-dramatichook-viewer-description">{{{system.description}}}</div>
+  {{/if}}
+</section>

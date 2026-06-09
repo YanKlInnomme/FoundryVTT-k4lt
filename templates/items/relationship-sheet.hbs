@@ -1,0 +1,39 @@
+<!-- relationship-sheet.hbs -->
+<section class="k4lt-section k4lt-scrollY k4lt-flex k4lt-flex-col k4lt-gap-md">
+  <fieldset class="k4lt-sheet-block">
+    <legend>{{localize "k4lt.ui.Summary"}}</legend>
+    <input type="text" name="system.summary" value="{{system.summary}}">
+  </fieldset>
+  <fieldset class="k4lt-sheet-block">
+    <legend>{{localize "k4lt.ui.LinkedElementActor"}}</legend>
+    <input type="hidden" name="system.link" value="{{system.link}}">
+    <div class="k4lt-link-drop {{#unless linked}}empty{{/unless}}">
+      {{#if linked}}
+        <div class="k4lt-link-card" data-uuid="{{linked.uuid}}" data-action="open">
+          <img class="profile-img" src="{{linked.img}}" width="32" height="32">
+          <span>{{linked.name}}</span>
+          <button
+            type="button"
+            class="k4lt-link-remove"
+            data-action="unlink"
+            title="{{localize 'k4lt.ui.RemoveLink'}}"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      {{else}}
+        <div class="k4lt-link-empty">{{localize "k4lt.ui.DropHereActor"}}</div>
+      {{/if}}
+    </div>
+  </fieldset>
+  <fieldset class="k4lt-sheet-block">
+    <legend>{{localize "k4lt.combat.Strength"}}</legend>
+    <select name="system.strength">
+      {{selectOptions strengthValues selected=system.strength valueAttr="value" labelAttr="label"}}
+    </select>
+  </fieldset>
+  <fieldset class="k4lt-sheet-block">
+    <legend>{{localize "k4lt.ui.Description"}}</legend>
+    {{formInput systemFields.description value=system.description enriched=system.description toggled=true engine="prosemirror"}}
+  </fieldset>
+</section>

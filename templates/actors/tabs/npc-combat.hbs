@@ -1,0 +1,10 @@
+<!-- npc-combat.hbs -->
+<section class="tab tab-content {{tab.cssClass}}" data-group="sheet" data-tab="combat">
+  <fieldset class="k4lt-sheet-block small">
+    <legend>{{localize "k4lt.combat.Combat"}}</legend>
+    <select name="system.level.combat">
+      {{selectOptions levelValues selected=system.level.combat valueAttr="value" labelAttr="label"}}
+    </select>
+    {{formInput systemFields.combatmoves value=system.combatmoves enriched=system.combatmoves toggled=true engine="prosemirror"}}
+  </fieldset>
+</section>

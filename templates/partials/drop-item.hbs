@@ -1,0 +1,163 @@
+<!-- drop-item.hbs -->
+<div class="k4lt-drop-entry">
+  <div
+    class="k4lt-drop-item
+      {{#if this.system.active}}k4lt-equipped{{/if}}
+      {{#if (and
+        (eq this.type "weapon")
+        (gt this.system.ammo.max 0)
+        (eq this.system.ammo.value 0)
+      )}}k4lt-no-ammo{{/if}}"
+    data-item-id="{{this.id}}"
+    data-action="itemView"
+    draggable="true"
+  >
+    {{#if (or (eq this.type "move") (eq this.system.type "active"))}}
+      <button
+        type="button"
+        class="k4lt-drop-roll"
+        data-action="itemRoll"
+        data-prevent-view
+        title="{{localize 'k4lt.actions.RollMove'}}"
+      >
+        <i class="fas fa-dice-d10"></i>
+      </button>
+    {{/if}}
+    <img class="k4lt-drop-item-img" src="{{this.img}}" alt="{{this.name}}">
+    <div class="k4lt-drop-item-name">
+      {{this.name}}
+    </div>
+    {{#if (or (eq this.type "weapon") (eq this.type "armor"))}}
+      <button
+        type="button"
+        class="k4lt-equip-btn {{#if this.system.active}}active{{/if}}"
+        data-action="toggleEquip"
+        title="{{#if this.system.active}}Unequip{{else}}Equip{{/if}}"
+      >
+        {{#if (eq this.type "weapon")}}
+          <i class="fas {{#if this.system.active}}fa-crosshairs{{else}}fa-hand{{/if}}"></i>
+        {{else}}
+          <i class="fas {{#if this.system.active}}fa-shield-halved{{else}}fa-hand{{/if}}"></i>
+        {{/if}}
+      </button>
+    {{/if}}
+    {{!-- ACTIONS --}}
+    {{#if (or @root.user.isGM (ne this.type "move"))}}
+      <div class="k4lt-drop-item-actions">
+        <button
+          type="button"
+          class="k4lt-drop-action danger"
+          data-action="itemDelete"
+          data-prevent-view
+          title="{{localize 'k4lt.actions.DeleteItem'}}"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+        {{#if (or
+          @root.user.isGM
+          (eq this.type "darksecret")
+          (eq this.type "gear")
+        )}}
+          <button
+            type="button"
+            class="k4lt-drop-action"
+            data-action="itemEdit"
+            data-prevent-view
+            title="{{localize 'k4lt.actions.EditItem'}}"
+          >
+            <i class="fas fa-pen"></i>
+          </button>
+        {{/if}}
+      </div>
+    {{/if}}
+  </div>
+  {{!-- TOKENBAR --}}
+  {{#if this.system.hasTokens}}
+    <div
+      class="k4lt-drop-tokenbar k4lt-drop-tokenbar--{{this.system.tokenType}}"
+      data-item-id="{{this.id}}"
+      data-token-type="{{this.system.tokenType}}"
+    >
+      {{!-- EDGE --}}
+      {{#if (eq this.system.tokenType "edge")}}
+        {{#if @root.user.isGM}}
+          <button type="button" class="k4lt-token-btn" data-action="tokenIncrease">
+            <i class="fas fa-plus"></i>
+          </button>
+        {{/if}}
+        <div class="k4lt-token-value">{{this.system.tokens}}</div>
+        <button type="button" class="k4lt-token-btn" data-action="tokenDecrease">
+          <i class="fas fa-minus"></i>
+        </button>
+      {{/if}}
+      {{!-- HOLD --}}
+      {{#if (eq this.system.tokenType "hold")}}
+        {{#if @root.user.isGM}}
+          <button type="button" class="k4lt-token-btn" data-action="tokenIncrease">
+            <i class="fas fa-plus"></i>
+          </button>
+        {{/if}}
+        <div class="k4lt-token-value">{{this.system.tokens}}</div>
+        {{#if @root.user.isGM}}
+          <button type="button" class="k4lt-token-btn" data-action="tokenDecrease">
+            <i class="fas fa-minus"></i>
+          </button>
+        {{/if}}
+      {{/if}}
+      {{!-- TIME --}}
+      {{#if (eq this.system.tokenType "time")}}
+        <div class="k4lt-token-value">
+          {{this.system.tokens}} / {{this.system.timeTokenMax}}
+        </div>
+        <button type="button" class="k4lt-token-btn" data-action="tokenDecrease" data-prevent-view>
+          <i class="fas fa-minus"></i>
+        </button>
+      {{/if}}
+      {{!-- RAGE --}}
+      {{#if (eq this.system.tokenType "rage")}}
+        <button type="button" class="k4lt-token-btn" data-action="tokenIncrease">
+          <i class="fas fa-plus"></i>
+        </button>
+        <div class="k4lt-token-value">{{this.system.tokens}}</div>
+        <button type="button" class="k4lt-token-btn" data-action="tokenDecrease">
+          <i class="fas fa-minus"></i>
+        </button>
+      {{/if}}
+
+    </div>
+  {{/if}}
+  {{!-- ================================= --}}
+  {{!-- GEAR : USES                       --}}
+  {{!-- ================================= --}}
+  {{#if (and (eq this.type "gear") this.system.uses.max)}}
+    <div class="k4lt-drop-resourcebar k4lt-drop-resourcebar--uses" data-item-id="{{this.id}}">
+      <button type="button" class="k4lt-token-btn" data-action="usesDecrease">
+        <i class="fas fa-minus"></i>
+      </button>
+      <div class="k4lt-token-value">
+        {{this.system.uses.value}} / {{this.system.uses.max}}
+      </div>
+      <button type="button" class="k4lt-token-btn" data-action="usesIncrease">
+        <i class="fas fa-plus"></i>
+      </button>
+    </div>
+  {{/if}}
+  {{!-- ======================= --}}
+  {{!-- WEAPON : AMMO           --}}
+  {{!-- ======================= --}}
+  {{#if (and (eq this.type "weapon") (gt this.system.ammo.max 0))}}
+    <div class="k4lt-drop-resourcebar k4lt-drop-resourcebar--ammo" data-item-id="{{this.id}}">
+      <div class="k4lt-token-value">
+        {{this.system.ammo.value}} / {{this.system.ammo.max}}
+      </div>
+      <button
+        type="button"
+        class="k4lt-reload-btn"
+        data-action="requestReload"
+        title="{{localize 'k4lt.ui.Reload'}}"
+      >
+        <i class="fas fa-rotate-right"></i>
+      </button>
+    </div>
+  {{/if}}
+</div>

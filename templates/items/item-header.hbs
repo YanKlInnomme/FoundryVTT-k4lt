@@ -1,0 +1,18 @@
+<!-- item-header.hbs -->
+<header>
+  <div class="k4lt-grid k4lt-cols-item-header k4lt-gap-sm">
+    {{!-- IMAGE --}}
+    <div class="k4lt-row-span-3 k4lt-section">
+      <fieldset class="k4lt-sheet-block k4lt-image-block">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" data-action="editImage">
+        <button type="button" class="icon edit-image">
+          <i class="fas fa-edit"></i>
+        </button>
+      </fieldset>
+    </div>
+    {{!-- NAME --}}
+    <div class="k4lt-section k4lt-name-block">
+      <input type="text" name="name" value="{{item.name}}">
+    </div>
+  </div>
+</header>

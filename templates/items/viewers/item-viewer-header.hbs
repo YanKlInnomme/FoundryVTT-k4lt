@@ -1,0 +1,10 @@
+<!-- item-viewer-header.hbs -->
+<header class="k4lt-viewer-header">
+  {{#if (eq item.type "relationship")}}
+    {{> "systems/k4lt/templates/partials/relationship-viewer-header.hbs"}}
+  {{else if (eq item.type "dramatichook")}}
+    {{> "systems/k4lt/templates/partials/dramatichook-viewer-header.hbs"}}
+  {{else}}
+    {{> "systems/k4lt/templates/partials/default-viewer-header.hbs"}}
+  {{/if}}
+</header>

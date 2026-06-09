@@ -1,0 +1,7 @@
+<!-- npc-attacks.hbs -->
+<section class="tab tab-content {{tab.cssClass}}" data-group="sheet" data-tab="attacks">
+  <fieldset class="k4lt-sheet-block">
+    <legend>{{localize "k4lt.ui.Attacks"}}</legend>
+    {{formInput systemFields.attacks value=system.attacks enriched=system.attacks toggled=true engine="prosemirror"}}
+  </fieldset>
+</section>

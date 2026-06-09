@@ -1,0 +1,42 @@
+<!-- combat-selector.hbs -->
+<section class="k4lt-combat-selector">
+  <div class="k4lt-combat-help">
+    <i class="fa-solid fa-circle-info"></i>
+    <span>{{localize "k4lt.combat.SelectAttackHelp"}}</span>
+  </div>
+  {{#each weapons}}
+    <div class="k4lt-combat-weapon">
+      <header class="k4lt-combat-header">
+        <strong>{{name}}</strong>
+        {{#if (gt system.ammo.max 0)}}
+          <div class="k4lt-combat-resource">
+            <span>{{system.ammo.value}} / {{system.ammo.max}}</span>
+            <button class="k4lt-token-btn k4lt-combat-reload" data-action="reload" data-item="{{id}}">
+              <i class="fas fa-rotate-right"></i>
+            </button>
+          </div>
+        {{/if}}
+      </header>
+      {{#each system.attacks}}
+        <div
+          class="k4lt-combat-attack {{#if (gt ammoCost ../system.ammo.value)}}disabled{{/if}}"
+          data-action="attack"
+          data-weapon="{{../id}}"
+          data-attack="{{@index}}"
+        >
+          <div class="k4lt-combat-attack-title">
+            ◊ <strong>{{name}}</strong> [{{harm}}]
+            {{#if ammoCost}}
+              [-{{ammoCost}} {{localize "k4lt.combat.Ammo"}}]
+            {{/if}}
+          </div>
+          {{#if (or effect description)}}
+            <div class="k4lt-combat-attack-details">
+              [{{#if effect}}<span class="k4lt-combat-attack-effect">{{effect}}</span>{{/if}}{{#if description}} <span class="k4lt-combat-attack-description">{{{stripParagraph description}}}</span>{{/if}}]
+            </div>
+          {{/if}}
+        </div>
+      {{/each}}
+    </div>
+  {{/each}}
+</section>

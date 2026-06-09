@@ -1,0 +1,73 @@
+/* header.css */
+.k4lt .window-header .window-title {
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+.k4lt.minimized .window-header .window-title {
+  opacity: 1;
+}
+.k4lt-cols-item-header,
+.k4lt-cols-npc-header {
+  grid-template-columns: 120px 1fr;
+}
+/* ======================================== */
+/* PC HEADER                                */
+/* ======================================== */
+.k4lt-pc-header-grid {
+  display: grid;
+  grid-template-columns: 153px 200px 200px 1fr;
+  grid-template-rows: auto auto auto;
+  gap: .5rem;
+}
+.k4lt-link-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  text-align: left;
+}
+.k4lt-link-subtitle {
+  opacity: .7;
+  font-size: .75rem;
+  font-style: italic;
+  text-align: left;
+}
+.k4lt-header-image {
+  grid-column: 1;
+  grid-row: 1 / 4;
+}
+.k4lt-header-modifiers {
+  grid-column: 2 / 4;
+  grid-row: 1;
+}
+.k4lt-header-modifiers-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--k4lt-space-md);
+  align-items: end;
+}
+.k4lt-modifier {
+  display: flex;
+  flex-direction: column;
+  gap: var(--k4lt-space-xs);
+}
+.k4lt-header-name {
+  grid-column: 2 / 4;
+  grid-row: 2;
+}
+.k4lt-header-occupation {
+  grid-column: 2 / 4;
+  grid-row: 3;
+}
+.k4lt-link-drop.empty {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-align: center;
+  font-size: .875rem;
+}
+.k4lt-header-who {
+  grid-column: 4;
+  grid-row: 1 / 4;
+}

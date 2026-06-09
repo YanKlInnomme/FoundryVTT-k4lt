@@ -1,0 +1,52 @@
+/* combat-selector.css */
+.k4lt-combat-weapon {
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid var(--k4lt-color-dark-gold);
+}
+.k4lt-combat-attack {
+  padding: 6px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.k4lt-combat-attack:hover {
+  border-color: var(--k4lt-color-light-gold);
+}
+.k4lt-combat-attack.disabled {
+  opacity: .35;
+  pointer-events: none;
+  filter: grayscale(1);
+}
+.k4lt-combat-help {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  margin-bottom: 12px;
+  font-size: .9rem;
+  opacity: .8;
+  border: 1px dashed var(--k4lt-color-dark-gold);
+}
+.k4lt-combat-help i {
+  color: var(--k4lt-color-dark-red);
+}
+.k4lt-combat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.k4lt-combat-resource {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .95rem;
+  font-weight: 600;
+}
+.k4lt-combat-resource span {
+  opacity: .85;
+}
+.k4lt-combat-reload {
+  flex: 0 0 auto;
+}

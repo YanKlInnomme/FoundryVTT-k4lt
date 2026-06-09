@@ -1,0 +1,32 @@
+<!-- dramatichook-card.hbs -->
+<div class="k4lt-dramatichook-card {{#if system.completed}}completed{{/if}}" data-item-id="{{id}}" data-action="itemView">
+  {{!-- ACTIONS --}} {{#if @root.user.isGM}}
+  <div class="k4lt-drop-item-actions">
+    <button class="k4lt-drop-action" type="button" data-action="itemEdit" data-prevent-view>
+      <i class="fas fa-pen"></i>
+    </button>
+    <button class="k4lt-drop-action" type="button" data-action="itemDelete" data-prevent-view>
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  {{/if}}
+  <div class="k4lt-dramatichook-avatar">{{#if system.linkedDocument}}
+      <img src="{{system.linkedDocument.img}}" class="k4lt-relationship-img">
+    {{else}}
+      <div></div>
+    {{/if}}
+  </div>
+  <div class="k4lt-dramatichook-info">
+    <div class="k4lt-dramatichook-title">{{name}}</div>{{#if linked}}
+      <div class="k4lt-dramatichook-link">{{linked.name}}</div>
+    {{/if}}
+    <div class="k4lt-dramatichook-description">{{{system.description}}}</div>
+  </div>
+  <div class="k4lt-dramatichook-toggle">
+    <img class="k4lt-dramatichook-img" src="{{#if system.completed}}
+        systems/k4lt/assets/checked.webp
+      {{else}}
+        systems/k4lt/assets/blank.webp
+      {{/if}}" data-action="toggleCompleted" data-prevent-view>
+  </div>
+</div>

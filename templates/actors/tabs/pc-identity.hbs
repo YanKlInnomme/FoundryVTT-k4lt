@@ -1,0 +1,238 @@
+<!-- pc-identity.hbs -->
+<section
+  class="k4lt-scrollY tab tab-content {{tab.cssClass}}"
+  data-group="sheet"
+  data-tab="identity"
+>
+  <div class="k4lt-identity-layout">
+    {{!-- ATTRIBUTES --}}
+    <fieldset class="k4lt-sheet-block">
+      <legend>{{localize "k4lt.ui.Attributes"}}</legend>
+      <div class="k4lt-attributes-grid">
+        <div class="k4lt-attr willpic">
+          <select class="k4lt-attr-select" name="system.attributes.willpower">
+            {{selectOptions passiveAttributeValues selected=system.attributes.willpower valueAttr="value" labelAttr="label"}}
+          </select>
+        </div>
+        <div class="k4lt-attr-label will-label">{{localize "k4lt.attributes.Willpower"}}</div>
+        <div class="k4lt-attr fortpic">
+          <select class="k4lt-attr-select" name="system.attributes.fortitude">
+            {{selectOptions passiveAttributeValues selected=system.attributes.fortitude valueAttr="value" labelAttr="label"}}
+          </select>
+        </div>
+        <div class="k4lt-attr-label fort-label">{{localize "k4lt.attributes.Fortitude"}}</div>
+        <div class="k4lt-attr refpic">
+          <select class="k4lt-attr-select" name="system.attributes.reflexes">
+            {{selectOptions passiveAttributeValues selected=system.attributes.reflexes valueAttr="value" labelAttr="label"}}
+          </select>
+        </div>
+        <div class="k4lt-attr-label ref-label">{{localize "k4lt.attributes.Reflexes"}}</div>
+        <div class="attmid"></div>
+        <div class="k4lt-attr reasonpic">
+          <select class="k4lt-attr-select" name="system.attributes.reason">
+            {{selectOptions activeAttributeValues selected=system.attributes.reason valueAttr="value" labelAttr="label"}}
+          </select>
+        </div>
+        <div class="k4lt-attr-label reason-label">{{localize "k4lt.attributes.Reason"}}</div>
+        <div class="k4lt-attr percpic">
+          <select class="k4lt-attr-select" name="system.attributes.perception">
+            {{selectOptions activeAttributeValues selected=system.attributes.perception valueAttr="value" labelAttr="label"}}
+          </select>
+        </div>
+        <div class="k4lt-attr-label perc-label">{{localize "k4lt.attributes.Perception"}}</div>
+        <div class="k4lt-attr intupic">
+          <select class="k4lt-attr-select" name="system.attributes.intuition">
+            {{selectOptions activeAttributeValues selected=system.attributes.intuition valueAttr="value" labelAttr="label"}}
+          </select>
+        </div>
+        <div class="k4lt-attr-label intu-label">{{localize "k4lt.attributes.Intuition"}}</div>
+        <div class="k4lt-attr coolpic">
+          <select class="k4lt-attr-select" name="system.attributes.coolness">
+            {{selectOptions activeAttributeValues selected=system.attributes.coolness valueAttr="value" labelAttr="label"}}
+          </select>
+        </div>
+        <div class="k4lt-attr-label cool-label">{{localize "k4lt.attributes.Coolness"}}</div>
+        <div class="k4lt-attr chapic">
+          <select class="k4lt-attr-select" name="system.attributes.charisma">
+            {{selectOptions activeAttributeValues selected=system.attributes.charisma valueAttr="value" labelAttr="label"}}
+          </select>
+        </div>
+        <div class="k4lt-attr-label cha-label">{{localize "k4lt.attributes.Charisma"}}</div>
+        <div class="k4lt-attr violpic">
+          <select class="k4lt-attr-select" name="system.attributes.violence">
+            {{selectOptions activeAttributeValues selected=system.attributes.violence valueAttr="value" labelAttr="label"}}
+          </select>
+        </div>
+        <div class="k4lt-attr-label viol-label">{{localize "k4lt.attributes.Violence"}}</div>
+        <div class="k4lt-attr soulpic">
+          <select class="k4lt-attr-select" name="system.attributes.soul">
+            {{selectOptions activeAttributeValues selected=system.attributes.soul valueAttr="value" labelAttr="label"}}
+          </select>
+        </div>
+        <div class="k4lt-attr-label soul-label">{{localize "k4lt.attributes.Soul"}}</div>
+      </div>
+    </fieldset>
+    {{!-- DROP ZONES --}}
+    <div class="k4lt-identity-drops">
+      {{!-- GENERIC DROP ITEM PARTIAL --}}
+      {{#*inline "dropItem"}}
+        <div class="k4lt-drop-item" data-item-id="{{this.id}}">
+          {{#if (or (eq this.type "move") (eq this.system.type "active"))}}
+            <button
+              type="button"
+              class="k4lt-drop-roll"
+              data-action="itemRoll"
+              title="{{localize 'k4lt.actions.RollMove'}}"
+            >
+              <i class="fas fa-dice-d10"></i>
+            </button>
+          {{/if}}
+          <img class="k4lt-drop-item-img" src="{{this.img}}" alt="{{this.name}}">
+          <div class="k4lt-drop-item-overlay">
+            <div class="k4lt-drop-item-name">{{this.name}}</div>
+          </div>
+          {{!-- ACTIONS --}}
+          <div class="k4lt-drop-item-actions">
+            <button
+              type="button"
+              class="k4lt-drop-action danger"
+              data-action="itemDelete"
+              title="{{localize 'k4lt.actions.DeleteItem'}}"
+            >
+              <i class="fas fa-times"></i>
+            </button>
+            <button
+              type="button"
+              class="k4lt-drop-action"
+              data-action="itemEdit"
+              title="{{localize 'k4lt.actions.EditItem'}}"
+            >
+              <i class="fas fa-pen"></i>
+            </button>
+          </div>
+          {{!-- TOKENS --}}
+          {{#if this.system.hasTokens}}
+            <div class="k4lt-drop-tokenbar" data-token-type="{{this.system.tokenType}}">
+              {{!-- EDGE / HOLD --}}
+              {{#unless (eq this.system.tokenType "time")}}
+                {{#if (or (eq this.system.tokenType "edge") @root.user.isGM)}}
+                  <button type="button" class="k4lt-token-btn" data-action="tokenDecrease">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                {{/if}}
+                <div class="k4lt-token-value">
+                  {{#if (and (eq this.system.tokenType "hold") (not @root.user.isGM))}}
+                    <i class="fas fa-lock"></i>
+                  {{/if}}
+                  {{this.system.tokens}}
+                </div>
+                {{#if (or (eq this.system.tokenType "edge") @root.user.isGM)}}
+                  <button type="button" class="k4lt-token-btn" data-action="tokenIncrease">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                {{/if}}
+              {{/unless}}
+              {{!-- TIME --}}
+              {{#if (eq this.system.tokenType "time")}}
+                <div class="k4lt-time-track">
+                  {{#times this.system.timeTokenMax}}
+                    <div class="k4lt-time-segment {{#if (lt @index ../this.system.tokens)}}active{{/if}}"></div>
+                  {{/times}}
+                </div>
+              {{/if}}
+            </div>
+          {{/if}}
+        </div>
+      {{/inline}}
+      {{!-- DARK SECRET --}}
+      <div class="k4lt-dropzone" data-drop-zone data-types="darksecret" data-collection="darksecrets">
+        <div class="k4lt-dropzone-title">
+          {{localize "k4lt.collections.DarkSecrets"}}
+          <span class="k4lt-tooltip" data-tooltip="{{localize 'k4lt.ui.DropOrCreateDarkSecret'}}">
+            <i class="fas fa-question-circle"></i>
+          </span>
+        </div>
+        <div class="k4lt-dropzone-content">
+          {{#each collections.darksecrets}}
+            {{> "systems/k4lt/templates/partials/drop-item.hbs"}}
+          {{/each}}
+          {{!-- CREATE DARK SECRET --}}
+          <div class="k4lt-drop-entry k4lt-drop-create" data-action="createDarkSecret" title="{{localize 'k4lt.ui.CreateDarkSecret'}}">
+            <div class="k4lt-drop-item k4lt-drop-item--create">
+              <i class="fas fa-plus"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{!-- ADVANTAGE --}}
+      <div class="k4lt-dropzone" data-drop-zone data-types="advantage" data-collection="advantages">
+        <div class="k4lt-dropzone-title">
+          {{localize "k4lt.collections.Advantages"}}
+          <span class="k4lt-tooltip" data-tooltip="{{localize 'k4lt.ui.DropHereAdvantage'}}">
+            <i class="fas fa-question-circle"></i>
+          </span>
+        </div>
+        <div class="k4lt-dropzone-content">
+          {{#each collections.advantages}}
+            {{> "systems/k4lt/templates/partials/drop-item.hbs"}}
+          {{/each}}
+        </div>
+      </div>
+      {{!-- DISADVANTAGE --}}
+      <div class="k4lt-dropzone" data-drop-zone data-types="disadvantage" data-collection="disadvantages">
+        <div class="k4lt-dropzone-title">
+          {{localize "k4lt.collections.Disadvantages"}}
+          <span class="k4lt-tooltip" data-tooltip="{{localize 'k4lt.ui.DropHereDisadvantage'}}">
+            <i class="fas fa-question-circle"></i>
+          </span>
+        </div>
+        <div class="k4lt-dropzone-content">
+          {{#each collections.disadvantages}}
+            {{> "systems/k4lt/templates/partials/drop-item.hbs"}}
+          {{/each}}
+        </div>
+      </div>
+      {{!-- ABILITY --}}
+      {{#if canSeeAbilities}}
+        <div class="k4lt-dropzone" data-drop-zone data-types="ability" data-collection="abilities">
+          <div class="k4lt-dropzone-title">
+            {{localize "k4lt.collections.Abilities"}}
+            <span class="k4lt-tooltip" data-tooltip="{{localize 'k4lt.ui.DropHereAbility'}}">
+              <i class="fas fa-question-circle"></i>
+            </span>
+          </div>
+          <div class="k4lt-dropzone-content">
+            {{#each collections.abilities}}
+              {{> "systems/k4lt/templates/partials/drop-item.hbs"}}
+            {{/each}}
+          </div>
+        </div>
+      {{/if}}
+      {{!-- LIMITATION --}}
+      {{#if canSeeLimitations}}
+        <div class="k4lt-dropzone" data-drop-zone data-types="limitation" data-collection="limitations">
+          <div class="k4lt-dropzone-title">
+            {{localize "k4lt.collections.Limitations"}}
+            <span class="k4lt-tooltip" data-tooltip="{{localize 'k4lt.ui.DropHereLimitation'}}">
+              <i class="fas fa-question-circle"></i>
+            </span>
+          </div>
+          <div class="k4lt-dropzone-content">
+            {{#each collections.limitations}}
+              {{> "systems/k4lt/templates/partials/drop-item.hbs"}}
+            {{/each}}
+          </div>
+        </div>
+      {{/if}}
+      {{!-- MOVE --}}
+      <div class="k4lt-dropzone" data-drop-zone data-types="move" data-collection="moves">
+        <div class="k4lt-dropzone-title">{{localize "k4lt.collections.Moves"}}</div>
+        <div class="k4lt-dropzone-content">
+          {{#each collections.moves}}
+            {{> "systems/k4lt/templates/partials/drop-item.hbs"}}
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

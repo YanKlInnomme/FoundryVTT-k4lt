@@ -1,0 +1,20 @@
+<!-- item-viewer-body.hbs -->
+<section class="k4lt-item-viewer-body">
+  {{#if (eq item.type "move")}}
+    {{> "systems/k4lt/templates/partials/move-viewer.hbs"}}
+  {{else if (eq item.type "darksecret")}}
+    {{> "systems/k4lt/templates/partials/darksecret-viewer.hbs"}}
+  {{else if (eq item.type "weapon")}}
+    {{> "systems/k4lt/templates/partials/weapon-viewer.hbs"}}
+  {{else if (eq item.type "armor")}}
+    {{> "systems/k4lt/templates/partials/armor-viewer.hbs"}}
+  {{else if (eq item.type "gear")}}
+    {{> "systems/k4lt/templates/partials/gear-viewer.hbs"}}
+  {{else if (eq item.type "relationship")}}
+    {{> "systems/k4lt/templates/partials/relationship-viewer.hbs"}}
+  {{else if (eq item.type "dramatichook")}}
+    {{> "systems/k4lt/templates/partials/dramatichook-viewer.hbs"}}
+  {{else}}
+    {{> "systems/k4lt/templates/partials/trait-viewer.hbs"}}
+  {{/if}}
+</section>

@@ -1,0 +1,18 @@
+/* pause.css */
+.paused > figcaption {
+  position: relative;
+  transform: translateY(-50px);
+  color: var(--k4lt-color-black);
+  font-size: 3em;
+  font-family: var(--k4lt-font-secondary);
+  text-shadow:
+      1px  1px 0 var(--k4lt-color-white),
+    -1px -1px 0 var(--k4lt-color-white),
+      1px -1px 0 var(--k4lt-color-white),
+    -1px  1px 0 var(--k4lt-color-white);
+}
+.paused > img {
+  width: 200px;
+  height: 200px;
+  content: url("../../assets/pause.webp");
+}

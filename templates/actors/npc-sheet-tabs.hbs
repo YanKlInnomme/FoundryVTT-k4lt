@@ -1,0 +1,19 @@
+<!-- npc-sheet-tabs.hbs -->
+<nav class="sheet-tabs tabs" data-group="sheet">
+  {{#each tabs}}
+    <a
+      data-action="tab"
+      data-group="sheet"
+      data-tab="{{this.id}}"
+      class="{{this.cssClass}}"
+    >
+      <span>
+        {{localize this.label}}
+
+        {{#if this.value}}
+          [{{this.value}}]
+        {{/if}}
+      </span>
+    </a>
+  {{/each}}
+</nav>

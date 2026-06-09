@@ -1,0 +1,106 @@
+<!-- pc-status.hbs -->
+<section
+  class="k4lt-scrollY tab tab-content {{tab.cssClass}}"
+  data-group="sheet"
+  data-tab="status"
+>
+  <div class="k4lt-status-grid">
+    {{!-- STABILITY --}}
+    <fieldset class="k4lt-sheet-block">
+      <legend>{{localize "k4lt.character.Stability"}}</legend>
+      <div class="k4lt-stability-card">
+        <div class="k4lt-stability-track">
+          {{#each stabilitySteps}}
+            <span class="k4lt-stability-dot {{#if this.active}}active{{/if}}"></span>
+          {{/each}}
+        </div>
+        <div class="k4lt-stability-title">{{stabilityLabel}}</div>
+        <div class="k4lt-stability-effects">{{stabilityEffect}}</div>
+        <div class="k4lt-stability-controls">
+          <button type="button" class="k4lt-stability-btn" data-action="stabilityDecrease">
+            <i class="fas fa-minus"></i>
+          </button>
+          <button type="button" class="k4lt-stability-btn" data-action="stabilityIncrease">
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+      </div>
+    </fieldset>
+    {{!-- WOUNDS --}}
+    <fieldset class="k4lt-sheet-block">
+      <legend>{{localize "k4lt.character.Wounds"}}</legend>
+      <div class="k4lt-wounds-grid">
+        <div class="k4lt-wounds-column">
+          {{#each wounds}}
+            {{#if (or (eq id "majorwound1") (eq id "majorwound3") (eq id "criticalwound"))}}
+              <div class="k4lt-wound-row">
+                <img class="k4lt-wound" src="{{img}}" data-action="cycleWound" data-wound="{{id}}">
+                <input type="text" name="system.{{id}}.value" value="{{value}}" placeholder="{{placeholder}}">
+              </div>
+            {{/if}}
+          {{/each}}
+        </div>
+        <div class="k4lt-wounds-column">
+          {{#each wounds}}
+            {{#if (or (eq id "majorwound2") (eq id "majorwound4"))}}
+              <div class="k4lt-wound-row">
+                <img class="k4lt-wound" src="{{img}}" data-action="cycleWound" data-wound="{{id}}">
+                <input type="text" name="system.{{id}}.value" value="{{value}}" placeholder="{{placeholder}}">
+              </div>
+            {{/if}}
+          {{/each}}
+          {{!-- LEGEND --}}
+          <div class="k4lt-wound-legend-inline">
+            <span>
+              <img src="systems/k4lt/assets/blank.webp">
+              {{localize "k4lt.character.NoWound"}}
+            </span>
+            <span>
+              <img src="systems/k4lt/assets/bleeding-wound.webp">
+              {{localize "k4lt.character.OpenWound"}}
+            </span>
+            <span>
+              <img src="systems/k4lt/assets/sticking-plaster.webp">
+              {{localize "k4lt.character.StabilizedWound"}}
+            </span>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  {{!-- CONDITIONS --}}
+  <fieldset class="k4lt-sheet-block k4lt-sheet-block-conditions">
+    <legend>{{localize "k4lt.conditions.Conditions"}}</legend>
+    {{!-- GRID --}}
+    <div class="k4lt-conditions-grid">
+      {{#each conditions}}
+        <div class="k4lt-condition-toggle">
+          <img class="k4lt-condition-img" src="{{img}}" data-action="cycleCondition" data-condition="{{id}}">
+          <span>{{localize (concat "k4lt.conditions." label)}}</span>
+        </div>
+      {{/each}}
+    </div>
+    {{!-- DETAILS --}}
+    {{#each conditions}}
+      {{#if (eq state "checked")}}
+        <div class="k4lt-condition-card">
+          <div class="k4lt-condition-header">
+            <h4>{{localize (concat "k4lt.conditions." label)}}</h4>
+          </div>
+          {{#if haunted}}
+            {{!-- HAUNTED --}}
+            <div>Hold : {{data.tokens}}</div>
+            <label>{{localize "k4lt.WhatIsHauntingTheCharacter"}}</label>
+            {{formInput fieldAnswer value=data.answer enriched=data.answer toggled=true engine="prosemirror"}}
+          {{else}}
+            {{!-- NORMAL CONDITIONS --}}
+            <label>{{localize (concat "k4lt.conditions." (lookup questions 0))}}</label>
+            {{formInput fieldAnswer1 value=data.answer1 enriched=data.answer1 toggled=true engine="prosemirror"}}
+            <label>{{localize (concat "k4lt.conditions." (lookup questions 1))}}</label>
+            {{formInput fieldAnswer2 value=data.answer2 enriched=data.answer2 toggled=true engine="prosemirror"}}
+          {{/if}}
+        </div>
+      {{/if}}
+    {{/each}}
+  </fieldset>
+</section>

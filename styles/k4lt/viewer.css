@@ -1,0 +1,87 @@
+/* viewer.css */
+.k4lt-name-viewer-block h1 {
+  font-family: var(--k4lt-font-secondary);
+  margin: 1rem 0 0;
+}
+.k4lt-item-viewer-body {
+  margin-top: var(--k4lt-space-md);
+}
+.k4lt-viewer-result-label {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--k4lt-color-dark-red);
+}
+.k4lt-viewer-result p {
+  margin: 0 0 1rem 0;
+}
+.k4lt-item-viewer-description,
+.k4lt-relationship-viewer-description,
+.k4lt-dramatichook-viewer-description,
+.k4lt-viewer-attack {
+  margin-top: .75rem;
+  padding-top: .5rem;
+  border-top: 1px dashed var(--k4lt-color-dark-gold);
+  font-size: .95rem;
+  opacity: .9;
+}
+.k4lt-item-viewer-uses {
+  font-size: .9rem;
+}
+.k4lt-relationship-viewer-header {
+  display: grid;
+  grid-template-columns: 90px 1fr 70px;
+  gap: var(--k4lt-space-lg);
+  align-items: center;
+  padding-bottom: var(--k4lt-space-md);
+  border-bottom: 1px solid var(--k4lt-color-dark-gold);
+}
+.k4lt-relationship-viewer-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--k4lt-color-dark-red);
+}
+.k4lt-relationship-viewer-type {
+  font-family: var(--k4lt-font-secondary);
+  font-size: .8rem;
+  text-transform: uppercase;
+  color: var(--k4lt-color-dark-red);
+}
+.k4lt-relationship-viewer-titleblock h1 {
+  margin: .25rem 0;
+  font-family: var(--k4lt-font-secondary);
+  font-size: 2.2rem;
+  color: var(--k4lt-color-dark-red);
+  text-transform: uppercase;
+}
+.k4lt-relationship-viewer-linked {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.k4lt-relationship-viewer-summary {
+  margin-top: .5rem;
+  font-style: italic;
+  opacity: .8;
+}
+.k4lt-relationship-viewer-strength {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--k4lt-color-dark-red);
+  font-size: 1.2rem;
+}
+.k4lt-relationship-viewer-body {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.k4lt-dramatichook-viewer-status-img {
+  width: 24px;
+  height: 24px;
+  padding: 2px;
+  border: 1px dashed var(--k4lt-color-dark-gold);
+  border-radius: 4px;
+}

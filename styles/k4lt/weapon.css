@@ -1,0 +1,171 @@
+/* weapon.css */
+/* ======================================== */
+/* ATTACK LIST                              */
+/* ======================================== */
+.k4lt-attack-header {
+  display: grid;
+  grid-template-columns: 1fr 55px 55px 200px 32px;
+  gap: var(--k4lt-space-sm);
+  font-size: .7rem;
+  opacity: .7;
+}
+.k4lt-attack-header span {
+  padding-left: 2px;
+}
+.k4lt-attack-line {
+  display: grid;
+  grid-template-columns: 1fr 55px 55px 200px 32px;
+  gap: var(--k4lt-space-sm);
+  align-items: center;
+}
+.k4lt-attack-line input {
+  width: 100%;
+  min-width: 0;
+}
+.k4lt-attack-line input[type="number"] {
+  width: 55px;
+}
+.k4lt-attack-description-row {
+  margin-top: var(--k4lt-space-xs);
+  margin-bottom: var(--k4lt-space-md);
+}
+.k4lt-attack-description-row .editor {
+  min-height: 90px;
+}
+.k4lt-add-attack {
+  margin-top: var(--k4lt-space-sm);
+  width: 100%;
+  padding: var(--k4lt-space-sm);
+  border-radius: var(--k4lt-radius);
+  border: 1px dashed var(--k4lt-color-dark-gold);
+  background: transparent;
+  font-family: var(--k4lt-font-primary);
+  font-size: .8rem;
+  color: var(--k4lt-color-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--k4lt-space-sm);
+  cursor: pointer;
+  transition: all .2s ease;
+}
+.k4lt-add-attack:hover {
+  background: rgba(155, 141, 104, .1);
+  border-color: var(--k4lt-color-light-gold);
+  color: var(--k4lt-color-dark-red);
+  transform: translateY(-1px);
+}
+.k4lt-attack-preview {
+  margin-bottom: var(--k4lt-space-lg);
+  font-size: .85rem;
+  opacity: .85;
+}
+.k4lt-attack-preview:hover {
+  color: var(--k4lt-color-dark-red);
+}
+.k4lt-attack-remove {
+  width: 20px;
+  height: 20px;
+  font-size: .65rem;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  background: var(--k4lt-color-black-50);
+  color: var(--k4lt-color-white);
+  opacity: 0;
+  transition: all .15s ease;
+}
+.k4lt-attack-line:hover .k4lt-attack-remove {
+  opacity: 1;
+}
+.k4lt-attack-remove:hover {
+  background: var(--k4lt-color-red);
+  transform: scale(.95);
+}
+/* ======================================== */
+/* ARMOR PREVIEW                            */
+/* ======================================== */
+.k4lt-armor-preview {
+  margin-bottom: var(--k4lt-space-lg);
+  font-size: .85rem;
+  opacity: .85;
+}
+.k4lt-armor-preview:hover {
+  color: var(--k4lt-color-dark-red);
+}
+/* ========================= */
+/* INVENTORY LAYOUT          */
+/* ========================= */
+.k4lt-inventory-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--k4lt-gap);
+  align-items: stretch;
+}
+.k4lt-inventory-notes {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.k4lt-inventory-notes .editor {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.k4lt-inventory-notes .editor-content {
+  display: flex;
+  flex: 1;
+}
+.k4lt-inventory-notes .ProseMirror {
+  flex: 1;
+  min-height: var(--k4lt-editor-min-height);
+  height: auto;
+}
+.k4lt-inventory-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--k4lt-gap);
+}
+.k4lt-inventory-sidebar .k4lt-dropzone {
+  flex: 1;
+}
+/* ========================= */
+/* AMMO ROW                  */
+/* ========================= */
+.k4lt-ammo-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: .5rem;
+}
+.k4lt-ammo-part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .25rem;
+}
+.k4lt-ammo-part input {
+  width: 70px;
+  text-align: center;
+}
+.k4lt-ammo-part span {
+  font-size: .8rem;
+  opacity: .7;
+}
+.k4lt-ammo-separator {
+  font-size: 1.4rem;
+  font-weight: bold;
+  opacity: .5;
+}
+/* ========================= */
+/* EMPTY WEAPON              */
+/* ========================= */
+.k4lt-no-ammo .k4lt-drop-item-img,
+.k4lt-no-ammo .k4lt-equip-btn {
+  opacity: .25 !important;
+  filter: grayscale(1) !important;
+  transition: all .2s ease;
+}

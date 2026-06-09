@@ -1,0 +1,7 @@
+<!-- npc-description.hbs -->
+<section class="tab tab-content {{tab.cssClass}}" data-group="sheet" data-tab="description">
+  <fieldset class="k4lt-sheet-block full">
+    <legend>{{localize "k4lt.ui.Description"}}</legend>
+    {{formInput systemFields.description value=system.description enriched=system.description toggled=true engine="prosemirror"}}
+  </fieldset>
+</section>

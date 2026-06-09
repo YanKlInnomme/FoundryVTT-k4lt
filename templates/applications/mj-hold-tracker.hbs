@@ -1,0 +1,19 @@
+<!-- mj-hold-tracker.hbs -->
+<section class="k4lt-hold-tracker">
+  <div class="k4lt-hold-grid">
+    {{#each actors}}
+      <div class="k4lt-hold-card" data-actor-id="{{id}}">
+        <div class="k4lt-hold-bg" style="background-image: url('{{img}}')"></div>
+        <div class="k4lt-hold-overlay">
+          <div class="k4lt-hold-value">{{hold}}</div>
+          <div class="k4lt-hold-name">{{name}}</div>
+          <div class="k4lt-hold-owner">{{owners}}</div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+  <div class="k4lt-hold-help">
+    <i class="fas fa-mouse"></i>
+    {{localize "k4lt.ui.ClickCardOpenPC"}}
+  </div>
+</section>

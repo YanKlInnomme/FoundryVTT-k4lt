@@ -1,6 +1,6 @@
 ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FYanKlInnomme%2FFoundryVTT-k4lt%2Fmaster%2Fsystem.json&query=%24.compatibility.verified&label=foundry%20vtt&color=%23ee9b3a) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FYanKlInnomme%2FFoundryVTT-k4lt%2Fmaster%2Fsystem.json&query=%24.version&label=version&color=%230f2f2b) ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/YanKlInnomme/FoundryVTT-k4lt/total) ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues-raw/YanKlInnomme/FoundryVTT-k4lt) ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues-closed-raw/YanKlInnomme/FoundryVTT-k4lt) ![GitHub forks](https://img.shields.io/github/forks/YanKlInnomme/FoundryVTT-k4lt) ![GitHub Repo stars](https://img.shields.io/github/stars/YanKlInnomme/FoundryVTT-k4lt) [![Static Badge](https://img.shields.io/badge/buy_me_a_coffee-FFDD00?logo=Buy%20Me%20A%20Coffee&logoColor=black)](https://www.buymeacoffee.com/yank)
 
-**See below for the English version**
+[**See below for the English version**](#KULT-Divinity-Lost-Game-System-for-Foundry-VTT)
 
 # Système de Jeu KULT: Divinity Lost pour Foundry VTT
 Kult est un jeu de rôle d'horreur qui se concentre sur les peurs et les pulsions enfouies dans notre subconscient. Les joueurs incarnent des personnages aux sombres secrets et évoluent dans des villes industrielles, affrontant des cultes sataniques, des tueurs psychopathes, des multinationales corrompues et bien plus encore.
@@ -8,10 +8,6 @@ Kult est un jeu de rôle d'horreur qui se concentre sur les peurs et les pulsion
 Attention, ce jeu explore des thèmes matures liés à l'horreur psychologique et corporelle. Au sein des différents ouvrages qui le constitue, on y trouve des exemples explicites d'abus physiques et mentaux, de violence, d'agression sexuelle, d'exploitation religieuse, de maltraitance des enfants, de maladie mentale, d'enlèvement et de rapt, de cruauté et de mort animale, de grossesse et d'accouchement, de fausse couche et d'avortement, de consommation de drogue, d'automutilation et de suicide, de sang et de mort.
 
 Ce système de jeu est un ensemble de fichiers qui fournissent à Foundry VTT toutes les informations nécessaires pour prendre en charge les règles, les mécanismes et les éléments de jeu spécifiques à KULT: Divinity Lost.
-
-![Capture d'écran 2025-05-06 163629](https://github.com/user-attachments/assets/a3b28bd4-407c-47b5-81af-dd8e00641904)
-![Capture d'écran 2025-05-06 163840](https://github.com/user-attachments/assets/156faab8-f65a-46e1-82da-1011e275b418)
-![Capture d'écran 2025-05-06 164047](https://github.com/user-attachments/assets/9a80a9c8-769a-41df-b3d7-bbc7785958d1)
 
 Si vous appréciez le système et que vous avez les moyens de le faire, vous pouvez me soutenir en m'offrant un café sur Buy Me a Coffee (https://www.buymeacoffee.com/yank). Votre geste sera grandement apprécié et contribuera à soutenir le développement continu. Quoi qu'il en soit, je vous souhaite une expérience enrichissante et divertissante. N'hésitez pas à me contacter pour partager vos commentaires ou signaler tout problème éventuel.
 
@@ -37,6 +33,22 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 à 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
+
+## Version 6.0.0.0
+ * Passage à la version 14 de Foundry VTT :
+    - Refonte intégrale de l'architecture JavaScript (ES Modules, ApplicationV2, HandlebarsApplicationMixin, etc.).
+    - Réécriture et réorganisation complète du code afin d'améliorer la maintenabilité et de faciliter les développements futurs.
+    - Refonte complète des fiches PJ, PNJ et objets (Actions, Avantages, Désavantages, Capacités, etc.) avec prise en charge des thèmes clair et sombre de Foundry VTT.
+    - Ajout de nouveaux types d'objets : armes, armures, relations et ressorts dramatiques.
+    - Améliorations diverses, notamment au niveau de la gestion et de l'automatisation des jetons, ainsi que de l'affichage des résultats dans le chat.
+    - Mise en place d'un sélecteur de combat permettant de choisir précisément l'Arme et l'attaque utilisées lors de l'action *Engager le combat*.
+    - Ajout d'un tracker à destination du MJ permettant de visualiser les Retenues de l'ensemble des Personnages Joueurs et d'accéder rapidement à leur fiche.
+    - Gestion de l'équipement, y compris la prise en compte des Armes et Armures équipées, ainsi que du rechargement des armes.
+    - Correction des Conditions afin qu'elles soient automatiquement prises en compte dans la Stabilité lorsque cela est applicable.
+    - Implémentation complète du système de Progression de KULT: Divinité Perdue, incluant les états de conscience Dormeur, Conscient, Éclairé et Éveillé.
+    - Affichage différencié de la fiche de Personnage Joueur pour le joueur et pour le MJ, notamment en termes d'édition et de visibilité de certaines informations (Retenues, Relations, Ressorts dramatiques, etc.).
+    - Sauvegarde automatique de la position de défilement dans les onglets des fiches.
+    - Refonte de l'internationalisation du système pour prise en compte des multiples changements apportés.
 
 ## Version 5.0.2.2
  * Suppression de variables redondantes dans le fichier en.json
@@ -277,7 +289,23 @@ This digital adaptation is unofficial content from KULT: Divinity Lost, authoriz
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
 
-# Version 5.0.2.2
+## Version 6.0.0.0
+ * Transition to Foundry VTT version 14:
+    - Complete overhaul of the JavaScript architecture (ES Modules, ApplicationV2, HandlebarsApplicationMixin, etc.).
+    - Complete rewrite and reorganization of the code to improve maintainability and facilitate future developments.
+    - Complete redesign of the PC, NPC and item sheets (Moves, Advantages, Disadvantages, Abilities, etc.) with support for Foundry VTT's light and dark themes.
+    - Addition of new item types: Weapons, Armors, Relationships and Dramatic Hooks.
+    - Various improvements, notably in terms of token management and automation, as well as the display of results in the chat.
+    - Implementation of a combat selector allowing to precisely choose the Weapon and attack used when performing the *Engage in Combat* action.
+    - Addition of a tracker for the GM to view each Player Character's Hold and quickly access their sheets.
+    - Equipment management, including support for equipped Weapons and Armor, as well as weapon reloading.
+    - Fixed Conditions so they are automatically taken into account for Stability when applicable.
+    - Complete implementation of the KULT: Divinity Lost progression system, including the states of consciousness Sleeper, Aware, Enlightened and Awakened.
+    - Separate Player Character sheet views for players and GMs, including differences in editing permissions and information visibility (Hold, Relationships, Dramatic Hooks, etc.).
+    - Automatic saving of the scroll position in the sheet tabs.
+    - Complete overhaul of the system's internationalization to support the numerous changes introduced in this release.
+
+## Version 5.0.2.2
  * Removed redundant variables in en.json file
  * Added two new macros:
     - `Quick Token Setup for PCs`: Automatically configures player tokens with vision, name display, and actor linkage settings.

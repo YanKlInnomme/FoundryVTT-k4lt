@@ -1,0 +1,33 @@
+/* fonts.css */
+@font-face {
+  font-family: "Alverata";
+  src: url("../../fonts/Alverata.woff2") format("woff2"),
+    url("../../fonts/Alverata.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Alverata";
+  src: url("../../fonts/Alverata-Bold.woff2") format("woff2"),
+    url("../../fonts/Alverata-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Alverata";
+  src: url("../../fonts/Alverata-Italic.woff2") format("woff2"),
+    url("../../fonts/Alverata-Italic.ttf") format("truetype");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Alverata";
+  src: url("../../fonts/Alverata-BoldItalic.woff2") format("woff2"),
+    url("../../fonts/Alverata-BoldItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Infidel-C";
+  src: url("../../fonts/Infidel-C.woff2") format("woff2"),
+    url("../../fonts/Infidel-C.ttf") format("truetype");
+  font-weight: 700;
+}

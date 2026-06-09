@@ -1,0 +1,80 @@
+<!-- pc-sheet-body.hbs -->
+<section class="k4lt-section">
+  <div class="k4lt-summary-row">
+    {{!-- TOKENS --}}
+    <fieldset class="k4lt-sheet-block">
+      <legend>{{localize "k4lt.ui.TokenSummary"}}</legend>
+      <div class="k4lt-token-summary">
+        <div class="k4lt-token-card edge">
+          <span>{{localize "k4lt.actions.Edge"}}</span>
+          <strong>{{tokenSummary.edge}}</strong>
+        </div>
+        <div class="k4lt-token-card hold">
+          <span>{{localize "k4lt.actions.Hold"}}</span>
+          <strong>{{tokenSummary.hold}}</strong>
+        </div>
+        {{#if tokenSummary.rage.exists}}
+          <div class="k4lt-token-card rage">
+            <span>{{localize "k4lt.actions.Rage"}}</span>
+            <strong>{{tokenSummary.rage.value}}</strong>
+          </div>
+        {{/if}}
+        {{#if tokenSummary.time.exists}}
+          <div class="k4lt-token-card time">
+            <span>{{localize "k4lt.item.Time"}}</span>
+            <strong>{{tokenSummary.time.current}} / {{tokenSummary.time.max}}</strong>
+          </div>
+        {{/if}}
+      </div>
+    </fieldset>
+    {{!-- STABILITY --}}
+    <div class="k4lt-summary-stability">
+      <span>{{localize "k4lt.character.Stability"}}</span>
+      <strong>{{stabilityLabel}}</strong>
+    </div>
+    {{!-- CONDITIONS --}}
+    {{#if activeConditions.length}}
+      <fieldset class="k4lt-sheet-block k4lt-summary-conditions">
+        <legend>{{localize "k4lt.conditions.Conditions"}}</legend>
+        <div class="k4lt-active-conditions cols-{{conditionColumns}}">
+          {{#each activeConditions}}
+            <div class="k4lt-active-condition">
+              <img src="{{img}}">
+              <span>{{localize (concat "k4lt.conditions." label)}}</span>
+            </div>
+          {{/each}}
+        </div>
+      </fieldset>
+    {{/if}}
+    {{!-- EQUIPPED ITEMS --}}
+    {{#if equippedItems.length}}
+      <fieldset class="k4lt-sheet-block k4lt-summary-equipped">
+        <legend>{{localize "k4lt.ui.InventoryEquipped"}}</legend>
+        <div class="k4lt-active-equipment cols-{{equipmentColumns}}">
+          {{#each equippedItems}}
+            <div class="k4lt-active-item {{type}}">
+              <i class="fas
+                {{#if (eq type "weapon")}}fa-crosshairs{{else if (eq type "armor")}}fa-shield-halved{{/if}}
+                k4lt-equipped-icon
+                {{#if (and (eq type "weapon") (gt system.ammo.max 0) (eq system.ammo.value 0))}}k4lt-empty-weapon{{/if}}"
+              ></i>
+              <span>{{name}}</span>
+            </div>
+          {{/each}}
+        </div>
+      </fieldset>
+    {{/if}}
+    {{!-- CONSCIOUSNESS --}}
+    <div class="k4lt-summary-consciousness">
+      <span>
+        {{localize
+          "k4lt.advancement.StateOfConsciousness"}}
+      </span>
+      <strong
+        class="k4lt-consciousness-{{consciousnessState}}"
+      >
+        {{localize (concat "k4lt.meta." (capitalize consciousnessState))}}
+      </strong>
+    </div>
+  </div>
+</section>

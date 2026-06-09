@@ -1,0 +1,21 @@
+/* grid.css */
+.k4lt-grid {
+  display: grid;
+  gap: var(--k4lt-gap);
+}
+.k4lt-cols-1 { grid-template-columns: repeat(1, 1fr); }
+.k4lt-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.k4lt-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.k4lt-cols-4 { grid-template-columns: repeat(4, 1fr); }
+.k4lt-cols-5 { grid-template-columns: repeat(5, 1fr); }
+.k4lt-cols-auto {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+.k4lt-col-span-2 { grid-column: span 2; }
+.k4lt-col-span-3 { grid-column: span 3; }
+.k4lt-row-span-2 { grid-row: span 2; }
+.k4lt-row-span-3 { grid-row: span 3; }
+.k4lt-col-start-2 { grid-column-start: 2; }
+.k4lt-col-start-3 { grid-column-start: 3; }
+.k4lt-row-start-2 { grid-row-start: 2; }
+.k4lt-row-start-3 { grid-row-start: 3; }

@@ -1,0 +1,9 @@
+<!-- relationship-viewer.hbs -->
+<div class="k4lt-relationship-viewer">
+  <div><strong>{{localize "k4lt.ui.LinkedElementActor"}}</strong> : {{item.system.linkedActor.name}}</div>
+  <div><strong>{{localize "k4lt.ui.Summary"}}</strong> : {{system.summary}}</div>
+  <div><strong>{{localize "k4lt.combat.Strength"}}</strong> : {{system.strength}}</div>
+  {{#if system.description}}
+    <div class="k4lt-relationship-viewer-description">{{{system.description}}}</div>
+  {{/if}}
+</div>

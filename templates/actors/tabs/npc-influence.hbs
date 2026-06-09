@@ -1,0 +1,10 @@
+<!-- npc-influence.hbs -->
+<section class="tab tab-content {{tab.cssClass}}" data-group="sheet" data-tab="influence">
+  <fieldset class="k4lt-sheet-block small">
+    <legend>{{localize "k4lt.combat.Influence"}}</legend>
+    <select name="system.level.influence">
+      {{selectOptions levelValues selected=system.level.influence valueAttr="value" labelAttr="label"}}
+    </select>
+    {{formInput systemFields.influencemoves value=system.influencemoves enriched=system.influencemoves toggled=true engine="prosemirror"}}
+  </fieldset>
+</section>

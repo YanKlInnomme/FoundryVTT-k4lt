@@ -1,0 +1,10 @@
+<!-- npc-magic.hbs -->
+<section class="tab tab-content {{tab.cssClass}}" data-group="sheet" data-tab="magic">
+  <fieldset class="k4lt-sheet-block small">
+    <legend>{{localize "k4lt.combat.Magic"}}</legend>
+    <select name="system.level.magic">
+      {{selectOptions levelValues selected=system.level.magic valueAttr="value" labelAttr="label"}}
+    </select>
+    {{formInput systemFields.magicmoves value=system.magicmoves enriched=system.magicmoves toggled=true engine="prosemirror"}}
+  </fieldset>
+</section>

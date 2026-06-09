@@ -2,18 +2,18 @@
   "id": "k4lt",
   "title": "KULT: Divinity Lost (4th Edition)",
   "description": "Kult is a horror role-playing game that focuses on the fears and impulses buried in our subconscious. Players take on the role of characters with dark secrets and can evolve in industrial cities, facing satanic cults, psychopathic killers, corrupt multinationals and more.",
-  "version": "5.0.2.2",
+  "version": "6.0.0.0",
   "license": "LICENSE",
   "compatibility": {
-    "minimum": "13",
-    "verified": "13.348",
-    "maximum": "14"
+    "minimum": "14",
+    "verified": "14.363",
+    "maximum": "15"
   },
   "authors": [
     {
-      "name": "YanK",
-      "url": "https://yank-solutions.fr",
-      "email": "yanklinnomme@gmail.com",
+      "name": "YanK l'Innommé",
+      "url": "https://yanklinnomme.fr",
+      "email": "contact@yanklinnomme.fr",
       "discord": "yanklinnomme"
     },
     {
@@ -50,20 +50,60 @@
   "media": [
     {
       "type": "cover",
-      "loop": false
+      "loop": false,
+      "flags": {}
     },
     {
       "type": "setup",
-      "loop": false,
+      "url": "systems/k4lt/assets/repo.webp",
       "thumbnail": "systems/k4lt/assets/thumbnail.webp"
     }
   ],
-  "esmodules": [
-    "k4lt.js"
-  ],
+  "esmodules": [ "k4lt.js" ],
   "styles": [
+    {
+      "src": "styles/core/reset.css",
+      "layer": "reset"
+    },
+    {
+      "src": "styles/core/variables.css",
+      "layer": "variables"
+    },
+    {
+      "src": "styles/core/base.css",
+      "layer": "elements"
+    },
+    {
+      "src": "styles/foundry/theme.css",
+      "layer": "applications"
+    },
+    {
+      "src": "styles/foundry/pause.css",
+      "layer": "exceptions"
+    },
     "styles/k4lt.css"
   ],
+  "documentTypes": {
+    "Actor": {
+      "pc": {},
+      "npc": {}
+    },
+    "Item": {
+      "ability": {},
+      "advantage": {},
+      "armor": {},
+      "darksecret": {},
+      "disadvantage": {},
+      "dramatichook": {},
+      "family": {},
+      "gear": {},
+      "limitation": {},
+      "move": {},
+      "occupation": {},
+      "relationship": {},
+      "weapon": {}
+    }
+  },
   "packs": [
     {
       "label": "Abilities",
@@ -138,7 +178,6 @@
       "system": "k4lt",
       "path": "packs/macros",
       "ownership": {
-        "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       }
     },
@@ -149,7 +188,16 @@
       "system": "k4lt",
       "path": "packs/moves",
       "ownership": {
-        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "label": "Weapons",
+      "name": "weapons",
+      "type": "Item",
+      "system": "k4lt",
+      "path": "packs/weapons",
+      "ownership": {
         "ASSISTANT": "OWNER"
       }
     }

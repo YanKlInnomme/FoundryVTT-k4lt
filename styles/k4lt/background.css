@@ -1,0 +1,57 @@
+/* background.css */
+.k4lt-background-layout {
+  display: grid;
+  gap: var(--k4lt-space-md);
+  margin-bottom: var(--k4lt-space-md);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.k4lt-background-notes {
+  min-height: 260px;
+}
+.k4lt-background-layout .k4lt-dropzone {
+  min-height: 220px;
+}
+.k4lt-background-layout .k4lt-dropzone-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--k4lt-space-xs);
+  flex: 1;
+}
+.k4lt-background-layout .k4lt-dropzone-content:empty::after {
+  content: attr(data-placeholder);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  opacity: .6;
+  font-size: .8rem;
+  text-transform: uppercase;
+}
+.k4lt-background-notes .prosemirror {
+  min-height: 180px;
+}
+.k4lt-dramatichook-card {
+  position: relative;
+  display: flex;
+  gap: var(--k4lt-space-md);
+  align-items: flex-start;
+  padding: var(--k4lt-space-sm);
+  border: 1px solid var(--k4lt-color-dark-gold);
+  border-radius: var(--k4lt-radius);
+  min-height: 100px;
+}
+.k4lt-dramatichook-avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 64px;
+}
+.k4lt-dramatichook-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.k4lt-dramatichook-card:hover .k4lt-drop-item-actions {
+  opacity: 1;
+}

@@ -1,0 +1,43 @@
+<!-- pc-background.hbs -->
+<section
+  class="k4lt-scrollY tab tab-content {{tab.cssClass}}"
+  data-group="sheet"
+  data-tab="background"
+>
+  <div class="k4lt-background-layout">
+    {{!-- RELATIONSHIPS --}}
+    <div class="k4lt-dropzone" data-drop-zone data-types="relationship" data-collection="relationships">
+      <div class="k4lt-dropzone-title">
+        {{localize "k4lt.collections.Relationships"}}
+        <span class="k4lt-tooltip" data-tooltip="{{localize 'k4lt.ui.DropHereRelationship'}}">
+          <i class="fas fa-question-circle"></i>
+        </span>
+      </div>
+      <div class="k4lt-relationship-content">
+        {{#each collections.relationships}}
+          {{> "systems/k4lt/templates/partials/relationship-card.hbs"}}
+        {{/each}}
+      </div>
+    </div>
+    {{!-- DRAMATIC HOOKS --}}
+    <div class="k4lt-dropzone" data-drop-zone data-types="dramatichook" data-collection="dramatichooks">
+      <div class="k4lt-dropzone-title">
+        {{localize "k4lt.collections.DramaticHooks"}}
+        <span class="k4lt-tooltip" data-tooltip="{{localize 'k4lt.ui.DropHereDramaticHook'}}">
+          <i class="fas fa-question-circle"></i>
+        </span>
+      </div>
+      <div class="k4lt-dramatichook-content">
+        {{#each collections.dramatichooks}}
+          {{> "systems/k4lt/templates/partials/dramatichook-card.hbs"}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+  <div class="k4lt-background-layout">
+    <fieldset class="k4lt-sheet-block k4lt-background-notes">
+      <legend>{{localize "k4lt.character.WhatYouHoldDear"}}</legend>
+      {{formInput systemFields.whatyouholddear value=system.whatyouholddear enriched=system.whatyouholddear toggled=true engine="prosemirror"}}
+    </fieldset>
+  </div>
+</section>

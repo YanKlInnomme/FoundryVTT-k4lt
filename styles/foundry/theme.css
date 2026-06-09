@@ -1,0 +1,108 @@
+/* theme.css */
+  /* ----- Buttons (Light) ----- */
+  .application.theme-light a.button,
+  .themed.theme-light a.button,
+  .application.theme-light button,
+  .themed.theme-light button,
+  .application.theme-light kbd,
+  .themed.theme-light kbd {
+    --button-border-color:           var(--color-dark-5);
+    --button-text-color:             var(--color-dark-1);
+    --button-focus-outline-color:    var(--k4lt-color-white);
+    --button-hover-background-color: var(--k4lt-color-red);
+    --button-hover-border-color:     var(--k4lt-color-white);
+    --button-hover-text-color:       var(--k4lt-color-white);
+  }
+  /* ----- Buttons (Dark) ----- */
+  .application.theme-dark a.button,
+  .themed.theme-dark a.button,
+  .application.theme-dark button,
+  .themed.theme-dark button,
+  .application.theme-dark kbd,
+  .themed.theme-dark kbd {
+    --button-border-color:           var(--color-light-5);
+    --button-text-color:             var(--color-light-1);
+    --button-focus-outline-color:    var(--k4lt-color-black);
+    --button-hover-background-color: var(--k4lt-color-gold);
+    --button-hover-border-color:     var(--k4lt-color-black);
+    --button-hover-text-color:       var(--k4lt-color-black);
+  }
+  /* ----- Buttons (General) ----- */
+  a.button,
+  button,
+  kbd {
+    --button-focus-outline-color:    var(--k4lt-color-white);
+    --button-hover-background-color: var(--k4lt-color-red);
+    --button-hover-border-color:     var(--k4lt-color-white);
+    --button-hover-text-color:       var(--k4lt-color-white);
+  }
+  /* ----- UI Control Buttons ----- */
+  button.ui-control.button,
+  a.ui-control.button,
+  li.ui-control.button,
+  .placeable-hud .control-icon.button,
+  .placeable-hud input.button {
+    --control-border-color:       var(--k4lt-color-gold);
+    --control-hover-bg-color:     var(--k4lt-color-gold);
+    --control-hover-border-color: var(--k4lt-color-white);
+  }
+  /* ----- UI Control Toggles ----- */
+  button.ui-control.toggle,
+  a.ui-control.toggle,
+  li.ui-control.toggle,
+  .placeable-hud .control-icon.toggle,
+  .placeable-hud input.toggle {
+    --control-bg-color:            var(--k4lt-color-white);
+    --control-border-color:        var(--k4lt-color-black);
+    --control-active-bg-color:     var(--k4lt-color-red);
+    --control-active-border-color: var(--k4lt-color-red);
+    --control-hover-border-color:  var(--k4lt-color-red);
+  }
+  /* ----- Pressed UI Controls ----- */
+  button.ui-control[aria-pressed="true"],
+  a.ui-control[aria-pressed="true"],
+  li.ui-control[aria-pressed="true"],
+  .placeable-hud .control-icon[aria-pressed="true"],
+  .placeable-hud input[aria-pressed="true"] {
+    border: 2px solid var(--k4lt-color-red);
+  }
+  /* ----- Dividers (Light) ----- */
+  .application.theme-light,
+  .themed.theme-light {
+    --divider-line-color: var(--k4lt-color-red);
+    --divider-text-color: var(--color-text-primary);
+  }
+  /* ----- Dividers (Dark) ----- */
+  .application.theme-dark,
+  .themed.theme-dark {
+    --divider-line-color: var(--k4lt-color-gold);
+    --divider-text-color: var(--k4lt-color-red);
+  }
+  /* ----- Divider Headers ----- */
+  h1.divider::before,
+  h2.divider::before,
+  h3.divider::before,
+  h4.divider::before,
+  h1.divider::after,
+  h2.divider::after,
+  h3.divider::after,
+  h4.divider::after {
+    border-top: 2px ridge var(--divider-line-color);
+  }
+  h1.divider,
+  h2.divider,
+  h3.divider,
+  h4.divider {
+    color: var(--divider-text-color);
+  }
+  /* ----- Misc ----- */
+  #chat-message:focus {
+    outline-color: var(--k4lt-color-gold);
+  }
+  .header-actions > button,
+  .settings > button,
+  .documentation > button,
+  .documentation > a.button,
+  .access > button {
+    font-family: var(--k4lt-font-primary);
+  }

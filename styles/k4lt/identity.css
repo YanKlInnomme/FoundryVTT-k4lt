@@ -1,0 +1,112 @@
+/* identity.css */
+/* ======================================== */
+/* IDENTITY LAYOUT                          */
+/* ======================================== */
+.k4lt-identity-layout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--k4lt-space-md);
+}
+/* ======================================== */
+/* ATTRIBUTES GRID                          */
+/* ======================================== */
+.k4lt-attributes-grid {
+  display: grid;
+  grid-template-columns: 110px 110px 110px;
+  grid-auto-rows: auto;
+  width: fit-content;
+  margin: 0 auto;
+}
+.k4lt-attr {
+  width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: all .2s ease;
+}
+.k4lt-select,
+.k4lt-attr-select {
+  border: none;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, .2);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.k4lt-select option,
+.k4lt-attr-select option {
+  background: var(--k4lt-color-dark-gray);
+  color: var(--k4lt-color-white);
+}
+.k4lt-modifiers-select {
+  width: 75%;
+}
+.k4lt-attr-select {
+  width: 70px;
+  text-align: center;
+}
+.k4lt-attr-label {
+  text-align: center;
+  font-size: .8rem;
+  font-style: italic;
+  pointer-events: none;
+}
+.attmid {
+  width: 110px;
+  height: 110px;
+  background-image: url("../../assets/attributes/middle.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+/* ======================================== */
+/* ATTRIBUTE GRID POSITIONING               */
+/* ======================================== */
+.willpic  { grid-column: 2; grid-row: 1; }
+.fortpic  { grid-column: 1; grid-row: 2; }
+.will-label { grid-column: 2; grid-row: 2; align-self: start; }
+.refpic   { grid-column: 3; grid-row: 2; }
+.fort-label { grid-column: 1; grid-row: 3; }
+.ref-label  { grid-column: 3; grid-row: 3; }
+.reasonpic { grid-column: 1; grid-row: 4; }
+.attmid    { grid-column: 2; grid-row: 4; }
+.intupic   { grid-column: 3; grid-row: 4; }
+.reason-label { grid-column: 1; grid-row: 5; align-self: start; }
+.percpic      { grid-column: 2; grid-row: 5; }
+.intu-label   { grid-column: 3; grid-row: 5; align-self: start; }
+.coolpic  { grid-column: 1; grid-row: 6; }
+.perc-label { grid-column: 2; grid-row: 6; align-self: start; }
+.violpic  { grid-column: 3; grid-row: 6; }
+.cool-label { grid-column: 1; grid-row: 7; align-self: start; }
+.chapic     { grid-column: 2; grid-row: 7; }
+.viol-label { grid-column: 3; grid-row: 7; align-self: start; }
+.cha-label  { grid-column: 2; grid-row: 8; align-self: start; }
+.soulpic    { grid-column: 2; grid-row: 9; }
+.soul-label { grid-column: 2; grid-row: 10; align-self: start; }
+/* ======================================== */
+/* ATTRIBUTE BACKGROUNDS                    */
+/* ======================================== */
+.willpic  { background-image: url("../../assets/attributes/will.webp"); }
+.willpic:hover  { background-image: url("../../assets/attributes/will-hover.webp"); }
+.fortpic  { background-image: url("../../assets/attributes/fort.webp"); }
+.fortpic:hover  { background-image: url("../../assets/attributes/fort-hover.webp"); }
+.refpic   { background-image: url("../../assets/attributes/ref.webp"); }
+.refpic:hover   { background-image: url("../../assets/attributes/ref-hover.webp"); }
+.reasonpic { background-image: url("../../assets/attributes/reason.webp"); }
+.reasonpic:hover { background-image: url("../../assets/attributes/reason-hover.webp"); }
+.percpic  { background-image: url("../../assets/attributes/perc.webp"); }
+.percpic:hover  { background-image: url("../../assets/attributes/perc-hover.webp"); }
+.intupic  { background-image: url("../../assets/attributes/intu.webp"); }
+.intupic:hover  { background-image: url("../../assets/attributes/intu-hover.webp"); }
+.coolpic  { background-image: url("../../assets/attributes/cool.webp"); }
+.coolpic:hover  { background-image: url("../../assets/attributes/cool-hover.webp"); }
+.chapic   { background-image: url("../../assets/attributes/cha.webp"); }
+.chapic:hover   { background-image: url("../../assets/attributes/cha-hover.webp"); }
+.violpic  { background-image: url("../../assets/attributes/viol.webp"); }
+.violpic:hover  { background-image: url("../../assets/attributes/viol-hover.webp"); }
+.soulpic  { background-image: url("../../assets/attributes/soul.webp"); }
+.soulpic:hover  { background-image: url("../../assets/attributes/soul-hover.webp"); }

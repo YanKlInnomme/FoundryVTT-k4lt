@@ -1,0 +1,25 @@
+<!-- weapon-viewer.hbs -->
+<div class="k4lt-item-viewer">
+  {{#if item.system.ammo.max}}<div><strong>{{localize "k4lt.combat.Ammo"}}</strong> : {{item.system.ammo.value}} / {{item.system.ammo.max}}</div>{{/if}}
+  <div>
+    <strong>{{localize "k4lt.combat.Range"}}</strong> :
+    {{#each distance}}
+      <span>{{localize (concat "k4lt.distance." (capitalize this))}}</span>
+      {{#unless @last}} • {{/unless}}
+    {{/each}}
+  </div>
+  <div class="k4lt-viewer-attack"></div>
+  {{#each item.system.attacks}}
+    <div>
+      ◊ <strong>{{name}}</strong> [{{harm}}]
+      {{#if ammoCost}}
+        [−{{ammoCost}} {{localize "k4lt.combat.Ammo"}}]
+      {{/if}}
+      {{#if (or effect description)}}
+        <span class="k4lt-attack-details">
+          [{{#if effect}}<span class="k4lt-attack-effect">{{effect}}</span>{{/if}}{{#if description}} <span class="k4lt-attack-description">{{{stripParagraph description}}}</span>{{/if}}]
+        </span>
+      {{/if}}
+    </div>
+  {{/each}}
+</div>

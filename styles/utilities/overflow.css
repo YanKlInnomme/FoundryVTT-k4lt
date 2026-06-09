@@ -1,0 +1,5 @@
+/* overflow.css */
+.k4lt-scrollY {
+  overflow-y: auto;
+  overflow-x: hidden;
+}

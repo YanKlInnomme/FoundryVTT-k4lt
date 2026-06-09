@@ -1,12 +1,70 @@
-<div class="blood-img" style="background-image: url('{{getBloodBackground}}');">
-  <div class='result-roll'>
-    <div class='tooltip'>
-      {{total}}
-      <span class='tooltiptext'>{{result}}</span>
+<!-- roll-card.hbs -->
+<div class="k4lt-roll-card">
+  {{!-- HEADER --}}
+  <div class="k4lt-roll-header">{{moveName}}</div>
+  {{!-- TOTAL --}}
+  <div class="k4lt-roll-total">{{total}}</div>
+  {{!-- RESULT --}}
+  <div class="k4lt-roll-result">{{resultText}}</div>
+  {{!-- DETAILS --}}
+  <details class="k4lt-roll-details">
+    <summary class="k4lt-roll-toggle">
+      <span>{{localize "k4lt.mechanics.RollDetails"}}</span>
+      <i class="fa-solid fa-chevron-down k4lt-roll-chevron"></i>
+    </summary>
+    <div class="k4lt-roll-details-content">
+      {{!-- FORMULA --}}
+      <div class="k4lt-roll-formula">{{formula}}</div>
+      {{!-- DICE --}}
+      <div class="k4lt-roll-dice">
+        {{#each dice}}
+          <div class="k4lt-roll-die">
+            <i class="fa-solid fa-dice-d10"></i>
+            <span>{{this}}</span>
+          </div>
+        {{/each}}
+      </div>
+      {{!-- MODIFIERS --}}
+      <div class="k4lt-roll-breakdown">
+        {{#each modifiers}}
+          <div class="k4lt-roll-breakdown-line">
+            <span class="k4lt-roll-breakdown-label">{{this.label}}</span>
+            <span class="k4lt-roll-breakdown-value {{#if (gt this.value 0)}}positive{{/if}} {{#if (lt this.value 0)}}negative{{/if}}">
+              {{#if (gt this.value 0)}}+{{/if}}{{this.value}}
+            </span>
+          </div>
+        {{/each}}
+      </div>
+      {{!-- COMBAT DETAILS --}}
+      {{#if combatDetails}}
+        <div class="k4lt-roll-combat">
+          <div class="k4lt-roll-combat-line">
+            {{combatDetails.weaponName}}
+          </div>
+          <div class="k4lt-roll-combat-line">
+            ◊ <strong>{{combatDetails.attack}}</strong>
+            [{{combatDetails.harm}}]
+            {{#if combatDetails.ammoCost}}
+              [-{{combatDetails.ammoCost}}
+              {{localize "k4lt.combat.Ammo"}}]
+            {{/if}}
+            {{#if (or combatDetails.effect combatDetails.description)}}
+              <span class="k4lt-attack-details">
+                [{{#if combatDetails.effect}}<span class="k4lt-attack-effect">{{combatDetails.effect}}</span>{{/if}}{{#if combatDetails.description}} <span class="k4lt-attack-description">{{{stripParagraph combatDetails.description}}}</span>{{/if}}]
+              </span>
+            {{/if}}
+          </div>
+        </div>
+      {{/if}}
     </div>
-  </div>
-  <div class='move-name'>{{moveName}}</div>
-  <div class='move-name'>{{resultText}}</div>
-  <div class='move-result'>{{{moveResultText}}}</div>
-  <div class='move-options'>{{{optionsText}}}</div>
+  </details>
+  <hr class="k4lt-roll-separator">
+  {{!-- DESCRIPTION --}}
+  {{#if moveResultText}}
+    <div class="k4lt-roll-description">{{{moveResultText}}}</div>
+  {{/if}}
+  {{!-- OPTIONS --}}
+  {{#if optionsText}}
+    <div class="k4lt-roll-options">{{{optionsText}}}</div>
+  {{/if}}
 </div>

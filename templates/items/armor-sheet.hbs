@@ -1,0 +1,23 @@
+<!-- armor-sheet.hbs -->
+<section class="k4lt-section k4lt-scrollY k4lt-flex k4lt-flex-col k4lt-gap-md">
+  {{!-- CORE --}}
+  <fieldset class="k4lt-sheet-block">
+    <div class="k4lt-grid k4lt-cols-2 k4lt-gap-md">
+      <div class="k4lt-field">
+        <label class="k4lt-label">{{localize "k4lt.item.ArmorRating"}}</label>
+        <input type="number" name="system.rating" value="{{system.rating}}" min="0">
+      </div>
+    </div>
+    {{!-- PREVIEW --}}
+    <div class="k4lt-armor-preview">
+      {{#if system.rating}}
+        ◊ <strong>{{item.name}}</strong> [{{system.rating}}]
+      {{/if}}
+    </div>
+  </fieldset>
+  {{!-- DESCRIPTION --}}
+  <fieldset class="k4lt-sheet-block">
+    <legend>{{localize "k4lt.ui.Description"}}</legend>
+    {{formInput systemFields.description value=system.description enriched=system.description toggled=true engine="prosemirror"}}
+  </fieldset>
+</section>

@@ -1,13 +1,33 @@
-<div class="move-card">
-  <div class="move-info item-name" data-item-id="{{_id}}">
-    <a class="move-card-text item-edit"> {{system.target}} ({{system.summary}}): {{system.strength}}</a>
-
-    <a class="item-control item-delete" title="{{localize 'k4lt.DeleteItem'}}">
-      <i class="fas fa-trash"></i>
-    </a>
-    <a class="item-control item-edit" title="{{localize 'k4lt.EditItem'}}">
-      <i class="fas fa-edit"></i>
-    </a>
-
+<!-- relationship-card.hbs -->
+<div class="k4lt-relationship" data-item-id="{{_id}}" data-action="itemView">
+  <div class="k4lt-relationship-left">
+    {{#if linked}}
+      <img class="k4lt-relationship-img" src="{{linked.img}}">
+    {{else}}
+      <img class="k4lt-relationship-img" src="icons/svg/mystery-man.svg">
+    {{/if}}
+  </div>
+  <div class="k4lt-relationship-center">
+    <div class="k4lt-relationship-name">{{name}}</div>
+    {{#if linked}}
+      <div class="k4lt-relationship-linked">{{linked.name}}</div>
+    {{/if}}
+    {{#if system.summary}}
+      <div class="k4lt-relationship-summary">{{system.summary}}</div>
+    {{/if}}
+  </div>
+  <div class="k4lt-relationship-right">
+    <div class="k4lt-relationship-strength">{{system.strength}}</div>
+    {{!-- ACTIONS --}}
+    {{#if @root.user.isGM}}
+      <div class="k4lt-drop-item-actions">
+        <button type="button" class="k4lt-drop-action danger" data-action="itemDelete" data-prevent-view title="{{localize 'k4lt.actions.DeleteItem'}}">
+          <i class="fas fa-times"></i>
+        </button>
+        <button type="button" class="k4lt-drop-action" data-action="itemEdit" data-prevent-view title="{{localize 'k4lt.actions.EditItem'}}">
+          <i class="fas fa-pen"></i>
+        </button>
+      </div>
+    {{/if}}
   </div>
 </div>

@@ -1,0 +1,48 @@
+<!-- move-sheet.hbs -->
+<section class="k4lt-section k4lt-scrollY k4lt-flex k4lt-flex-col k4lt-gap-md">
+  {{!-- ATTRIBUT + SPECIAL --}}
+  <fieldset class="k4lt-sheet-block">
+    <div class="k4lt-grid k4lt-cols-2 k4lt-gap-md">
+      <div class="k4lt-field">
+        <label class="k4lt-label">{{localize "k4lt.mechanics.AttributePrompt"}}</label>
+        <select name="system.attributemod">
+          {{selectOptions attributeMoveValues selected=system.attributemod valueAttr="value" labelAttr="label"}}
+        </select>
+      </div>
+      <div class="k4lt-field">
+        <label class="k4lt-label">{{localize "k4lt.combat.SpecialMove"}}</label>
+        <select name="system.specialflag">
+          {{selectOptions specialMoveValues selected=system.specialflag valueAttr="value" labelAttr="label"}}
+        </select>
+      </div>
+    </div>
+  </fieldset>
+  {{!-- TRIGGER --}}
+  <fieldset class="k4lt-sheet-block">
+    <legend>{{localize "k4lt.combat.Trigger"}}</legend>
+    {{formInput systemFields.trigger value=system.trigger enriched=system.trigger toggled=true engine="prosemirror"}}
+  </fieldset>
+  {{!-- OPTIONS --}}
+  <fieldset class="k4lt-sheet-block">
+    <legend>{{localize "k4lt.ui.Options"}}</legend>
+    {{formInput systemFields.options value=system.options enriched=system.options toggled=true engine="prosemirror"}}
+  </fieldset>
+  {{!-- RESULTS --}}
+  <fieldset class="k4lt-sheet-block">
+    <legend>{{localize "k4lt.ui.Results"}}</legend>
+    <div class="k4lt-grid k4lt-cols-1 k4lt-gap-md">
+      <div class="k4lt-field">
+        <label class="k4lt-label">15+</label>
+        {{formInput systemFields.completesuccess value=system.completesuccess enriched=system.completesuccess toggled=true engine="prosemirror"}}
+      </div>
+      <div class="k4lt-field">
+        <label class="k4lt-label">10–14</label>
+        {{formInput systemFields.partialsuccess value=system.partialsuccess enriched=system.partialsuccess toggled=true engine="prosemirror"}}
+      </div>
+      <div class="k4lt-field">
+        <label class="k4lt-label">0–9</label>
+        {{formInput systemFields.failure value=system.failure enriched=system.failure toggled=true engine="prosemirror"}}
+      </div>
+    </div>
+  </fieldset>
+</section>

@@ -1,0 +1,11 @@
+<!-- armor-viewer.hbs -->
+<div class="k4lt-item-viewer">
+  <strong>
+    {{localize "k4lt.item.ArmorRating"}}
+  </strong> : {{item.system.rating}}
+  {{#if item.system.description}}
+    <div class="k4lt-item-viewer-description">
+      {{{item.system.description}}}
+    </div>
+  {{/if}}
+</div>

@@ -1,0 +1,13 @@
+/* spacing.css */
+.k4lt-gap-xs { gap: var(--k4lt-space-xs); }
+.k4lt-gap-sm { gap: var(--k4lt-space-sm); }
+.k4lt-gap-md { gap: var(--k4lt-space-md); }
+.k4lt-gap-lg { gap: var(--k4lt-space-lg); }
+.k4lt-p-xs { padding: var(--k4lt-space-xs); }
+.k4lt-p-sm { padding: var(--k4lt-space-sm); }
+.k4lt-p-md { padding: var(--k4lt-space-md); }
+.k4lt-p-lg { padding: var(--k4lt-space-lg); }
+.k4lt-m-xs { margin: var(--k4lt-space-xs); }
+.k4lt-m-sm { margin: var(--k4lt-space-sm); }
+.k4lt-m-md { margin: var(--k4lt-space-md); }
+.k4lt-m-lg { margin: var(--k4lt-space-lg); }

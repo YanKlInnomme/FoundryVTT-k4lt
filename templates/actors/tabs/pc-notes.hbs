@@ -1,0 +1,7 @@
+<!-- pc-notes.hbs -->
+<section class="tab tab-content {{tab.cssClass}}" data-group="sheet" data-tab="notes">
+  <fieldset class="k4lt-sheet-block">
+    <legend>{{localize "k4lt.ui.Notes"}}</legend>
+    {{formInput systemFields.notes value=system.notes enriched=system.notes toggled=true engine="prosemirror"}}
+  </fieldset>
+</section>

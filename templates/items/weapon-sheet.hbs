@@ -1,0 +1,94 @@
+<!-- weapon-sheet.hbs -->
+<section class="k4lt-section k4lt-scrollY k4lt-flex k4lt-flex-col k4lt-gap-md">
+  {{!-- CORE --}}
+  <fieldset class="k4lt-sheet-block">
+    <div class="k4lt-field">
+      <label class="k4lt-label">{{localize "k4lt.combat.Ammo"}}</label>
+      <div class="k4lt-ammo-row">
+        <div class="k4lt-ammo-part">
+          <input type="number" name="system.ammo.value" value="{{system.ammo.value}}" min="0">
+          <span>{{localize "k4lt.item.Current"}}</span>
+        </div>
+        <span class="k4lt-ammo-separator">/</span>
+        <div class="k4lt-ammo-part">
+          <input type="number" name="system.ammo.max" value="{{system.ammo.max}}" min="0">
+          <span>{{localize "k4lt.item.Max"}}</span>
+        </div>
+      </div>
+    </div>
+    {{!-- DISTANCE --}}
+    <div class="k4lt-field k4lt-m-sm">
+      <label class="k4lt-label">{{localize "k4lt.combat.Range"}}</label>
+      <div class="k4lt-flex k4lt-gap-flex-sm k4lt-flex-wrap">
+        {{#each distanceValues as |d|}}
+          <label class="k4lt-checkbox">
+            <input
+              type="checkbox"
+              name="system.distance"
+              value="{{d.value}}"
+              {{#if (includes ../system.distance d.value)}}checked{{/if}}
+            >
+            {{d.label}}
+          </label>
+        {{/each}}
+      </div>
+    </div>
+  </fieldset>
+  {{!-- ATTACKS --}}
+  <fieldset class="k4lt-sheet-block  k4lt-sheet-block-weapon">
+    <legend>{{localize "k4lt.ui.Attacks"}}</legend>
+    {{!-- HEADER --}}
+    <div class="k4lt-attack-header">
+      <span>{{localize "k4lt.ui.Name"}}</span>
+      <span>{{localize "k4lt.combat.Harm"}}</span>
+      <span>{{localize "k4lt.item.AmmoCost"}}</span>
+      <span>{{localize "k4lt.ui.Effect"}}</span>
+      <span></span>
+    </div>
+    {{!-- LIST --}}
+    {{#each system.attacks as |attack i|}}
+      <div class="k4lt-attack-line k4lt-grid k4lt-gap-sm">
+        <input type="text" name="system.attacks.{{i}}.name" value="{{attack.name}}">
+        <input type="number" name="system.attacks.{{i}}.harm" value="{{attack.harm}}" min="0">
+        <input type="number" name="system.attacks.{{i}}.ammoCost" value="{{attack.ammoCost}}" min="0">
+        <input type="text" name="system.attacks.{{i}}.effect" value="{{attack.effect}}">
+        <button
+          type="button"
+          class="k4lt-attack-remove"
+          data-action="removeAttack"
+          data-index="{{i}}"
+          title="{{localize 'k4lt.ui.Delete'}}"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="k4lt-attack-description-row">
+        {{formInput
+          @root.systemFields.attacks.element.fields.description
+          value=attack.description
+          enriched=attack.description
+          toggled=true
+          engine="prosemirror"
+          name=(concat "system.attacks." i ".description")
+        }}
+      </div>
+      {{!-- PREVIEW --}}
+      {{#if attack.name}}
+        <div class="k4lt-attack-preview">
+          ◊ <strong>{{attack.name}}</strong> [{{attack.harm}}]
+          {{#if ammoCost}}
+           [−{{ammoCost}} {{localize "k4lt.combat.Ammo"}}]
+          {{/if}}
+          {{#if (or attack.effect attack.description)}}
+            <span class="k4lt-attack-details">[{{#if attack.effect}}<span class="k4lt-attack-effect">{{attack.effect}}</span>{{/if}}{{#if attack.description}} <span class="k4lt-attack-description">{{{stripParagraph attack.description}}}</span>{{/if}}]</span>
+          {{/if}}
+        </div>
+      {{/if}}
+    {{/each}}
+    {{!-- ADD --}}
+    <button type="button" class="k4lt-add-attack" data-action="addAttack">
+      <i class="fas fa-plus"></i>
+      {{localize "k4lt.ui.Add"}}
+    </button>
+  </fieldset>
+</section>

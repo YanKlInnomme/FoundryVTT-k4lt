@@ -1,0 +1,9 @@
+/* flex.css */
+.k4lt-flex      { display: flex; }
+.k4lt-flex-col  { flex-direction: column; }
+.k4lt-flex-row  { flex-direction: row; }
+.k4lt-flex-wrap { flex-wrap: wrap; }
+.k4lt-flex-1    { flex: 1; }
+.k4lt-flex-auto { flex: auto; }
+.k4lt-gap-flex-sm { gap: var(--k4lt-space-sm); }
+.k4lt-gap-flex-md { gap: var(--k4lt-space-md); }

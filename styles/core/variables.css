@@ -1,0 +1,50 @@
+/* variables.css */
+:root {
+/* ---------------------------------- */
+/* K4LT COLORS                        */
+/* ---------------------------------- */
+--k4lt-color-red:        rgb(165, 20, 19);
+--k4lt-color-light-red:  rgb(155, 32, 31);
+--k4lt-color-dark-red:   rgb(120, 46, 34);
+--k4lt-color-light-gold: rgb(200, 190, 140);
+--k4lt-color-gold:       rgb(155, 141, 104);
+--k4lt-color-dark-gold:  rgb(150, 140, 106);
+--k4lt-color-parchment:  rgb(224, 219, 204);
+--k4lt-color-light-gray: rgb(200, 200, 200);
+--k4lt-color-gray:       rgb(83, 83, 83);
+--k4lt-color-dark-gray:  rgb(32, 32, 32);
+--k4lt-color-black:      rgb(6, 6, 5);
+--k4lt-color-white:      rgb(247, 243, 232);
+--k4lt-color-black-50:   rgba(6, 6, 5, 0.5);
+--k4lt-color-gray-50:    rgba(83, 83, 83, 0.5);
+/* ---------------------------------- */
+/* K4LT TYPOGRAPHY                    */
+/* ---------------------------------- */
+--k4lt-font-primary:   "Alverata", sans-serif;
+--k4lt-font-secondary: "Infidel-C", sans-serif;
+/* ---------------------------------- */
+/* K4LT LAYOUT                        */
+/* ---------------------------------- */
+--k4lt-space-xs: 2px;
+--k4lt-space-sm: 4px;
+--k4lt-space-md: 8px;
+--k4lt-space-lg: 12px;
+--k4lt-radius: 6px;
+--k4lt-gap: 6px;
+--k4lt-editor-min-height: 220px;
+/* ---------------------------------- */
+/* FOUNDRY THEME OVERRIDES            */
+/* ---------------------------------- */
+--color-text-hyperlink:       var(--k4lt-color-red);
+--color-text-selection-bg:    var(--k4lt-color-gold);
+--color-shadow-primary:       var(--k4lt-color-black-50);
+--color-shadow-highlight:     var(--k4lt-color-light-gold);
+--color-border-highlight:     var(--k4lt-color-light-gold);
+--color-border-highlight-alt: var(--k4lt-color-light-red);
+--color-ownership-none:       var(--k4lt-color-dark-red);
+--color-scrollbar:            var(--k4lt-color-dark-red);
+--color-text-accent:          var(--k4lt-color-red);
+}
+body {
+  --font-body: var(--k4lt-font-primary);
+}

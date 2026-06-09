@@ -1,0 +1,34 @@
+<!-- npc-sheet-header.hbs -->
+<header>
+  <div class="k4lt-grid k4lt-cols-npc-header k4lt-gap-sm">
+    {{!-- IMAGE --}}
+    <div class="k4lt-row-span-3 k4lt-section">
+      <fieldset class="k4lt-sheet-block k4lt-image-block">
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" data-action="editImage">
+          <button type="button" class="icon edit-image" data-action="openImageEditor">
+            <i class="fas fa-edit"></i>
+        </button>
+      </fieldset>
+    </div>
+    {{!-- HOME --}}
+    <div class="k4lt-section">
+      <fieldset class="k4lt-sheet-block k4lt-home-block">
+        <legend>{{localize "k4lt.npc.Home"}}</legend>
+        {{formInput systemFields.home value=system.home}}
+      </fieldset>
+    </div>
+    {{!-- TYPE --}}
+    <div class="k4lt-section">
+      <fieldset class="k4lt-sheet-block k4lt-type-block">
+        <legend>{{localize "k4lt.npc.Type"}}</legend>
+        {{formInput systemFields.creaturetype value=system.creaturetype}}
+      </fieldset>
+    </div>
+    {{!-- NAME --}}
+    <div class="k4lt-section">
+      <fieldset class="k4lt-sheet-block k4lt-name-block">
+        <input type="text" name="name" value="{{actor.name}}">
+      </fieldset>
+    </div>
+  </div>
+</header>

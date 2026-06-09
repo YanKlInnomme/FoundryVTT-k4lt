@@ -1,0 +1,14 @@
+<!-- npc-sheet-body.hbs -->
+<section class="k4lt-section">
+  <fieldset class="k4lt-sheet-block k4lt-type-harm">
+    <legend>{{localize "k4lt.combat.Harm"}}</legend>
+    <div class="k4lt-harm-values">
+      <button type="button" class="k4lt-harm-btn" data-action="harmDec">&minus;</button>
+      <input name="system.harm.value" value="{{system.harm.value}}" type="number">
+      <span>/</span>
+      <input name="system.harm.max" value="{{system.harm.max}}" type="number">
+      <button type="button" class="k4lt-harm-btn" data-action="harmInc">+</button>
+    </div>
+    {{formInput systemFields.harmmoves value=system.harmmoves enriched=system.harmmoves toggled=true engine="prosemirror"}}
+  </fieldset>
+</section>

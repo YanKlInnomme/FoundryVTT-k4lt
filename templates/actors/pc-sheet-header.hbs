@@ -1,0 +1,99 @@
+<!-- pc-sheet-header.hbs -->
+<header>
+  <div class="k4lt-pc-header-grid k4lt-section">
+    {{!-- IMAGE --}}
+    <div class="k4lt-header-image">
+      <fieldset class="k4lt-sheet-block k4lt-image-block">
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" data-action="editImage">
+        <button type="button" class="icon edit-image" data-action="openImageEditor">
+          <i class="fas fa-edit"></i>
+        </button>
+      </fieldset>
+    </div>
+    {{!-- MODIFIERS --}}
+    <div class="k4lt-header-modifiers">
+      <fieldset class="k4lt-sheet-block">
+        <legend>{{localize "k4lt.ui.Modifiers"}}</legend>
+        <div class="k4lt-header-modifiers-row">
+          <div class="k4lt-modifier">
+            <label class="k4lt-label">
+              {{localize "k4lt.ui.Ongoing"}}
+              <span class="k4lt-tooltip" data-tooltip="{{localize 'k4lt.ui.OngoingHint'}}">
+                <i class="fas fa-question-circle"></i>
+              </span>
+            </label>
+            <select name="system.ongoing" class="k4lt-select k4lt-modifiers-select">
+              {{selectOptions modifierValues selected=system.ongoing valueAttr="value" labelAttr="label"}}
+            </select>
+          </div>
+          <div class="k4lt-modifier">
+            <label class="k4lt-label">
+              {{localize "k4lt.ui.Forward"}}
+              <span class="k4lt-tooltip" data-tooltip="{{localize 'k4lt.ui.ForwardHint'}}">
+                <i class="fas fa-question-circle"></i>
+              </span>
+            </label>
+            <select name="system.forward" class="k4lt-select k4lt-modifiers-select">
+              {{selectOptions modifierValues selected=system.forward valueAttr="value" labelAttr="label"}}
+            </select>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    {{!-- WHO ARE YOU --}}
+    <div class="k4lt-header-who">
+      <fieldset class="k4lt-sheet-block">
+        <legend>{{localize "k4lt.character.WhoAreYou"}}</legend>
+        {{formInput systemFields.whoareyou value=system.whoareyou enriched=system.whoareyou toggled=true engine="prosemirror"}}
+      </fieldset>
+    </div>
+    {{!-- NAME --}}
+    <div class="k4lt-header-name">
+      <fieldset class="k4lt-sheet-block k4lt-name-block">
+        <input type="text" name="name" value="{{actor.name}}">
+      </fieldset>
+    </div>
+    {{!-- OCCUPATION --}}
+    <div class="k4lt-header-occupation">
+      <fieldset class="k4lt-sheet-block">
+        <legend>{{localize "k4lt.collections.Occupation"}}</legend>
+        <div
+          class="k4lt-link-drop {{#unless collections.occupations.[0]}}empty{{/unless}}"
+          data-drop-zone
+          data-collection="occupations"
+          data-types="occupation"
+        >
+          {{#if collections.occupations.[0]}}
+            <div class="k4lt-link-card" data-item-id="{{collections.occupations.[0].id}}">
+              <img src="{{collections.occupations.[0].img}}" width="32" height="32" data-action="itemEdit">
+              <div class="k4lt-link-text">
+                <span data-action="itemEdit">{{collections.occupations.[0].name}}</span>
+                {{#if collections.occupations.[0].system.archetype}}
+                  <small class="k4lt-link-subtitle">
+                    {{#if (eq collections.occupations.[0].system.archetype "other")}}
+                      {{localize "k4lt.archetypes.other"}} — {{collections.occupations.[0].system.customArchetype}}
+                    {{else}}
+                      {{localize (concat "k4lt.archetypes." collections.occupations.[0].system.archetype)}}
+                    {{/if}}
+                  </small>
+                {{/if}}
+              </div>
+              <button
+                type="button"
+                class="k4lt-link-remove"
+                data-action="itemDelete"
+                title="{{localize 'k4lt.actions.DeleteItem'}}"
+              >
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+          {{else}}
+            <div class="k4lt-link-empty" data-action="itemCreate" data-type="occupation">
+              {{localize "k4lt.ui.DropOrCreateOccupation"}}
+            </div>
+          {{/if}}
+        </div>
+      </fieldset>
+    </div>
+  </div>
+</header>

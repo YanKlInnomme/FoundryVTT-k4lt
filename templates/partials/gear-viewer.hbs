@@ -1,0 +1,15 @@
+<!-- gear-viewer.hbs -->
+<div class="k4lt-item-viewer">
+  {{#if item.system.uses.max}}
+    <div class="k4lt-item-viewer-uses">
+      <strong>
+        {{localize "k4lt.combat.Uses"}}
+      </strong> : {{item.system.uses.value}} / {{item.system.uses.max}}
+    </div>
+  {{/if}}
+  {{#if item.system.description}}
+    <div class="k4lt-item-viewer-description">
+      {{{item.system.description}}}
+    </div>
+  {{/if}}
+</div>

@@ -1,0 +1,17 @@
+<!-- gear-sheet.hbs -->
+<section class="k4lt-section k4lt-grid k4lt-gap-md">
+  {{!-- USES --}}
+  <fieldset class="k4lt-sheet-block">
+    <legend>{{localize "k4lt.combat.Uses"}}</legend>
+    <div class="k4lt-field-inline">
+      <input type="number" name="system.uses.value" value="{{system.uses.value}}" style="width:50px;">
+      <span>/</span>
+      <input type="number" name="system.uses.max" value="{{system.uses.max}}" style="width:50px;">
+    </div>
+  </fieldset>
+  {{!-- DESCRIPTION --}}
+  <fieldset class="k4lt-sheet-block">
+    <legend>{{localize "k4lt.ui.Description"}}</legend>
+    {{formInput systemFields.description value=system.description enriched=system.description toggled=true engine="prosemirror"}}
+  </fieldset>
+</section>

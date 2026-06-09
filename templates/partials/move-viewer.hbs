@@ -1,0 +1,34 @@
+<!-- move-viewer.hbs -->
+<section class="k4lt-section k4lt-flex k4lt-flex-col k4lt-gap-md">
+  <fieldset class="k4lt-sheet-block">
+    <legend>{{localize "k4lt.mechanics.AttributePrompt"}}</legend>
+    {{localize (concat "k4lt.attributes." (capitalize system.attributemod))}}
+  </fieldset>
+  {{#if system.trigger}}
+    <fieldset class="k4lt-sheet-block">
+      <legend>{{localize "k4lt.combat.Trigger"}}</legend>
+      {{{system.trigger}}}
+    </fieldset>
+  {{/if}}
+  {{#if system.options}}
+    <fieldset class="k4lt-sheet-block">
+      <legend>{{localize "k4lt.ui.Options"}}</legend>
+      {{{system.options}}}
+    </fieldset>
+  {{/if}}
+  <fieldset class="k4lt-sheet-block">
+    <legend>{{localize "k4lt.ui.Results"}}</legend>
+    <div class="k4lt-viewer-result success">
+      <label class="k4lt-viewer-result-label">15+</label>
+      {{{system.completesuccess}}}
+    </div>
+    <div class="k4lt-viewer-result partial">
+      <label class="k4lt-viewer-result-label">10–14</label>
+      {{{system.partialsuccess}}}
+    </div>
+    <div class="k4lt-viewer-result failure">
+      <label class="k4lt-viewer-result-label">0–9</label>
+      {{{system.failure}}}
+    </div>
+  </fieldset>
+</section>

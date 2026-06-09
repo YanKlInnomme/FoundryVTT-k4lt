@@ -1,0 +1,106 @@
+/* summary.css */
+.k4lt-token-summary {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.k4lt-token-card {
+  min-width: 90px;
+  padding: 8px 12px;
+  border: 1px solid var(--k4lt-color-dark-gold);
+  border-radius: 6px;
+  text-align: center;
+  background: rgba(0, 0, 0, .25);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.k4lt-token-card span {
+  font-size: .75rem;
+  opacity: .7;
+  text-transform: uppercase;
+}
+.k4lt-token-card strong {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.k4lt-summary-row {
+  display: flex;
+  gap: 1rem;
+  align-items: stretch;
+}
+.k4lt-summary-row .k4lt-sheet-block {
+  flex: 1;
+}
+.k4lt-summary-stability,
+.k4lt-summary-consciousness {
+  min-width: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .35rem;
+  padding: .75rem;
+  border: 1px solid var(--k4lt-color-dark-gold);
+  border-radius: 6px;
+}
+.k4lt-summary-stability span,
+.k4lt-summary-consciousness span {
+  font-size: .8rem;
+  text-transform: uppercase;
+  opacity: .8;
+  letter-spacing: .05em;
+}
+.k4lt-summary-stability strong {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--k4lt-color-dark-red);
+}
+.k4lt-summary-conditions {
+  min-width: 180px;
+  flex: 0 0 auto;
+}
+.k4lt-active-conditions {
+  display: grid;
+  gap: .35rem;
+}
+.k4lt-active-conditions.cols-1 { grid-template-columns: 1fr; }
+.k4lt-active-conditions.cols-2 { grid-template-columns: repeat(2, 1fr); }
+.k4lt-active-conditions.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.k4lt-active-condition {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  font-size: .9rem;
+}
+.k4lt-active-condition img {
+  width: 16px;
+  height: 16px;
+}
+.k4lt-no-condition {
+  opacity: .5;
+  font-style: italic;
+}
+.k4lt-active-item {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .9rem;
+}
+.k4lt-equipped-icon {
+  width: 18px;
+  text-align: center;
+  opacity: .85;
+}
+.k4lt-active-item.weapon .k4lt-equipped-icon {
+  color: var(--k4lt-color-dark-red);
+}
+.k4lt-active-item.armor .k4lt-equipped-icon {
+  color: var(--k4lt-color-dark-gold);
+}
+.k4lt-empty-weapon {
+  filter: grayscale(1);
+  transition: all .2s ease;
+}

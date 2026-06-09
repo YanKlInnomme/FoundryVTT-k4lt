@@ -1,0 +1,165 @@
+/* rolls.css */
+.k4lt-roll-card {
+  padding: 12px;
+  border: 1px solid var(--k4lt-color-dark-gold);
+  border-radius: 6px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, .15), rgba(0, 0, 0, .05));
+  font-family: var(--k4lt-font-primary);
+}
+.k4lt-roll-header {
+  font-family: var(--k4lt-font-secondary);
+  font-size: 1.2rem;
+  color: var(--k4lt-color-dark-red);
+  margin-bottom: 8px;
+  text-align: center;
+}
+.k4lt-roll-total {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 6px;
+}
+.k4lt-roll-result {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+.k4lt-roll-description {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+.k4lt-roll-options {
+  padding-top: 8px;
+  border-top: 1px solid rgba(0, 0, 0, .15);
+  font-size: .9rem;
+  opacity: .85;
+}
+.k4lt-roll-separator {
+  margin: 14px 0;
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, .12);
+}
+.k4lt-roll-details {
+  margin-top: 10px;
+}
+.k4lt-roll-details summary {
+  list-style: none;
+}
+.k4lt-roll-details summary::-webkit-details-marker {
+  display: none;
+}
+.k4lt-roll-details-content {
+  margin-top: 10px;
+}
+.k4lt-roll-details.open {
+  display: block;
+}
+.k4lt-roll-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, .08);
+  cursor: pointer;
+  transition: background .15s ease;
+}
+.k4lt-roll-toggle:hover {
+  background: rgba(0, 0, 0, .15);
+}
+.k4lt-roll-chevron {
+  transition: transform .2s ease;
+  opacity: .7;
+}
+.k4lt-roll-details[open] .k4lt-roll-chevron {
+  transform: rotate(180deg);
+}
+.k4lt-roll-dice {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.k4lt-roll-die {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px;
+  width: 60px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, .08);
+}
+.k4lt-roll-die i {
+  font-size: 1.4rem;
+  color: var(--k4lt-color-dark-red);
+}
+.k4lt-roll-die span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.k4lt-roll-formula {
+  text-align: center;
+  font-family: monospace;
+  opacity: .7;
+  font-size: .85rem;
+}
+.k4lt-roll-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 12px;
+}
+.k4lt-roll-breakdown-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, .05);
+}
+.k4lt-roll-breakdown-label {
+  font-size: .95rem;
+  opacity: .85;
+}
+.k4lt-roll-breakdown-value {
+  min-width: 42px;
+  text-align: center;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, .08);
+}
+.k4lt-roll-breakdown-value.positive {
+  color: #2f7d32;
+  background: rgba(47, 125, 50, .12);
+}
+.k4lt-roll-breakdown-value.negative {
+  color: #a02b2b;
+  background: rgba(160, 43, 43, .12);
+}
+.k4lt-roll-combat {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--k4lt-color-dark-gold);
+  display: flex;
+  flex-direction: column;
+}
+.k4lt-roll-combat-line {
+  padding: 2px 0;
+  font-size: .95rem;
+}
+.k4lt-roll-combat-line:first-child {
+  font-weight: 600;
+  color: var(--k4lt-color-dark-red);
+}
+.k4lt-roll-combat-line:last-child {
+  padding-left: 8px;
+  opacity: .9;
+}
+.k4lt-roll-combat-line strong {
+  font-weight: 700;
+}

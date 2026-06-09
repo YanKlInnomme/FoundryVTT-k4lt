@@ -1,0 +1,33 @@
+/* editor.css */
+.k4lt .prosemirror {
+  --min-height: var(--k4lt-editor-min-height);
+  padding: var(--k4lt-space-sm);
+  font-family: var(--k4lt-font-primary);
+  overflow-y: auto;
+}
+.k4lt .editor {
+  position: relative;
+}
+.k4lt .editor .icon.toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, var(--k4lt-color-light-red), var(--k4lt-color-dark-red));
+  color: var(--k4lt-color-white);
+  cursor: pointer;
+  opacity: 0;
+  transition: all .2s ease;
+}
+.k4lt .editor:hover .icon.toggle {
+  opacity: 1;
+}
+.k4lt .editor .icon.toggle:hover {
+  background: linear-gradient(135deg, var(--k4lt-color-dark-red), var(--k4lt-color-light-red));
+}

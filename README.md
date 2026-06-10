@@ -109,27 +109,30 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 6.0.0.1
+ * Correction de plusieurs libellés anglais afin d'utiliser la terminologie officielle ("Relations" au lieu de "Relationships")
+
 ## Version 6.0.0.0
  * Passage à la version 14 de Foundry VTT :
-    - Refonte intégrale de l'architecture JavaScript (ES Modules, ApplicationV2, HandlebarsApplicationMixin, etc.).
-    - Réécriture et réorganisation complète du code afin d'améliorer la maintenabilité et de faciliter les développements futurs.
-    - Refonte complète des fiches PJ, PNJ et objets (Actions, Avantages, Désavantages, Capacités, etc.) avec prise en charge des thèmes clair et sombre de Foundry VTT.
-    - Ajout de nouveaux types d'objets : armes, armures, relations et ressorts dramatiques.
-    - Améliorations diverses, notamment au niveau de la gestion et de l'automatisation des jetons, ainsi que de l'affichage des résultats dans le chat.
-    - Mise en place d'un sélecteur de combat permettant de choisir précisément l'Arme et l'attaque utilisées lors de l'action *Engager le combat*.
-    - Ajout d'un tracker à destination du MJ permettant de visualiser les Retenues de l'ensemble des Personnages Joueurs et d'accéder rapidement à leur fiche.
-    - Gestion de l'équipement, y compris la prise en compte des Armes et Armures équipées, ainsi que du rechargement des armes.
-    - Correction des Conditions afin qu'elles soient automatiquement prises en compte dans la Stabilité lorsque cela est applicable.
-    - Implémentation complète du système de Progression de KULT: Divinité Perdue, incluant les états de conscience Dormeur, Conscient, Éclairé et Éveillé.
-    - Affichage différencié de la fiche de Personnage Joueur pour le joueur et pour le MJ, notamment en termes d'édition et de visibilité de certaines informations (Retenues, Relations, Ressorts dramatiques, etc.).
-    - Sauvegarde automatique de la position de défilement dans les onglets des fiches.
-    - Refonte de l'internationalisation du système pour prise en compte des multiples changements apportés.
+    - Refonte intégrale de l'architecture JavaScript (ES Modules, ApplicationV2, HandlebarsApplicationMixin, etc.)
+    - Réécriture et réorganisation complète du code afin d'améliorer la maintenabilité et de faciliter les développements futurs
+    - Refonte complète des fiches PJ, PNJ et objets (Actions, Avantages, Désavantages, Capacités, etc.) avec prise en charge des thèmes clair et sombre de Foundry VTT
+    - Ajout de nouveaux types d'objets : armes, armures, relations et ressorts dramatiques
+    - Améliorations diverses, notamment au niveau de la gestion et de l'automatisation des jetons, ainsi que de l'affichage des résultats dans le chat
+    - Mise en place d'un sélecteur de combat permettant de choisir précisément l'Arme et l'attaque utilisées lors de l'action *Engager le combat*
+    - Ajout d'un tracker à destination du MJ permettant de visualiser les Retenues de l'ensemble des Personnages Joueurs et d'accéder rapidement à leur fiche
+    - Gestion de l'équipement, y compris la prise en compte des Armes et Armures équipées, ainsi que du rechargement des armes
+    - Correction des Conditions afin qu'elles soient automatiquement prises en compte dans la Stabilité lorsque cela est applicable
+    - Implémentation complète du système de Progression de KULT: Divinité Perdue, incluant les états de conscience Dormeur·euse, Conscient·e, Éclairé·e et Éveillé·e
+    - Affichage différencié de la fiche de Personnage Joueur pour le joueur et pour le MJ, notamment en termes d'édition et de visibilité de certaines informations (Retenues, Relations, Ressorts dramatiques, etc.)
+    - Sauvegarde automatique de la position de défilement dans les onglets des fiches
+    - Refonte de l'internationalisation du système pour prise en compte des multiples changements apportés
 
 ## Version 5.0.2.2
  * Suppression de variables redondantes dans le fichier en.json
  * Ajout de deux nouvelles macros :
-    - `Quick Token Setup for PCs`: Configure automatiquement les tokens joueurs avec des paramètres de vision, d'affichage de nom et de liaison à l’acteur.
-    - `Regenerate All Scene Thumbnails`: Régénère les vignettes de toutes les scènes du monde.
+    - `Quick Token Setup for PCs`: Configure automatiquement les tokens joueurs avec des paramètres de vision, d'affichage de nom et de liaison à l’acteur
+    - `Regenerate All Scene Thumbnails`: Régénère les vignettes de toutes les scènes du monde
 
 ## Version 5.0.2.1
  * Corrections mineures dans le fichier CSS
@@ -139,17 +142,17 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
 ## Version 5.0.1.0
  * Correction de la mise en forme de la fiche de personnage non joueur (PNJ)
  * Ajout de macros supplémentaires :
-    - `Enhanced Fog of War Reset` : Permet de réinitialiser les données du brouillard de guerre (Fog of War) pour toutes les scènes.
-    - `Extinguish All Scene Lights` : Permet d'éteindre toutes les lumières de la scène en cours.
-    - `Flickering Light Horror Effect` : Permet d'ajouter un effet de lumière vacillante pour créer une ambiance d'horreur.
-    - `Ignite All Scene Lights` : Permet d'allumer toutes les lumières de la scène en cours.
-    - `NPC Token Rotation Lock` : Permet de verrouiller la rotation des jetons PNJ (Rotation Off).
-    - `NPC Token Rotation Unlock` : Permet de déverrouiller la rotation des jetons PNJ (Rotation On).
-    - `Random Token Scatter` : Permet de disperser aléatoirement les jetons sélectionnés sur la scène en cours.
-    - `Randomize Pulse Light Settings` : Permet de randomiser les paramètres des lumières pulsées (Pulse Light) pour créer un éclairage varié sur la scène en cours.
-    - `Remove All PC Tokens` : Permet de supprimer tous les jetons de personnages joueurs (PC) de la scène en cours ou de toutes les scènes.
-    - `Remove Orphaned Tokens` : Permet de supprimer les jetons orphelins (tokens sans acteur) de toutes les scènes.
-    - `Validate Actor Images` : Permet de vérifier et réparer automatiquement les images cassées des Acteurs et de leurs Tokens.
+    - `Enhanced Fog of War Reset` : Permet de réinitialiser les données du brouillard de guerre (Fog of War) pour toutes les scènes
+    - `Extinguish All Scene Lights` : Permet d'éteindre toutes les lumières de la scène en cours
+    - `Flickering Light Horror Effect` : Permet d'ajouter un effet de lumière vacillante pour créer une ambiance d'horreur
+    - `Ignite All Scene Lights` : Permet d'allumer toutes les lumières de la scène en cours
+    - `NPC Token Rotation Lock` : Permet de verrouiller la rotation des jetons PNJ (Rotation Off)
+    - `NPC Token Rotation Unlock` : Permet de déverrouiller la rotation des jetons PNJ (Rotation On)
+    - `Random Token Scatter` : Permet de disperser aléatoirement les jetons sélectionnés sur la scène en cours
+    - `Randomize Pulse Light Settings` : Permet de randomiser les paramètres des lumières pulsées (Pulse Light) pour créer un éclairage varié sur la scène en cours
+    - `Remove All PC Tokens` : Permet de supprimer tous les jetons de personnages joueurs (PC) de la scène en cours ou de toutes les scènes
+    - `Remove Orphaned Tokens` : Permet de supprimer les jetons orphelins (tokens sans acteur) de toutes les scènes
+    - `Validate Actor Images` : Permet de vérifier et réparer automatiquement les images cassées des Acteurs et de leurs Tokens
 
 ## Version 5.0.0.0
  * Passage à la version 13 de Foundry VTT :
@@ -364,27 +367,30 @@ This digital adaptation is unofficial content from KULT: Divinity Lost, authoriz
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
 
+## Version 6.0.0.1
+ * Updated several English labels to match the official KULT: Divinity Lost terminology ("Relations" instead of "Relationships")
+
 ## Version 6.0.0.0
  * Transition to Foundry VTT version 14:
-    - Complete overhaul of the JavaScript architecture (ES Modules, ApplicationV2, HandlebarsApplicationMixin, etc.).
-    - Complete rewrite and reorganization of the code to improve maintainability and facilitate future developments.
+    - Complete overhaul of the JavaScript architecture (ES Modules, ApplicationV2, HandlebarsApplicationMixin, etc.)
+    - Complete rewrite and reorganization of the code to improve maintainability and facilitate future developments
     - Complete redesign of the PC, NPC and item sheets (Moves, Advantages, Disadvantages, Abilities, etc.) with support for Foundry VTT's light and dark themes.
-    - Addition of new item types: Weapons, Armors, Relationships and Dramatic Hooks.
-    - Various improvements, notably in terms of token management and automation, as well as the display of results in the chat.
-    - Implementation of a combat selector allowing to precisely choose the Weapon and attack used when performing the *Engage in Combat* action.
-    - Addition of a tracker for the GM to view each Player Character's Hold and quickly access their sheets.
-    - Equipment management, including support for equipped Weapons and Armor, as well as weapon reloading.
-    - Fixed Conditions so they are automatically taken into account for Stability when applicable.
-    - Complete implementation of the KULT: Divinity Lost progression system, including the states of consciousness Sleeper, Aware, Enlightened and Awakened.
-    - Separate Player Character sheet views for players and GMs, including differences in editing permissions and information visibility (Hold, Relationships, Dramatic Hooks, etc.).
-    - Automatic saving of the scroll position in the sheet tabs.
-    - Complete overhaul of the system's internationalization to support the numerous changes introduced in this release.
+    - Addition of new item types: Weapons, Armors, Relationships and Dramatic Hooks
+    - Various improvements, notably in terms of token management and automation, as well as the display of results in the chat
+    - Implementation of a combat selector allowing to precisely choose the Weapon and attack used when performing the *Engage in Combat* action
+    - Addition of a tracker for the GM to view each Player Character's Hold and quickly access their sheets
+    - Equipment management, including support for equipped Weapons and Armor, as well as weapon reloading
+    - Fixed Conditions so they are automatically taken into account for Stability when applicable
+    - Complete implementation of the KULT: Divinity Lost progression system, including the states of consciousness Sleeper, Aware, Enlightened and Awakened
+    - Separate Player Character sheet views for players and GMs, including differences in editing permissions and information visibility (Hold, Relationships, Dramatic Hooks, etc.)
+    - Automatic saving of the scroll position in the sheet tabs
+    - Complete overhaul of the system's internationalization to support the numerous changes introduced in this release
 
 ## Version 5.0.2.2
  * Removed redundant variables in en.json file
  * Added two new macros:
-    - `Quick Token Setup for PCs`: Automatically configures player tokens with vision, name display, and actor linkage settings.
-    - `Regenerate All Scene Thumbnails`: Regenerates thumbnails for all scenes in the world.
+    - `Quick Token Setup for PCs`: Automatically configures player tokens with vision, name display, and actor linkage settings
+    - `Regenerate All Scene Thumbnails`: Regenerates thumbnails for all scenes in the world
 
 ## Version 5.0.2.1
  * Minor corrections in the CSS file
@@ -394,17 +400,17 @@ This digital adaptation is unofficial content from KULT: Divinity Lost, authoriz
 ## Version 5.0.1.0
  * Fixed the Non-Player Character sheet display
  * Added additional macros:
-    - `Enhanced Fog of War Reset`: Resets the fog of war data for all scenes.
-    - `Extinguish All Scene Lights`: Turns off all lights in the current scene.
-    - `Flickering Light Horror Effect`: Adds a flickering light effect to create a horror ambiance.
-    - `Ignite All Scene Lights`: Turns on all lights in the current scene.
-    - `NPC Token Rotation Lock`: Locks the rotation of NPC tokens (Rotation Off).
-    - `NPC Token Rotation Unlock`: Unlocks the rotation of NPC tokens (Rotation On).
-    - `Random Token Scatter`: Randomly scatters selected tokens across the current scene.
-    - `Randomize Pulse Light Settings`: Randomizes pulse light settings for varied lighting effects in the current scene.
-    - `Remove All PC Tokens`: Removes all player character tokens from the current or all scenes.
-    - `Remove Orphaned Tokens`: Removes orphaned tokens (tokens without actors) from all scenes.
-    - `Validate Actor Images`: Checks and automatically repairs broken images for Actors and their Tokens.
+    - `Enhanced Fog of War Reset`: Resets the fog of war data for all scenes
+    - `Extinguish All Scene Lights`: Turns off all lights in the current scene
+    - `Flickering Light Horror Effect`: Adds a flickering light effect to create a horror ambiance
+    - `Ignite All Scene Lights`: Turns on all lights in the current scene
+    - `NPC Token Rotation Lock`: Locks the rotation of NPC tokens (Rotation Off)
+    - `NPC Token Rotation Unlock`: Unlocks the rotation of NPC tokens (Rotation On)
+    - `Random Token Scatter`: Randomly scatters selected tokens across the current scene
+    - `Randomize Pulse Light Settings`: Randomizes pulse light settings for varied lighting effects in the current scene
+    - `Remove All PC Tokens`: Removes all player character tokens from the current or all scenes
+    - `Remove Orphaned Tokens`: Removes orphaned tokens (tokens without actors) from all scenes
+    - `Validate Actor Images`: Checks and automatically repairs broken images for Actors and their Tokens
 
 ## Version 5.0.2.1
  * Minor corrections in the CSS file

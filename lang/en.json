@@ -16,7 +16,7 @@
       "limitation": "Limitation",
       "move": "Move",
       "occupation": "Occupation",
-      "relationship": "Relationship",
+      "relationship": "Relation",
       "weapon": "Weapon"
     }
   },
@@ -64,7 +64,7 @@
       "DropHereLimitation": "Drop Limitations here",
       "DropHereWeapon": "Drop Weapons here",
       "DropHereArmor": "Drop Armor here",
-      "DropHereRelationship": "Drop Relationships here",
+      "DropHereRelationship": "Drop Relations here",
       "DropHereDramaticHook": "Drop Dramatic Hooks here",
       "DropOrCreateOccupation": "Drop an Occupation or click to create",
       "DropOrCreateAny": "Drop item or click to create",
@@ -133,8 +133,8 @@
       "Disadvantage": "Disadvantage",
       "DramaticHooks" : "Dramatic Hooks",
       "DramaticHook" : "Dramatic Hook",
-      "Relationships": "Relationships",
-      "Relationship": "Relationship",
+      "Relationships": "Relations",
+      "Relationship": "Relation",
       "Abilities": "Abilities",
       "Ability": "Ability",
       "Limitations": "Limitations",

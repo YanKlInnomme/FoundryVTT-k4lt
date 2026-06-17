@@ -413,6 +413,11 @@
     "settings": {
       "Debug": "Aktywuj tryb debugowania",
       "DebugHint": "Wyświetl dodatkowe informacje debugowania w konsoli deweloperskiej"
+    },
+    "share": {
+      "Title": "Udostępnij",
+      "Button": "Udostępnij",
+      "SelectRecipients": "Wybierz odbiorców"
     }
   }
 }

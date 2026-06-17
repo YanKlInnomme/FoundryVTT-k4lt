@@ -413,6 +413,11 @@
     "settings": {
       "Debug": "Ativar modo de depuração",
       "DebugHint": "Exibir informações adicionais de depuração no console de desenvolvimento"
+    },
+    "share": {
+      "Title": "Compartilhar",
+      "Button": "Compartilhar",
+      "SelectRecipients": "Selecionar destinatários"
     }
   }
 }

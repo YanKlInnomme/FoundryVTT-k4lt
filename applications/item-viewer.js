@@ -3,6 +3,7 @@ const {
   ApplicationV2,
   HandlebarsApplicationMixin,
 } = foundry.applications.api;
+import k4ltShareDialog from "./share-dialog.js";
 export default class k4ltItemViewer extends HandlebarsApplicationMixin(
   ApplicationV2,
 ) {
@@ -47,5 +48,22 @@ export default class k4ltItemViewer extends HandlebarsApplicationMixin(
   }
   get title() {
     return this.item.name;
+  }
+  _getHeaderControls() {
+    const controls = super._getHeaderControls();
+    controls.unshift({
+      icon: "fas fa-share-nodes",
+      label: game.i18n.localize(
+        "k4lt.share.Button",
+      ),
+      action: "shareViewer",
+      onClick: () => {
+        new k4ltShareDialog({
+          type: "showItemViewer",
+          uuid: this.item.uuid,
+        }).render(true);
+      },
+    });
+    return controls;
   }
 }

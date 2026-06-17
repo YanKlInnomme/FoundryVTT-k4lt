@@ -386,6 +386,7 @@
   width: 32px;
   height: 32px;
   object-fit: cover;
+  object-position: center top;
   border-radius: 50%;
   border: 1px solid var(--k4lt-color-dark-gold);
 }

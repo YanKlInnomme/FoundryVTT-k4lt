@@ -109,6 +109,17 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 6.1.1.1
+ * Correction du bug de doublon des Actions lors de la duplication ou de l'importation d'un Personnage Joueur
+ * Ajout d'une fonction de partage de la visionneuse (affichage des objets 'Avantages', 'Désavantages', etc. dans la fiche du Personnage Joueur) pour pouvoir partager la fenêtre affichée à qui l'on souhaite (MJ ou joueur·euse) via une simple sélection (par ailleurs cette sélection ciblée fonctionne aussi pour l'affichage des images aux joueurs)
+ * Réorganisation du compendium Macros avec un ensemble de dossiers
+ * Ajout de cinq nouvelles macros :
+  - `Fix Starting Weapon Flags`: Permet de marquer l'arme Désarmé comme arme de départ sur un personnage existant lorsque ce drapeau est manquant, afin d'empêcher le système d'ajouter un doublon
+  - `Journal Broken Image Remover`: Permet de supprimer les images cassées des journaux
+  - `Set Level for Selected Walls`: Permet de définir le niveau pour les murs sélectionnés
+  - `Assign Follower`: Permet d'assigner un suiveur à un personnage
+  - `Remove Follower`: Permet de supprimer un suiveur d'un personnage
+
 ## Version 6.0.0.1
  * Correction de plusieurs libellés anglais afin d'utiliser la terminologie officielle ("Relations" au lieu de "Relationships")
 
@@ -366,6 +377,17 @@ This digital adaptation is unofficial content from KULT: Divinity Lost, authoriz
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 to 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 6.1.1.1
+  * Fixed the duplicate Actions bug when duplicating or importing a Player Character
+  * Added a share function for the viewer (display of 'Advantages', 'Disadvantages', etc. objects in the Player Character sheet) to be able to share the displayed window with whoever you want (GM or player) via a simple selection (this targeted selection also works for displaying images to players)
+  * Reorganization of the Macros compendium with a set of folders
+  * Added five new macros:
+    - `Fix Starting Weapon Flags`: Allows you to mark the Unarmed weapon as a starting weapon on an existing character when this flag is missing, to prevent the system from adding a duplicate
+    - `Journal Broken Image Remover`: Allows you to remove broken images from journals
+    - `Set Level for Selected Walls`: Allows you to set the level for selected walls
+    - `Assign Follower`: Allows you to assign a follower to a character
+    - `Remove Follower`: Allows you to remove a follower from a character
 
 ## Version 6.0.0.1
  * Updated several English labels to match the official KULT: Divinity Lost terminology ("Relations" instead of "Relationships")

@@ -9,6 +9,8 @@ import {
 import Hotbar from "./modules/hotbar.js";
 import registerHandlebarsHelpers from "./modules/helpers.js";
 import k4ltMJHoldTracker from "./applications/mj-hold-tracker.js";
+import k4ltItemViewer from "./applications/item-viewer.js";
+import k4ltShareDialog from "./applications/share-dialog.js";
 const templatePaths = [
   "systems/k4lt/templates/partials/armor-viewer.hbs",
   "systems/k4lt/templates/partials/darksecret-viewer.hbs",
@@ -258,4 +260,60 @@ Hooks.once(
         );
       });
   });
-  
+Hooks.once("ready", () => {
+  game.socket.on(
+    "system.k4lt",
+    async data => {
+      kultLogger(
+        "Socket received",
+        game.user.name,
+        data,
+      );
+      if (
+        data.users?.length &&
+        !data.users.includes(
+          game.user.id,
+        )
+      ) {
+        return;
+      }
+      switch (data.type) {
+        case "showItemViewer": {
+          const item =
+            await fromUuid(
+              data.uuid,
+            );
+          if (!item) {
+            kultLogger(
+              "Unable to resolve item",
+              data.uuid,
+            );
+            return;
+          }
+          new k4ltItemViewer(
+            item,
+          ).render(true);
+          break;
+        }
+      }
+    },
+  );
+const ImagePopout =
+  foundry.applications.apps.ImagePopout;
+const originalShareImage =
+  ImagePopout.prototype.shareImage;
+ImagePopout.prototype.shareImage =
+  function(options = {}) {
+    new k4ltShareDialog({
+      onShare: users => {
+        originalShareImage.call(
+          this,
+          {
+            ...options,
+            users,
+          },
+        );
+      },
+    }).render(true);
+  };
+});

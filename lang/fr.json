@@ -413,6 +413,11 @@
     "settings": {
       "Debug": "Activer le mode débogage",
       "DebugHint": "Afficher des informations de débogage supplémentaires dans la console de développement"
+    },
+    "share": {
+      "Title": "Partager",
+      "Button": "Partager",
+      "SelectRecipients": "Sélectionner les destinataires"
     }
   }
 }

@@ -413,6 +413,11 @@
     "settings": {
       "Debug": "Activate debug mode",
       "DebugHint": "Display additional debugging information in the development console"
+    },
+    "share": {
+      "Title": "Share",
+      "Button": "Share",
+      "SelectRecipients": "Select recipients"
     }
   }
 }

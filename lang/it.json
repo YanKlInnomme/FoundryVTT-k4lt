@@ -413,6 +413,11 @@
     "settings": {
       "Debug": "Attiva modalità debug",
       "DebugHint": "Mostra informazioni di debug aggiuntive nella console di sviluppo"
+    },
+    "share": {
+      "Title": "Condividi",
+      "Button": "Condividi",
+      "SelectRecipients": "Seleziona destinatari"
     }
   }
 }

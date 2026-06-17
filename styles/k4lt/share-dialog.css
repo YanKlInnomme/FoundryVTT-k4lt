@@ -1,0 +1,29 @@
+/* share-dialog.css */
+.k4lt-share-dialog {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.k4lt-share-dialog p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+.k4lt-share-dialog .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+.k4lt-share-dialog .checkbox input {
+  margin: 0;
+}
+.k4lt-share-dialog .checkbox span {
+  font-size: 1rem;
+}
+.k4lt-share-dialog button[data-action="share"] {
+  align-self: flex-end;
+  min-width: 120px;
+}

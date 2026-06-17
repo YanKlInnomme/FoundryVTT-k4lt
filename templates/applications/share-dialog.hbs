@@ -1,0 +1,29 @@
+<!-- share-dialog.hbs -->
+
+<form class="k4lt-share-dialog">
+
+  <p>
+    {{localize "k4lt.share.SelectRecipients"}}
+  </p>
+
+  <div class="k4lt-share-users">
+    {{#each users}}
+      <label class="checkbox">
+        <input
+          type="checkbox"
+          value="{{id}}"
+        >
+
+        <span>{{name}}</span>
+      </label>
+    {{/each}}
+  </div>
+
+  <button
+    type="button"
+    data-action="share"
+  >
+    {{localize "k4lt.share.Button"}}
+  </button>
+
+</form>

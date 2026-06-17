@@ -354,30 +354,21 @@ export default class k4ltActor extends Actor {
     if (!this.isOwner)       return;
     if (this.type !== "pc") return;
     /* ---- DEFAULT MOVES ------------------------ */
-    const movePack =
-      game.packs.get("k4lt.moves");
-    if (movePack) {
-      const moveDocuments =
-        await movePack.getDocuments();
-      const existingMoveSources =
-        new Set(
-          this.items
-            .filter(i => i.type === "move")
-            .map(i => i.flags?.core?.sourceId)
-            .filter(Boolean)
-        );
-      const movesToCreate =
-        moveDocuments
-          .filter(doc =>
-            !existingMoveSources.has(
-              `Compendium.k4lt.moves.Item.${doc.id}`
-            )
-          )
-          .map(doc => doc.toObject());
-      if (movesToCreate.length) {
+    if (
+      !this.items.some(
+        i => i.type === "move"
+      )
+    ) {
+      const movePack =
+        game.packs.get("k4lt.moves");
+      if (movePack) {
+        const moveDocuments =
+          await movePack.getDocuments();
         await this.createEmbeddedDocuments(
           "Item",
-          movesToCreate,
+          moveDocuments.map(
+            doc => doc.toObject()
+          )
         );
       }
     }

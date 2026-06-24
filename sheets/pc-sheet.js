@@ -265,7 +265,7 @@ export default class k4ltPCSheet extends HandlebarsApplicationMixin(sheets.Actor
     if (!item) return;
     const allowedTypes = [
       "darksecret", "advantage", "disadvantage", "ability", "limitation",
-      "move", "gear", "weapon", "armor", "relationship", "dramatichook",
+      "move", "gear", "weapon", "armor", "relationship", "dramatichook", "occupation",
     ];
     if (!allowedTypes.includes(item.type)) {
       ui.notifications.warn(game.i18n.localize("k4lt.mechanics.InvalidDropType"));

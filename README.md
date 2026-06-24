@@ -109,6 +109,9 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 6.1.1.2
+ * Correction du glisser-déposer du Métier sur la fiche Personnage Joueur
+
 ## Version 6.1.1.1
  * Correction du bug de doublon des Actions lors de la duplication ou de l'importation d'un Personnage Joueur
  * Ajout d'une fonction de partage de la visionneuse (affichage des objets 'Avantages', 'Désavantages', etc. dans la fiche du Personnage Joueur) pour pouvoir partager la fenêtre affichée à qui l'on souhaite (MJ ou joueur·euse) via une simple sélection (par ailleurs cette sélection ciblée fonctionne aussi pour l'affichage des images aux joueurs)
@@ -377,6 +380,9 @@ This digital adaptation is unofficial content from KULT: Divinity Lost, authoriz
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 to 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 6.1.1.2
+* Fixed drag-and-drop of Occupation on Player Character sheets
 
 ## Version 6.1.1.1
   * Fixed the duplicate Actions bug when duplicating or importing a Player Character

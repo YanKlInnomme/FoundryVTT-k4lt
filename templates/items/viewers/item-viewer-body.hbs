@@ -14,6 +14,8 @@
     {{> "systems/k4lt/templates/partials/relationship-viewer.hbs"}}
   {{else if (eq item.type "dramatichook")}}
     {{> "systems/k4lt/templates/partials/dramatichook-viewer.hbs"}}
+  {{else if (eq item.type "family")}}
+    {{> "systems/k4lt/templates/partials/family-viewer.hbs"}}
   {{else}}
     {{> "systems/k4lt/templates/partials/trait-viewer.hbs"}}
   {{/if}}

@@ -19,6 +19,19 @@
         {{/each}}
       </div>
     </div>
+    {{!-- FAMILY --}}
+    {{#if collections.families.length}}
+      <div class="k4lt-dropzone" data-drop-zone data-types="family" data-collection="families">
+        <div class="k4lt-dropzone-title">
+          {{localize "k4lt.collections.Family"}}
+        </div>
+        <div class="k4lt-family-content">
+          {{#each collections.families}}
+            {{> "systems/k4lt/templates/partials/family-card.hbs"}}
+          {{/each}}
+        </div>
+      </div>
+    {{/if}}
     {{!-- DRAMATIC HOOKS --}}
     <div class="k4lt-dropzone" data-drop-zone data-types="dramatichook" data-collection="dramatichooks">
       <div class="k4lt-dropzone-title">

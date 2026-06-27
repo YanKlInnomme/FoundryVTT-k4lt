@@ -264,7 +264,7 @@ export default class k4ltPCSheet extends HandlebarsApplicationMixin(sheets.Actor
     const item = await Item.implementation.fromDropData(data);
     if (!item) return;
     const allowedTypes = [
-      "darksecret", "advantage", "disadvantage", "ability", "limitation",
+      "darksecret", "advantage", "disadvantage", "ability", "limitation", "family",
       "move", "gear", "weapon", "armor", "relationship", "dramatichook", "occupation",
     ];
     if (!allowedTypes.includes(item.type)) {

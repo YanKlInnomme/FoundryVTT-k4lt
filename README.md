@@ -109,6 +109,9 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 6.1.2.2
+ * Suite à la mise à jour du module premium 'The Black Madonna', ajout d'une zone 'Famille' dans l'onglet 'Contexte' de la fiche de Personnage Joueur
+
 ## Version 6.1.1.2
  * Correction du glisser-déposer du Métier sur la fiche Personnage Joueur
 
@@ -381,8 +384,11 @@ This digital adaptation is unofficial content from KULT: Divinity Lost, authoriz
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
 
+## Version 6.1.2.2
+ * Following the update to the premium 'The Black Madonna' module, added a 'Family' section to the 'Background' tab of the Player Character sheet
+
 ## Version 6.1.1.2
-* Fixed drag-and-drop of Occupation on Player Character sheets
+ * Fixed drag-and-drop of Occupation on Player Character sheets
 
 ## Version 6.1.1.1
   * Fixed the duplicate Actions bug when duplicating or importing a Player Character

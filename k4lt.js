@@ -18,6 +18,8 @@ const templatePaths = [
   "systems/k4lt/templates/partials/dramatichook-card.hbs",
   "systems/k4lt/templates/partials/dramatichook-viewer-header.hbs",
   "systems/k4lt/templates/partials/dramatichook-viewer.hbs",
+  "systems/k4lt/templates/partials/family-card.hbs",
+  "systems/k4lt/templates/partials/family-viewer.hbs",
   "systems/k4lt/templates/partials/gear-viewer.hbs",
   "systems/k4lt/templates/partials/move-viewer.hbs",
   "systems/k4lt/templates/partials/relationship-card.hbs",

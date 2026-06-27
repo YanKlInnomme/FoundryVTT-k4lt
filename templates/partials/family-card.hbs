@@ -1,0 +1,35 @@
+<!-- family-card.hbs -->
+
+<div
+  class="k4lt-family k4lt-sheet-block"
+  data-item-id="{{_id}}"
+  data-action="itemView"
+>
+  {{#if @root.user.isGM}}
+    <div class="k4lt-drop-item-actions">
+      <button
+        type="button"
+        class="k4lt-drop-action danger"
+        data-action="itemDelete"
+        data-prevent-view
+        title="{{localize 'k4lt.actions.DeleteItem'}}"
+      >
+        <i class="fas fa-times"></i>
+      </button>
+
+      <button
+        type="button"
+        class="k4lt-drop-action"
+        data-action="itemEdit"
+        data-prevent-view
+        title="{{localize 'k4lt.actions.EditItem'}}"
+      >
+        <i class="fas fa-pen"></i>
+      </button>
+    </div>
+  {{/if}}
+
+  <div class="k4lt-family-content">
+    {{{system.description}}}
+  </div>
+</div>

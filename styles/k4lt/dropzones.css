@@ -432,3 +432,19 @@
 .k4lt-link-remove i {
   font-size: 10px;
 }
+/* ======================================== */
+/* FAMILY                                   */
+/* ======================================== */
+.k4lt-family {
+  position: relative;
+  padding: var(--k4lt-space-sm);
+  border: 1px dashed transparent;
+  border-radius: var(--k4lt-radius);
+  transition: .15s;
+}
+.k4lt-family:hover {
+  border-color: var(--k4lt-color-dark-gold);
+}
+.k4lt-family:hover .k4lt-drop-item-actions {
+  opacity: 1;
+}

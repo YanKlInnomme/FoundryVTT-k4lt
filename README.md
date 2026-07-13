@@ -78,6 +78,7 @@
 [**See below for the English version**](#KULT-Divinity-Lost-Game-System-for-Foundry-VTT)
 
 # Système de Jeu KULT: Divinity Lost pour Foundry VTT
+
 Kult est un jeu de rôle d'horreur qui se concentre sur les peurs et les pulsions enfouies dans notre subconscient. Les joueurs incarnent des personnages aux sombres secrets et évoluent dans des villes industrielles, affrontant des cultes sataniques, des tueurs psychopathes, des multinationales corrompues et bien plus encore.
 
 Attention, ce jeu explore des thèmes matures liés à l'horreur psychologique et corporelle. Au sein des différents ouvrages qui le constitue, on y trouve des exemples explicites d'abus physiques et mentaux, de violence, d'agression sexuelle, d'exploitation religieuse, de maltraitance des enfants, de maladie mentale, d'enlèvement et de rapt, de cruauté et de mort animale, de grossesse et d'accouchement, de fausse couche et d'avortement, de consommation de drogue, d'automutilation et de suicide, de sang et de mort.
@@ -108,6 +109,15 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 à 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
+
+## Version 6.1.3.2
+ * Ajout de trois nouvelles macros :
+  - `Advance Sleeper to Aware`: Fait passer un personnage "Dormeur·euse" à l'état "Conscient·e" en réinitialisant au préalable sa progression, en lui attribuant l'expérience nécessaire et en appliquant toutes les améliorations propres aux "Dormeur·euses"
+  - `Fog of War Reset`: Permet de réinitialiser le brouillard de guerre (Fog of War) pour toutes les scènes du monde
+  - `Randomize Candle Lights`: Applique des profils aléatoires d'éclairage à la bougie aux lumières d'ambiance sélectionnées, en faisant varier la luminosité, la couleur, le scintillement et l'animation pour obtenir un rendu plus naturel
+ * Suppression des macros :
+  - `Randomize Pulse Light Settings` qui est désormais obsolète et remplacée par la macro `Randomize Candle Lights`
+  - `Enhanced Fog of War Reset` qui est désormais obsolète et remplacée par la macro `Fog of War Reset`
 
 ## Version 6.1.2.2
  * Suite à la mise à jour du module premium 'The Black Madonna', ajout d'une zone 'Famille' dans l'onglet 'Contexte' de la fiche de Personnage Joueur
@@ -352,13 +362,14 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
 ---------------------------------------------------------------------
 
 # KULT: Divinity Lost Game System for Foundry VTT
+
 Kult is a horror role-playing game that focuses on the fears and impulses buried in our subconscious. Players embody characters with dark secrets and evolve in industrial cities, confronting satanic cults, psychopathic killers, corrupt multinationals and much more.
 
 Be warned: this game explores mature themes of psychological and body horror. Within the various books that make it up, there are explicit examples of physical and mental abuse, violence, sexual assault, religious exploitation, child abuse, mental illness, kidnapping and abduction, animal cruelty and death, pregnancy and childbirth, miscarriage and abortion, drug use, self-mutilation and suicide, blood and death.
 
 This game system is a set of files that provide Foundry VTT with all the information needed to support the rules, mechanics and gameplay elements specific to KULT: Divinity Lost.
 
-If you like the system and have the means to do so, you can buy me a coffee (https://www.buymeacoffee.com/yank) to show your support and help me continue development. In any case, I hope you have a great time, and please don't hesitate to contact me to give me your opinion or report any problems.
+If you enjoy this system and are in a position to do so, you can support my work by buying me a coffee on Buy Me a Coffee (https://www.buymeacoffee.com/yank). Your support is greatly appreciated and helps fund the continued development of this project. Either way, I hope you enjoy using it. If you have any comments, suggestions, or questions, please don't hesitate to get in touch.
 
 ## Requirements
 
@@ -383,6 +394,15 @@ This digital adaptation is unofficial content from KULT: Divinity Lost, authoriz
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 to 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 6.1.3.2
+ * Added three new macros:
+  - `Advance Sleeper to Aware`: Advances a character from "Sleeper" to "Aware" state by resetting their progression, assigning the necessary experience, and applying all improvements specific to "Sleepers"
+  - `Fog of War Reset`: Allows you to reset the fog of war data for all scenes in the world
+  - `Randomize Candle Lights`: Applies random candle light profiles to selected ambient lights, varying brightness, color, flicker, and animation for a more natural look
+ * Removed macros:
+  - `Randomize Pulse Light Settings` which is now obsolete and replaced by the `Randomize Candle Lights` macro
+  - `Enhanced Fog of War Reset` which is now obsolete and replaced by the `Fog of War Reset` macro
 
 ## Version 6.1.2.2
  * Following the update to the premium 'The Black Madonna' module, added a 'Family' section to the 'Background' tab of the Player Character sheet

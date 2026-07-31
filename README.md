@@ -110,6 +110,12 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 6.1.3.3
+ * Ajout de trois nouvelles macros :
+  - `Enhanced Journal Text Formatting`: Corrige automatiquement la mise en forme des textes de journaux, notamment la position des deux-points, les tirets, la casse de "PCs", l'italique des citations et les espaces superflus dans les titres
+  - `Set All Light Colors to White`: Définit en blanc la couleur de toutes les lumières d'ambiance de la scène active
+  - `Set Background Color Scene`: Définit la couleur d'arrière-plan de toutes les scènes sur une teinte sombre uniforme
+
 ## Version 6.1.3.2
  * Ajout de trois nouvelles macros :
   - `Advance Sleeper to Aware`: Fait passer un personnage "Dormeur·euse" à l'état "Conscient·e" en réinitialisant au préalable sa progression, en lui attribuant l'expérience nécessaire et en appliquant toutes les améliorations propres aux "Dormeur·euses"
@@ -394,6 +400,12 @@ This digital adaptation is unofficial content from KULT: Divinity Lost, authoriz
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 to 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 6.1.3.3
+ * Added three new macros:
+  - `Enhanced Journal Text Formatting`: Automatically corrects journal text formatting, including colon placement, dashes, "PCs" capitalization, italicized quotations, and excess spaces in titles
+  - `Set All Light Colors to White`: Sets the color of every ambient light in the active scene to white
+  - `Set Background Color Scene`: Sets the background color of every scene to a uniform dark shade
 
 ## Version 6.1.3.2
  * Added three new macros:

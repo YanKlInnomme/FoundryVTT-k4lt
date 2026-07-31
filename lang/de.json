@@ -412,7 +412,9 @@
     },
     "settings": {
       "Debug": "Debug-Modus aktivieren",
-      "DebugHint": "Zusätzliche Debug-Informationen in der Entwicklerkonsole anzeigen"
+      "DebugHint": "Zusätzliche Debug-Informationen in der Entwicklerkonsole anzeigen",
+      "HoldTrackerShowOnlyAssignedPCs": "Nur zugewiesene SC anzeigen",
+      "HoldTrackerShowOnlyAssignedPCsHint": "Wenn aktiviert, zeigt der Hold Tracker nur SC an, die mindestens einem Nicht-SL-Spieler gehören."
     },
     "share": {
       "Title": "Teilen",

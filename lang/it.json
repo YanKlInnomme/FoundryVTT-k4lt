@@ -412,7 +412,9 @@
     },
     "settings": {
       "Debug": "Attiva modalità debug",
-      "DebugHint": "Mostra informazioni di debug aggiuntive nella console di sviluppo"
+      "DebugHint": "Mostra informazioni di debug aggiuntive nella console di sviluppo",
+      "HoldTrackerShowOnlyAssignedPCs": "Mostra solo i PG assegnati",
+      "HoldTrackerShowOnlyAssignedPCsHint": "Se attiva, il registro delle Prese mostra solo i PG posseduti da almeno un giocatore non GM."
     },
     "share": {
       "Title": "Condividi",

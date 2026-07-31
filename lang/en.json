@@ -412,7 +412,9 @@
     },
     "settings": {
       "Debug": "Activate debug mode",
-      "DebugHint": "Display additional debugging information in the development console"
+      "DebugHint": "Display additional debugging information in the development console",
+      "HoldTrackerShowOnlyAssignedPCs": "Show assigned PCs only",
+      "HoldTrackerShowOnlyAssignedPCsHint": "When enabled, the Hold Tracker only displays PCs owned by at least one non-GM player."
     },
     "share": {
       "Title": "Share",

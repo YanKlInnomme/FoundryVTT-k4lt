@@ -1,9 +1,18 @@
 /* hold-tracker.css */
+.k4lt-hold-tracker {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  max-height: calc(100vh - 120px);
+}
 .k4lt-hold-grid {
   display: flex;
   flex-wrap: wrap;
+  min-height: 0;
+  overflow-y: auto;
   gap: 8px;
   justify-content: center;
+  scrollbar-gutter: stable;
 }
 .k4lt-hold-card {
   position: relative;
@@ -56,6 +65,7 @@
   color: var(--k4lt-color-white);
 }
 .k4lt-hold-help {
+  flex: 0 0 auto;
   margin-top: 10px;
   text-align: center;
   font-size: .8rem;

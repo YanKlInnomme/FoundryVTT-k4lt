@@ -412,7 +412,9 @@
     },
     "settings": {
       "Debug": "Aktywuj tryb debugowania",
-      "DebugHint": "Wyświetl dodatkowe informacje debugowania w konsoli deweloperskiej"
+      "DebugHint": "Wyświetl dodatkowe informacje debugowania w konsoli deweloperskiej",
+      "HoldTrackerShowOnlyAssignedPCs": "Pokazuj tylko przypisanych BG",
+      "HoldTrackerShowOnlyAssignedPCsHint": "Po włączeniu rejestr wyświetla tylko BG należących do co najmniej jednego gracza niebędącego MG."
     },
     "share": {
       "Title": "Udostępnij",

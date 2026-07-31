@@ -412,7 +412,9 @@
     },
     "settings": {
       "Debug": "Activar modo de depuración",
-      "DebugHint": "Mostrar información adicional de depuración en la consola de desarrollo"
+      "DebugHint": "Mostrar información adicional de depuración en la consola de desarrollo",
+      "HoldTrackerShowOnlyAssignedPCs": "Mostrar solo PJ asignados",
+      "HoldTrackerShowOnlyAssignedPCsHint": "Al activarlo, el registro de Reservas solo muestra PJ pertenecientes al menos a un jugador que no sea DJ."
     },
     "share": {
       "Title": "Compartir",

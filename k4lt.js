@@ -111,6 +111,10 @@ Hooks.on(
   "deleteActor",
   refreshHoldTracker
 );
+Hooks.on(
+  "k4ltHoldTrackerFilterChanged",
+  refreshHoldTracker
+);
 /* ===================================== */
 /* CHAT : RELOAD REQUESTS                */
 /* ===================================== */

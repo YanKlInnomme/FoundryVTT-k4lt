@@ -110,6 +110,12 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 6.1.4.3
+ * Amélioration du suivi des Retenues du MJ :
+  - Ajout d'une barre de défilement adaptative lorsque le nombre de PJ dépasse l'espace disponible dans la fenêtre
+  - Affichage par défaut des seuls PJ attribués à au moins un joueur non MJ
+  - Ajout d'un paramètre de monde permettant d'afficher de nouveau tous les PJ dans le suivi des Retenues
+
 ## Version 6.1.3.3
  * Ajout de trois nouvelles macros :
   - `Enhanced Journal Text Formatting`: Corrige automatiquement la mise en forme des textes de journaux, notamment la position des deux-points, les tirets, la casse de "PCs", l'italique des citations et les espaces superflus dans les titres
@@ -400,6 +406,12 @@ This digital adaptation is unofficial content from KULT: Divinity Lost, authoriz
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 to 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 6.1.4.3
+ * Improved the GM Hold Tracker:
+  - Added an adaptive scrollbar when the number of PCs exceeds the available window space
+  - By default, only PCs assigned to at least one non-GM player are displayed
+  - Added a world setting that allows all PCs to be displayed in the Hold Tracker again
 
 ## Version 6.1.3.3
  * Added three new macros:

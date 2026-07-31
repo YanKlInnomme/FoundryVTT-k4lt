@@ -48,8 +48,22 @@ export default class k4ltMJHoldTracker extends HandlebarsApplicationMixin(
   /* CONTEXT                                      */
   /* -------------------------------------------- */
   async _prepareContext() {
+    const showOnlyAssignedPCs = game.settings.get(
+      "k4lt",
+      "holdTrackerShowOnlyAssignedPCs",
+    );
     const actors = game.actors.contents
       .filter((a) => a.type === "pc")
+      .filter(
+        (actor) =>
+          !showOnlyAssignedPCs
+          || game.users.some(
+            (user) =>
+              !user.isGM
+              && actor.ownership[user.id]
+                === CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER,
+          ),
+      )
       .map((actor) => {
         const hold = actor.items
           .filter(

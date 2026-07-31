@@ -412,7 +412,9 @@
     },
     "settings": {
       "Debug": "Activer le mode débogage",
-      "DebugHint": "Afficher des informations de débogage supplémentaires dans la console de développement"
+      "DebugHint": "Afficher des informations de débogage supplémentaires dans la console de développement",
+      "HoldTrackerShowOnlyAssignedPCs": "Limiter le suivi aux PJ attribués",
+      "HoldTrackerShowOnlyAssignedPCsHint": "Lorsque cette option est activée, le suivi des Retenues affiche uniquement les PJ possédés par au moins un joueur non MJ."
     },
     "share": {
       "Title": "Partager",

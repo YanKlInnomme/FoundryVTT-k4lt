@@ -178,6 +178,28 @@ export const registerk4ltSettings = () => {
     },
   );
   /* -------------------------------------------- */
+  /* HOLD TRACKER ACTOR FILTER                    */
+  /* -------------------------------------------- */
+  game.settings.register(
+    "k4lt",
+    "holdTrackerShowOnlyAssignedPCs",
+    {
+      name: game.i18n.localize(
+        "k4lt.settings.HoldTrackerShowOnlyAssignedPCs",
+      ),
+      hint: game.i18n.localize(
+        "k4lt.settings.HoldTrackerShowOnlyAssignedPCsHint",
+      ),
+      scope: "world",
+      config: true,
+      default: true,
+      type: Boolean,
+      onChange: () => Hooks.callAll(
+        "k4ltHoldTrackerFilterChanged",
+      ),
+    },
+  );
+  /* -------------------------------------------- */
   /* HOLD TRACKER POSITION                        */
   /* -------------------------------------------- */
   game.settings.register(

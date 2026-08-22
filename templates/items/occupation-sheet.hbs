@@ -6,7 +6,7 @@
     <select name="system.archetype">
       {{selectOptions archetypeValues selected=system.archetype valueAttr="value" labelAttr="label"}}
     </select>
-    {{#if (eq system.archetype "other")}}
+    {{#if (eq system.archetype "Other")}}
       <input type="text" name="system.customArchetype" value="{{system.customArchetype}}" placeholder="Custom archetype">
     {{/if}}
   </fieldset>

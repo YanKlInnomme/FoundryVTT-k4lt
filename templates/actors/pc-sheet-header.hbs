@@ -70,8 +70,8 @@
                 <span data-action="itemEdit">{{collections.occupations.[0].name}}</span>
                 {{#if collections.occupations.[0].system.archetype}}
                   <small class="k4lt-link-subtitle">
-                    {{#if (eq collections.occupations.[0].system.archetype "other")}}
-                      {{localize "k4lt.archetypes.other"}} — {{collections.occupations.[0].system.customArchetype}}
+                    {{#if (eq collections.occupations.[0].system.archetype "Other")}}
+                      {{localize "k4lt.archetypes.Other"}} — {{collections.occupations.[0].system.customArchetype}}
                     {{else}}
                       {{localize (concat "k4lt.archetypes." collections.occupations.[0].system.archetype)}}
                     {{/if}}

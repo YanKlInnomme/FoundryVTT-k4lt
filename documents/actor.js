@@ -63,7 +63,7 @@ export default class k4ltActor extends Actor {
     resultText,
     moveResultText,
     optionsText,
-    rollMode,
+    messageMode,
     attrMod = 0,
     ongoing = 0,
     forward = 0,
@@ -122,13 +122,9 @@ export default class k4ltActor extends Actor {
       speaker: ChatMessage.getSpeaker({ alias: this.name }),
       content,
       rolls: [roll],
-      rollMode,
     };
-    if (rollMode === "gmroll") {
-      chatData.whisper = game.users.filter(u => u.isGM).map(u => u.id);
-    }
     kultLogger("chatData => ", chatData);
-    return ChatMessage.create(chatData);
+    return ChatMessage.create(chatData, { messageMode });
   }
   /* -------------------------------------------- */
   /*  MOVE ROLL                                    */
@@ -213,6 +209,16 @@ export default class k4ltActor extends Actor {
       if (this.hasUnstabilizedMajorWounds)   status--;
       if (this.hasUnstabilizedCriticalWound) status--;
     }
+    /* -- Stability modifier -------------------- */
+    if (moveType === "disadvantage" && stability > 0) {
+      status -= stability <= 2 ? 1 : stability <= 5 ? 2 : 3;
+    }
+    if (specialflag === "1" && stability > 2) {
+      status -= stability <= 5 ? 1 : 2;
+    }
+    if (specialflag === "2" && stability > 5) {
+      status++;
+    }
     /* -- Build roll formula --------------------- */
     const parts = ["2d10", mod, ongoing, forward, status];
     if (specialflag == 3) {
@@ -226,9 +232,9 @@ export default class k4ltActor extends Actor {
       await this.update({ "system.forward": 0 });
     }
     /* -- Roll mode ------------------------------ */
-    let rollMode = game.settings.get("core", "messageMode");
+    let messageMode = game.settings.get("core", "messageMode");
     if (moveType === "disadvantage") {
-      rollMode = "gmroll";
+      messageMode = "gm";
     }
     /* -- Result text ---------------------------- */
     let resultText     = "";
@@ -285,7 +291,7 @@ export default class k4ltActor extends Actor {
       resultText,
       moveResultText,
       optionsText: optionstext,
-      rollMode,
+      messageMode,
       attrMod: mod,
       ongoing,
       forward,

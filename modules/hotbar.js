@@ -11,7 +11,7 @@ export default class Hotbar {
     /* PASSIVE ITEMS                             */
     /* ---------------------------------------- */
     if (item.system.type === "passive") {
-      ui.notifications.info(game.i18n.localize("k4lt.PassiveAbility"));
+      ui.notifications.info(game.i18n.localize("k4lt.flags.PassiveAbility"));
       return false;
     }
     const actor = item.actor;

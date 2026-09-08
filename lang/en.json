@@ -48,6 +48,8 @@
       "Tokens": "Tokens",
       "TokenSummary": "Token Summary",
       "InventoryEquipped": "Inventory Equipped",
+      "Equip": "Equip",
+      "Unequip": "Unequip",
       "Reload": "Reload",
       "ClickCardOpenPC": "Click card to open PC sheet",
       "NoOwner": "No Owner",

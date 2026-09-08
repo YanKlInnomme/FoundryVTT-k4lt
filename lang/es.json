@@ -48,6 +48,8 @@
       "Tokens": "Contadores",
       "TokenSummary": "Resumen de contadores",
       "InventoryEquipped": "Equipo equipado",
+      "Equip": "Equipar",
+      "Unequip": "Desequipar",
       "Reload": "Recargar",
       "ClickCardOpenPC": "Haz clic en la tarjeta para abrir la hoja del PJ",
       "NoOwner": "Sin propietario",

@@ -48,6 +48,8 @@
       "Tokens": "Żetony",
       "TokenSummary": "Podsumowanie żetonów",
       "InventoryEquipped": "Wyposażone przedmioty",
+      "Equip": "Wyposaż",
+      "Unequip": "Zdejmij",
       "Reload": "Przeładuj",
       "ClickCardOpenPC": "Kliknij kartę, aby otworzyć kartę postaci",
       "NoOwner": "Brak właściciela",

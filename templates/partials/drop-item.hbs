@@ -32,7 +32,7 @@
         type="button"
         class="k4lt-equip-btn {{#if this.system.active}}active{{/if}}"
         data-action="toggleEquip"
-        title="{{#if this.system.active}}Unequip{{else}}Equip{{/if}}"
+        title="{{#if this.system.active}}{{localize 'k4lt.ui.Unequip'}}{{else}}{{localize 'k4lt.ui.Equip'}}{{/if}}"
       >
         {{#if (eq this.type "weapon")}}
           <i class="fas {{#if this.system.active}}fa-crosshairs{{else}}fa-hand{{/if}}"></i>

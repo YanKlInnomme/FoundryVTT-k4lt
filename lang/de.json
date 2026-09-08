@@ -48,6 +48,8 @@
       "Tokens": "Marker",
       "TokenSummary": "Markerübersicht",
       "InventoryEquipped": "Getragene Ausrüstung",
+      "Equip": "Ausrüsten",
+      "Unequip": "Ablegen",
       "Reload": "Nachladen",
       "ClickCardOpenPC": "Karte anklicken, um den Charakterbogen zu öffnen",
       "NoOwner": "Kein Besitzer",

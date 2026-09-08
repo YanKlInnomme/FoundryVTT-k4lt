@@ -48,6 +48,8 @@
       "Tokens": "Marcadores",
       "TokenSummary": "Resumo de Marcadores",
       "InventoryEquipped": "Equipamento Equipado",
+      "Equip": "Equipar",
+      "Unequip": "Desequipar",
       "Reload": "Recarregar",
       "ClickCardOpenPC": "Clique no cartão para abrir a ficha do PJ",
       "NoOwner": "Sem proprietário",

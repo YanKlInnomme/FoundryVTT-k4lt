@@ -48,6 +48,8 @@
       "Tokens": "Jetons",
       "TokenSummary": "Résumé des jetons",
       "InventoryEquipped": "Équipement porté",
+      "Equip": "Équiper",
+      "Unequip": "Déséquiper",
       "Reload": "Rechargement",
       "ClickCardOpenPC": "Cliquez sur la carte pour ouvrir la fiche du PJ",
       "NoOwner": "Aucun propriétaire",

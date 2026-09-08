@@ -48,6 +48,8 @@
       "Tokens": "Tokens",
       "TokenSummary": "Token Summary",
       "InventoryEquipped": "Equipaggiamento indossato",
+      "Equip": "Equipaggiare",
+      "Unequip": "Rimuovere",
       "Reload": "Ricarica",
       "ClickCardOpenPC": "Clicca sulla scheda per aprire il foglio del PG",
       "NoOwner": "Nessun proprietario",

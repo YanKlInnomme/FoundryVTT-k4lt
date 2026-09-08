@@ -48,6 +48,8 @@
       "Tokens": "Tokens",
       "TokenSummary": "Token Summary",
       "InventoryEquipped": "Екіпіроване спорядження",
+      "Equip": "Екіпірувати",
+      "Unequip": "Зняти",
       "Reload": "Перезарядити",
       "ClickCardOpenPC": "Натисніть картку, щоб відкрити аркуш персонажа",
       "NoOwner": "Без власника",

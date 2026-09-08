@@ -110,6 +110,10 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 6.1.5.4
+ * Ajout d'une nouvelle macro :
+  - `Update PC Traits to v14`: Permet au MJ de sélectionner un ou plusieurs PJ issus de version antérieure et de remplacer leurs Avantages, Désavantages, Capacités et Limitations par leurs versions officielles v14
+
 ## Version 6.1.5.3
  * Correction pour la prise en compte de la stabilité dans les jets de dés pour les actions 'Désavantages', 'Garder le contrôle' et 'Voir à travers l’Illusion' y compris lors du cumul avec les blessures
  * Mise à jour de la visibilité des jets de dés conformément à la version 14 de Foundry VTT
@@ -410,6 +414,10 @@ This digital adaptation is unofficial content from KULT: Divinity Lost, authoriz
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 to 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 6.1.5.4
+ * Added a new macro:
+  - `Update PC Traits to v14`: Allows the GM to select one or more PCs from a previous version and replace their Advantages, Disadvantages, Abilities and Limitations with their official v14 versions
 
 ## Version 6.1.5.3
  * Fixed stability being taken into account in dice rolls for the actions 'Disadvantages', 'Keep Control' and 'See Through Illusion', including when combined with wounds

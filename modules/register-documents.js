@@ -1,5 +1,9 @@
 // register-documents.js
 import k4ltActor from "../documents/actor.js";
+import ArchetypeModel from '../models/archetype.js';
+import AppearanceModel from '../models/appearance.js';
+import ArchetypeSheet from '../sheets/archetype-sheet.js';
+import AppearanceSheet from '../sheets/appearance-sheet.js';
 import k4ltPCModel from "../models/pc.js";
 import k4ltNPCModel from "../models/npc.js";
 import k4ltPCSheet from "../sheets/pc-sheet.js";
@@ -49,6 +53,8 @@ export function registerk4ltDocuments(systemId) {
   /* -------------------------------------------- */
   CONFIG.Item.documentClass = k4ltItem;
   CONFIG.Item.dataModels = {
+    archetype: ArchetypeModel,
+    appearance: AppearanceModel,
     ability: k4ltAbilityModel,
     advantage: k4ltAdvantageModel,
     armor: k4ltArmorModel,
@@ -96,6 +102,22 @@ export function registerk4ltDocuments(systemId) {
   /* -------------------------------------------- */
   /* REGISTER ITEM SHEETS                         */
   /* -------------------------------------------- */
+  foundry.documents.collections.Items.registerSheet(
+    systemId,
+    ArchetypeSheet,
+    {
+      types:['archetype'],
+      makeDefault:true
+    }
+  );
+  foundry.documents.collections.Items.registerSheet(
+    systemId,
+    AppearanceSheet,
+    {
+      types: ['appearance'],
+      makeDefault: true
+    }
+  );
   foundry.documents.collections.Items.registerSheet(
     systemId,
     k4ltAbilitySheet,

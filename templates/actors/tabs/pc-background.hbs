@@ -4,7 +4,25 @@
   data-group="sheet"
   data-tab="background"
 >
-  <div class="k4lt-background-layout">
+  <div class="k4lt-background-layout k4lt-background-main">
+    {{#if hasArchetypeDetails}}
+    <fieldset class="k4lt-sheet-block k4lt-archetype-context k4lt-enlightened-context">
+      <legend>{{localize "k4lt.creation.ArchetypeDetails"}}</legend>
+      {{#if archetypeWorldLinks.ally.showInDetails}}
+      <label>{{localize "k4lt.creation.Ally"}}<input name="system.archetypeContext.ally" value="{{system.archetypeContext.ally}}"></label>
+      <a class="content-link k4lt-archetype-document" data-uuid="{{archetypeWorldLinks.ally.uuid}}"><img src="{{archetypeWorldLinks.ally.img}}" alt=""><span>{{archetypeWorldLinks.ally.name}}</span></a>
+      {{/if}}
+      {{#if archetypeWorldLinks.enemy.showInDetails}}
+      <label>{{localize "k4lt.creation.Enemy"}}<input name="system.archetypeContext.enemy" value="{{system.archetypeContext.enemy}}"></label>
+      <a class="content-link k4lt-archetype-document" data-uuid="{{archetypeWorldLinks.enemy.uuid}}"><img src="{{archetypeWorldLinks.enemy.img}}" alt=""><span>{{archetypeWorldLinks.enemy.name}}</span></a>
+      {{/if}}
+    </fieldset>
+    {{else if (eq consciousnessState "sleeper")}}
+    <fieldset class="k4lt-sheet-block k4lt-archetype-context k4lt-distractions-context">
+      <legend>{{localize "k4lt.creation.Distractions"}}</legend>
+      <input type="text" name="system.archetypeContext.distractions" value="{{system.archetypeContext.distractions}}">
+    </fieldset>
+    {{/if}}
     {{!-- RELATIONSHIPS --}}
     <div class="k4lt-dropzone" data-drop-zone data-types="relationship" data-collection="relationships">
       <div class="k4lt-dropzone-title">
@@ -16,6 +34,20 @@
       <div class="k4lt-relationship-content">
         {{#each collections.relationships}}
           {{> "systems/k4lt/templates/partials/relationship-card.hbs"}}
+        {{/each}}
+      </div>
+    </div>
+    {{!-- DRAMATIC HOOKS --}}
+    <div class="k4lt-dropzone" data-drop-zone data-types="dramatichook" data-collection="dramatichooks">
+      <div class="k4lt-dropzone-title">
+        {{localize "k4lt.collections.DramaticHooks"}}
+        <span class="k4lt-tooltip" data-tooltip="{{localize 'k4lt.ui.DropHereDramaticHook'}}">
+          <i class="fas fa-question-circle"></i>
+        </span>
+      </div>
+      <div class="k4lt-dramatichook-content">
+        {{#each collections.dramatichooks}}
+          {{> "systems/k4lt/templates/partials/dramatichook-card.hbs"}}
         {{/each}}
       </div>
     </div>
@@ -32,20 +64,6 @@
         </div>
       </div>
     {{/if}}
-    {{!-- DRAMATIC HOOKS --}}
-    <div class="k4lt-dropzone" data-drop-zone data-types="dramatichook" data-collection="dramatichooks">
-      <div class="k4lt-dropzone-title">
-        {{localize "k4lt.collections.DramaticHooks"}}
-        <span class="k4lt-tooltip" data-tooltip="{{localize 'k4lt.ui.DropHereDramaticHook'}}">
-          <i class="fas fa-question-circle"></i>
-        </span>
-      </div>
-      <div class="k4lt-dramatichook-content">
-        {{#each collections.dramatichooks}}
-          {{> "systems/k4lt/templates/partials/dramatichook-card.hbs"}}
-        {{/each}}
-      </div>
-    </div>
   </div>
   <div class="k4lt-background-layout">
     <fieldset class="k4lt-sheet-block k4lt-background-notes">

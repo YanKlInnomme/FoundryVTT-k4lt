@@ -1,0 +1,90 @@
+{
+  "Compendium.k4lt.abilities.Item.2SvYTWRokr1wPQYT": {
+    "requires": [
+      "Compendium.k4lt.abilities.Item.QY4OeZ4pBflJeOm6"
+    ],
+    "expertise": 1
+  },
+  "Compendium.k4lt.abilities.Item.4ms4EzyYfGSoy9MD": {
+    "requires": [
+      "Compendium.k4lt.abilities.Item.2SvYTWRokr1wPQYT"
+    ],
+    "expertise": 1
+  },
+  "Compendium.k4lt.abilities.Item.N5gbaERbEsvICAiL": {
+    "requires": [
+      "Compendium.k4lt.abilities.Item.4ms4EzyYfGSoy9MD"
+    ],
+    "expertise": 1
+  },
+  "Compendium.k4lt.abilities.Item.JcQCDgMGIb2QKf4x": {
+    "grantAdvantage": true
+  },
+  "Compendium.k4lt.abilities.Item.ZBHxl8mUcnuyqigQ": {
+    "grantAdvantage": true
+  },
+  "Compendium.k4lt.abilities.Item.XzyH4NZgIIPgbJbC": {
+    "choices": [
+      "fire",
+      "electricity",
+      "radioactivity",
+      "cold",
+      "chemicals"
+    ]
+  },
+  "Compendium.k4lt.abilities.Item.BaydV8S5E2zeQ8H0": {
+    "choices": [
+      "firearms",
+      "piercing",
+      "bludgeoning"
+    ]
+  },
+  "Compendium.k4lt.limitations.Item.GO7m28sJriEATDit": {
+    "choices": [
+      "fire",
+      "electricity",
+      "iron",
+      "silver",
+      "sunlight",
+      "water",
+      "wood"
+    ]
+  },
+  "Compendium.k4lt.limitations.Item.1jKbE41FyrZnmdhD": {
+    "choices": [
+      "dead",
+      "inferno",
+      "summon",
+      "living",
+      "bind"
+    ]
+  },
+  "Compendium.k4lt.limitations.Item.UN92jATqZ0GDj85S": {
+    "detail": true
+  },
+  "Compendium.k4lt.limitations.Item.bGEvmrbJqoi7C5DE": {
+    "detail": true
+  },
+  "Compendium.k4lt.limitations.Item.L7JYSH9lhSY1DoiL": {
+    "detail": true
+  },
+  "Compendium.k4lt.limitations.Item.zPma39Sx2Rk2804O": {
+    "detail": true
+  },
+  "Compendium.k4lt.limitations.Item.cxBvxHDIHdNOp8VH": {
+    "detail": true
+  },
+  "Compendium.k4lt.disadvantages.Item.G9FVgoG2r9YZla6B": {
+    "onlyArchetype": "abomination"
+  },
+  "Compendium.k4lt.disadvantages.Item.JJ9uq6ZQTwY1AveY": {
+    "onlyArchetype": "deathmagician"
+  },
+  "Compendium.k4lt.disadvantages.Item.F2zljCWutli99NIU": {
+    "onlyArchetype": "revenant"
+  },
+  "Compendium.k4lt.disadvantages.Item.ujVn7JcqO2a5QTZK": {
+    "onlyArchetype": "disciple",
+    "relation": true
+  }
+}

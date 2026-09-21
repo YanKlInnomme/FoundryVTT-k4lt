@@ -1,10 +1,17 @@
 // pc-sheet.js
+import { isAttributeAdvancement, canIncreaseAttribute, buyAttributeAdvancement, refundAttributeAdvancement, refundAllAttributes } from '../modules/attribute-advancement.js';
+import { toggleExperience } from '../modules/experience-approval.js';
+import { consciousness, isPastConsciousness, setupArchetype, buyArchetypeAdvancement, traitAdvancements, refundArchetypeOperations, configureFreePool, sourceOf, BROKEN_DISADVANTAGE_SOURCE, stabilityMinimum, syncArchetypeRelationships } from '../modules/archetype-workflow.js';
 const { sheets } = foundry.applications;
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 import k4ltItemViewer from "../applications/item-viewer.js";
 export default class k4ltPCSheet extends HandlebarsApplicationMixin(sheets.ActorSheetV2) {
   #viewConsciousness = null;
+  #lastConsciousness = null;
   #scrollPositions = {};
+  #stabilityMinimum() {
+    return stabilityMinimum(this.actor);
+  }
   static DEFAULT_OPTIONS = {
     classes: ["k4lt", "actor", "pc"],
     position: { width: 1432, height: 885 },
@@ -159,7 +166,7 @@ export default class k4ltPCSheet extends HandlebarsApplicationMixin(sheets.Actor
     let stability = parseInt(this.document.system.stability.value) || 0;
     if (impacts.includes(condition)) {
       stability += next === "checked" ? 1 : -1;
-      stability = Math.max(0, Math.min(stability, 9));
+      stability = Math.max(this.#stabilityMinimum(), Math.min(stability, 9));
     }
     this.#saveScrollPosition();
     await this.document.update({
@@ -172,7 +179,7 @@ export default class k4ltPCSheet extends HandlebarsApplicationMixin(sheets.Actor
   /* -------------------------------------------- */
   async #onStability(delta) {
     let value = parseInt(this.document.system.stability.value) || 0;
-    value = Math.clamp(value + delta, 0, 9);
+    value = Math.clamp(value + delta, this.#stabilityMinimum(), 9);
     await this.document.update({ "system.stability.value": value });
   }
   async #onStabilityIncrease() {
@@ -183,7 +190,7 @@ export default class k4ltPCSheet extends HandlebarsApplicationMixin(sheets.Actor
   }
   async #onStabilityDecrease() {
     let value = Number(this.actor.system.stability.value) || 0;
-    value = Math.max(value - 1, 0);
+    value = Math.max(value - 1, this.#stabilityMinimum());
     this.#saveScrollPosition();
     await this.actor.update({ "system.stability.value": value });
   }
@@ -191,13 +198,7 @@ export default class k4ltPCSheet extends HandlebarsApplicationMixin(sheets.Actor
   /*  CURRENT CONSCIOUSNESS                        */
   /* -------------------------------------------- */
   #getConsciousnessState() {
-    const spentSleeper = [
-      "advancementSleeper1", "advancementSleeper2", "advancementSleeper3",
-      "advancementSleeper4", "advancementSleeper5", "advancementSleeper6",
-    ].filter((id) => this.actor.system[id]?.value > 0).length;
-    if (this.actor.system.advancementAware31?.value > 0) return "enlightened";
-    if (spentSleeper >= 6) return "aware";
-    return "sleeper";
+    return consciousness(this.actor);
   }
   /* -------------------------------------------- */
   /*  SELECT OPTIONS                               */
@@ -245,6 +246,7 @@ export default class k4ltPCSheet extends HandlebarsApplicationMixin(sheets.Actor
       moves:         collections.move         ?? [],
       families:      collections.family       ?? [],
       occupations:   collections.occupation   ?? [],
+      archetypes: collections.archetype ?? [],
       gears:         collections.gear         ?? [],
       weapons:       collections.weapon       ?? [],
       armors:        collections.armor        ?? [],
@@ -263,6 +265,11 @@ export default class k4ltPCSheet extends HandlebarsApplicationMixin(sheets.Actor
     if (data.type !== "Item") return;
     const item = await Item.implementation.fromDropData(data);
     if (!item) return;
+    if (!this.document.isOwner) return;
+    if (item.type === 'archetype') return setupArchetype(this.document,item);
+    if (item.type === 'appearance') {
+      return this.document.update({[`system.appearance.${item.system.category}`]:item.name});
+    }
     const allowedTypes = [
       "darksecret", "advantage", "disadvantage", "ability", "limitation", "family",
       "move", "gear", "weapon", "armor", "relationship", "dramatichook", "occupation",
@@ -272,7 +279,7 @@ export default class k4ltPCSheet extends HandlebarsApplicationMixin(sheets.Actor
       return;
     }
     const currentState = this.#getConsciousnessState();
-    if (item.type === "ability" && currentState === "sleeper") {
+    if (item.type === "ability" && currentState !== "enlightened") {
       kultLogger("DROP BLOCKED", item.name, "requires aware");
       return;
     }
@@ -294,6 +301,9 @@ export default class k4ltPCSheet extends HandlebarsApplicationMixin(sheets.Actor
       itemData.system.tokens = itemData.system.timeTokenMax ?? 0;
     }
     await this.document.createEmbeddedDocuments("Item", [itemData]);
+    if(item.type==='disadvantage'&&sourceOf(item)===BROKEN_DISADVANTAGE_SOURCE&&(this.document.system.stability.value??0)<4){
+      await this.document.update({"system.stability.value":4});
+    }
   }
   /* -------------------------------------------- */
   /*  MINIMIZE                                    */
@@ -331,8 +341,22 @@ export default class k4ltPCSheet extends HandlebarsApplicationMixin(sheets.Actor
   /* -------------------------------------------- */
   /*  RENDER                                       */
   /* -------------------------------------------- */
+  async _renderHTML(context, options) {
+    // Capture the current DOM before automatic form updates replace the sheet parts.
+    this.#saveScrollPosition();
+    return super._renderHTML(context, options);
+  }
   _onRender(context, options) {
     super._onRender(context, options);
+    const minimumStability=this.#stabilityMinimum();
+    if((this.actor.system.stability.value??0)<minimumStability){
+      this.actor.update({"system.stability.value":minimumStability});
+      return;
+    }
+    syncArchetypeRelationships(this.actor).catch(error=>{
+      console.error('K4LT archetype relationship migration',error);
+      ui.notifications.error(error.message);
+    });
     this.#activateAttributeHoverEffects();
     this.#activateImageHoverPreview();
     this.#activateDropZones();
@@ -375,6 +399,8 @@ export default class k4ltPCSheet extends HandlebarsApplicationMixin(sheets.Actor
       case "toggleAdvancementXP": return this.#onToggleAdvancementXP(event);
       case "buyAdvancement":      return this.#onBuyAdvancement(event);
       case "resetAdvancements":   return this.#onResetAdvancements(event);
+      case "createWithoutArchetype": return setupArchetype(this.actor);
+      case "configureFreePool": return configureFreePool(this.actor);
       case "resetProgression":    return this.#onResetProgression(event);
       case "viewConsciousness":   return this.#onViewConsciousness(event);
       default:                    return super._onClickAction(event, target);
@@ -537,32 +563,19 @@ export default class k4ltPCSheet extends HandlebarsApplicationMixin(sheets.Actor
   /*  TOGGLE XP                                    */
   /* -------------------------------------------- */
   async #onToggleAdvancementXP(event) {
-    if (!game.user.isGM) return;
+    if (!this.actor.isOwner) return;
     event.preventDefault();
     const button = event.target.closest("[data-id]");
     if (!button) return;
-    const id      = button.dataset.id;
-    const current = this.actor.system[id]?.value ?? 0;
-    const next    = current > 0 ? 0 : 1;
-    const updates = { [`system.${id}.value`]: next };
-    const xpIds   = ["advancementExp1", "advancementExp2", "advancementExp3", "advancementExp4", "advancementExp5"];
-    let checked = 0;
-    for (const xpId of xpIds) {
-      const value = xpId === id ? next : (this.actor.system[xpId]?.value ?? 0);
-      if (value > 0) checked++;
-    }
-    if (checked >= 5) {
-      for (const xpId of xpIds) updates[`system.${xpId}.value`] = 0;
-      updates["system.advancementPoints.value"] = (this.actor.system.advancementPoints.value ?? 0) + 1;
-    }
     this.#saveScrollPosition();
-    await this.actor.update(updates);
+    await toggleExperience(this.actor, button.dataset.id);
   }
   /* -------------------------------------------- */
   /*  BUY ADVANCEMENT                              */
   /* -------------------------------------------- */
   async #onBuyAdvancement(event) {
     event.preventDefault();
+    if (!this.actor.isOwner) return;
     const button = event.target.closest("[data-id]");
     if (!button) return;
     const id           = button.dataset.id;
@@ -606,6 +619,32 @@ export default class k4ltPCSheet extends HandlebarsApplicationMixin(sheets.Actor
     };
     const max = maxMap[id] ?? entryData.max ?? 1;
     if (current >= max) return;
+    if (traitAdvancements.has(id) || ['advancementSleeper6','advancementAware24','advancementAware31','advancementEnlightened24'].includes(id)) {
+      this.#saveScrollPosition();
+      return buyArchetypeAdvancement(this.actor,id);
+    }
+    if (isAttributeAdvancement(id)) {
+      this.#saveScrollPosition();
+      return buyAttributeAdvancement(this.actor, id, () =>
+        this.#getConsciousnessState() === entryState
+        && (id !== 'advancementAware21' || sumSpent(awareTier1Ids) >= 5)
+        && (id !== 'advancementEnlightened21' || sumSpent(enlightenedTier1Ids) >= 5));
+    }
+    const storyEnding = ['advancementAware23', 'advancementEnlightened23'].includes(id);
+    const storyRule = id === 'advancementAware23'
+      ? 'k4lt.advancement.Aware.Seven' : 'k4lt.advancement.Enlightened.Seven';
+    if (storyEnding) {
+      const confirmed = await foundry.applications.api.DialogV2.confirm({
+        window: { title: game.i18n.localize('k4lt.advancement.StoryEnding.Title') },
+        content: `<div class="k4lt-awakening-dialog">
+          <h2>${game.i18n.localize('k4lt.advancement.StoryEnding.Title')}</h2>
+          <p>${game.i18n.localize(storyRule)}</p>
+          <div class="k4lt-awakening-warning">${game.i18n.localize('k4lt.advancement.StoryEnding.Explanation')}</div>
+          <div class="k4lt-awakening-confirm">${game.i18n.localize('k4lt.advancement.StoryEnding.Confirm')}</div>
+        </div>`,
+      });
+      if (!confirmed) return;
+    }
     /* -- Awakening confirmation ----------------- */
     if (id === "advancementEnlightened31") {
       const confirmed = await foundry.applications.api.DialogV2.confirm({
@@ -631,11 +670,26 @@ export default class k4ltPCSheet extends HandlebarsApplicationMixin(sheets.Actor
       if (!confirmed) return;
     }
     /* -- Apply advancement ---------------------- */
+    // A dialog may remain open while another action changes the character.
+    if (!this.actor.isOwner || this.#getConsciousnessState() !== entryState
+      || (this.actor.system[id]?.value ?? 0) !== current
+      || (this.actor.system.advancementPoints.value ?? 0) < 1) return;
     this.#saveScrollPosition();
     await this.actor.update({
       [`system.${id}.value`]: current + 1,
-      "system.advancementPoints.value": points - 1,
+      "system.advancementPoints.value": this.actor.system.advancementPoints.value - 1,
     });
+    if (storyEnding) {
+      await ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+        content: `<div class="k4lt-awakening-chat">
+          <h2>${game.i18n.localize('k4lt.advancement.StoryEnding.Title')}</h2>
+          <p class="k4lt-awakening-chat-intro"><strong>${game.i18n.format('k4lt.advancement.StoryEnding.Chat', {name: foundry.utils.escapeHTML(this.actor.name)})}</strong></p>
+          <p>${game.i18n.localize(storyRule)}</p>
+          <div class="k4lt-awakening-chat-warning">${game.i18n.localize('k4lt.advancement.StoryEnding.Explanation')}</div>
+        </div>`,
+      });
+    }
     /* -- Awakening chat message ----------------- */
     if (id === "advancementEnlightened31") {
       await ChatMessage.create({
@@ -668,16 +722,18 @@ export default class k4ltPCSheet extends HandlebarsApplicationMixin(sheets.Actor
     const entryState   = id.startsWith("advancementSleeper") ? "sleeper"
       : id.startsWith("advancementAware") ? "aware"
       : "enlightened";
-    if (entryState !== currentState) return;
+    if (entryState !== currentState && !(this.actor.getFlag('k4lt','archetypeHistory')??[]).some(op=>op.advancement===id)) return;
     if (!id) return;
     const data = this.actor.system[id];
     if (!data) return;
     const current = data.value ?? 0;
     if (current <= 0) return;
+    if (!await refundArchetypeOperations(this.actor,id)) return;
     this.#saveScrollPosition();
     await this.actor.update({
       [`system.${id}.value`]: current - 1,
       "system.advancementPoints.value": (this.actor.system.advancementPoints.value ?? 0) + 1,
+      ...refundAttributeAdvancement(this.actor, id),
     });
   }
   /* -------------------------------------------- */
@@ -685,6 +741,7 @@ export default class k4ltPCSheet extends HandlebarsApplicationMixin(sheets.Actor
   /* -------------------------------------------- */
   async #onResetAdvancements() {
     if (!game.user.isGM) return;
+    if (!await refundArchetypeOperations(this.actor,null,true)) return;
     const updates = {};
     let refunded = 0;
     for (const [key, value] of Object.entries(this.actor.system)) {
@@ -694,7 +751,8 @@ export default class k4ltPCSheet extends HandlebarsApplicationMixin(sheets.Actor
         updates[`system.${key}.value`] = 0;
       }
     }
-    updates["system.advancementPoints.value"] = refunded;
+    updates["system.advancementPoints.value"] = refunded + (this.actor.system.advancementPoints.value ?? 0);
+    Object.assign(updates, refundAllAttributes(this.actor));
     this.#saveScrollPosition();
     await this.actor.update(updates);
   }
@@ -711,7 +769,9 @@ export default class k4ltPCSheet extends HandlebarsApplicationMixin(sheets.Actor
       `,
     });
     if (!confirmed) return;
+    if (!await refundArchetypeOperations(this.actor,null,true)) return;
     const updates = {};
+    Object.assign(updates, refundAllAttributes(this.actor));
     for (const [key, value] of Object.entries(this.actor.system)) {
       if (!key.startsWith("advancement")) continue;
       if (typeof value === "object" && typeof value.value === "number") {
@@ -748,14 +808,16 @@ export default class k4ltPCSheet extends HandlebarsApplicationMixin(sheets.Actor
   #saveScrollPosition() {
     const container = this.element?.querySelector(".tab.active.k4lt-scrollY");
     if (!container) return;
-    const tab = this.tabGroups.sheet ?? "default";
+    const tab = container.dataset.tab ?? this.tabGroups.sheet ?? "default";
     this.#scrollPositions[tab] = container.scrollTop;
   }
   #restoreScrollPosition() {
     const container = this.element?.querySelector(".tab.active.k4lt-scrollY");
     if (!container) return;
-    const tab = this.tabGroups.sheet ?? "default";
-    container.scrollTop = this.#scrollPositions[tab] ?? 0;
+    const tab = container.dataset.tab ?? this.tabGroups.sheet ?? "default";
+    if (this.#scrollPositions[tab] !== undefined) {
+      container.scrollTop = this.#scrollPositions[tab];
+    }
   }
   /* -------------------------------------------- */
   /*  CONTEXT                                      */
@@ -871,7 +933,10 @@ export default class k4ltPCSheet extends HandlebarsApplicationMixin(sheets.Actor
     context.consciousnessState = currentState;
     context.canSeeAbilities    = currentState === "enlightened";
     context.canSeeLimitations  = currentState === "enlightened";
-    if (!this.#viewConsciousness) this.#viewConsciousness = currentState;
+    if (!this.#viewConsciousness || this.#lastConsciousness !== currentState) {
+      this.#viewConsciousness = currentState;
+    }
+    this.#lastConsciousness = currentState;
     const displayedState = this.#viewConsciousness ?? currentState;
     kultLogger("CURRENT:", currentState, "VIEW:", this.#viewConsciousness, "DISPLAY:", displayedState);
     advancement.states = [
@@ -889,6 +954,8 @@ export default class k4ltPCSheet extends HandlebarsApplicationMixin(sheets.Actor
       entry.checked   = entry.value > 0;
       entry.archived  = displayedState !== currentState;
       entry.available = !entry.archived && advancementPoints > 0 && !entry.full;
+      entry.attributeMaxed = isAttributeAdvancement(entry.id) && !canIncreaseAttribute(actor, entry.id);
+      if (entry.attributeMaxed) entry.available = false;
       entry.uses      = Array.from({ length: entry.max }, (_, i) => ({ used: i < entry.value }));
       return entry;
     };
@@ -902,10 +969,22 @@ export default class k4ltPCSheet extends HandlebarsApplicationMixin(sheets.Actor
       { index: 6, id: "advancementSleeper6", max: 1, label: game.i18n.localize("k4lt.advancement.Sleeper.Six") },
     ];
     let nextAvailable = true;
+    const sleeperCompleted = isPastConsciousness("sleeper", currentState);
     for (const entry of sleeperEntries) {
       enrichEntry(entry);
-      entry.available = !entry.full && nextAvailable && advancementPoints > 0;
-      if (!entry.checked) nextAvailable = false;
+      if (sleeperCompleted) {
+        entry.value = entry.max;
+        entry.remaining = 0;
+        entry.full = true;
+        entry.checked = true;
+        entry.completed = true;
+        entry.archived = true;
+        entry.available = false;
+        entry.uses = Array.from({length:entry.max},()=>({used:true}));
+      } else {
+        entry.available = !entry.archived && !entry.full && nextAvailable && advancementPoints > 0;
+        if (!entry.checked) nextAvailable = false;
+      }
     }
     /* -- Aware ---------------------------------- */
     const awareGroups = [
@@ -1002,6 +1081,20 @@ export default class k4ltPCSheet extends HandlebarsApplicationMixin(sheets.Actor
       };
     }
     context.advancement = advancement;
+    context.archetypeWorldLinks=Object.fromEntries(['ally','enemy'].map(key=>{
+      const uuid=actor.system.archetypeContext?.[key+'Link'];
+      const document=uuid?fromUuidSync(uuid):null;
+      return [key,document?{
+        uuid:document.uuid,
+        name:document.name,
+        img:document.img??document.thumb??(document.documentName==='JournalEntry'?'icons/svg/book.svg':'icons/svg/mystery-man.svg'),
+        showInDetails:document.documentName==='JournalEntry',
+      }:null];
+    }));
+    context.hasArchetypeDetails=Object.values(context.archetypeWorldLinks).some(link=>link?.showInDetails);
+    context.freeAdvantages = await Promise.all((actor.system.freeAdvantages??[]).map(async uuid=>({uuid,name:(await fromUuid(uuid).catch(()=>null))?.name??game.i18n.localize('k4lt.creation.Missing')})));
+    context.hasAppearance = ["clothes", "face", "eyes", "body"]
+      .some((key) => String(actor.system.appearance?.[key] ?? "").trim().length > 0);
     /* -- Assign to context ---------------------- */
     Object.assign(context, {
       actor,

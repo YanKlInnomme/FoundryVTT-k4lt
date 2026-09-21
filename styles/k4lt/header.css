@@ -58,6 +58,18 @@
   grid-column: 2 / 4;
   grid-row: 3;
 }
+/* Let linked names shrink within their card and wrap, even without spaces. */
+.k4lt-header-occupation .k4lt-link-text {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.k4lt-header-occupation .k4lt-link-text span {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.k4lt-header-occupation .k4lt-link-card img {
+  flex: 0 0 32px;
+}
 .k4lt-link-drop.empty {
   min-height: 52px;
   display: flex;
@@ -70,4 +82,13 @@
 .k4lt-header-who {
   grid-column: 4;
   grid-row: 1 / 4;
+  min-height: 0;
+}
+.k4lt-header-who > fieldset {
+  height: 100%;
+}
+.k4lt-header-appearance {
+  grid-column: 1 / 5;
+  grid-row: 4;
+  min-width: 0;
 }

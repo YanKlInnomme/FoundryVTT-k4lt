@@ -10,12 +10,15 @@
   flex-wrap: wrap;
   min-height: 0;
   overflow-y: auto;
+  /* Leave room for the 1.03 hover scale without clipping or adding a scrollbar. */
+  padding: 4px;
   gap: 8px;
   justify-content: center;
   scrollbar-gutter: stable;
 }
 .k4lt-hold-card {
   position: relative;
+  flex: 0 0 110px;
   width: 110px;
   height: 160px;
   overflow: hidden;

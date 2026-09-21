@@ -1,6 +1,12 @@
 <!-- pc-advancement.hbs -->
 <section class="k4lt-scrollY tab tab-content {{tab.cssClass}}" data-group="sheet" data-tab="advancement">
   <div class="k4lt-advancement-layout">
+    {{#if (eq system.creationMode "free")}}
+    <fieldset class="k4lt-sheet-block"><legend>{{localize "k4lt.creation.FreePool"}}</legend>
+      {{#each freeAdvantages}}<p><a class="content-link" data-uuid="{{uuid}}">{{name}}</a></p>{{/each}}
+      {{#if @root.user.isGM}}<button type="button" data-action="configureFreePool">{{localize "k4lt.creation.EditPool"}}</button>{{/if}}
+    </fieldset>
+    {{/if}}
     {{!-- EXPERIENCE --}}
     <fieldset class="k4lt-sheet-block">
       <legend>{{localize "k4lt.advancement.ExperiencePoints"}}</legend>
@@ -13,7 +19,6 @@
               class="
               k4lt-advancement-dot
               {{#if checked}}active{{/if}}
-              {{#unless @root.user.isGM}}readonly{{/unless}}
               "
               data-action="toggleAdvancementXP"
               data-id="{{id}}"
@@ -108,6 +113,7 @@
               {{#if checked}}checked{{/if}}
               "
               data-action="buyAdvancement"
+              {{#if attributeMaxed}}disabled aria-disabled="true"{{/if}}
               data-id="{{id}}"
             >
               {{!-- INDEX --}}

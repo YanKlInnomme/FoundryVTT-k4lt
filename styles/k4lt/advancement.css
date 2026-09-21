@@ -1,4 +1,25 @@
 /* advancement.css */
+.k4lt-attribute-choice .form-footer {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+.k4lt-attribute-choice .form-footer > button {
+  min-width: 0;
+  white-space: normal;
+}
+.k4lt-attribute-choice .form-footer > button[data-action="willpower"],
+.k4lt-attribute-choice .form-footer > button[data-action="perception"],
+.k4lt-attribute-choice .form-footer > button[data-action="charisma"],
+.k4lt-attribute-choice .form-footer > button[data-action="soul"] {
+  grid-column: 1 / -1;
+  width: calc((100% - 6px) / 2);
+  justify-self: center;
+}
+.k4lt-attribute-choice button:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
 .k4lt-advancement-layout {
   display: flex;
   flex-direction: column;
@@ -16,12 +37,14 @@
   margin-left: 10px;
 }
 .k4lt-advancement-dot {
-  width: 27px;
-  height: 27px;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
   padding: 0;
-  border-radius: 50%;
-  border: 1px solid var(--k4lt-color-dark-gold);
-  background: rgba(0, 0, 0, .08);
+  border-radius: 0;
+  border: 1px dashed var(--k4lt-color-dark-gold);
+  background: url("../../assets/blank.webp") center / contain no-repeat;
+  box-shadow: none;
   cursor: pointer;
   transition: all .15s ease;
 }
@@ -32,8 +55,7 @@
   transform: scale(.95);
 }
 .k4lt-advancement-dot.active {
-  background: linear-gradient(135deg, var(--k4lt-color-light-red), var(--k4lt-color-dark-red));
-  box-shadow: 0 0 10px rgba(165, 20, 19, .35);
+  background-image: url("../../assets/checked.webp");
 }
 .k4lt-advancement-points {
   display: flex;
@@ -172,18 +194,16 @@
   min-width: 72px;
 }
 .k4lt-advancement-use {
-  width: 16px;
-  height: 16px;
+  width: 28px;
+  height: 28px;
   flex-shrink: 0;
-  border-radius: 50%;
-  border: 1px solid var(--k4lt-color-dark-gold);
-  background: rgba(0, 0, 0, .08);
+  border-radius: 0;
+  border: 1px dashed var(--k4lt-color-dark-gold);
+  background: url("../../assets/blank.webp") center / contain no-repeat;
   transition: all .15s ease;
 }
 .k4lt-advancement-use.used {
-  background: linear-gradient(135deg, var(--k4lt-color-light-red), var(--k4lt-color-dark-red));
-  border-color: transparent;
-  box-shadow: 0 0 6px rgba(165, 20, 19, .35);
+  background-image: url("../../assets/checked.webp");
 }
 .k4lt-advancement-content {
   display: flex;

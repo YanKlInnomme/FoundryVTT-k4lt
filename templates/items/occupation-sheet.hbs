@@ -1,6 +1,7 @@
 <!-- occupation-sheet.hbs -->
 <section class="k4lt-section k4lt-scrollY k4lt-flex k4lt-flex-col k4lt-gap-md">
-  {{!-- ARCHETYPE --}}
+  {{!-- Legacy field remains readable until migrated; new occupations are independent. --}}
+  {{#if system.archetype}}
   <fieldset class="k4lt-sheet-block">
     <legend>{{localize "k4lt.collections.Archetype"}}</legend>
     <select name="system.archetype">
@@ -10,6 +11,7 @@
       <input type="text" name="system.customArchetype" value="{{system.customArchetype}}" placeholder="Custom archetype">
     {{/if}}
   </fieldset>
+  {{/if}}
   {{!-- DESCRIPTION --}}
   <fieldset class="k4lt-sheet-block">
     <legend>{{localize "k4lt.ui.Description"}}</legend>

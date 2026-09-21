@@ -5,7 +5,7 @@
     <div class="k4lt-row-span-3 k4lt-section">
       <fieldset class="k4lt-sheet-block k4lt-image-block">
         <img class="profile-img" src="{{item.img}}" data-edit="img" data-action="editImage">
-        <button type="button" class="icon edit-image">
+        <button type="button" class="icon edit-image" data-action="openImageEditor">
           <i class="fas fa-edit"></i>
         </button>
       </fieldset>
@@ -16,3 +16,5 @@
     </div>
   </div>
 </header>
+{{#if item.flags.k4lt.configuration.choice}}<p>{{localize (concat "k4lt.creation." item.flags.k4lt.configuration.choice)}}</p>{{/if}}
+{{#if item.flags.k4lt.configuration.detail}}<label>{{localize "k4lt.creation.Details"}}<input name="flags.k4lt.configuration.detail" value="{{item.flags.k4lt.configuration.detail}}"></label>{{/if}}

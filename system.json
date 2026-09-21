@@ -2,11 +2,11 @@
   "id": "k4lt",
   "title": "KULT: Divinity Lost (4th Edition)",
   "description": "Kult is a horror role-playing game that focuses on the fears and impulses buried in our subconscious. Players take on the role of characters with dark secrets and can evolve in industrial cities, facing satanic cults, psychopathic killers, corrupt multinationals and more.",
-  "version": "6.1.5.4",
+  "version": "6.2.0.0",
   "license": "LICENSE",
   "compatibility": {
     "minimum": "14",
-    "verified": "14.367",
+    "verified": "14.368",
     "maximum": "15"
   },
   "authors": [
@@ -59,7 +59,9 @@
       "thumbnail": "systems/k4lt/assets/thumbnail.webp"
     }
   ],
-  "esmodules": [ "k4lt.js" ],
+  "esmodules": [
+    "k4lt.js"
+  ],
   "styles": [
     {
       "src": "styles/core/reset.css",
@@ -81,7 +83,8 @@
       "src": "styles/foundry/pause.css",
       "layer": "exceptions"
     },
-    "styles/k4lt.css"
+    "styles/k4lt.css",
+    "styles/k4lt/archetypes.css"
   ],
   "socket": true,
   "documentTypes": {
@@ -92,6 +95,8 @@
     "Item": {
       "ability": {},
       "advantage": {},
+      "appearance": {},
+      "archetype": {},
       "armor": {},
       "darksecret": {},
       "disadvantage": {},
@@ -123,6 +128,39 @@
       "type": "Item",
       "system": "k4lt",
       "path": "packs/advantages",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "label": "Appearance",
+      "name": "appearance",
+      "type": "Item",
+      "system": "k4lt",
+      "path": "packs/appearance",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "label": "Archetypes",
+      "name": "archetypes",
+      "type": "Item",
+      "system": "k4lt",
+      "path": "packs/archetypes",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "label": "Armor",
+      "name": "armor",
+      "type": "Item",
+      "system": "k4lt",
+      "path": "packs/armor",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
@@ -188,6 +226,27 @@
       "type": "Item",
       "system": "k4lt",
       "path": "packs/moves",
+      "ownership": {
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "label": "Occupations",
+      "name": "occupations",
+      "type": "Item",
+      "system": "k4lt",
+      "path": "packs/occupations",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "label": "Special Equipement",
+      "name": "special-equipment",
+      "type": "Item",
+      "system": "k4lt",
+      "path": "packs/special-equipment",
       "ownership": {
         "ASSISTANT": "OWNER"
       }

@@ -29,44 +29,21 @@ export default class k4ltItem extends Item {
   get attribute() {
     return this.system.attribute || null;
   }
-  // RELIQUAT TECHNIQUE NEUTRALISE
-  // Cette méthode n'est appelée ni par le système ni par son compendium
-  // Macros. Elle utilisait encore l'ancienne formule 2d6 et un ancien
-  // format de caractéristique. Le code reste commenté temporairement afin
-  // de détecter un éventuel appel provenant d'une macro de monde ou d'un
-  // module tiers.
-  //
-  // async roll() {
-  //   if (!this.isMove) return;
-  //   const actor = this.actor;
-  //   if (!actor) {
-  //     ui.notifications.warn("No actor linked to this item.");
-  //     return;
-  //   }
-  //   const attribute = this.attribute;
-  //   let modifier = 0;
-  //   if (attribute && actor.system.attributes?.[attribute]) {
-  //     modifier = actor.system.attributes[attribute].value ?? 0;
-  //   }
-  //   const roll = await new Roll(
-  //     `2d6 + ${modifier}`,
-  //   ).evaluate({
-  //     async: true,
-  //   });
-  //   roll.toMessage({
-  //     speaker: ChatMessage.getSpeaker({
-  //       actor,
-  //     }),
-  //     flavor: this.name,
-  //   });
-  //   return roll;
-  // }
   /* -------------------------------------------- */
   /* LIFECYCLE HOOKS                              */
   /* -------------------------------------------- */
   async _preCreate(data, options, user) {
     await super._preCreate(data, options, user);
     /* -- valeur par défaut -- */
+    if (this.type === "archetype" && !this.system.key) {
+      this.updateSource({ "system.key": `custom-${foundry.utils.randomID()}` });
+    }
+    if (
+      this.type === "relationship"
+      && (!data.img || data.img === "icons/svg/item-bag.svg")
+    ) {
+      this.updateSource({ img: "icons/svg/mystery-man.svg" });
+    }
     if (
       this.type === "weapon"
       && data.system?.damage == null

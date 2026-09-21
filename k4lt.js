@@ -1,4 +1,5 @@
 // k4lt.js
+import './modules/archetype-migration.js';
 import {
   addk4ltLinksToSettings,
   registerk4ltSettings

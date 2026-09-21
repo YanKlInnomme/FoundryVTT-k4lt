@@ -47,6 +47,18 @@
         {{formInput systemFields.whoareyou value=system.whoareyou enriched=system.whoareyou toggled=true engine="prosemirror"}}
       </fieldset>
     </div>
+    {{!-- APPEARANCE --}}
+    {{#if hasAppearance}}
+    <div class="k4lt-header-appearance">
+      <fieldset class="k4lt-sheet-block k4lt-appearance-block" data-drop-zone data-types="appearance">
+        <legend>{{localize "TYPES.Item.appearance"}}</legend>
+        <label>{{localize "k4lt.creation.clothes"}}<input name="system.appearance.clothes" value="{{system.appearance.clothes}}"></label>
+        <label>{{localize "k4lt.creation.face"}}<input name="system.appearance.face" value="{{system.appearance.face}}"></label>
+        <label>{{localize "k4lt.creation.eyes"}}<input name="system.appearance.eyes" value="{{system.appearance.eyes}}"></label>
+        <label>{{localize "k4lt.creation.body"}}<input name="system.appearance.body" value="{{system.appearance.body}}"></label>
+      </fieldset>
+    </div>
+    {{/if}}
     {{!-- NAME --}}
     <div class="k4lt-header-name">
       <fieldset class="k4lt-sheet-block k4lt-name-block">
@@ -55,6 +67,28 @@
     </div>
     {{!-- OCCUPATION --}}
     <div class="k4lt-header-occupation">
+      <fieldset class="k4lt-sheet-block">
+        <legend>{{localize "k4lt.collections.Archetype"}}</legend>
+        <div
+          class="k4lt-link-drop {{#unless collections.archetypes.[0]}}empty{{/unless}}"
+          data-drop-zone
+          data-collection="archetypes"
+          data-types="archetype"
+        >
+        {{#if collections.archetypes.[0]}}
+          <div class="k4lt-link-card" data-item-id="{{collections.archetypes.[0].id}}">
+            <img src="{{collections.archetypes.[0].img}}" width="32" height="32" data-action="itemEdit">
+            <div class="k4lt-link-text">
+              <span data-action="itemEdit">{{collections.archetypes.[0].name}}</span>
+            </div>
+          </div>
+        {{else}}
+          <div class="k4lt-link-empty" data-action="createWithoutArchetype">
+            {{localize "k4lt.ui.DropOrCreateArchetype"}}
+          </div>
+        {{/if}}
+        </div>
+      </fieldset>
       <fieldset class="k4lt-sheet-block">
         <legend>{{localize "k4lt.collections.Occupation"}}</legend>
         <div
@@ -68,15 +102,6 @@
               <img src="{{collections.occupations.[0].img}}" width="32" height="32" data-action="itemEdit">
               <div class="k4lt-link-text">
                 <span data-action="itemEdit">{{collections.occupations.[0].name}}</span>
-                {{#if collections.occupations.[0].system.archetype}}
-                  <small class="k4lt-link-subtitle">
-                    {{#if (eq collections.occupations.[0].system.archetype "Other")}}
-                      {{localize "k4lt.archetypes.Other"}} — {{collections.occupations.[0].system.customArchetype}}
-                    {{else}}
-                      {{localize (concat "k4lt.archetypes." collections.occupations.[0].system.archetype)}}
-                    {{/if}}
-                  </small>
-                {{/if}}
               </div>
               <button
                 type="button"

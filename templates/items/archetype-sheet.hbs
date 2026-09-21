@@ -1,0 +1,34 @@
+<section class="k4lt-scrollY k4lt-section k4lt-archetype-body">
+  <fieldset class="k4lt-sheet-block k4lt-archetype-description">
+    <legend>{{localize "k4lt.ui.Description"}}</legend>
+    {{formInput systemFields.description value=system.description enriched=system.description toggled=true engine="prosemirror"}}
+  </fieldset>
+  <fieldset class="k4lt-sheet-block">
+    <legend>{{localize "k4lt.creation.State"}}</legend>
+    <select name="system.state">{{selectOptions stateOptions selected=system.state}}</select>
+  </fieldset>
+  <div class="k4lt-archetype-group-heading">
+    <h2>{{localize "k4lt.creation.ChoiceGroup"}}</h2>
+    <button type="button" data-action="addChoiceGroup"><i class="fas fa-plus"></i> {{localize "k4lt.creation.AddGroup"}}</button>
+  </div>
+  {{#each groups}}
+  <fieldset class="k4lt-sheet-block k4lt-archetype-group" data-choice-group="{{@index}}">
+    <legend>{{label}} <span class="k4lt-archetype-count">{{min}}–{{#if max}}{{max}}{{else}}∞{{/if}}</span></legend>
+    <div class="k4lt-archetype-group-toolbar">
+      <p>{{#if open}}{{localize "k4lt.creation.Open"}}{{else}}{{localize "k4lt.creation.Restricted"}}{{/if}}</p>
+      <button type="button" class="icon" data-action="editChoiceGroup" title="{{localize 'k4lt.creation.ChoiceGroup'}}" aria-label="{{localize 'k4lt.creation.ChoiceGroup'}}"><i class="fas fa-cog"></i></button>
+      <button type="button" class="icon" data-action="removeChoiceGroup" title="{{localize 'k4lt.actions.DeleteItem'}}" aria-label="{{localize 'k4lt.actions.DeleteItem'}}"><i class="fas fa-trash"></i></button>
+    </div>
+    <ul class="k4lt-archetype-links">
+      {{#each links}}
+      <li>
+        <a class="content-link" data-action="openChoice" data-uuid="{{uuid}}"><i class="fas fa-book-open"></i> {{name}}</a>
+        <button type="button" class="k4lt-archetype-required {{#if required}}active{{/if}}" data-action="toggleRequired" data-uuid="{{uuid}}" aria-pressed="{{#if required}}true{{else}}false{{/if}}">{{#if required}}<i class="fas fa-check"></i> {{/if}}{{localize "k4lt.creation.Required"}}</button>
+        <button type="button" class="icon" data-action="removeChoice" data-uuid="{{uuid}}" title="{{localize 'k4lt.actions.DeleteItem'}}" aria-label="{{localize 'k4lt.actions.DeleteItem'}}"><i class="fas fa-times"></i></button>
+      </li>
+      {{/each}}
+    </ul>
+    <p class="k4lt-archetype-drop"><i class="fas fa-hand-pointer"></i> {{localize "k4lt.creation.DropTrait"}}</p>
+  </fieldset>
+  {{/each}}
+</section>

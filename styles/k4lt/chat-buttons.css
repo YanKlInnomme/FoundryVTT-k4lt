@@ -1,4 +1,13 @@
 /* chat-buttons.css */
+[data-xp-approval] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+[data-xp-approval] > button {
+  flex: 0 1 auto;
+  margin: 0;
+}
 .k4lt-chat-btn {
   display: inline-flex;
   align-items: center;

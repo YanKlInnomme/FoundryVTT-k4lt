@@ -5,6 +5,18 @@
   margin-bottom: var(--k4lt-space-md);
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
+.k4lt-background-main {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.k4lt-background-main > [data-collection="relationships"] {
+  grid-column: 1;
+}
+.k4lt-background-main > [data-collection="dramatichooks"] {
+  grid-column: 2;
+}
+.k4lt-background-main > [data-collection="families"] {
+  grid-column: 1 / -1;
+}
 .k4lt-background-notes {
   min-height: 260px;
 }

@@ -81,22 +81,20 @@ export default class k4ltBaseItemSheet extends HandlebarsApplicationMixin(sheets
       typeValues,
       specialMoveValues,
       archetypeValues,
+      stateOptions: Object.fromEntries(['sleeper','aware','enlightened'].map(key=>[key,game.i18n.localize(`k4lt.creation.${key}`)])),
+      appearanceOptions: Object.fromEntries(['clothes','face','eyes','body'].map(key=>[key,game.i18n.localize(`k4lt.creation.${key}`)])),
       systemFields: this.document.system.constructor.schema.fields,
     });
     return context;
   }
   _onClickAction(event, target) {
     const action = target.dataset.action;
-    if (action === "editImage") return this._onEditImage(event);
+    if (action === "openImageEditor") return this._onOpenImageEditor(event, target);
     return super._onClickAction(event, target);
   }
-  async _onEditImage(event) {
+  _onOpenImageEditor(event, target) {
     event.preventDefault();
-    const fp = new FilePicker({
-      type: "image",
-      current: this.document.img,
-      callback: (path) => this.document.update({ img: path }),
-    });
-    return fp.browse();
+    const image = target.closest(".k4lt-image-block")?.querySelector(".profile-img");
+    image?.click();
   }
 }

@@ -53,6 +53,12 @@ export default class k4ltPCModel extends foundry.abstract.TypeDataModel {
     /* SCHEMA                      */
     /* --------------------------- */
     return {
+      // Blank preserves legacy inference until a creation profile or migration sets the state.
+      consciousness: new fields.StringField({initial:'',blank:true,choices:['','sleeper','aware','enlightened']}),
+      creationMode: new fields.StringField({initial:'legacy',choices:['legacy','archetype','free']}),
+      freeAdvantages: new fields.ArrayField(new fields.StringField(),{initial:[]}),
+      appearance: new fields.ObjectField({initial:{clothes:'',face:'',eyes:'',body:''}}),
+      archetypeContext: new fields.ObjectField({initial:{}}),
       /* ========================= */
       /* FREE TEXT                 */
       /* ========================= */

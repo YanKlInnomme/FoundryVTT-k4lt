@@ -110,6 +110,16 @@ Cette adaptation numérique est un contenu non officiel de KULT: Divinity Lost, 
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 à 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Traduction brésilienne
 
+## Version 6.2.0.0
+ * Ajout de la création guidée de personnage, avec ou sans archétype : choix des traits, répartition des caractéristiques, suggestions de métier et d’apparence, saisie personnalisée et aperçu avant application
+ * Ajout des compendiums Archétypes (25 entrées), Métiers (231 entrées) et Apparence (555 entrées), ainsi que des compendiums Armures et Équipement spécial
+ * Fiches d’archétype personnalisables : description en premier, état de conscience, groupes de choix éditables et ouverture des traits liés par clic
+ * Séparation de l’archétype et du métier sur la fiche des Personnages Joueurs. Suggestions de métier et d’apparence proposées dans les deux parcours de création, tout en conservant la saisie libre
+ * Gestion des acquisitions et changements d’archétype, des prérequis, de la réserve d’avantages et des augmentations de caractéristiques. Remboursement des progressions avec conservation des choix initiaux et des points encore disponibles
+ * Les propriétaires peuvent cocher l’expérience ; une série complète déclenche une demande de validation au MJ. Amélioration du suivi des progressions et de la conservation du défilement de la fiche
+ * Les relations affichent le portrait de l’Actor lié en priorité, sinon l’image de leur item. Image par défaut mystery-man et correction du bouton de modification d’image des items
+ * Intégration des portraits d’archétypes dans le système et des illustrations d’équipement
+
 ## Version 6.1.5.4
  * Ajout d'une nouvelle macro :
   - `Update PC Traits to v14`: Permet au MJ de sélectionner un ou plusieurs PJ issus de version antérieure et de remplacer leurs Avantages, Désavantages, Capacités et Limitations par leurs versions officielles v14
@@ -414,6 +424,16 @@ This digital adaptation is unofficial content from KULT: Divinity Lost, authoriz
  * Tom LaPorta (https://gitlab.com/fattom23) - Versions 0.7 to 1.2
  * Astarte Horns (https://github.com/astarte-horns) - Versions 1.3 to 1.5
  * Roberto Lorite (https://www.comunidadumbria.com/) - Brazilian translation
+
+## Version 6.2.0.0
+  * Added guided character creation, with or without archetype: trait selection, attribute distribution, occupation and appearance suggestions, custom input and preview before application
+  * Added Archetypes (25 entries), Occupations (231 entries) and Appearance (555 entries) compendiums, as well as Armor and Special Equipment compendiums
+  * Customizable archetype sheets: description first, state of consciousness, editable choice groups and opening of linked traits by click
+  * Separation of archetype and occupation on the Player Character sheet. Occupation and appearance suggestions offered in both creation paths while retaining free input
+  * Management of acquisitions and changes of archetype, prerequisites, advantage pool and attribute increases. Refund of progressions while retaining initial choices and points still available
+  * Owners can check experience; a full series triggers a validation request to the GM. Improved tracking of progressions and retention of sheet scrolling
+  * Relationships display the portrait of the linked Actor first, otherwise the image of their item. Default mystery-man image and correction of item image edit button
+  * Integration of archetype portraits into the system and equipment illustrations
 
 ## Version 6.1.5.4
  * Added a new macro:

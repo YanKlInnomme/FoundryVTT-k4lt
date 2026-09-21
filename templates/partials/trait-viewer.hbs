@@ -1,5 +1,17 @@
 <!-- trait-viewer.hbs -->
 <section class="k4lt-section k4lt-flex k4lt-flex-col k4lt-gap-md">
+  {{#if item.flags.k4lt.configuration.choice}}
+    <fieldset class="k4lt-sheet-block">
+      <legend>{{localize "k4lt.ui.Options"}}</legend>
+      {{localize (concat "k4lt.creation." item.flags.k4lt.configuration.choice)}}
+    </fieldset>
+  {{/if}}
+  {{#if item.flags.k4lt.configuration.detail}}
+    <fieldset class="k4lt-sheet-block">
+      <legend>{{localize "k4lt.creation.Details"}}</legend>
+      <div style="white-space: pre-wrap; overflow-wrap: anywhere;">{{item.flags.k4lt.configuration.detail}}</div>
+    </fieldset>
+  {{/if}}
   <fieldset class="k4lt-sheet-block">
     <legend>{{localize "k4lt.ui.Type"}}</legend>
     {{#if (eq system.type "active")}}

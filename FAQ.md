@@ -257,6 +257,10 @@ Le module `k4lt-en` nécessite le système `k4lt` et le module de ressources **`
 Le module Foundry VTT de **The Black Madonna** reste disponible en anglais uniquement. Le module `k4lt-fr` ne traduit pas automatiquement son contenu et il n'existe pas actuellement de version française officielle de ce module.
 Pour les groupes qui souhaitent néanmoins jouer la campagne en français, **Deep Translate** peut traduire un monde Foundry complet avec DeepL tout en conservant sa structure et sa mise en forme. Cela peut rendre la campagne VO exploitable en français, mais **cela ne constitue pas une traduction officielle**.
 ## 8. Migration et dépannage
+### Une mise à jour du module met-elle à jour les aventures déjà importées ?
+**Non, pas automatiquement.** Les documents importés dans le monde sont des copies de ceux du compendium. Une mise à jour de k4lt-fr ou de k4lt-en ne remplace pas automatiquement ces copies ni vos modifications personnelles.
+Pour bénéficier des corrections, comparez les documents avec ceux du compendium et réimportez les éléments concernés si nécessaire, en conservant vos notes et personnalisations.
+Les **macros des sept sceaux d'Écho du Passé / An Echo From the Past** déjà importées doivent notamment être réimportées pour recevoir les corrections concernant les Archétypes distincts des Métiers, les états de conscience et les récompenses.
 ### Que faire si un ancien personnage n'utilise pas les versions actuelles de ses Traits ?
 Le compendium **Macros** contient la macro `Update PC Traits to v14`.
 Elle permet au MJ de sélectionner un ou plusieurs Personnages Joueurs provenant d'une version antérieure du système et de remplacer leurs **Avantages**, **Désavantages**, **Capacités** et **Limitations** par leurs versions actuelles prévues pour la v14.
@@ -304,19 +308,26 @@ Il peut également être installé manuellement depuis les Releases GitHub.
 **Non.**
 Le simple fait d'installer le module n'impose rien.
 Pour les scénarios compatibles, une option permet d'**activer ou de désactiver les ressources IA supplémentaires**. Il est donc possible de conserver le scénario entièrement sans IA, ou d'activer ces ressources au cas par cas.
+### Comment activer les ressources supplémentaires pour un scénario ?
+Après avoir activé k4lt-assets-ai et importé un scénario compatible, **rechargez le monde (F5)** pour faire apparaître le dialogue. Les ressources supplémentaires sont inactives par défaut : **Oui** les active, tandis que **Non** les laisse inactives.
+La case **Ne plus afficher** masque ce dialogue pour les prochaines utilisations. Les options restent accessibles dans **Paramètres de jeu**, dans la section du module **KULT: Divinity Lost - AI Assets**.
+Chaque scénario dispose de sa propre option : La Galerie des Âmes, Oakwood Heights, The Black Madonna et Écho du Passé.
+Pour désactiver des ressources déjà activées, ouvrez les **paramètres du monde**, puis les options du module **KULT: Divinity Lost - AI Assets**, **décochez la case correspondant au scénario** et enregistrez les modifications.
+### Où trouver les journaux additionnels importés ?
+Lorsque les ressources sont activées, ces journaux sont importés depuis les compendiums de k4lt-assets-ai dans le dossier du scénario :
+- **Sketches** dans **La Galerie des Âmes / Gallery of Souls** ;
+- **Immersion Kit** dans **Oakwood Heights VF / Oakwood Heights** ;
+- **Galerie / Gallery** dans **Écho du Passé / An Echo From the Past**.
 ### Quels scénarios disposent actuellement de ressources supplémentaires dans `k4lt-assets-ai` ?
 Le module propose actuellement des ressources optionnelles pour plusieurs contenus :
 - **La Galerie des Âmes / Gallery of Souls** : 27 portraits pour PJ et PNJ, ainsi que 10 illustrations représentant les croquis de Christian Starker ;
 - **Oakwood Heights / Oakwood Heights VF** : 23 portraits pour PJ et PNJ, ainsi qu'un kit d'immersion de 9 illustrations ;
+- **Écho du Passé / An Echo From the Past** : 39 portraits, comprenant les formes réelles de certains personnages et plusieurs variantes, 7 illustrations de lieux et un journal Galerie disponible en français et en anglais ;
 - **The Black Madonna / La Madone Noire** : 62 portraits de PNJ, 11 illustrations de lieux, 3 illustrations scénaristiques et 3 pistes audio MP3.
-
 Ces ressources s'ajoutent aux ressources non-IA déjà utilisées par les aventures ; elles restent entièrement facultatives.
 ### Pourquoi parler de scénarios « prêts à jouer en un clic » avec `k4lt-assets-ai` ?
-
 Les scénarios fonctionnent déjà sans ce module, avec les ressources autorisées dans les modules officiels.
-
 `k4lt-assets-ai` ajoute toutefois les portraits, illustrations d'ambiance, aides visuelles et contenus audio qui permettent de disposer d'une présentation beaucoup plus complète dès l'importation du scénario.
-
 C'est dans ce sens qu'il peut transformer un scénario déjà préparé pour Foundry en une expérience plus proche du **« prêt à jouer en un clic »**, sans pour autant être nécessaire à son fonctionnement.
 
 ---
@@ -552,6 +563,10 @@ The `k4lt-en` module requires the `k4lt` system and the **`k4lt-assets`** resour
 The Foundry VTT module for **The Black Madonna** remains available in English only. The `k4lt-fr` module does not automatically translate its content, and there is currently no official French version of this module.
 For groups that still want to play the campaign in French, **Deep Translate** can translate an entire Foundry world with DeepL while preserving its structure and formatting. This can make the English campaign usable in French, but **it is not an official translation**.
 ## 8. Migration and Troubleshooting
+### Does updating a module update adventures already imported into a world?
+**No, not automatically.** World documents are copies of the compendium documents. Updating k4lt-fr or k4lt-en does not automatically replace these copies or your personal changes.
+To receive corrections, compare the documents with their compendium counterparts and reimport the affected elements if needed, keeping your notes and customizations.
+The **seven seal macros from An Echo From the Past / Écho du Passé** must specifically be reimported to receive fixes for Archetypes as separate items from Occupations, consciousness states, and rewards.
 ### What should I do if an older character is not using the current versions of its Traits?
 The **Macros** compendium contains the `Update PC Traits to v14` macro.
 It allows the GM to select one or more Player Characters from an earlier system version and replace their **Advantages**, **Disadvantages**, **Abilities**, and **Limitations** with the current versions intended for v14.
@@ -599,17 +614,24 @@ It can also be installed manually from the GitHub Releases page.
 **No.**
 Installing the module does not force anything.
 For compatible scenarios, an option allows the additional AI resources to be **enabled or disabled**. You can therefore keep a scenario entirely AI-free or activate the extra resources on a case-by-case basis.
+### How do I enable additional resources for a scenario?
+After enabling k4lt-assets-ai and importing a compatible scenario, **reload the world (F5)** to display the dialog. Additional resources are disabled by default: **Yes** enables them, while **No** leaves them disabled.
+The **Do not show again** checkbox hides the dialog for subsequent use. The options remain available in **Game Settings**, under **KULT: Divinity Lost - AI Assets**.
+Each scenario has its own option: Gallery of Souls, Oakwood Heights, The Black Madonna, and An Echo From the Past.
+To disable resources that are already enabled, open the **world settings**, go to the **KULT: Divinity Lost - AI Assets** module options, **uncheck the box for the scenario**, and save your changes.
+### Where can I find imported additional journals?
+When the resources are enabled, these journals are imported from the k4lt-assets-ai compendiums into the scenario's journal folder:
+- **Sketches** in **Gallery of Souls / La Galerie des Âmes**;
+- **Immersion Kit** in **Oakwood Heights / Oakwood Heights VF**;
+- **Gallery / Galerie** in **An Echo From the Past / Écho du Passé**.
 ### Which scenarios currently have additional resources in `k4lt-assets-ai`?
 The module currently provides optional resources for several pieces of content:
 - **Gallery of Souls / La Galerie des Âmes**: 27 PC and NPC portraits, plus 10 illustrations depicting Christian Starker's sketches;
 - **Oakwood Heights / Oakwood Heights VF**: 23 PC and NPC portraits, plus a 9-image immersion kit;
+- **An Echo From the Past / Écho du Passé**: 39 portraits, including some characters’ real forms and several variants, 7 location illustrations, and a Gallery journal available in English and French;
 - **The Black Madonna / La Madone Noire**: 62 NPC portraits, 11 location illustrations, 3 story-related illustrations, and 3 MP3 audio tracks.
-
 These resources are added on top of the non-AI assets already used by the adventures; they remain entirely optional.
 ### Why describe scenarios as “one-click ready-to-play” with `k4lt-assets-ai`?
-
 The scenarios already work without this module, using the resources allowed in the officially distributed modules.
-
 However, `k4lt-assets-ai` adds portraits, atmospheric illustrations, visual aids, and audio content that make the presentation much more complete immediately after importing the adventure.
-
 That is the sense in which it can turn an already prepared Foundry scenario into something closer to a **“one-click ready-to-play”** experience, without being required for the scenario to function.
